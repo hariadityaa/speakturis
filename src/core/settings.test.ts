@@ -4,10 +4,10 @@ import { DEFAULTS, cleanSettings, isValidSettings } from './settings';
 describe('settings', () => {
   it('accepts partial and full valid settings', () => {
     expect(isValidSettings({})).toBe(true);
-    expect(isValidSettings({ lang: 'ja', rate: 0.6, voice: { ja: 'x' }, direction: 'english-first', keepAwake: false, newPerSession: 3, commutePauseMs: 1000, plan: { ja: { id: 'week', start: '2026-10-03' } } })).toBe(true);
+    expect(isValidSettings({ lang: 'ja', rate: 0.6, voice: { ja: 'x' }, cardFront: 'native', newPerSession: 3 })).toBe(true);
   });
   it('rejects wrong types and ranges', () => {
-    for (const bad of [null, [], 'x', { rate: 'fast' }, { rate: NaN }, { newPerSession: 0 }, { direction: 'up' }, { keepAwake: 1 }, { voice: { ja: 5 } }, { lang: 3 }, { plan: { ja: 'week' } }, { plan: { ja: { id: 'week', start: 'today' } } }]) {
+    for (const bad of [null, [], 'x', { rate: 'fast' }, { rate: NaN }, { newPerSession: 0 }, { cardFront: 'up' }, { voice: { ja: 5 } }, { lang: 3 }]) {
       expect(isValidSettings(bad)).toBe(false);
     }
   });
@@ -15,5 +15,8 @@ describe('settings', () => {
     expect(cleanSettings({ rate: 'fast' })).toEqual(DEFAULTS);
     expect(cleanSettings(undefined)).toEqual(DEFAULTS);
     expect(cleanSettings({ lang: 'ja', rate: 0.7 })).toEqual({ ...DEFAULTS, lang: 'ja', rate: 0.7 });
+  });
+  it('shows English on the card front by default', () => {
+    expect(DEFAULTS.cardFront).toBe('english');
   });
 });

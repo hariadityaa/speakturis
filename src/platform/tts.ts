@@ -74,17 +74,3 @@ export function speak(text: string, o: SpeakOptions): Promise<void> {
     synth.speak(u);
   });
 }
-
-// Screen Wake Lock: keeps the screen on during a session so speech keeps playing.
-let lock: WakeLockSentinel | undefined;
-export async function keepAwake(on: boolean) {
-  try {
-    if (on) lock = await navigator.wakeLock?.request('screen');
-    else { await lock?.release(); lock = undefined; }
-  } catch { /* unsupported or denied: harmless */ }
-}
-document.addEventListener('visibilitychange', async () => {
-  if (document.visibilityState === 'visible' && lock && lock.released) {
-    try { lock = await navigator.wakeLock?.request('screen'); } catch { /* ignore */ }
-  }
-});

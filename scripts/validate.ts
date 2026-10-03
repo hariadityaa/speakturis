@@ -1,6 +1,6 @@
 /**
  * Validates every language pack in /content against /schema, then runs cross-file checks
- * (IDs resolve, dialogue graphs are sound, plans fit the daily budget, every number composes).
+ * (IDs resolve, dialogue graphs are sound, every number composes).
  * Exit code 1 on any error, so CI fails.
  */
 import Ajv2020 from 'ajv/dist/2020.js';
@@ -11,15 +11,13 @@ import { composeNumber } from '../src/core/numbers.ts';
 import type { Pack } from '../src/core/types.ts';
 
 const ROOT = resolve(fileURLToPath(import.meta.url), '../..');
-const FILES = ['pack', 'scripts', 'phrases', 'numbers', 'dialogues', 'schedule'] as const;
+const FILES = ['pack', 'scripts', 'phrases', 'numbers', 'dialogues'] as const;
 type FileKey = (typeof FILES)[number];
 
 const ajv = new Ajv2020({ allErrors: true, strict: false });
 const validators = Object.fromEntries(
   FILES.map((f) => [f, ajv.compile(JSON.parse(readFileSync(join(ROOT, 'schema', `${f}.schema.json`), 'utf8')))]),
 ) as Record<FileKey, ReturnType<typeof ajv.compile>>;
-
-const parseDate = (s: string) => Date.parse(`${s}T00:00:00Z`);
 
 export function validatePack(dir: string): string[] {
   const errors: string[] = [];
@@ -50,7 +48,8 @@ export function validatePack(dir: string): string[] {
 
   // 2. Pack meta
   if (dir.split(/[\\/]/).pop() !== meta.code) err('pack.json', `code "${meta.code}" must match folder name`);
-  if (Number.isNaN(parseDate(meta.trip.date))) err('pack.json', 'trip.date is not a valid date');
+  const situations = meta.situations.map((x) => x.id);
+  dup('pack.json', 'situation', situations);
 
   // 3. Scripts
   const systemIds = p.scripts.systems.map((s) => s.id);
@@ -74,7 +73,7 @@ export function validatePack(dir: string): string[] {
   const phraseIds = p.phrases.phrases.map((x) => x.id);
   dup('phrases.json', 'phrase', phraseIds);
   for (const ph of p.phrases.phrases) {
-    for (const t of ph.tags) if (!meta.situations.includes(t)) err('phrases.json', `${ph.id}: tag "${t}" not in pack.json situations`);
+    for (const t of ph.tags) if (!situations.includes(t)) err('phrases.json', `${ph.id}: tag "${t}" not in pack.json situations`);
     if (ph.audioSrc && !existsSync(join(dir, ph.audioSrc))) err('phrases.json', `${ph.id}: audioSrc "${ph.audioSrc}" file not found`);
   }
   if (charIds.some((id) => phraseIds.includes(id))) err('phrases.json', 'a phrase id collides with a character id');
@@ -102,7 +101,7 @@ export function validatePack(dir: string): string[] {
   // 6. Dialogues
   dup('dialogues.json', 'dialogue', p.dialogues.dialogues.map((d) => d.id));
   for (const d of p.dialogues.dialogues) {
-    if (!meta.situations.includes(d.situation)) err('dialogues.json', `${d.id}: situation "${d.situation}" not in pack.json situations`);
+    if (!situations.includes(d.situation)) err('dialogues.json', `${d.id}: situation "${d.situation}" not in pack.json situations`);
     if (!d.nodes[d.start]) err('dialogues.json', `${d.id}: start node "${d.start}" does not exist`);
     for (const [nid, node] of Object.entries(d.nodes)) {
       if (node.end && node.replies?.length) err('dialogues.json', `${d.id}.${nid}: end node must not have replies`);
@@ -126,44 +125,6 @@ export function validatePack(dir: string): string[] {
     }
     for (const id of reach) if (!canEnd.has(id)) err('dialogues.json', `${d.id}: node "${id}" cannot reach an end`);
   }
-
-  // 7. Schedule: each plan is checked on its own. Together the plans must teach every phrase and kana group.
-  const plans = p.schedule.plans;
-  dup('schedule.json', 'plan', plans.map((x) => x.id));
-  const everIntroduced = new Set<string>();
-  const scheduledGroups = new Set<string>();
-  for (const plan of plans) {
-    const at = (s: string) => `plan ${plan.id} ${s}`;
-    plan.weeks.forEach((w, i) => { if (w.week !== i + 1) err('schedule.json', at(`weeks must be numbered 1..N in order (found ${w.week} at position ${i + 1})`)); });
-    const introduced: string[] = [];
-    for (const w of plan.weeks) {
-      // Each study day (1-6) must have work and fit the daily budget.
-      for (let day = 1; day <= 6; day++) {
-        const total = w.tasks.filter((t) => !t.days || t.days.includes(day)).reduce((acc, t) => acc + t.minutes, 0);
-        if (total === 0) err('schedule.json', at(`week ${w.week} day ${day}: no tasks`));
-        if (total > plan.dailyMinutes) err('schedule.json', at(`week ${w.week} day ${day}: ${total} min, above dailyMinutes ${plan.dailyMinutes}`));
-      }
-      for (const t of w.tasks) {
-        const where = at(`week ${w.week} ${t.type}`);
-        if (t.type === 'kana' && t.ref && !groupIds.includes(t.ref)) err('schedule.json', `${where}: unknown kana group "${t.ref}"`);
-        if (t.type === 'kana' && t.ref) scheduledGroups.add(t.ref);
-        if (t.type === 'reading' && t.ref && !setIds.includes(t.ref)) err('schedule.json', `${where}: unknown word set "${t.ref}"`);
-        if (t.type === 'dialogue' && t.ref && !p.dialogues.dialogues.some((d) => d.id === t.ref)) err('schedule.json', `${where}: unknown dialogue "${t.ref}"`);
-        if (t.days && t.days.some((d) => d < 1 || d > 6)) err('schedule.json', `${where}: days must be 1-6`);
-        if (t.type === 'reading' && !t.ref) err('schedule.json', `${where}: needs ref`);
-        if (t.type === 'dialogue' && !t.ref) err('schedule.json', `${where}: needs ref`);
-        if (t.phraseIds && t.type !== 'phrases') err('schedule.json', `${where}: only phrases tasks can list phraseIds`);
-        for (const id of t.phraseIds ?? []) {
-          if (!phraseIds.includes(id)) err('schedule.json', `${where}: unknown phrase "${id}"`);
-          introduced.push(id);
-          everIntroduced.add(id);
-        }
-      }
-    }
-    dup('schedule.json', at('phraseIds'), introduced);
-  }
-  for (const id of phraseIds) if (!everIntroduced.has(id)) err('schedule.json', `phrase "${id}" is never introduced by any plan`);
-  for (const g of groupIds) if (!scheduledGroups.has(g)) err('schedule.json', `kana group "${g}" is never scheduled`);
 
   return errors;
 }

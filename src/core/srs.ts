@@ -12,11 +12,10 @@
  *  - Good  (2): normal. First success = 1 day, second = 3 days, after that interval x ease.
  *  - Easy  (3): effortless. Jumps ahead faster. Ease rises.
  *
- * Trip cap: there is a hard end date (the trip). Seeing a card for the first time after the
- * trip is useless, so the interval is capped to `maxIntervalDays` (days left to the trip).
+ * Cap: `maxIntervalDays` limits how far ahead a card can go, so nothing disappears for months.
  *
  * Due dates for intervals of 1+ days are set to the start of that local day, so a card that
- * is "due tomorrow" shows up all of tomorrow, including the morning commute.
+ * is "due tomorrow" shows up all of tomorrow.
  */
 export type Grade = 0 | 1 | 2 | 3;
 

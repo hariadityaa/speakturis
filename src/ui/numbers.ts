@@ -1,4 +1,4 @@
-import { app, markTaskDone, say } from '../app';
+import { app, say } from '../app';
 import { shuffle } from '../core/items';
 import { composeNumber, composePrice, formatPrice } from '../core/numbers';
 import { stopSpeaking } from '../platform/tts';
@@ -8,10 +8,9 @@ const ROUND = 10;
 const rnd = (a: number, b: number) => a + Math.floor(Math.random() * (b - a + 1));
 
 /** Shared by the number drill and the yen price drill. Both are driven by numbers.json and pack currency. */
-export const numbersScreen = (prices: boolean): Screen => (root, q) => {
+export const numbersScreen = (prices: boolean): Screen => (root) => {
   const { numbers, meta } = app.pack;
-  const taskKey = q.get('task');
-  const back = taskKey ? '/' : '/practice';
+  const back = '/';
   const limits = prices
     ? [numbers.priceDrill.max / 10, numbers.priceDrill.max / 2, numbers.priceDrill.max]
     : [10, 100, 1000, numbers.range.max].filter((x) => x <= numbers.range.max);
@@ -29,9 +28,9 @@ export const numbersScreen = (prices: boolean): Screen => (root, q) => {
   const body = h('div');
   const bar = h('div', { class: 'chips' });
   const paintBar = () => bar.replaceChildren(
-    h('button', { class: `chip${mode === 'say' ? ' on' : ''}`, onclick: () => { mode = 'say'; run(); } }, 'See → say'),
-    h('button', { class: `chip${mode === 'hear' ? ' on' : ''}`, onclick: () => { mode = 'hear'; run(); } }, 'Hear → pick'),
-    ...limits.map((l) => h('button', { class: `chip${max === l ? ' on' : ''}`, onclick: () => { max = l; run(); } }, `≤ ${l.toLocaleString('en-SG')}`)));
+    h('button', { class: `chip${mode === 'say' ? ' on' : ''}`, onclick: () => { mode = 'say'; run(); } }, 'Say it'),
+    h('button', { class: `chip${mode === 'hear' ? ' on' : ''}`, onclick: () => { mode = 'hear'; run(); } }, 'Hear it'),
+    ...limits.map((l) => h('button', { class: `chip${max === l ? ' on' : ''}`, onclick: () => { max = l; run(); } }, `Up to ${l.toLocaleString('en-SG')}`)));
 
   const run = () => {
     stopSpeaking();
@@ -40,7 +39,6 @@ export const numbersScreen = (prices: boolean): Screen => (root, q) => {
     const step = () => {
       body.replaceChildren();
       if (i >= ROUND) {
-        if (taskKey) void markTaskDone(taskKey);
         body.append(h('div', { class: 'card center' }, h('h2', null, mode === 'hear' ? `${right} / ${ROUND}` : 'Round complete')),
           h('button', { class: 'btn primary', onclick: run }, 'Another round'), h('a', { class: 'btn', href: `#${back}` }, 'Done'));
         return;
@@ -54,7 +52,7 @@ export const numbersScreen = (prices: boolean): Screen => (root, q) => {
           h('button', { class: 'btn g2', onclick: () => { right++; i++; step(); } }, 'Got it'));
         const card = h('button', { class: 'flash', onclick: () => { ans.hidden = false; next.hidden = false; void say(w.speak ?? w.native); } },
           h('div', { class: 'big huge' }, show(n)));
-        body.append(progressBar(i, ROUND), card, ans, h('p', { class: 'note center' }, 'Say it out loud, then tap to check'), next);
+        body.append(progressBar(i, ROUND), card, ans, h('p', { class: 'note center' }, 'Say it aloud, then tap to check.'), next);
       } else {
         // Wrong options sit near the answer so listening, not size, decides it.
         const near = new Set<number>([n]);
@@ -83,7 +81,7 @@ export const numbersScreen = (prices: boolean): Screen => (root, q) => {
     step();
   };
 
-  root.append(header(prices ? `${meta.currency.code} prices` : 'Numbers', back), bar, body);
+  root.append(header(prices ? 'Prices' : 'Numbers', back), bar, body);
   run();
   return stopSpeaking;
 };

@@ -5,7 +5,7 @@
       "id": "d-ramen",
       "title": "Ordering at a ramen shop",
       "situation": "food",
-      "intro": "You enter a small ramen shop in Sapporo. A staff member greets you.",
+      "intro": "You enter a small ramen shop. A staff member greets you.",
       "start": "n1",
       "nodes": {
         "n1": {
@@ -278,10 +278,10 @@
             {
               "next": "n2",
               "good": true,
-              "native": "札幌駅までお願いします",
-              "reading": "sapporo eki made onegai shimasu",
-              "english": "To Sapporo Station, please",
-              "speak": "さっぽろえきまでおねがいします"
+              "native": "駅までお願いします",
+              "reading": "eki made onegai shimasu",
+              "english": "To the station, please",
+              "speak": "えきまでおねがいします"
             },
             {
               "next": "n1b",
@@ -306,10 +306,10 @@
             {
               "next": "n2",
               "good": true,
-              "native": "札幌駅までお願いします",
-              "reading": "sapporo eki made onegai shimasu",
-              "english": "To Sapporo Station, please",
-              "speak": "さっぽろえきまでおねがいします"
+              "native": "駅までお願いします",
+              "reading": "eki made onegai shimasu",
+              "english": "To the station, please",
+              "speak": "えきまでおねがいします"
             }
           ]
         },
@@ -573,7 +573,7 @@
       "id": "d-hotel",
       "title": "Checking in at the hotel",
       "situation": "hotel",
-      "intro": "You arrive at your Sapporo hotel with your suitcase. Your booking is under the name Tan.",
+      "intro": "You arrive at your hotel with your suitcase. Your booking is under the name Tan.",
       "start": "n1",
       "nodes": {
         "n1": {

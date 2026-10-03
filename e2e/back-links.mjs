@@ -17,16 +17,12 @@ try {
   await page.goto(base);
   await page.waitForSelector('.welcome button, .bar');
   if (await page.$('.welcome button')) await page.click('.welcome button');
-  await page.waitForSelector('.bar');
-  // Then a study plan.
-  await page.waitForSelector('.plans button');
-  await page.click('.plans button');
   await page.waitForSelector('.list .row');
-  check('Today lists plan tasks', (await page.$$('.list .row')).length > 0);
+  check('Learn lists topics', (await page.$$('.list .row')).length > 0);
 
-  const routes = ['/review', '/flash', '/flash?tag=food', '/flash?new=1', '/kana', '/kana?ref=all',
-    '/numbers', '/prices', '/read', '/dialogue', '/commute',
-    '/show?id=p-ikura&list=survival', '/show?id=h-nanmei&list=heard', '/show?id=p-ikura&list=survival&from=today'];
+  const routes = ['/lesson', '/lesson?more=1', '/topic?id=food', '/lesson?topic=food', '/numbers', '/prices',
+    '/dialogue', '/dialogue?id=d-ramen', '/dialogue?id=d-ramen&back=%2Ftopic%3Fid%3Dfood',
+    '/show?id=p-ikura&list=survival', '/show?id=h-nanmei&list=heard', '/show?id=p-mizu&list=food&back=%2Ftopic%3Fid%3Dfood'];
   for (const r of routes) {
     await page.goto(`${base}#${r}`);
     await page.waitForSelector('.bar');
@@ -38,36 +34,41 @@ try {
     check(`${r} back -> ${href}`, href.startsWith('#/') && page.url().startsWith(base) && !(await page.content()).includes('404'), page.url());
   }
 
-  // Phrasebook: survival pinned on Today, a tab of its own, staff lines link to a reply.
-  await page.goto(`${base}#/`);
-  await page.waitForSelector('.grid.mini .tile');
-  check('Today pins 10 survival phrases', (await page.$$('.grid.mini .tile')).length === 10);
-  await page.click('.grid.mini .tile');
-  await page.waitForSelector('.show-text');
-  check('survival tile opens a show card', (await page.textContent('.show-text')) === 'すみません');
+  // Reported bug: back from mid-lesson returns home.
+  await page.goto(`${base}#/lesson`);
+  await page.waitForSelector('.flash');
+  // New cards are taught first. Step past them to the first quiz card.
+  while (await page.$('.btn.learn')) await page.click('.btn.learn');
+  await page.click('.flash');
+  await page.click('.btn.g2');
   await page.click('a.back');
-  await page.waitForSelector('.grid.mini');
-  check('show card back -> Today', page.url() === `${base}#/`);
+  await page.waitForSelector('.bar');
+  check('lesson mid-session back -> Learn', page.url() === `${base}#/`);
+
+  // Phrasebook: search, Survival list, staff lines link to a reply, show card returns to its list.
   await page.click('.tabs a[data-path="/phrasebook"]');
-  await page.waitForSelector('.chips .chip.on');
+  await page.waitForSelector('.phrase');
   check('Phrasebook tab is active', (await page.getAttribute('.tabs a.on', 'data-path')) === '/phrasebook');
-  await page.click('.chips a[href="#/phrasebook?list=heard"]');
-  await page.waitForSelector('.chip.on[href="#/phrasebook?list=heard"]');
-  await page.click('a.row[href*="h-nanmei"]');
+  await page.fill('.search', 'toilet');
+  check('phrasebook search finds toilet', (await page.$$('.phrase')).length >= 1);
+  await page.fill('.search', '');
+  await page.click('.chips .chip:has-text("Survival")');
+  await page.waitForSelector('.chip.on:has-text("Survival")');
+  check('Survival lists 10 phrases', (await page.$$('.phrase')).length === 10);
+  await page.click('.phrase a');
+  await page.waitForSelector('.show-text');
+  check('survival row opens a show card', (await page.textContent('.show-text')) === 'すみません');
+  await page.click('a.back');
+  await page.waitForSelector('.chip.on:has-text("Survival")');
+  check('show card back -> Survival list', page.url().endsWith('#/phrasebook?list=survival'));
+  await page.click('.chips .chip:has-text("They say")');
+  await page.waitForSelector('.chip.on:has-text("They say")');
+  await page.click('.phrase a[href*="h-nanmei"]');
   await page.waitForSelector('.show-text');
   await page.click('a.row[href*="p-futari"]');
   await page.waitForFunction(() => document.querySelector('.show-text')?.textContent !== '何名様ですか');
   check('staff line links to its reply', (await page.textContent('.show-text')) === '二人です');
   check('reply card has no prev/next outside its list', !(await page.$('.grades a')));
-
-  // Reported bug: Review mid-session, back returns to Today.
-  await page.goto(`${base}#/review`);
-  await page.waitForSelector('.flash');
-  await page.click('.flash');
-  await page.click('.btn.g2');
-  await page.click('a.back');
-  await page.waitForSelector('.bar');
-  check('review mid-session back -> Today', page.url() === `${base}#/`);
   check('no page errors', errors.length === 0, errors.join(' | '));
 } finally {
   await browser.close();

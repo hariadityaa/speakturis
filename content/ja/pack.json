@@ -7,13 +7,34 @@
   "readingSystem": "romaji",
   "scriptSystems": [],
   "situations": [
-    "greeting",
-    "food",
-    "shopping",
-    "transport",
-    "hotel",
-    "help",
-    "signs"
+    {
+      "id": "greeting",
+      "label": "Basics"
+    },
+    {
+      "id": "food",
+      "label": "Food and drink"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "transport",
+      "label": "Getting around"
+    },
+    {
+      "id": "hotel",
+      "label": "Hotel"
+    },
+    {
+      "id": "help",
+      "label": "Help"
+    },
+    {
+      "id": "signs",
+      "label": "Signs"
+    }
   ],
   "survival": [
     "p-sumimasen",
@@ -37,10 +58,6 @@
       "reading": "en",
       "speak": "えん"
     }
-  },
-  "trip": {
-    "date": "2027-01-30",
-    "place": "Sapporo"
   },
   "restDay": 0
 }

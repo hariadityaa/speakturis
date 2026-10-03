@@ -1,4 +1,4 @@
-import { app, gradeDrill, markTaskDone, say, unlocked } from '../app';
+import { app, gradeDrill, say } from '../app';
 import { choices, shuffle } from '../core/items';
 import type { Item, KanaChar, KanaGroup } from '../core/types';
 import { stopSpeaking } from '../platform/tts';
@@ -8,26 +8,22 @@ const ROUND = 10;
 
 export const kanaScreen: Screen = (root, q) => {
   const ref = q.get('ref');
-  const taskKey = q.get('task');
   const groups = app.pack.scripts.systems.flatMap((s) => s.groups.map((g) => ({ sys: s.id, g })));
 
   if (!ref) {
     // Group picker, grouped by script system in pack order.
-    const open = unlocked();
-    root.append(header('Kana', '/practice'));
+    root.append(header('Alphabet', '/'));
     for (const s of app.pack.scripts.systems) {
       root.append(h('h2', { class: 'sect' }, s.name),
         h('div', { class: 'grid' }, s.groups.map((g) => {
-          const live = g.chars.every((c) => open.has(c.id));
-          return h('a', { class: `tile${live ? '' : ' dim'}`, href: `#/kana?ref=${g.id}` },
+          return h('a', { class: 'tile', href: `#/kana?ref=${g.id}` },
             h('b', { class: 'jp' }, g.chars.map((c) => c.char).join('')), h('small', null, g.label));
         })));
     }
-    root.append(h('a', { class: 'btn', href: '#/kana?ref=all' }, 'Drill everything unlocked'));
+    root.append(h('a', { class: 'btn', href: '#/kana?ref=all' }, 'Drill everything'));
     return;
   }
 
-  const open = unlocked();
   const found = groups.find((x) => x.g.id === ref);
   let pool: KanaChar[];
   let title: string;
@@ -37,12 +33,12 @@ export const kanaScreen: Screen = (root, q) => {
     title = found.g.label;
     distract = (app.pack.scripts.systems.find((s) => s.id === found.sys)?.groups ?? []).flatMap((g: KanaGroup) => g.chars);
   } else {
-    pool = groups.flatMap((x) => x.g.chars).filter((c) => open.has(c.id));
-    title = 'All unlocked';
+    pool = groups.flatMap((x) => x.g.chars);
+    title = 'All';
     distract = pool;
   }
 
-  const back = taskKey ? '/' : '/kana';
+  const back = '/kana';
   let mode: 'learn' | 'c2s' | 's2c' = 'learn';
   const body = h('div');
   const tabs = h('div', { class: 'chips' });
@@ -56,7 +52,7 @@ export const kanaScreen: Screen = (root, q) => {
   const paint = () => {
     paintTabs();
     body.replaceChildren();
-    if (!pool.length) { body.append(h('p', { class: 'note' }, 'Nothing unlocked yet.')); return; }
+    if (!pool.length) { body.append(h('p', { class: 'note' }, 'No characters in this group.')); return; }
     if (mode === 'learn') {
       body.append(h('div', { class: 'kana-grid' }, pool.map((c) =>
         h('button', { class: 'kana-cell', onclick: () => void say(c.speak ?? c.char) }, h('b', null, c.char), h('small', null, c.reading)))),
@@ -74,7 +70,6 @@ export const kanaScreen: Screen = (root, q) => {
     const step = () => {
       body.replaceChildren();
       if (i >= qs.length) {
-        if (taskKey) void markTaskDone(taskKey);
         body.append(h('div', { class: 'card center' }, h('h2', null, `${right} / ${qs.length}`), h('p', null, 'Round complete.')),
           h('button', { class: 'btn primary', onclick: () => drill(m) }, 'Another round'),
           h('a', { class: 'btn', href: `#${back}` }, 'Done'));

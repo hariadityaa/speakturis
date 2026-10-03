@@ -52,25 +52,9 @@ describe('validatePack', () => {
     expect(validatePack(dir).join('\n')).toMatch(/missing node "ghost"/);
   });
 
-  it('rejects a schedule that references a missing kana group', () => {
-    edit('schedule.json', (j) => { j.plans[0].weeks[0].tasks.push({ type: 'kana', ref: 'k-nope', minutes: 1, days: [1] }); j.plans[0].dailyMinutes = 60; });
-    expect(validatePack(dir).join('\n')).toMatch(/unknown kana group/);
-  });
 
-  it('rejects a task with an unknown phrase', () => {
-    edit('schedule.json', (j) => { j.plans[0].weeks[0].tasks[1].phraseIds.push('p-nope'); });
-    expect(validatePack(dir).join('\n')).toMatch(/unknown phrase "p-nope"/);
-  });
 
-  it('rejects a phrase introduced twice in one plan', () => {
-    edit('schedule.json', (j) => { const t = j.plans[1].weeks[0].tasks; t[2].phraseIds.push(t[1].phraseIds[0]); });
-    expect(validatePack(dir).join('\n')).toMatch(/duplicate plan month phraseIds/);
-  });
 
-  it('rejects duplicate plan ids', () => {
-    edit('schedule.json', (j) => { j.plans[1].id = j.plans[0].id; });
-    expect(validatePack(dir).join('\n')).toMatch(/duplicate plan id/);
-  });
 
   it('rejects numbers with a missing digit word', () => {
     edit('numbers.json', (j) => { delete j.words['5']; });
@@ -101,14 +85,11 @@ describe('validatePack', () => {
     edit('pack.json', (j) => { j.code = 'ko'; });
     expect(validatePack(dir).join('\n')).toMatch(/must match folder name/);
   });
-  it('rejects a phrase that no plan introduces', () => {
-    edit('phrases.json', (j) => { j.phrases.push({ ...j.phrases[0], id: 'p-orphan' }); });
-    expect(validatePack(dir).join('\n')).toMatch(/"p-orphan" is never introduced/);
-  });
 
-  it('rejects a study day over the daily minutes', () => {
-    edit('schedule.json', (j) => { j.plans[0].weeks[0].tasks[0].minutes = 30; });
-    expect(validatePack(dir).join('\n')).toMatch(/above dailyMinutes/);
+
+  it('rejects a duplicate situation', () => {
+    edit('pack.json', (j) => { j.situations.push(j.situations[0]); });
+    expect(validatePack(dir).join('\n')).toMatch(/duplicate situation id/);
   });
 
   it('accepts a pack with no scripts', () => {
@@ -116,9 +97,4 @@ describe('validatePack', () => {
     expect(validatePack(dir)).toEqual([]);
   });
 
-  it('rejects a kana group that is never scheduled', () => {
-    edit('scripts.json', (j) => { j.systems = [{ id: 'kata', name: 'Katakana', groups: [{ id: 'k-a', label: 'A', chars: [{ id: 'ka-a', char: 'ア', reading: 'a' }] }] }]; });
-    edit('pack.json', (j) => { j.scriptSystems = ['kata']; });
-    expect(validatePack(dir).join('\n')).toMatch(/never scheduled/);
-  });
 });

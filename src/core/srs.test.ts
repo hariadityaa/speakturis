@@ -56,7 +56,7 @@ describe('srs.review', () => {
     expect(c.ease).toBe(MIN_EASE);
   });
 
-  it('caps the interval to the days left before the trip', () => {
+  it('caps the interval at maxIntervalDays', () => {
     const c = { ...newState(now), interval: 30, reps: 5 };
     const r = review(c, 2, now, { maxIntervalDays: 12 });
     expect(r.interval).toBe(12);

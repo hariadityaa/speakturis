@@ -2,7 +2,7 @@ import { isValidSettings } from '../core/settings';
 import { dumpAll, restoreAll, type Dump } from './db';
 
 const APP = 'turisfasih';
-const VERSION = 1;
+const VERSION = 2;
 
 export async function exportBackup(): Promise<void> {
   const data = await dumpAll();
@@ -31,14 +31,10 @@ export function parseBackup(text: string): Dump {
   if (j?.app !== APP) throw new Error('Not a Turisfasih backup.');
   if (j.version !== VERSION) throw new Error(`Unsupported backup version ${j.version}.`);
   const d = j.data;
-  if (!d || !Array.isArray(d.cards) || !Array.isArray(d.log) || !Array.isArray(d.kv)) throw new Error('Backup is incomplete.');
+  if (!d || !Array.isArray(d.cards) || !Array.isArray(d.kv)) throw new Error('Backup is incomplete.');
   for (const c of d.cards) {
     if (typeof c !== 'object' || c === null) throw new Error('Backup has a corrupt card.');
     if (!isStr(c.lang) || !isStr(c.id) || !isNum(c.ease) || !isNum(c.interval) || !isNum(c.due) || !isNum(c.reps) || !isNum(c.lapses)) throw new Error('Backup has a corrupt card.');
-  }
-  for (const l of d.log) {
-    if (typeof l !== 'object' || l === null) throw new Error('Backup has a corrupt log entry.');
-    if (!isStr(l.lang) || !isStr(l.date) || !Array.isArray(l.done) || !isNum(l.reviews)) throw new Error('Backup has a corrupt log entry.');
   }
   for (const kv of d.kv) {
     if (!Array.isArray(kv) || !isStr(kv[0])) throw new Error('Backup has corrupt settings.');
@@ -47,8 +43,8 @@ export function parseBackup(text: string): Dump {
   return d as Dump;
 }
 
-export async function importBackup(file: File): Promise<{ cards: number; days: number }> {
+export async function importBackup(file: File): Promise<{ cards: number }> {
   const dump = parseBackup(await file.text());
   await restoreAll(dump);
-  return { cards: dump.cards.length, days: dump.log.length };
+  return { cards: dump.cards.length };
 }
