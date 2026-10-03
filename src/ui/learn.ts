@@ -40,9 +40,10 @@ export const learnScreen: Screen = (root) => {
       h('p', { class: 'note' }, 'Come back tomorrow to keep them fresh.'));
   }
 
-  const topics = app.pack.meta.situations.map((s) => {
+  const topics = app.pack.meta.situations.flatMap((s) => {
     const ids = all.filter((i) => i.tags?.includes(s.id));
-    return link(`/topic?id=${s.id}`, s.label, `${ids.filter((i) => isLearned(i.id)).length} of ${ids.length} learned`);
+    if (!ids.length) return []; // phrasebook-only topic: nothing to practise
+    return [link(`/topic?id=${s.id}`, s.label, `${ids.filter((i) => isLearned(i.id)).length} of ${ids.length} learned`)];
   });
 
   const { scripts, dialogues, meta } = app.pack;

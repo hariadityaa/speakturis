@@ -10,7 +10,10 @@
         "greeting",
         "help"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "pardon"
+      ]
     },
     {
       "id": "p-xiexie",
@@ -20,7 +23,10 @@
       "tags": [
         "greeting"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "thanks"
+      ]
     },
     {
       "id": "p-hao",
@@ -62,7 +68,11 @@
       "tags": [
         "greeting"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "hi",
+        "hey"
+      ]
     },
     {
       "id": "h-huanying",
@@ -84,7 +94,12 @@
       "tags": [
         "shopping"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "price",
+        "cost",
+        "how much"
+      ]
     },
     {
       "id": "p-tingbudong",
@@ -105,7 +120,10 @@
         "help",
         "greeting"
       ],
-      "difficulty": 2
+      "difficulty": 2,
+      "keywords": [
+        "english speaker"
+      ]
     },
     {
       "id": "p-cesuo",
@@ -116,7 +134,15 @@
         "help",
         "transport"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "toilet",
+        "restroom",
+        "bathroom",
+        "loo",
+        "wc",
+        "lavatory"
+      ]
     },
     {
       "id": "p-jiezhang",
@@ -127,7 +153,12 @@
         "food",
         "shopping"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "check",
+        "pay",
+        "bill"
+      ]
     },
     {
       "id": "p-shuaka",
@@ -137,7 +168,13 @@
       "tags": [
         "shopping"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "credit card",
+        "debit",
+        "visa",
+        "mastercard"
+      ]
     },
     {
       "id": "p-buyong",
@@ -160,7 +197,11 @@
       ],
       "difficulty": 1,
       "replyId": "p-bu-daizi",
-      "listen": true
+      "listen": true,
+      "keywords": [
+        "bag",
+        "plastic bag"
+      ]
     },
     {
       "id": "p-bu-daizi",
@@ -170,7 +211,11 @@
       "tags": [
         "shopping"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "bag",
+        "plastic bag"
+      ]
     },
     {
       "id": "s-cesuo",
@@ -180,7 +225,15 @@
       "tags": [
         "signs"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "toilet",
+        "restroom",
+        "bathroom",
+        "loo",
+        "wc",
+        "lavatory"
+      ]
     },
     {
       "id": "h-jiwei",
@@ -244,7 +297,10 @@
       "tags": [
         "food"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "drink"
+      ]
     },
     {
       "id": "p-caidan",
@@ -254,7 +310,10 @@
       "tags": [
         "food"
       ],
-      "difficulty": 2
+      "difficulty": 2,
+      "keywords": [
+        "carte"
+      ]
     },
     {
       "id": "h-diancan",
@@ -276,7 +335,10 @@
       "tags": [
         "signs"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "way out"
+      ]
     },
     {
       "id": "s-nan",
@@ -329,7 +391,11 @@
       ],
       "difficulty": 1,
       "replyId": "p-weibo",
-      "listen": true
+      "listen": true,
+      "keywords": [
+        "microwave",
+        "warm"
+      ]
     },
     {
       "id": "h-zaiju",
@@ -375,7 +441,13 @@
       "tags": [
         "transport"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "metro",
+        "subway",
+        "train",
+        "mrt"
+      ]
     },
     {
       "id": "p-dizhi",
@@ -385,7 +457,11 @@
       "tags": [
         "transport"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "cab",
+        "taxi"
+      ]
     },
     {
       "id": "p-bangmang",
@@ -395,7 +471,11 @@
       "tags": [
         "help"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "emergency",
+        "sos"
+      ]
     },
     {
       "id": "p-ruzhu",
@@ -405,7 +485,12 @@
       "tags": [
         "hotel"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "hotel",
+        "check in",
+        "register"
+      ]
     },
     {
       "id": "p-dingfang",
@@ -415,7 +500,11 @@
       "tags": [
         "hotel"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "booking",
+        "reservation"
+      ]
     },
     {
       "id": "h-dingwei",
@@ -427,7 +516,10 @@
       ],
       "difficulty": 1,
       "replyId": "p-dingwei",
-      "listen": true
+      "listen": true,
+      "keywords": [
+        "reservation"
+      ]
     },
     {
       "id": "p-dingwei",
@@ -437,7 +529,10 @@
       "tags": [
         "food"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "reservation"
+      ]
     },
     {
       "id": "s-rukou",
@@ -447,7 +542,10 @@
       "tags": [
         "signs"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "way in"
+      ]
     },
     {
       "id": "s-jieyun",
@@ -457,7 +555,13 @@
       "tags": [
         "signs"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "metro",
+        "subway",
+        "train",
+        "mrt"
+      ]
     },
     {
       "id": "p-zaoan",
@@ -499,7 +603,12 @@
         "food",
         "greeting"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "shopkeeper",
+        "owner",
+        "vendor"
+      ]
     },
     {
       "id": "p-butaila",
@@ -519,7 +628,11 @@
       "tags": [
         "food"
       ],
-      "difficulty": 2
+      "difficulty": 2,
+      "keywords": [
+        "bubble tea",
+        "milk tea"
+      ]
     },
     {
       "id": "h-tiandu",
@@ -551,7 +664,11 @@
       "tags": [
         "food"
       ],
-      "difficulty": 2
+      "difficulty": 2,
+      "keywords": [
+        "beer",
+        "alcohol"
+      ]
     },
     {
       "id": "p-zaiyige",
@@ -598,7 +715,11 @@
         "shopping",
         "food"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "microwave",
+        "warm"
+      ]
     },
     {
       "id": "p-meiyou",
@@ -619,7 +740,10 @@
       "tags": [
         "shopping"
       ],
-      "difficulty": 2
+      "difficulty": 2,
+      "keywords": [
+        "invoice"
+      ]
     },
     {
       "id": "p-kankan",
@@ -711,7 +835,12 @@
       "tags": [
         "shopping"
       ],
-      "difficulty": 2
+      "difficulty": 2,
+      "keywords": [
+        "duty free",
+        "refund",
+        "tax refund"
+      ]
     },
     {
       "id": "p-maipiao",
@@ -721,7 +850,10 @@
       "tags": [
         "transport"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "ticket"
+      ]
     },
     {
       "id": "p-gongche",
@@ -731,7 +863,10 @@
       "tags": [
         "transport"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "bus"
+      ]
     },
     {
       "id": "p-xiache",
@@ -741,7 +876,12 @@
       "tags": [
         "transport"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "alight",
+        "exit bus",
+        "stop"
+      ]
     },
     {
       "id": "p-jiazhi",
@@ -751,7 +891,13 @@
       "tags": [
         "transport"
       ],
-      "difficulty": 2
+      "difficulty": 2,
+      "keywords": [
+        "easycard",
+        "top-up",
+        "reload",
+        "metro card"
+      ]
     },
     {
       "id": "p-jicun",
@@ -761,7 +907,13 @@
       "tags": [
         "hotel"
       ],
-      "difficulty": 2
+      "difficulty": 2,
+      "keywords": [
+        "baggage",
+        "bags",
+        "suitcase",
+        "store"
+      ]
     },
     {
       "id": "p-tuifang",
@@ -771,7 +923,10 @@
       "tags": [
         "hotel"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "check out"
+      ]
     },
     {
       "id": "p-wifi",
@@ -782,7 +937,12 @@
         "hotel",
         "food"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "internet",
+        "password",
+        "wifi"
+      ]
     },
     {
       "id": "p-paizhao",
@@ -793,7 +953,12 @@
         "help",
         "shopping"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "camera",
+        "picture",
+        "photograph"
+      ]
     },
     {
       "id": "s-yingye",
@@ -833,7 +998,10 @@
       "tags": [
         "signs"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "market"
+      ]
     },
     {
       "id": "s-zhenzhu",
@@ -843,7 +1011,11 @@
       "tags": [
         "signs"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "boba",
+        "bubble tea"
+      ]
     },
     {
       "id": "s-niurou",
@@ -853,7 +1025,3072 @@
       "tags": [
         "signs"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "noodles"
+      ]
+    },
+    {
+      "id": "b-konbanwa",
+      "native": "晚上好",
+      "reading": "wǎnshang hǎo",
+      "english": "Good evening",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "hi"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-oyasumi",
+      "native": "晚安",
+      "reading": "wǎn'ān",
+      "english": "Good night",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1,
+      "book": true
+    },
+    {
+      "id": "b-hajimemashite",
+      "native": "很高興認識你",
+      "reading": "hěn gāoxìng rènshi nǐ",
+      "english": "Nice to meet you",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "pleased to meet you"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-sayounara",
+      "native": "再見",
+      "reading": "zàijiàn",
+      "english": "Goodbye",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "bye"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-douitashimashite",
+      "native": "不客氣",
+      "reading": "bú kèqì",
+      "english": "You're welcome",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1,
+      "book": true
+    },
+    {
+      "id": "b-gomen",
+      "native": "對不起",
+      "reading": "duìbuqǐ",
+      "english": "I'm sorry",
+      "tags": [
+        "greeting",
+        "help"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "apologies",
+        "apologise"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ryokousha",
+      "native": "我是觀光客",
+      "reading": "wǒ shì guānguāngkè",
+      "english": "I'm a tourist",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "visitor",
+        "traveller"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-wakarimashita",
+      "native": "我知道了",
+      "reading": "wǒ zhīdào le",
+      "english": "I understand / got it",
+      "tags": [
+        "help",
+        "greeting"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "okay"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kekkou",
+      "native": "不必了，謝謝",
+      "reading": "búbì le, xièxie",
+      "english": "No, thank you (polite refusal)",
+      "tags": [
+        "greeting",
+        "shopping"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "decline",
+        "no thanks"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-zhongwen-yidian",
+      "native": "我會說一點中文",
+      "reading": "wǒ huì shuō yìdiǎn Zhōngwén",
+      "english": "I speak a little Chinese",
+      "tags": [
+        "help",
+        "greeting"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-douzo",
+      "native": "給你",
+      "reading": "gěi nǐ",
+      "english": "Here you go",
+      "tags": [
+        "greeting",
+        "shopping"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "please",
+        "go ahead"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-zhege-zhongwen",
+      "native": "這個中文怎麼說？",
+      "reading": "zhège Zhōngwén zěnme shuō?",
+      "english": "How do you say this in Chinese?",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "translate"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kaite",
+      "native": "可以寫下來嗎？",
+      "reading": "kěyǐ xiě xiàlái ma?",
+      "english": "Can you write it down?",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "paper",
+        "note"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-honyaku",
+      "native": "我可以用翻譯軟體嗎？",
+      "reading": "wǒ kěyǐ yòng fānyì ruǎntǐ ma?",
+      "english": "May I use a translation app?",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "translate",
+        "phone"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-biiru-futatsu",
+      "native": "請給我兩杯啤酒",
+      "reading": "qǐng gěi wǒ liǎng bēi píjiǔ",
+      "english": "Two beers, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "beer"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ocha",
+      "native": "請給我茶",
+      "reading": "qǐng gěi wǒ chá",
+      "english": "Tea, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "green tea"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-koohii",
+      "native": "請給我咖啡",
+      "reading": "qǐng gěi wǒ kāfēi",
+      "english": "Coffee, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-nomihoudai",
+      "native": "有喝到飽嗎？",
+      "reading": "yǒu hē dào bǎo ma?",
+      "english": "Do you have all-you-can-drink?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "buffet",
+        "unlimited drinks"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kore-futatsu",
+      "native": "我要兩個這個",
+      "reading": "wǒ yào liǎng ge zhège",
+      "english": "Two of these, please",
+      "tags": [
+        "food",
+        "shopping"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-onaji",
+      "native": "我要一樣的",
+      "reading": "wǒ yào yíyàng de",
+      "english": "The same, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "same as that"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-xiangcai",
+      "native": "不要香菜",
+      "reading": "bú yào xiāngcài",
+      "english": "No coriander, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "cilantro"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-xiaola",
+      "native": "我要小辣",
+      "reading": "wǒ yào xiǎo là",
+      "english": "A little spicy, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "mild",
+        "medium"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-qubing",
+      "native": "去冰",
+      "reading": "qù bīng",
+      "english": "No ice, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "drink"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-wutang",
+      "native": "無糖",
+      "reading": "wú táng",
+      "english": "No sugar, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "drink",
+        "sweet"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-yeshi-doko",
+      "native": "夜市在哪裡？",
+      "reading": "yèshì zài nǎlǐ?",
+      "english": "Where is the night market?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "market"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-nama-mono",
+      "native": "我不能吃生食",
+      "reading": "wǒ bù néng chī shēngshí",
+      "english": "I can't eat raw food",
+      "tags": [
+        "food",
+        "health"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "sushi",
+        "sashimi"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-okawari",
+      "native": "可以續杯嗎？",
+      "reading": "kěyǐ xùbēi ma?",
+      "english": "A refill, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "seconds",
+        "more"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-niku-nan",
+      "native": "這是什麼肉？",
+      "reading": "zhè shì shénme ròu?",
+      "english": "What meat is this?",
+      "tags": [
+        "food",
+        "health"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "pork",
+        "beef",
+        "chicken"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-mochikaeri",
+      "native": "可以打包嗎？",
+      "reading": "kěyǐ dǎbāo ma?",
+      "english": "Can I take it away?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "takeaway",
+        "take out",
+        "doggy bag"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-oishikatta",
+      "native": "非常好吃",
+      "reading": "fēicháng hǎochī",
+      "english": "That was very delicious",
+      "tags": [
+        "food",
+        "greeting"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "tasty",
+        "yummy"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-nomimono",
+      "native": "有什麼飲料？",
+      "reading": "yǒu shénme yǐnliào?",
+      "english": "What drinks do you have?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "beverages"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-yoyaku-onegai",
+      "native": "我想訂位",
+      "reading": "wǒ xiǎng dìngwèi",
+      "english": "I'd like to make a reservation",
+      "tags": [
+        "food",
+        "hotel"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "book a table"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kinen",
+      "native": "請給我禁菸座位",
+      "reading": "qǐng gěi wǒ jìnyān zuòwèi",
+      "english": "Non-smoking seat, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "no smoking"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-chiisai",
+      "native": "有小一點的嗎？",
+      "reading": "yǒu xiǎo yìdiǎn de ma?",
+      "english": "Do you have a smaller one?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "size"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ookii-no",
+      "native": "有大一點的嗎？",
+      "reading": "yǒu dà yìdiǎn de ma?",
+      "english": "Do you have a bigger one?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "size"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-betsu-iro",
+      "native": "有別的顏色嗎？",
+      "reading": "yǒu bié de yánsè ma?",
+      "english": "Do you have other colours?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "colors"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-shichaku",
+      "native": "可以試穿嗎？",
+      "reading": "kěyǐ shìchuān ma?",
+      "english": "May I try this on?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "fitting room"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-yasuku",
+      "native": "可以算便宜一點嗎？",
+      "reading": "kěyǐ suàn piányí yìdiǎn ma?",
+      "english": "Can it be a bit cheaper?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "discount",
+        "bargain"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-fukuro-onegai",
+      "native": "請給我一個袋子",
+      "reading": "qǐng gěi wǒ yí ge dàizi",
+      "english": "A bag, please",
+      "tags": [
+        "shopping",
+        "convenience"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "plastic bag"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-zeikomi",
+      "native": "含稅嗎？",
+      "reading": "hán shuì ma?",
+      "english": "Is tax included?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "vat",
+        "gst"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-genkin",
+      "native": "我付現金",
+      "reading": "wǒ fù xiànjīn",
+      "english": "Cash, please",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "pay cash"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ic-pay",
+      "native": "可以用悠遊卡付款嗎？",
+      "reading": "kěyǐ yòng yōuyóukǎ fùkuǎn ma?",
+      "english": "Can I pay with my transit card?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "suica",
+        "pasmo",
+        "icoca",
+        "easycard",
+        "tap"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-qr",
+      "native": "可以用行動支付嗎？",
+      "reading": "kěyǐ yòng xíngdòng zhīfù ma?",
+      "english": "Can I pay by QR code?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "mobile payment",
+        "scan",
+        "paypay",
+        "line pay"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-menzei-counter",
+      "native": "退稅櫃檯在哪裡？",
+      "reading": "tuìshuì guìtái zài nǎlǐ?",
+      "english": "Where is the tax-free counter?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "duty free",
+        "refund"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-pasupooto",
+      "native": "這是我的護照",
+      "reading": "zhè shì wǒ de hùzhào",
+      "english": "Here is my passport",
+      "tags": [
+        "shopping",
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "id"
+      ],
+      "book": true
+    },
+    {
+      "id": "bh-yigong",
+      "native": "一共一百塊",
+      "reading": "yígòng yìbǎi kuài",
+      "english": "That's 100 dollars in total",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "total"
+      ],
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-reshiito",
+      "native": "需要發票嗎？",
+      "reading": "xūyào fāpiào ma?",
+      "english": "Do you need a receipt?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "invoice"
+      ],
+      "listen": true,
+      "replyId": "p-fapiao",
+      "book": true
+    },
+    {
+      "id": "b-yoyaku-kakunin",
+      "native": "請幫我確認訂房",
+      "reading": "qǐng bāng wǒ quèrèn dìngfáng",
+      "english": "Please confirm my reservation",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-hayame-ci",
+      "native": "可以提早入住嗎？",
+      "reading": "kěyǐ tízǎo rùzhù ma?",
+      "english": "Can I check in early?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "early arrival"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-osoku-co",
+      "native": "可以延後退房嗎？",
+      "reading": "kěyǐ yánhòu tuìfáng ma?",
+      "english": "Can I check out late?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "late checkout"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-nimotsu-ato",
+      "native": "退房後可以寄放行李嗎？",
+      "reading": "tuìfáng hòu kěyǐ jìfàng xíngli ma?",
+      "english": "Can I leave my bags after check-out?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "luggage storage",
+        "baggage"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kagi-nakushi",
+      "native": "我的房卡掉了",
+      "reading": "wǒ de fángkǎ diào le",
+      "english": "I lost my room key",
+      "tags": [
+        "hotel",
+        "emergency"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "key card"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-heya-hairenai",
+      "native": "我進不了房間",
+      "reading": "wǒ jìn bù liǎo fángjiān",
+      "english": "I can't get into my room",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "locked out"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-oyu",
+      "native": "沒有熱水",
+      "reading": "méiyǒu rè shuǐ",
+      "english": "There's no hot water",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "shower",
+        "broken"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-eakon",
+      "native": "冷氣壞了",
+      "reading": "lěngqì huài le",
+      "english": "The air conditioning doesn't work",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "ac",
+        "heater",
+        "broken"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-heya-atsui",
+      "native": "房間太熱了",
+      "reading": "fángjiān tài rè le",
+      "english": "The room is too hot",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "warm"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-tonari-urusai",
+      "native": "隔壁房間很吵",
+      "reading": "gébì fángjiān hěn chǎo",
+      "english": "The next room is noisy",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "noise",
+        "loud"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-taoru",
+      "native": "請再給我一條毛巾",
+      "reading": "qǐng zài gěi wǒ yì tiáo máojīn",
+      "english": "One more towel, please",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 3,
+      "keywords": [
+        "towels"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-juudenki",
+      "native": "可以借充電器嗎？",
+      "reading": "kěyǐ jiè chōngdiànqì ma?",
+      "english": "Can I borrow a phone charger?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "charger",
+        "cable"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-chousyoku-nanji",
+      "native": "早餐幾點開始？",
+      "reading": "zǎocān jǐ diǎn kāishǐ?",
+      "english": "What time does breakfast start?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "breakfast"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-chousyoku-doko",
+      "native": "早餐在哪裡？",
+      "reading": "zǎocān zài nǎlǐ?",
+      "english": "Where is breakfast served?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "breakfast"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-erebeetaa",
+      "native": "電梯在哪裡？",
+      "reading": "diàntī zài nǎlǐ?",
+      "english": "Where is the elevator?",
+      "tags": [
+        "hotel",
+        "transport"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "lift"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kankou",
+      "native": "你推薦哪些景點？",
+      "reading": "nǐ tuījiàn nǎxiē jǐngdiǎn?",
+      "english": "What sightseeing do you recommend?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "attractions",
+        "tourist"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ippaku",
+      "native": "可以再住一晚嗎？",
+      "reading": "kěyǐ zài zhù yì wǎn ma?",
+      "english": "Can I stay one more night?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "extend"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ryoushuusho",
+      "native": "請開收據給我",
+      "reading": "qǐng kāi shōujù gěi wǒ",
+      "english": "A receipt, please",
+      "tags": [
+        "hotel",
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "invoice"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-aiteiru",
+      "native": "還有空房嗎？",
+      "reading": "háiyǒu kōngfáng ma?",
+      "english": "Do you have any rooms free?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "vacancy",
+        "available"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-sanpaku",
+      "native": "住三晚",
+      "reading": "zhù sān wǎn",
+      "english": "Three nights",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "stay"
+      ],
+      "book": true
+    },
+    {
+      "id": "bh-pasupooto",
+      "native": "請給我看護照",
+      "reading": "qǐng gěi wǒ kàn hùzhào",
+      "english": "Your passport, please",
+      "tags": [
+        "hotel",
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "id"
+      ],
+      "listen": true,
+      "replyId": "b-pasupooto",
+      "book": true
+    },
+    {
+      "id": "bh-onamae",
+      "native": "請問你的名字？",
+      "reading": "qǐngwèn nǐ de míngzi?",
+      "english": "Your name, please",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-nanpaku",
+      "native": "要住幾晚？",
+      "reading": "yào zhù jǐ wǎn?",
+      "english": "How many nights?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-sanpaku",
+      "book": true
+    },
+    {
+      "id": "bh-checkout-jikan",
+      "native": "十一點退房",
+      "reading": "shíyī diǎn tuìfáng",
+      "english": "Check-out is at eleven",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-asa-nanaji",
+      "native": "早餐七點開始",
+      "reading": "zǎocān qī diǎn kāishǐ",
+      "english": "Breakfast is from seven",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "b-byouin",
+      "native": "醫院在哪裡？",
+      "reading": "yīyuàn zài nǎlǐ?",
+      "english": "Where is the hospital?",
+      "tags": [
+        "health",
+        "emergency"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "clinic"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-yakkyoku",
+      "native": "藥局在哪裡？",
+      "reading": "yàojú zài nǎlǐ?",
+      "english": "Where is a pharmacy?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "drugstore",
+        "chemist"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-zutsuuyaku",
+      "native": "有頭痛藥嗎？",
+      "reading": "yǒu tóutòng yào ma?",
+      "english": "Do you have headache medicine?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "painkiller",
+        "aspirin",
+        "paracetamol"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kazegusuri",
+      "native": "有感冒藥嗎？",
+      "reading": "yǒu gǎnmào yào ma?",
+      "english": "Do you have cold medicine?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "flu"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-igusuri",
+      "native": "有胃藥嗎？",
+      "reading": "yǒu wèiyào ma?",
+      "english": "Do you have stomach medicine?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "indigestion",
+        "antacid"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-geridome",
+      "native": "有止瀉藥嗎？",
+      "reading": "yǒu zhǐxièyào ma?",
+      "english": "Do you have anti-diarrhoea medicine?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "diarrhea"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-bansoukou",
+      "native": "有OK繃嗎？",
+      "reading": "yǒu OK bēng ma?",
+      "english": "Do you have plasters?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "speak": "有歐凱繃嗎？",
+      "keywords": [
+        "band-aid",
+        "bandage"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-hiyakedome",
+      "native": "有防曬乳嗎？",
+      "reading": "yǒu fángshàirǔ ma?",
+      "english": "Do you have sunscreen?",
+      "tags": [
+        "health",
+        "shopping"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "sunblock"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kusuri-nomikata",
+      "native": "這個藥怎麼吃？",
+      "reading": "zhège yào zěnme chī?",
+      "english": "How do I take this medicine?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "dose"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-atama",
+      "native": "我頭痛",
+      "reading": "wǒ tóutòng",
+      "english": "I have a headache",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "head hurts"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-onaka",
+      "native": "我肚子痛",
+      "reading": "wǒ dùzi tòng",
+      "english": "I have a stomachache",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "tummy"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-nodo",
+      "native": "我喉嚨痛",
+      "reading": "wǒ hóulóng tòng",
+      "english": "I have a sore throat",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "throat"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ha",
+      "native": "我牙痛",
+      "reading": "wǒ yá tòng",
+      "english": "I have a toothache",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "dentist",
+        "tooth"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-netsu",
+      "native": "我發燒了",
+      "reading": "wǒ fāshāo le",
+      "english": "I have a fever",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "temperature"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-seki",
+      "native": "我咳嗽",
+      "reading": "wǒ késou",
+      "english": "I have a cough",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "coughing"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-hakike",
+      "native": "我想吐",
+      "reading": "wǒ xiǎng tù",
+      "english": "I feel sick (nauseous)",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "vomit",
+        "nausea"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-geri",
+      "native": "我拉肚子",
+      "reading": "wǒ lā dùzi",
+      "english": "I have diarrhoea",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "diarrhea"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kega",
+      "native": "我受傷了",
+      "reading": "wǒ shòushāng le",
+      "english": "I'm injured",
+      "tags": [
+        "health",
+        "emergency"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "hurt",
+        "wound"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-koko-itai",
+      "native": "這裡痛",
+      "reading": "zhèlǐ tòng",
+      "english": "It hurts here",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "pain"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-guai",
+      "native": "我不舒服",
+      "reading": "wǒ bù shūfu",
+      "english": "I feel unwell",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "sick",
+        "ill"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-arerugii",
+      "native": "我會過敏",
+      "reading": "wǒ huì guòmǐn",
+      "english": "I have an allergy",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "allergic"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-piinattsu",
+      "native": "我對花生過敏",
+      "reading": "wǒ duì huāshēng guòmǐn",
+      "english": "I'm allergic to peanuts",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "nuts",
+        "allergy"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-tamago-arerugii",
+      "native": "我對蛋過敏",
+      "reading": "wǒ duì dàn guòmǐn",
+      "english": "I'm allergic to eggs",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "egg"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kakukakurui",
+      "native": "我對甲殼類過敏",
+      "reading": "wǒ duì jiǎqiàolèi guòmǐn",
+      "english": "I'm allergic to shellfish",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "shrimp",
+        "crab",
+        "seafood"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-nyuu",
+      "native": "我不能吃乳製品",
+      "reading": "wǒ bù néng chī rǔzhìpǐn",
+      "english": "I can't have dairy",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "milk",
+        "lactose"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-komugi",
+      "native": "我對小麥過敏",
+      "reading": "wǒ duì xiǎomài guòmǐn",
+      "english": "I'm allergic to wheat",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "gluten"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-biigan",
+      "native": "我吃全素",
+      "reading": "wǒ chī quánsù",
+      "english": "I'm vegan",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "plant-based",
+        "no animal products"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-niku-sakana-nai",
+      "native": "我不吃肉和魚",
+      "reading": "wǒ bù chī ròu hé yú",
+      "english": "I don't eat meat or fish",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "vegan"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-dashi",
+      "native": "湯底有魚嗎？",
+      "reading": "tāngdǐ yǒu yú ma?",
+      "english": "Is there fish in the broth too?",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "dashi",
+        "stock",
+        "bonito"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-buta-nai",
+      "native": "我不能吃豬肉",
+      "reading": "wǒ bù néng chī zhūròu",
+      "english": "I can't eat pork",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "halal"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-halal",
+      "native": "這是清真的嗎？",
+      "reading": "zhè shì qīngzhēn de ma?",
+      "english": "Is this halal?",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "muslim"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-no-alcohol",
+      "native": "我不喝酒",
+      "reading": "wǒ bù hē jiǔ",
+      "english": "I don't drink alcohol",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "no alcohol"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ninshin",
+      "native": "我懷孕了",
+      "reading": "wǒ huáiyùn le",
+      "english": "I'm pregnant",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "expecting"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-hoken",
+      "native": "我有旅遊保險",
+      "reading": "wǒ yǒu lǚyóu bǎoxiǎn",
+      "english": "I have travel insurance",
+      "tags": [
+        "health",
+        "emergency"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "insurance"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kinou",
+      "native": "從昨天開始",
+      "reading": "cóng zuótiān kāishǐ",
+      "english": "Since yesterday",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "book": true
+    },
+    {
+      "id": "bh-doushita",
+      "native": "怎麼了？",
+      "reading": "zěnme le?",
+      "english": "What's the matter?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-guai",
+      "book": true
+    },
+    {
+      "id": "bh-doko-itai",
+      "native": "哪裡不舒服？",
+      "reading": "nǎlǐ bù shūfu?",
+      "english": "Where does it hurt?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-koko-itai",
+      "book": true
+    },
+    {
+      "id": "bh-arerugii",
+      "native": "有過敏嗎？",
+      "reading": "yǒu guòmǐn ma?",
+      "english": "Do you have any allergies?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-arerugii",
+      "book": true
+    },
+    {
+      "id": "bh-itsukara",
+      "native": "從什麼時候開始的？",
+      "reading": "cóng shénme shíhou kāishǐ de?",
+      "english": "Since when?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-kinou",
+      "book": true
+    },
+    {
+      "id": "bh-nomikata",
+      "native": "一天三次，飯後吃",
+      "reading": "yì tiān sān cì, fàn hòu chī",
+      "english": "Take it three times a day after meals",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-hokenshou",
+      "native": "你有保險嗎？",
+      "reading": "nǐ yǒu bǎoxiǎn ma?",
+      "english": "Do you have insurance?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-hoken",
+      "book": true
+    },
+    {
+      "id": "bh-netsu-hakaru",
+      "native": "我幫你量一下體溫",
+      "reading": "wǒ bāng nǐ liáng yíxià tǐwēn",
+      "english": "I'll take your temperature",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "b-kyuukyuusha",
+      "native": "請叫救護車",
+      "reading": "qǐng jiào jiùhùchē",
+      "english": "Please call an ambulance",
+      "tags": [
+        "emergency",
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "ambulance",
+        "119"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-keisatsu",
+      "native": "請叫警察",
+      "reading": "qǐng jiào jǐngchá",
+      "english": "Please call the police",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "cops",
+        "110"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kooban",
+      "native": "警察局在哪裡？",
+      "reading": "jǐngchájú zài nǎlǐ?",
+      "english": "Where is the nearest police station?",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "police box",
+        "koban"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kaji",
+      "native": "著火了",
+      "reading": "zháohuǒ le",
+      "english": "Fire!",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "fire"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-dorobou",
+      "native": "有小偷",
+      "reading": "yǒu xiǎotōu",
+      "english": "Thief!",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "robbery",
+        "stolen"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-nusumareta",
+      "native": "被偷了",
+      "reading": "bèi tōu le",
+      "english": "It was stolen",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "theft",
+        "robbed"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-saifu-nusu",
+      "native": "我的錢包被偷了",
+      "reading": "wǒ de qiánbāo bèi tōu le",
+      "english": "My wallet was stolen",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "purse"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-saifu-nakushi",
+      "native": "我的錢包不見了",
+      "reading": "wǒ de qiánbāo bú jiàn le",
+      "english": "I lost my wallet",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "lost"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-passport-nakushi",
+      "native": "我的護照不見了",
+      "reading": "wǒ de hùzhào bú jiàn le",
+      "english": "I lost my passport",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "lost"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kaban",
+      "native": "我把包包忘在那裡了",
+      "reading": "wǒ bǎ bāobāo wàng zài nàlǐ le",
+      "english": "I left my bag behind",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 3,
+      "keywords": [
+        "forgot",
+        "bag"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-wasuremono",
+      "native": "失物招領處在哪裡？",
+      "reading": "shīwù zhāolǐngchù zài nǎlǐ?",
+      "english": "Where is the lost property office?",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "lost and found"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-densha-wasure",
+      "native": "我把東西忘在車上了",
+      "reading": "wǒ bǎ dōngxi wàng zài chē shàng le",
+      "english": "I left something on the train",
+      "tags": [
+        "emergency",
+        "tickets"
+      ],
+      "difficulty": 3,
+      "keywords": [
+        "lost"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kaado-tomete",
+      "native": "請幫我停卡",
+      "reading": "qǐng bāng wǒ tíng kǎ",
+      "english": "Please block my card",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "cancel card"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-xinjiapo-banshichu",
+      "native": "新加坡駐台北商務辦事處在哪裡？",
+      "reading": "Xīnjiāpō zhù Táiběi shāngwù bànshìchù zài nǎlǐ?",
+      "english": "Where is the Singapore trade office?",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 3,
+      "keywords": [
+        "embassy",
+        "consulate"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-higaitodoke",
+      "native": "我要報案",
+      "reading": "wǒ yào bào'àn",
+      "english": "I want to file a police report",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "report crime"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-jiko",
+      "native": "我發生意外了",
+      "reading": "wǒ fāshēng yìwài le",
+      "english": "I've had an accident",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "crash"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-hagureta",
+      "native": "我跟朋友走散了",
+      "reading": "wǒ gēn péngyou zǒusàn le",
+      "english": "I got separated from my friend",
+      "tags": [
+        "emergency",
+        "help"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "lost friend"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kodomo-maigo",
+      "native": "我的小孩不見了",
+      "reading": "wǒ de xiǎohái bú jiàn le",
+      "english": "My child is missing",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "lost child"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-dareka",
+      "native": "請來人幫忙",
+      "reading": "qǐng lái rén bāngmáng",
+      "english": "Someone, please come!",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "help"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-isha",
+      "native": "請叫醫生",
+      "reading": "qǐng jiào yīshēng",
+      "english": "Please call a doctor",
+      "tags": [
+        "emergency",
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "doctor"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-eigo-isha",
+      "native": "有會說英文的醫生嗎？",
+      "reading": "yǒu huì shuō Yīngwén de yīshēng ma?",
+      "english": "Is there a doctor who speaks English?",
+      "tags": [
+        "emergency",
+        "health"
+      ],
+      "difficulty": 3,
+      "book": true
+    },
+    {
+      "id": "b-tsuuyaku",
+      "native": "請幫我找翻譯",
+      "reading": "qǐng bāng wǒ zhǎo fānyì",
+      "english": "An interpreter, please",
+      "tags": [
+        "emergency",
+        "help"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "translator"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-jishin",
+      "native": "地震了",
+      "reading": "dìzhèn le",
+      "english": "Earthquake!",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "quake"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-denwa",
+      "native": "可以借我電話嗎？",
+      "reading": "kěyǐ jiè wǒ diànhuà ma?",
+      "english": "Please lend me a phone",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "call"
+      ],
+      "book": true
+    },
+    {
+      "id": "bh-nani-nakushita",
+      "native": "你掉了什麼？",
+      "reading": "nǐ diào le shénme?",
+      "english": "What did you lose?",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-saifu-nakushi",
+      "book": true
+    },
+    {
+      "id": "bh-itsu-doko",
+      "native": "什麼時候、在哪裡？",
+      "reading": "shénme shíhou, zài nǎlǐ?",
+      "english": "When and where?",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-denwa-bangou",
+      "native": "請告訴我你的電話號碼",
+      "reading": "qǐng gàosù wǒ nǐ de diànhuà hàomǎ",
+      "english": "Your phone number, please",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-okega",
+      "native": "你有受傷嗎？",
+      "reading": "nǐ yǒu shòushāng ma?",
+      "english": "Are you hurt?",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-kega",
+      "book": true
+    },
+    {
+      "id": "bh-sugu-kimasu",
+      "native": "馬上就到",
+      "reading": "mǎshàng jiù dào",
+      "english": "They are on their way",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "b-konbini",
+      "native": "便利商店在哪裡？",
+      "reading": "biànlì shāngdiàn zài nǎlǐ?",
+      "english": "Where is a convenience store?",
+      "tags": [
+        "convenience"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "7-eleven",
+        "seven eleven",
+        "lawson",
+        "familymart",
+        "kombini"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-atatame-iranai",
+      "native": "不用微波",
+      "reading": "bú yòng wéibō",
+      "english": "No need to heat it",
+      "tags": [
+        "convenience",
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "no microwave"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-hashi-nizen",
+      "native": "請給我兩雙筷子",
+      "reading": "qǐng gěi wǒ liǎng shuāng kuàizi",
+      "english": "Two pairs of chopsticks, please",
+      "tags": [
+        "convenience"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "cutlery"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-supuun",
+      "native": "請給我湯匙",
+      "reading": "qǐng gěi wǒ tāngchí",
+      "english": "A spoon, please",
+      "tags": [
+        "convenience",
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "cutlery"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-chaaji-ic",
+      "native": "請幫我儲值悠遊卡",
+      "reading": "qǐng bāng wǒ chǔzhí yōuyóukǎ",
+      "english": "Please top up my transit card",
+      "tags": [
+        "convenience",
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "suica",
+        "pasmo",
+        "icoca",
+        "easycard",
+        "reload"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-chuzhi-500",
+      "native": "儲值五百元",
+      "reading": "chǔzhí wǔbǎi yuán",
+      "english": "Top up 500 dollars, please",
+      "tags": [
+        "convenience",
+        "tickets"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "charge"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-simu",
+      "native": "有賣SIM卡嗎？",
+      "reading": "yǒu mài SIM kǎ ma?",
+      "english": "Do you sell SIM cards?",
+      "tags": [
+        "convenience"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "sim",
+        "data",
+        "mobile"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-atm",
+      "native": "提款機在哪裡？",
+      "reading": "tíkuǎnjī zài nǎlǐ?",
+      "english": "Where is the ATM?",
+      "tags": [
+        "convenience",
+        "shopping"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "cash machine",
+        "withdraw"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kaigai-card",
+      "native": "可以用國外的卡嗎？",
+      "reading": "kěyǐ yòng guówài de kǎ ma?",
+      "english": "Does this ATM take foreign cards?",
+      "tags": [
+        "convenience"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "overseas card",
+        "withdraw"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-chiketto-hakken",
+      "native": "我要取票",
+      "reading": "wǒ yào qǔ piào",
+      "english": "I'd like to pick up a booked ticket",
+      "tags": [
+        "convenience",
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "print",
+        "collect"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-toire-okari",
+      "native": "可以借用廁所嗎？",
+      "reading": "kěyǐ jièyòng cèsuǒ ma?",
+      "english": "May I use the toilet?",
+      "tags": [
+        "convenience",
+        "help"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "restroom",
+        "bathroom",
+        "loo"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kore-dake",
+      "native": "就這些，謝謝",
+      "reading": "jiù zhèxiē, xièxie",
+      "english": "Just this, thanks",
+      "tags": [
+        "convenience",
+        "shopping"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "that's all"
+      ],
+      "book": true
+    },
+    {
+      "id": "bh-supuun-tsuke",
+      "native": "需要湯匙嗎？",
+      "reading": "xūyào tāngchí ma?",
+      "english": "Would you like a spoon?",
+      "tags": [
+        "convenience"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-supuun",
+      "book": true
+    },
+    {
+      "id": "bh-shenfen",
+      "native": "請出示證件",
+      "reading": "qǐng chūshì zhèngjiàn",
+      "english": "Please show your ID (alcohol)",
+      "tags": [
+        "convenience"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-kaado-ireru",
+      "native": "請插入卡片",
+      "reading": "qǐng chārù kǎpiàn",
+      "english": "Please insert your card",
+      "tags": [
+        "convenience"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-ic-tacchi",
+      "native": "請刷卡",
+      "reading": "qǐng shuākǎ",
+      "english": "Please tap your card",
+      "tags": [
+        "convenience",
+        "tickets"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "b-kippu-ichimai",
+      "native": "我要一張全票",
+      "reading": "wǒ yào yì zhāng quánpiào",
+      "english": "One adult ticket, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "adult"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-otona-nimai",
+      "native": "我要兩張全票",
+      "reading": "wǒ yào liǎng zhāng quánpiào",
+      "english": "Two adult tickets, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "adult"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kodomo",
+      "native": "我要一張兒童票",
+      "reading": "wǒ yào yì zhāng értóngpiào",
+      "english": "One child ticket, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "kid"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-oufuku",
+      "native": "我要來回票",
+      "reading": "wǒ yào láihuípiào",
+      "english": "Round trip, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "return"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-katamichi",
+      "native": "我要單程票",
+      "reading": "wǒ yào dānchéngpiào",
+      "english": "One way, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "single"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-shiteiseki",
+      "native": "我要對號座",
+      "reading": "wǒ yào duìhàozuò",
+      "english": "A reserved seat, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "reservation"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-jiyuuseki",
+      "native": "我要自由座",
+      "reading": "wǒ yào zìyóuzuò",
+      "english": "An unreserved seat, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 1,
+      "book": true
+    },
+    {
+      "id": "b-madogawa",
+      "native": "我要靠窗的座位",
+      "reading": "wǒ yào kào chuāng de zuòwèi",
+      "english": "A window seat, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-tsuurogawa",
+      "native": "我要靠走道的座位",
+      "reading": "wǒ yào kào zǒudào de zuòwèi",
+      "english": "An aisle seat, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-nanbansen",
+      "native": "是幾號月台？",
+      "reading": "shì jǐ hào yuètái?",
+      "english": "Which platform?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "track"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-hoomu",
+      "native": "月台在哪裡？",
+      "reading": "yuètái zài nǎlǐ?",
+      "english": "Where is the platform?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "track"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-shinkansen",
+      "native": "高鐵的月台在哪裡？",
+      "reading": "gāotiě de yuètái zài nǎlǐ?",
+      "english": "Where is the bullet train platform?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "shinkansen",
+        "hsr",
+        "high speed rail"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-tsugi-densha",
+      "native": "下一班車幾點？",
+      "reading": "xià yì bān chē jǐ diǎn?",
+      "english": "What time is the next train?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "timetable",
+        "schedule"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-saishuu",
+      "native": "末班車是幾點？",
+      "reading": "mòbānchē shì jǐ diǎn?",
+      "english": "What time is the last train?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "last service"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ic-tsukaeru",
+      "native": "這裡可以用悠遊卡嗎？",
+      "reading": "zhèlǐ kěyǐ yòng yōuyóukǎ ma?",
+      "english": "Can I use my transit card here?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "suica",
+        "pasmo",
+        "icoca",
+        "easycard",
+        "tap"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ic-kau",
+      "native": "我想買悠遊卡",
+      "reading": "wǒ xiǎng mǎi yōuyóukǎ",
+      "english": "I'd like to buy a transit card",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "suica",
+        "pasmo",
+        "icoca",
+        "easycard"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-zandaka",
+      "native": "我想查餘額",
+      "reading": "wǒ xiǎng chá yú'é",
+      "english": "I'd like to check my balance",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "remaining"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-bupiao",
+      "native": "我要補票",
+      "reading": "wǒ yào bǔpiào",
+      "english": "I'd like to pay the extra fare",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "excess fare"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kippu-nakushi",
+      "native": "我的車票不見了",
+      "reading": "wǒ de chēpiào bú jiàn le",
+      "english": "I lost my ticket",
+      "tags": [
+        "tickets",
+        "emergency"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-kono-kippu",
+      "native": "這張票可以搭嗎？",
+      "reading": "zhè zhāng piào kěyǐ dā ma?",
+      "english": "Can I use this ticket?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-rail-pass",
+      "native": "可以用鐵路周遊券嗎？",
+      "reading": "kěyǐ yòng tiělù zhōuyóuquàn ma?",
+      "english": "Can I use a rail pass?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "jr pass",
+        "tourist pass"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-pass-koukan",
+      "native": "鐵路周遊券在哪裡兌換？",
+      "reading": "tiělù zhōuyóuquàn zài nǎlǐ duìhuàn?",
+      "english": "Where do I exchange my rail pass?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "jr pass"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-cancel",
+      "native": "我想取消",
+      "reading": "wǒ xiǎng qǔxiāo",
+      "english": "I'd like to cancel",
+      "tags": [
+        "tickets",
+        "hotel"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "refund"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-okurete",
+      "native": "火車誤點了嗎？",
+      "reading": "huǒchē wùdiǎn le ma?",
+      "english": "Is the train delayed?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "late"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kyuukou",
+      "native": "這班車是快車嗎？",
+      "reading": "zhè bān chē shì kuàichē ma?",
+      "english": "Is this an express?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "local",
+        "limited express"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ryoukin",
+      "native": "車費多少錢？",
+      "reading": "chēfèi duōshǎo qián?",
+      "english": "What's the fare?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "price"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-taipei-main",
+      "native": "這班車到台北車站嗎？",
+      "reading": "zhè bān chē dào Táiběi chēzhàn ma?",
+      "english": "Does this train go to Taipei Main Station?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 3,
+      "book": true
+    },
+    {
+      "id": "b-basu-kuukou",
+      "native": "這班公車到機場嗎？",
+      "reading": "zhè bān gōngchē dào jīchǎng ma?",
+      "english": "Does this bus go to the airport?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-fufei",
+      "native": "要上車付費還是下車付費？",
+      "reading": "yào shàngchē fùfèi háishì xiàchē fùfèi?",
+      "english": "Do I pay when I get on or off?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "bus fare"
+      ],
+      "book": true
+    },
+    {
+      "id": "bh-nanmai",
+      "native": "要幾張？",
+      "reading": "yào jǐ zhāng?",
+      "english": "How many tickets?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-kippu-ichimai",
+      "book": true
+    },
+    {
+      "id": "bh-shitei",
+      "native": "要對號座還是自由座？",
+      "reading": "yào duìhàozuò háishì zìyóuzuò?",
+      "english": "Reserved or unreserved?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-shiteiseki",
+      "book": true
+    },
+    {
+      "id": "bh-oufuku",
+      "native": "單程還是來回？",
+      "reading": "dānchéng háishì láihuí?",
+      "english": "One way or round trip?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-katamichi",
+      "book": true
+    },
+    {
+      "id": "bh-hoomu",
+      "native": "三號月台",
+      "reading": "sān hào yuètái",
+      "english": "It's platform 3",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-kippu-haiken",
+      "native": "請出示車票",
+      "reading": "qǐng chūshì chēpiào",
+      "english": "Tickets, please (inspector)",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-douzo",
+      "book": true
+    },
+    {
+      "id": "bh-norikae",
+      "native": "請在下一站轉車",
+      "reading": "qǐng zài xià yí zhàn zhuǎnchē",
+      "english": "Change trains at the next station",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "b-takushii-noriba",
+      "native": "計程車招呼站在哪裡？",
+      "reading": "jìchéngchē zhāohūzhàn zài nǎlǐ?",
+      "english": "Where is the taxi stand?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "cab"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-takushii-yonde",
+      "native": "請幫我叫計程車",
+      "reading": "qǐng bāng wǒ jiào jìchéngchē",
+      "english": "Please call a taxi",
+      "tags": [
+        "transport",
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "cab"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-takushii-ikura",
+      "native": "到這裡多少錢？",
+      "reading": "dào zhèlǐ duōshǎo qián?",
+      "english": "How much to here? (taxi)",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "fare"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-meetaa",
+      "native": "請跳表",
+      "reading": "qǐng tiàobiǎo",
+      "english": "Please use the meter",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "taxi"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-tomete",
+      "native": "請在這裡停車",
+      "reading": "qǐng zài zhèlǐ tíngchē",
+      "english": "Please stop here",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "taxi"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-matte-te",
+      "native": "可以在這裡等我嗎？",
+      "reading": "kěyǐ zài zhèlǐ děng wǒ ma?",
+      "english": "Can you wait here?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "taxi"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kuukou-dou",
+      "native": "怎麼去機場？",
+      "reading": "zěnme qù jīchǎng?",
+      "english": "How do I get to the airport?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 1,
+      "book": true
+    },
+    {
+      "id": "b-michi-oshiete",
+      "native": "請告訴我怎麼走",
+      "reading": "qǐng gàosù wǒ zěnme zǒu",
+      "english": "Please tell me the way",
+      "tags": [
+        "transport",
+        "help"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "directions"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-aruite",
+      "native": "可以走路去嗎？",
+      "reading": "kěyǐ zǒulù qù ma?",
+      "english": "Can I walk there?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-nanpun",
+      "native": "要多久？",
+      "reading": "yào duōjiǔ?",
+      "english": "How many minutes does it take?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "time",
+        "how long"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-chizu-de",
+      "native": "請在地圖上指給我看",
+      "reading": "qǐng zài dìtú shàng zhǐ gěi wǒ kàn",
+      "english": "Please show me on the map",
+      "tags": [
+        "transport",
+        "help"
+      ],
+      "difficulty": 3,
+      "book": true
+    },
+    {
+      "id": "b-massugu",
+      "native": "請直走",
+      "reading": "qǐng zhí zǒu",
+      "english": "Go straight",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "straight ahead",
+        "forward"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-migi",
+      "native": "請右轉",
+      "reading": "qǐng yòu zhuǎn",
+      "english": "Turn right",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 1,
+      "book": true
+    },
+    {
+      "id": "b-hidari",
+      "native": "請左轉",
+      "reading": "qǐng zuǒ zhuǎn",
+      "english": "Turn left",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 1,
+      "book": true
+    },
+    {
+      "id": "b-norikae-doko",
+      "native": "要在哪裡轉車？",
+      "reading": "yào zài nǎlǐ zhuǎnchē?",
+      "english": "Where do I transfer?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "change trains"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-tsugi-eki",
+      "native": "下一站是哪裡？",
+      "reading": "xià yí zhàn shì nǎlǐ?",
+      "english": "What's the next station?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-koko-doko",
+      "native": "這裡是哪裡？",
+      "reading": "zhèlǐ shì nǎlǐ?",
+      "english": "Where am I?",
+      "tags": [
+        "transport",
+        "help"
+      ],
+      "difficulty": 1,
+      "book": true
+    },
+    {
+      "id": "b-deguchi-doko",
+      "native": "出口在哪裡？",
+      "reading": "chūkǒu zài nǎlǐ?",
+      "english": "Where is the exit?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "way out"
+      ],
+      "book": true
+    },
+    {
+      "id": "bh-doko-made",
+      "native": "要去哪裡？",
+      "reading": "yào qù nǎlǐ?",
+      "english": "Where to?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "destination"
+      ],
+      "listen": true,
+      "replyId": "p-dizhi",
+      "book": true
+    },
+    {
+      "id": "bh-tsukimashita",
+      "native": "到了",
+      "reading": "dào le",
+      "english": "We've arrived",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-taxi-kuai",
+      "native": "一百五十塊",
+      "reading": "yìbǎi wǔshí kuài",
+      "english": "That's 150 dollars",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "fare"
+      ],
+      "listen": true,
+      "book": true
     }
   ]
 }

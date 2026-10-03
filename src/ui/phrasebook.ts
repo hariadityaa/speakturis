@@ -1,5 +1,5 @@
 import { app, say, toggleStar } from '../app';
-import { ALL, HEARD, bookLists, bookPhrases, bookSections, translateUrl } from '../core/phrasebook';
+import { ALL, HEARD, bookLists, matchPhrase, bookPhrases, bookSections, translateUrl } from '../core/phrasebook';
 import type { Phrase } from '../core/types';
 import { stopSpeaking } from '../platform/tts';
 import { keepAwake } from '../platform/wake';
@@ -12,8 +12,6 @@ const safeBack = (b: string | null) => (b?.startsWith('/') && !b.startsWith('//'
 const showLink = (p: Phrase, list: string, back?: string) =>
   `#/show?id=${p.id}&list=${list}${back ? `&back=${encodeURIComponent(back)}` : ''}`;
 const play = (p: Phrase) => void say(p.speak ?? p.native, p.audioSrc);
-/** Lowercase without accents, so "xiexie" finds xièxie. */
-const fold = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 
 /** ☆/★ toggle. `onchange` runs after the star flips. */
 export const starButton = (p: Phrase, onchange: () => void, cls = 'star') => {
@@ -55,15 +53,14 @@ export const phrasebookScreen: Screen = (root, q) => {
   const paint = () => {
     const lists = allLists();
     if (!lists.some((l) => l.key === key)) key = ALL;
-    const words = fold(search.value.trim());
+    const words = search.value.trim();
     const back = `/phrasebook?list=${key}`;
     chips.replaceChildren(...lists.map((l) =>
       h('button', { class: `chip${l.key === key ? ' on' : ''}`, onclick: () => { key = l.key; history.replaceState(null, '', `#${`/phrasebook?list=${key}`}`); paint(); } }, l.label)));
     note.textContent = key === HEARD ? 'What staff say to you, and what to say back.' : 'Tap a phrase to show it full size, or tap 🔊 to hear it.';
-    const hit = (p: Phrase) => !words || fold(`${p.english} ${p.reading} ${p.native}`).includes(words);
-    list.replaceChildren();
+        list.replaceChildren();
     if (words || key !== ALL) {
-      const found = bookPhrases(app.pack, key, app.stars).filter(hit);
+      const found = bookPhrases(app.pack, key, app.stars).filter((p) => matchPhrase(p, words));
       list.append(found.length ? h('ul', { class: 'list' }, found.map((p) => phraseRow(p, key, back, paint)))
         : h('p', { class: 'note' }, 'No phrase found. ',
           words ? h('a', { href: translateUrl(app.pack.meta.ttsLocale, search.value.trim()), target: '_blank', rel: 'noopener noreferrer' }, 'Look it up in Google Translate') : null));

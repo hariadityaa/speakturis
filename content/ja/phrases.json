@@ -10,7 +10,10 @@
         "greeting",
         "help"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "pardon"
+      ]
     },
     {
       "id": "p-arigatou",
@@ -20,7 +23,10 @@
       "tags": [
         "greeting"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "thanks"
+      ]
     },
     {
       "id": "p-hai-iie",
@@ -64,7 +70,11 @@
         "greeting"
       ],
       "difficulty": 1,
-      "speak": "こんにちは"
+      "speak": "こんにちは",
+      "keywords": [
+        "hi",
+        "hey"
+      ]
     },
     {
       "id": "h-irasshaimase",
@@ -86,7 +96,12 @@
       "tags": [
         "shopping"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "price",
+        "cost",
+        "how much"
+      ]
     },
     {
       "id": "p-wakarimasen",
@@ -97,7 +112,11 @@
         "help"
       ],
       "difficulty": 1,
-      "speak": "わかりません"
+      "speak": "わかりません",
+      "keywords": [
+        "no idea",
+        "confused"
+      ]
     },
     {
       "id": "p-eigo",
@@ -109,7 +128,10 @@
         "greeting"
       ],
       "difficulty": 2,
-      "speak": "えいごははなせますか"
+      "speak": "えいごははなせますか",
+      "keywords": [
+        "english speaker"
+      ]
     },
     {
       "id": "p-toire",
@@ -120,7 +142,14 @@
         "help",
         "transport"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "restroom",
+        "bathroom",
+        "loo",
+        "wc",
+        "lavatory"
+      ]
     },
     {
       "id": "p-okaikei",
@@ -132,7 +161,12 @@
         "shopping"
       ],
       "difficulty": 2,
-      "speak": "おかいけいをおねがいします"
+      "speak": "おかいけいをおねがいします",
+      "keywords": [
+        "check",
+        "pay",
+        "payment"
+      ]
     },
     {
       "id": "p-kaado",
@@ -143,7 +177,13 @@
         "shopping"
       ],
       "difficulty": 2,
-      "speak": "カードはつかえますか"
+      "speak": "カードはつかえますか",
+      "keywords": [
+        "credit card",
+        "debit",
+        "visa",
+        "mastercard"
+      ]
     },
     {
       "id": "p-daijoubu",
@@ -155,7 +195,11 @@
         "greeting",
         "help"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "no thanks",
+        "fine"
+      ]
     },
     {
       "id": "h-fukuro",
@@ -168,7 +212,11 @@
       ],
       "difficulty": 1,
       "listen": true,
-      "replyId": "p-fukuro"
+      "replyId": "p-fukuro",
+      "keywords": [
+        "bag",
+        "plastic bag"
+      ]
     },
     {
       "id": "p-fukuro",
@@ -179,7 +227,11 @@
         "shopping"
       ],
       "difficulty": 2,
-      "speak": "ふくろはいりません"
+      "speak": "ふくろはいりません",
+      "keywords": [
+        "bag",
+        "plastic bag"
+      ]
     },
     {
       "id": "s-toire",
@@ -189,7 +241,14 @@
       "tags": [
         "signs"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "restroom",
+        "bathroom",
+        "loo",
+        "wc",
+        "lavatory"
+      ]
     },
     {
       "id": "h-nanmei",
@@ -224,7 +283,10 @@
         "food"
       ],
       "difficulty": 1,
-      "speak": "みずをください"
+      "speak": "みずをください",
+      "keywords": [
+        "drink"
+      ]
     },
     {
       "id": "p-menyuu",
@@ -235,7 +297,10 @@
         "food"
       ],
       "difficulty": 1,
-      "speak": "メニューをおねがいします"
+      "speak": "メニューをおねがいします",
+      "keywords": [
+        "carte"
+      ]
     },
     {
       "id": "h-gochuumon",
@@ -259,7 +324,10 @@
       "tags": [
         "signs"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "way out"
+      ]
     },
     {
       "id": "s-otoko",
@@ -317,7 +385,11 @@
       ],
       "difficulty": 1,
       "listen": true,
-      "replyId": "p-atatamete"
+      "replyId": "p-atatamete",
+      "keywords": [
+        "microwave",
+        "warm"
+      ]
     },
     {
       "id": "h-pointo",
@@ -367,7 +439,11 @@
         "transport"
       ],
       "difficulty": 1,
-      "speak": "えきはどこですか"
+      "speak": "えきはどこですか",
+      "keywords": [
+        "train station",
+        "railway"
+      ]
     },
     {
       "id": "p-juusho",
@@ -378,7 +454,11 @@
         "transport"
       ],
       "difficulty": 3,
-      "speak": "このじゅうしょまでおねがいします"
+      "speak": "このじゅうしょまでおねがいします",
+      "keywords": [
+        "cab",
+        "taxi"
+      ]
     },
     {
       "id": "p-tasukete",
@@ -389,7 +469,11 @@
         "help"
       ],
       "difficulty": 2,
-      "speak": "たすけてください"
+      "speak": "たすけてください",
+      "keywords": [
+        "emergency",
+        "sos"
+      ]
     },
     {
       "id": "p-chekkuin",
@@ -400,7 +484,12 @@
       "tags": [
         "hotel"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "hotel",
+        "check in",
+        "register"
+      ]
     },
     {
       "id": "p-yoyaku",
@@ -412,7 +501,10 @@
         "hotel",
         "food"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "booking"
+      ]
     },
     {
       "id": "h-yoyaku",
@@ -426,7 +518,10 @@
       ],
       "difficulty": 1,
       "listen": true,
-      "replyId": "p-yoyaku"
+      "replyId": "p-yoyaku",
+      "keywords": [
+        "booking"
+      ]
     },
     {
       "id": "s-iriguchi",
@@ -437,7 +532,10 @@
       "tags": [
         "signs"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "way in"
+      ]
     },
     {
       "id": "s-eki",
@@ -448,7 +546,11 @@
       "tags": [
         "signs"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "train station",
+        "railway"
+      ]
     },
     {
       "id": "p-ohayou",
@@ -492,7 +594,11 @@
       "tags": [
         "food"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "beer",
+        "alcohol"
+      ]
     },
     {
       "id": "p-hitotsu",
@@ -575,7 +681,10 @@
       "tags": [
         "shopping"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "invoice"
+      ]
     },
     {
       "id": "p-miteru",
@@ -598,7 +707,10 @@
         "transport"
       ],
       "difficulty": 3,
-      "speak": "みちにまよいました"
+      "speak": "みちにまよいました",
+      "keywords": [
+        "directions"
+      ]
     },
     {
       "id": "p-chotto-matte",
@@ -654,7 +766,11 @@
         "shopping"
       ],
       "difficulty": 1,
-      "speak": "はしをください"
+      "speak": "はしをください",
+      "keywords": [
+        "cutlery",
+        "utensils"
+      ]
     },
     {
       "id": "h-ohashi",
@@ -668,7 +784,11 @@
       ],
       "difficulty": 1,
       "listen": true,
-      "replyId": "p-hashi"
+      "replyId": "p-hashi",
+      "keywords": [
+        "cutlery",
+        "utensils"
+      ]
     },
     {
       "id": "p-atatamete",
@@ -680,7 +800,11 @@
         "food"
       ],
       "difficulty": 2,
-      "speak": "あたためてください"
+      "speak": "あたためてください",
+      "keywords": [
+        "microwave",
+        "warm"
+      ]
     },
     {
       "id": "p-betsubetsu",
@@ -702,7 +826,12 @@
         "shopping"
       ],
       "difficulty": 3,
-      "speak": "めんぜいできますか"
+      "speak": "めんぜいできますか",
+      "keywords": [
+        "duty free",
+        "refund",
+        "vat"
+      ]
     },
     {
       "id": "p-kippu",
@@ -713,7 +842,11 @@
         "transport"
       ],
       "difficulty": 3,
-      "speak": "きっぷはどこでかえますか"
+      "speak": "きっぷはどこでかえますか",
+      "keywords": [
+        "ticket",
+        "train"
+      ]
     },
     {
       "id": "p-basutei",
@@ -724,7 +857,10 @@
       "tags": [
         "transport"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "bus"
+      ]
     },
     {
       "id": "p-orimasu",
@@ -735,7 +871,12 @@
         "transport"
       ],
       "difficulty": 2,
-      "speak": "ここでおります"
+      "speak": "ここでおります",
+      "keywords": [
+        "alight",
+        "exit bus",
+        "stop"
+      ]
     },
     {
       "id": "s-chikatetsu",
@@ -746,7 +887,12 @@
       "tags": [
         "signs"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "metro",
+        "underground",
+        "mrt"
+      ]
     },
     {
       "id": "s-kaisatsu",
@@ -757,7 +903,11 @@
       "tags": [
         "signs"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "turnstile",
+        "fare gate"
+      ]
     },
     {
       "id": "p-nimotsu",
@@ -768,7 +918,13 @@
       "tags": [
         "hotel"
       ],
-      "difficulty": 3
+      "difficulty": 3,
+      "keywords": [
+        "baggage",
+        "bags",
+        "suitcase",
+        "store"
+      ]
     },
     {
       "id": "p-checkout",
@@ -779,7 +935,10 @@
       "tags": [
         "hotel"
       ],
-      "difficulty": 2
+      "difficulty": 2,
+      "keywords": [
+        "check out"
+      ]
     },
     {
       "id": "p-shokkenki",
@@ -790,7 +949,11 @@
       "tags": [
         "food"
       ],
-      "difficulty": 2
+      "difficulty": 2,
+      "keywords": [
+        "vending",
+        "ramen ticket machine"
+      ]
     },
     {
       "id": "p-chaaji",
@@ -801,7 +964,14 @@
       "tags": [
         "transport"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "suica",
+        "pasmo",
+        "icoca",
+        "top-up",
+        "reload"
+      ]
     },
     {
       "id": "p-shashin",
@@ -813,7 +983,12 @@
         "help",
         "shopping"
       ],
-      "difficulty": 2
+      "difficulty": 2,
+      "keywords": [
+        "camera",
+        "picture",
+        "photograph"
+      ]
     },
     {
       "id": "s-eigyouchuu",
@@ -857,7 +1032,11 @@
       "tags": [
         "hotel"
       ],
-      "difficulty": 2
+      "difficulty": 2,
+      "keywords": [
+        "tattoo",
+        "hot spring"
+      ]
     },
     {
       "id": "s-yu",
@@ -868,7 +1047,12 @@
       "tags": [
         "signs"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "hot spring",
+        "bath",
+        "public bath"
+      ]
     },
     {
       "id": "s-raamen",
@@ -889,7 +1073,3303 @@
       "tags": [
         "signs"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "keywords": [
+        "beer",
+        "alcohol"
+      ]
+    },
+    {
+      "id": "b-konbanwa",
+      "native": "こんばんは",
+      "reading": "konbanwa",
+      "english": "Good evening",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "hi"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-oyasumi",
+      "native": "おやすみなさい",
+      "reading": "oyasumi nasai",
+      "english": "Good night",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1,
+      "book": true
+    },
+    {
+      "id": "b-hajimemashite",
+      "native": "はじめまして",
+      "reading": "hajimemashite",
+      "english": "Nice to meet you",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "pleased to meet you"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-sayounara",
+      "native": "さようなら",
+      "reading": "sayounara",
+      "english": "Goodbye",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "bye"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-douitashimashite",
+      "native": "どういたしまして",
+      "reading": "dou itashimashite",
+      "english": "You're welcome",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1,
+      "book": true
+    },
+    {
+      "id": "b-gomen",
+      "native": "ごめんなさい",
+      "reading": "gomen nasai",
+      "english": "I'm sorry",
+      "tags": [
+        "greeting",
+        "help"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "apologies",
+        "apologise"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ryokousha",
+      "native": "私は旅行者です",
+      "reading": "watashi wa ryokousha desu",
+      "english": "I'm a tourist",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 2,
+      "speak": "わたしはりょこうしゃです",
+      "keywords": [
+        "visitor",
+        "traveller"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-wakarimashita",
+      "native": "分かりました",
+      "reading": "wakarimashita",
+      "english": "I understand / got it",
+      "tags": [
+        "help",
+        "greeting"
+      ],
+      "difficulty": 1,
+      "speak": "わかりました",
+      "keywords": [
+        "okay"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kekkou",
+      "native": "結構です",
+      "reading": "kekkou desu",
+      "english": "No, thank you (polite refusal)",
+      "tags": [
+        "greeting",
+        "shopping"
+      ],
+      "difficulty": 1,
+      "speak": "けっこうです",
+      "keywords": [
+        "decline",
+        "no thanks"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-nihongo-sukoshi",
+      "native": "日本語は少し話せます",
+      "reading": "nihongo wa sukoshi hanasemasu",
+      "english": "I speak a little Japanese",
+      "tags": [
+        "help",
+        "greeting"
+      ],
+      "difficulty": 2,
+      "speak": "にほんごはすこしはなせます",
+      "book": true
+    },
+    {
+      "id": "b-douzo",
+      "native": "はい、どうぞ",
+      "reading": "hai, douzo",
+      "english": "Here you go",
+      "tags": [
+        "greeting",
+        "shopping"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "please",
+        "go ahead"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kore-nihongo",
+      "native": "これは日本語で何と言いますか",
+      "reading": "kore wa nihongo de nan to iimasu ka",
+      "english": "How do you say this in Japanese?",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 3,
+      "speak": "これはにほんごでなんといいますか",
+      "keywords": [
+        "translate"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kaite",
+      "native": "書いてもらえますか",
+      "reading": "kaite moraemasu ka",
+      "english": "Can you write it down?",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 1,
+      "speak": "かいてもらえますか",
+      "keywords": [
+        "paper",
+        "note"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-honyaku",
+      "native": "翻訳アプリを使ってもいいですか",
+      "reading": "honyaku apuri o tsukatte mo ii desu ka",
+      "english": "May I use a translation app?",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 3,
+      "speak": "ほんやくアプリをつかってもいいですか",
+      "keywords": [
+        "translate",
+        "phone"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-biiru-futatsu",
+      "native": "ビールを二つください",
+      "reading": "biiru o futatsu kudasai",
+      "english": "Two beers, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "speak": "ビールをふたつください",
+      "keywords": [
+        "beer"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ocha",
+      "native": "お茶をください",
+      "reading": "ocha o kudasai",
+      "english": "Tea, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "speak": "おちゃをください",
+      "keywords": [
+        "green tea"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-koohii",
+      "native": "コーヒーをください",
+      "reading": "koohii o kudasai",
+      "english": "Coffee, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "book": true
+    },
+    {
+      "id": "b-sake",
+      "native": "日本酒をください",
+      "reading": "nihonshu o kudasai",
+      "english": "Sake, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "speak": "にほんしゅをください",
+      "keywords": [
+        "rice wine",
+        "alcohol"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-nomihoudai",
+      "native": "飲み放題はありますか",
+      "reading": "nomihoudai wa arimasu ka",
+      "english": "Do you have all-you-can-drink?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "speak": "のみほうだいはありますか",
+      "keywords": [
+        "buffet",
+        "unlimited drinks"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-eigo-menu",
+      "native": "英語のメニューはありますか",
+      "reading": "eigo no menyuu wa arimasu ka",
+      "english": "Do you have an English menu?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "speak": "えいごのメニューはありますか",
+      "keywords": [
+        "translation"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kore-futatsu",
+      "native": "これを二つください",
+      "reading": "kore o futatsu kudasai",
+      "english": "Two of these, please",
+      "tags": [
+        "food",
+        "shopping"
+      ],
+      "difficulty": 2,
+      "speak": "これをふたつください",
+      "book": true
+    },
+    {
+      "id": "b-onaji",
+      "native": "同じものをください",
+      "reading": "onaji mono o kudasai",
+      "english": "The same, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "speak": "おなじものをください",
+      "keywords": [
+        "same as that"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-wasabi-nuki",
+      "native": "わさび抜きでお願いします",
+      "reading": "wasabi nuki de onegai shimasu",
+      "english": "No wasabi, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "speak": "わさびぬきでおねがいします",
+      "keywords": [
+        "without"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-karakunai",
+      "native": "辛くしないでください",
+      "reading": "karaku shinaide kudasai",
+      "english": "Not too spicy, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "speak": "からくしないでください",
+      "keywords": [
+        "mild"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-nama-mono",
+      "native": "生ものは食べられません",
+      "reading": "nama mono wa taberaremasen",
+      "english": "I can't eat raw food",
+      "tags": [
+        "food",
+        "health"
+      ],
+      "difficulty": 2,
+      "speak": "なまものはたべられません",
+      "keywords": [
+        "sushi",
+        "sashimi"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-okawari",
+      "native": "おかわりをお願いします",
+      "reading": "okawari o onegai shimasu",
+      "english": "A refill, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "speak": "おかわりをおねがいします",
+      "keywords": [
+        "seconds",
+        "more"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-niku-nan",
+      "native": "これは何の肉ですか",
+      "reading": "kore wa nan no niku desu ka",
+      "english": "What meat is this?",
+      "tags": [
+        "food",
+        "health"
+      ],
+      "difficulty": 3,
+      "speak": "これはなんのにくですか",
+      "keywords": [
+        "pork",
+        "beef",
+        "chicken"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-mochikaeri",
+      "native": "持ち帰りできますか",
+      "reading": "mochikaeri dekimasu ka",
+      "english": "Can I take it away?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "speak": "もちかえりできますか",
+      "keywords": [
+        "takeaway",
+        "take out",
+        "doggy bag"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-oishikatta",
+      "native": "とても美味しかったです",
+      "reading": "totemo oishikatta desu",
+      "english": "That was very delicious",
+      "tags": [
+        "food",
+        "greeting"
+      ],
+      "difficulty": 1,
+      "speak": "とてもおいしかったです",
+      "keywords": [
+        "tasty",
+        "yummy"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-nomimono",
+      "native": "飲み物は何がありますか",
+      "reading": "nomimono wa nani ga arimasu ka",
+      "english": "What drinks do you have?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "speak": "のみものはなにがありますか",
+      "keywords": [
+        "beverages"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-yoyaku-onegai",
+      "native": "予約をお願いします",
+      "reading": "yoyaku o onegai shimasu",
+      "english": "I'd like to make a reservation",
+      "tags": [
+        "food",
+        "hotel"
+      ],
+      "difficulty": 2,
+      "speak": "よやくをおねがいします",
+      "keywords": [
+        "book a table"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kinen",
+      "native": "禁煙席をお願いします",
+      "reading": "kin'en seki o onegai shimasu",
+      "english": "Non-smoking seat, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "speak": "きんえんせきをおねがいします",
+      "keywords": [
+        "no smoking"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-chiisai",
+      "native": "もっと小さいのはありますか",
+      "reading": "motto chiisai no wa arimasu ka",
+      "english": "Do you have a smaller one?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "speak": "もっとちいさいのはありますか",
+      "keywords": [
+        "size"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ookii-no",
+      "native": "もっと大きいのはありますか",
+      "reading": "motto ookii no wa arimasu ka",
+      "english": "Do you have a bigger one?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "speak": "もっとおおきいのはありますか",
+      "keywords": [
+        "size"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-betsu-iro",
+      "native": "他の色はありますか",
+      "reading": "hoka no iro wa arimasu ka",
+      "english": "Do you have other colours?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "speak": "ほかのいろはありますか",
+      "keywords": [
+        "colors"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-shichaku",
+      "native": "試着してもいいですか",
+      "reading": "shichaku shite mo ii desu ka",
+      "english": "May I try this on?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "speak": "しちゃくしてもいいですか",
+      "keywords": [
+        "fitting room"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-yasuku",
+      "native": "もう少し安くなりますか",
+      "reading": "mou sukoshi yasuku narimasu ka",
+      "english": "Can it be a bit cheaper?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "speak": "もうすこしやすくなりますか",
+      "keywords": [
+        "discount",
+        "bargain"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-fukuro-onegai",
+      "native": "袋をお願いします",
+      "reading": "fukuro o onegai shimasu",
+      "english": "A bag, please",
+      "tags": [
+        "shopping",
+        "convenience"
+      ],
+      "difficulty": 2,
+      "speak": "ふくろをおねがいします",
+      "keywords": [
+        "plastic bag"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-zeikomi",
+      "native": "税込みですか",
+      "reading": "zeikomi desu ka",
+      "english": "Is tax included?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 1,
+      "speak": "ぜいこみですか",
+      "keywords": [
+        "vat",
+        "gst"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-genkin",
+      "native": "現金でお願いします",
+      "reading": "genkin de onegai shimasu",
+      "english": "Cash, please",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "speak": "げんきんでおねがいします",
+      "keywords": [
+        "pay cash"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ic-pay",
+      "native": "ICカードで払えますか",
+      "reading": "ai shii kaado de haraemasu ka",
+      "english": "Can I pay with my transit card?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "speak": "アイシーカードではらえますか",
+      "keywords": [
+        "suica",
+        "pasmo",
+        "icoca",
+        "easycard",
+        "tap"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-qr",
+      "native": "QRコード決済は使えますか",
+      "reading": "kyuuaaru koodo kessai wa tsukaemasu ka",
+      "english": "Can I pay by QR code?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "speak": "キューアールコードけっさいはつかえますか",
+      "keywords": [
+        "mobile payment",
+        "scan",
+        "paypay",
+        "line pay"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-menzei-counter",
+      "native": "免税カウンターはどこですか",
+      "reading": "menzei kauntaa wa doko desu ka",
+      "english": "Where is the tax-free counter?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "speak": "めんぜいカウンターはどこですか",
+      "keywords": [
+        "duty free",
+        "refund"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-pasupooto",
+      "native": "パスポートです",
+      "reading": "pasupooto desu",
+      "english": "Here is my passport",
+      "tags": [
+        "shopping",
+        "hotel"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "id"
+      ],
+      "book": true
+    },
+    {
+      "id": "bh-goukei-en",
+      "native": "合計で五百円です",
+      "reading": "goukei de gohyaku-en desu",
+      "english": "That's 500 yen in total",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "speak": "ごうけいでごひゃくえんです",
+      "keywords": [
+        "total"
+      ],
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-reshiito",
+      "native": "レシートは要りますか",
+      "reading": "reshiito wa irimasu ka",
+      "english": "Do you need a receipt?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "speak": "レシートはいりますか",
+      "keywords": [
+        "invoice"
+      ],
+      "listen": true,
+      "replyId": "p-reshiito",
+      "book": true
+    },
+    {
+      "id": "b-yoyaku-kakunin",
+      "native": "予約の確認をお願いします",
+      "reading": "yoyaku no kakunin o onegai shimasu",
+      "english": "Please confirm my reservation",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "speak": "よやくのかくにんをおねがいします",
+      "book": true
+    },
+    {
+      "id": "b-hayame-ci",
+      "native": "早めにチェックインできますか",
+      "reading": "hayame ni chekkuin dekimasu ka",
+      "english": "Can I check in early?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "speak": "はやめにチェックインできますか",
+      "keywords": [
+        "early arrival"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-osoku-co",
+      "native": "チェックアウトを遅くできますか",
+      "reading": "chekkuauto o osoku dekimasu ka",
+      "english": "Can I check out late?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "speak": "チェックアウトをおそくできますか",
+      "keywords": [
+        "late checkout"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-nimotsu-ato",
+      "native": "チェックアウトの後も荷物を預けられますか",
+      "reading": "chekkuauto no ato mo nimotsu o azukeraremasu ka",
+      "english": "Can I leave my bags after check-out?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 3,
+      "speak": "チェックアウトのあともにもつをあずけられますか",
+      "keywords": [
+        "luggage storage",
+        "baggage"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kagi-nakushi",
+      "native": "鍵をなくしました",
+      "reading": "kagi o nakushimashita",
+      "english": "I lost my room key",
+      "tags": [
+        "hotel",
+        "emergency"
+      ],
+      "difficulty": 1,
+      "speak": "かぎをなくしました",
+      "keywords": [
+        "key card"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-heya-hairenai",
+      "native": "部屋に入れません",
+      "reading": "heya ni hairemasen",
+      "english": "I can't get into my room",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 1,
+      "speak": "へやにはいれません",
+      "keywords": [
+        "locked out"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-oyu",
+      "native": "お湯が出ません",
+      "reading": "oyu ga demasen",
+      "english": "There's no hot water",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 1,
+      "speak": "おゆがでません",
+      "keywords": [
+        "shower",
+        "broken"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-eakon",
+      "native": "エアコンが動きません",
+      "reading": "eakon ga ugokimasen",
+      "english": "The air conditioning doesn't work",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 1,
+      "speak": "エアコンがうごきません",
+      "keywords": [
+        "ac",
+        "heater",
+        "broken"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-heya-atsui",
+      "native": "部屋が暑いです",
+      "reading": "heya ga atsui desu",
+      "english": "The room is too hot",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "speak": "へやがあついです",
+      "keywords": [
+        "warm"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-tonari-urusai",
+      "native": "隣の部屋がうるさいです",
+      "reading": "tonari no heya ga urusai desu",
+      "english": "The next room is noisy",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "speak": "となりのへやがうるさいです",
+      "keywords": [
+        "noise",
+        "loud"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-taoru",
+      "native": "タオルをもう一枚ください",
+      "reading": "taoru o mou ichimai kudasai",
+      "english": "One more towel, please",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "speak": "タオルをもういちまいください",
+      "keywords": [
+        "towels"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-juudenki",
+      "native": "充電器を貸してもらえますか",
+      "reading": "juudenki o kashite moraemasu ka",
+      "english": "Can I borrow a phone charger?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "speak": "じゅうでんきをかしてもらえますか",
+      "keywords": [
+        "charger",
+        "cable"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-wifi-pass",
+      "native": "Wi-Fiのパスワードを教えてください",
+      "reading": "wai fai no pasuwaado o oshiete kudasai",
+      "english": "What's the Wi-Fi password?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 3,
+      "speak": "ワイファイのパスワードをおしえてください",
+      "keywords": [
+        "wifi",
+        "internet"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-chousyoku-nanji",
+      "native": "朝食は何時からですか",
+      "reading": "choushoku wa nanji kara desu ka",
+      "english": "What time does breakfast start?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "speak": "ちょうしょくはなんじからですか",
+      "keywords": [
+        "breakfast"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-chousyoku-doko",
+      "native": "朝食はどこですか",
+      "reading": "choushoku wa doko desu ka",
+      "english": "Where is breakfast served?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "speak": "ちょうしょくはどこですか",
+      "keywords": [
+        "breakfast"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-erebeetaa",
+      "native": "エレベーターはどこですか",
+      "reading": "erebeetaa wa doko desu ka",
+      "english": "Where is the elevator?",
+      "tags": [
+        "hotel",
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "lift"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kankou",
+      "native": "おすすめの観光地はどこですか",
+      "reading": "osusume no kankouchi wa doko desu ka",
+      "english": "What sightseeing do you recommend?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 3,
+      "speak": "おすすめのかんこうちはどこですか",
+      "keywords": [
+        "attractions",
+        "tourist"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ippaku",
+      "native": "もう一泊できますか",
+      "reading": "mou ippaku dekimasu ka",
+      "english": "Can I stay one more night?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "speak": "もういっぱくできますか",
+      "keywords": [
+        "extend"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ryoushuusho",
+      "native": "領収書をお願いします",
+      "reading": "ryoushuusho o onegai shimasu",
+      "english": "A receipt, please",
+      "tags": [
+        "hotel",
+        "shopping"
+      ],
+      "difficulty": 2,
+      "speak": "りょうしゅうしょをおねがいします",
+      "keywords": [
+        "invoice"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-aiteiru",
+      "native": "空いている部屋はありますか",
+      "reading": "aiteiru heya wa arimasu ka",
+      "english": "Do you have any rooms free?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "speak": "あいているへやはありますか",
+      "keywords": [
+        "vacancy",
+        "available"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-sanpaku",
+      "native": "三泊です",
+      "reading": "sanpaku desu",
+      "english": "Three nights",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 1,
+      "speak": "さんぱくです",
+      "keywords": [
+        "stay"
+      ],
+      "book": true
+    },
+    {
+      "id": "bh-pasupooto",
+      "native": "パスポートを見せてください",
+      "reading": "pasupooto o misete kudasai",
+      "english": "Your passport, please",
+      "tags": [
+        "hotel",
+        "shopping"
+      ],
+      "difficulty": 2,
+      "speak": "パスポートをみせてください",
+      "keywords": [
+        "id"
+      ],
+      "listen": true,
+      "replyId": "b-pasupooto",
+      "book": true
+    },
+    {
+      "id": "bh-onamae",
+      "native": "お名前をお願いします",
+      "reading": "onamae o onegai shimasu",
+      "english": "Your name, please",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "speak": "おなまえをおねがいします",
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-nanpaku",
+      "native": "何泊のご予定ですか",
+      "reading": "nanpaku no goyotei desu ka",
+      "english": "How many nights?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "speak": "なんぱくのごよていですか",
+      "listen": true,
+      "replyId": "b-sanpaku",
+      "book": true
+    },
+    {
+      "id": "bh-checkout-jikan",
+      "native": "チェックアウトは十一時です",
+      "reading": "chekkuauto wa juuichiji desu",
+      "english": "Check-out is at eleven",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "speak": "チェックアウトはじゅういちじです",
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-asa-nanaji",
+      "native": "朝食は七時からです",
+      "reading": "choushoku wa shichiji kara desu",
+      "english": "Breakfast is from seven",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "speak": "ちょうしょくはしちじからです",
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "b-byouin",
+      "native": "病院はどこですか",
+      "reading": "byouin wa doko desu ka",
+      "english": "Where is the hospital?",
+      "tags": [
+        "health",
+        "emergency"
+      ],
+      "difficulty": 2,
+      "speak": "びょういんはどこですか",
+      "keywords": [
+        "clinic"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-yakkyoku",
+      "native": "薬局はどこですか",
+      "reading": "yakkyoku wa doko desu ka",
+      "english": "Where is a pharmacy?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "speak": "やっきょくはどこですか",
+      "keywords": [
+        "drugstore",
+        "chemist"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-zutsuuyaku",
+      "native": "頭痛薬はありますか",
+      "reading": "zutsuuyaku wa arimasu ka",
+      "english": "Do you have headache medicine?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "speak": "ずつうやくはありますか",
+      "keywords": [
+        "painkiller",
+        "aspirin",
+        "paracetamol"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kazegusuri",
+      "native": "風邪薬はありますか",
+      "reading": "kazegusuri wa arimasu ka",
+      "english": "Do you have cold medicine?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "speak": "かぜぐすりはありますか",
+      "keywords": [
+        "flu"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-igusuri",
+      "native": "胃薬はありますか",
+      "reading": "igusuri wa arimasu ka",
+      "english": "Do you have stomach medicine?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "speak": "いぐすりはありますか",
+      "keywords": [
+        "indigestion",
+        "antacid"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-geridome",
+      "native": "下痢止めはありますか",
+      "reading": "geridome wa arimasu ka",
+      "english": "Do you have anti-diarrhoea medicine?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "speak": "げりどめはありますか",
+      "keywords": [
+        "diarrhea"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-bansoukou",
+      "native": "絆創膏はありますか",
+      "reading": "bansoukou wa arimasu ka",
+      "english": "Do you have plasters?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "speak": "ばんそうこうはありますか",
+      "keywords": [
+        "band-aid",
+        "bandage"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-hiyakedome",
+      "native": "日焼け止めはありますか",
+      "reading": "hiyakedome wa arimasu ka",
+      "english": "Do you have sunscreen?",
+      "tags": [
+        "health",
+        "shopping"
+      ],
+      "difficulty": 2,
+      "speak": "ひやけどめはありますか",
+      "keywords": [
+        "sunblock"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kusuri-nomikata",
+      "native": "この薬はどう飲みますか",
+      "reading": "kono kusuri wa dou nomimasu ka",
+      "english": "How do I take this medicine?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "speak": "このくすりはどうのみますか",
+      "keywords": [
+        "dose"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-atama",
+      "native": "頭が痛いです",
+      "reading": "atama ga itai desu",
+      "english": "I have a headache",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "speak": "あたまがいたいです",
+      "keywords": [
+        "head hurts"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-onaka",
+      "native": "お腹が痛いです",
+      "reading": "onaka ga itai desu",
+      "english": "I have a stomachache",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "speak": "おなかがいたいです",
+      "keywords": [
+        "tummy"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-nodo",
+      "native": "喉が痛いです",
+      "reading": "nodo ga itai desu",
+      "english": "I have a sore throat",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "speak": "のどがいたいです",
+      "keywords": [
+        "throat"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ha",
+      "native": "歯が痛いです",
+      "reading": "ha ga itai desu",
+      "english": "I have a toothache",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "speak": "はがいたいです",
+      "keywords": [
+        "dentist",
+        "tooth"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-netsu",
+      "native": "熱があります",
+      "reading": "netsu ga arimasu",
+      "english": "I have a fever",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "speak": "ねつがあります",
+      "keywords": [
+        "temperature"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-seki",
+      "native": "咳が出ます",
+      "reading": "seki ga demasu",
+      "english": "I have a cough",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "speak": "せきがでます",
+      "keywords": [
+        "coughing"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-hakike",
+      "native": "吐き気がします",
+      "reading": "hakike ga shimasu",
+      "english": "I feel sick (nauseous)",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "speak": "はきけがします",
+      "keywords": [
+        "vomit",
+        "nausea"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-geri",
+      "native": "下痢をしています",
+      "reading": "geri o shite imasu",
+      "english": "I have diarrhoea",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "speak": "げりをしています",
+      "keywords": [
+        "diarrhea"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kega",
+      "native": "怪我をしました",
+      "reading": "kega o shimashita",
+      "english": "I'm injured",
+      "tags": [
+        "health",
+        "emergency"
+      ],
+      "difficulty": 1,
+      "speak": "けがをしました",
+      "keywords": [
+        "hurt",
+        "wound"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-koko-itai",
+      "native": "ここが痛いです",
+      "reading": "koko ga itai desu",
+      "english": "It hurts here",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "speak": "ここがいたいです",
+      "keywords": [
+        "pain"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-guai",
+      "native": "具合が悪いです",
+      "reading": "guai ga warui desu",
+      "english": "I feel unwell",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "speak": "ぐあいがわるいです",
+      "keywords": [
+        "sick",
+        "ill"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-arerugii",
+      "native": "アレルギーがあります",
+      "reading": "arerugii ga arimasu",
+      "english": "I have an allergy",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "allergic"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-piinattsu",
+      "native": "ピーナッツアレルギーです",
+      "reading": "piinattsu arerugii desu",
+      "english": "I'm allergic to peanuts",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "nuts",
+        "allergy"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-tamago-arerugii",
+      "native": "卵アレルギーです",
+      "reading": "tamago arerugii desu",
+      "english": "I'm allergic to eggs",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 1,
+      "speak": "たまごアレルギーです",
+      "keywords": [
+        "egg"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kakukakurui",
+      "native": "甲殻類にアレルギーがあります",
+      "reading": "koukakurui ni arerugii ga arimasu",
+      "english": "I'm allergic to shellfish",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 2,
+      "speak": "こうかくるいにアレルギーがあります",
+      "keywords": [
+        "shrimp",
+        "crab",
+        "seafood"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-nyuu",
+      "native": "乳製品が食べられません",
+      "reading": "nyuuseihin ga taberaremasen",
+      "english": "I can't have dairy",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 1,
+      "speak": "にゅうせいひんがたべられません",
+      "keywords": [
+        "milk",
+        "lactose"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-komugi",
+      "native": "小麦アレルギーです",
+      "reading": "komugi arerugii desu",
+      "english": "I'm allergic to wheat",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 1,
+      "speak": "こむぎアレルギーです",
+      "keywords": [
+        "gluten"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-soba",
+      "native": "そばアレルギーです",
+      "reading": "soba arerugii desu",
+      "english": "I'm allergic to buckwheat (soba)",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "noodles"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-bejitarian",
+      "native": "ベジタリアンです",
+      "reading": "bejitarian desu",
+      "english": "I'm vegetarian (eggs and dairy OK)",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "no meat"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-biigan",
+      "native": "ビーガンです",
+      "reading": "biigan desu",
+      "english": "I'm vegan",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "plant-based",
+        "no animal products"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-niku-sakana-nai",
+      "native": "肉と魚は食べません",
+      "reading": "niku to sakana wa tabemasen",
+      "english": "I don't eat meat or fish",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 2,
+      "speak": "にくとさかなはたべません",
+      "keywords": [
+        "vegan"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-dashi",
+      "native": "出汁にも魚は入っていますか",
+      "reading": "dashi ni mo sakana wa haitte imasu ka",
+      "english": "Is there fish in the broth too?",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 3,
+      "speak": "だしにもさかなははいっていますか",
+      "keywords": [
+        "dashi",
+        "stock",
+        "bonito"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-buta-nai",
+      "native": "豚肉は食べられません",
+      "reading": "butaniku wa taberaremasen",
+      "english": "I can't eat pork",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 1,
+      "speak": "ぶたにくはたべられません",
+      "keywords": [
+        "halal"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-halal",
+      "native": "ハラール対応ですか",
+      "reading": "hararu taiou desu ka",
+      "english": "Is this halal?",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 2,
+      "speak": "ハラールたいおうですか",
+      "keywords": [
+        "muslim"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-no-alcohol",
+      "native": "お酒は飲めません",
+      "reading": "osake wa nomemasen",
+      "english": "I don't drink alcohol",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 1,
+      "speak": "おさけはのめません",
+      "keywords": [
+        "no alcohol"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ninshin",
+      "native": "妊娠しています",
+      "reading": "ninshin shite imasu",
+      "english": "I'm pregnant",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "speak": "にんしんしています",
+      "keywords": [
+        "expecting"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-hoken",
+      "native": "海外旅行保険に入っています",
+      "reading": "kaigai ryokou hoken ni haitte imasu",
+      "english": "I have travel insurance",
+      "tags": [
+        "health",
+        "emergency"
+      ],
+      "difficulty": 2,
+      "speak": "かいがいりょこうほけんにはいっています",
+      "keywords": [
+        "insurance"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kinou",
+      "native": "昨日からです",
+      "reading": "kinou kara desu",
+      "english": "Since yesterday",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "speak": "きのうからです",
+      "book": true
+    },
+    {
+      "id": "bh-doushita",
+      "native": "どうしましたか",
+      "reading": "dou shimashita ka",
+      "english": "What's the matter?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-guai",
+      "book": true
+    },
+    {
+      "id": "bh-doko-itai",
+      "native": "どこが痛いですか",
+      "reading": "doko ga itai desu ka",
+      "english": "Where does it hurt?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "speak": "どこがいたいですか",
+      "listen": true,
+      "replyId": "b-koko-itai",
+      "book": true
+    },
+    {
+      "id": "bh-arerugii",
+      "native": "アレルギーはありますか",
+      "reading": "arerugii wa arimasu ka",
+      "english": "Do you have any allergies?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-arerugii",
+      "book": true
+    },
+    {
+      "id": "bh-itsukara",
+      "native": "いつからですか",
+      "reading": "itsukara desu ka",
+      "english": "Since when?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-kinou",
+      "book": true
+    },
+    {
+      "id": "bh-nomikata",
+      "native": "一日三回、食後に飲んでください",
+      "reading": "ichinichi sankai, shokugo ni nonde kudasai",
+      "english": "Take it three times a day after meals",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "speak": "いちにちさんかい、しょくごにのんでください",
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-hokenshou",
+      "native": "保険証はお持ちですか",
+      "reading": "hokenshou wa omochi desu ka",
+      "english": "Do you have insurance?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "speak": "ほけんしょうはおもちですか",
+      "listen": true,
+      "replyId": "b-hoken",
+      "book": true
+    },
+    {
+      "id": "bh-netsu-hakaru",
+      "native": "熱を測りますね",
+      "reading": "netsu o hakarimasu ne",
+      "english": "I'll take your temperature",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "speak": "ねつをはかりますね",
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "b-kyuukyuusha",
+      "native": "救急車を呼んでください",
+      "reading": "kyuukyuusha o yonde kudasai",
+      "english": "Please call an ambulance",
+      "tags": [
+        "emergency",
+        "health"
+      ],
+      "difficulty": 2,
+      "speak": "きゅうきゅうしゃをよんでください",
+      "keywords": [
+        "ambulance",
+        "119"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-keisatsu",
+      "native": "警察を呼んでください",
+      "reading": "keisatsu o yonde kudasai",
+      "english": "Please call the police",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "speak": "けいさつをよんでください",
+      "keywords": [
+        "cops",
+        "110"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kooban",
+      "native": "交番はどこですか",
+      "reading": "kooban wa doko desu ka",
+      "english": "Where is the nearest police station?",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "speak": "こうばんはどこですか",
+      "keywords": [
+        "police box",
+        "koban"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kaji",
+      "native": "火事です",
+      "reading": "kaji desu",
+      "english": "Fire!",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "speak": "かじです",
+      "keywords": [
+        "fire"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-dorobou",
+      "native": "泥棒です",
+      "reading": "dorobou desu",
+      "english": "Thief!",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "speak": "どろぼうです",
+      "keywords": [
+        "robbery",
+        "stolen"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-nusumareta",
+      "native": "盗まれました",
+      "reading": "nusumaremashita",
+      "english": "It was stolen",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "speak": "ぬすまれました",
+      "keywords": [
+        "theft",
+        "robbed"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-saifu-nusu",
+      "native": "財布を盗まれました",
+      "reading": "saifu o nusumaremashita",
+      "english": "My wallet was stolen",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "speak": "さいふをぬすまれました",
+      "keywords": [
+        "purse"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-saifu-nakushi",
+      "native": "財布をなくしました",
+      "reading": "saifu o nakushimashita",
+      "english": "I lost my wallet",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "speak": "さいふをなくしました",
+      "keywords": [
+        "lost"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-passport-nakushi",
+      "native": "パスポートをなくしました",
+      "reading": "pasupooto o nakushimashita",
+      "english": "I lost my passport",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "lost"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kaban",
+      "native": "かばんを忘れました",
+      "reading": "kaban o wasuremashita",
+      "english": "I left my bag behind",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "speak": "かばんをわすれました",
+      "keywords": [
+        "forgot",
+        "bag"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-wasuremono",
+      "native": "忘れ物センターはどこですか",
+      "reading": "wasuremono sentaa wa doko desu ka",
+      "english": "Where is the lost property office?",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "speak": "わすれものセンターはどこですか",
+      "keywords": [
+        "lost and found"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-densha-wasure",
+      "native": "電車に忘れ物をしました",
+      "reading": "densha ni wasuremono o shimashita",
+      "english": "I left something on the train",
+      "tags": [
+        "emergency",
+        "tickets"
+      ],
+      "difficulty": 2,
+      "speak": "でんしゃにわすれものをしました",
+      "keywords": [
+        "lost"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kaado-tomete",
+      "native": "カードを止めてください",
+      "reading": "kaado o tomete kudasai",
+      "english": "Please block my card",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "speak": "カードをとめてください",
+      "keywords": [
+        "cancel card"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-taishikan",
+      "native": "シンガポール大使館はどこですか",
+      "reading": "shingapooru taishikan wa doko desu ka",
+      "english": "Where is the Singapore embassy?",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "speak": "シンガポールたいしかんはどこですか",
+      "keywords": [
+        "consulate"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-higaitodoke",
+      "native": "被害届を出したいです",
+      "reading": "higaitodoke o dashitai desu",
+      "english": "I want to file a police report",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "speak": "ひがいとどけをだしたいです",
+      "keywords": [
+        "report crime"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-jiko",
+      "native": "事故にあいました",
+      "reading": "jiko ni aimashita",
+      "english": "I've had an accident",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "speak": "じこにあいました",
+      "keywords": [
+        "crash"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-hagureta",
+      "native": "友達とはぐれました",
+      "reading": "tomodachi to haguremashita",
+      "english": "I got separated from my friend",
+      "tags": [
+        "emergency",
+        "help"
+      ],
+      "difficulty": 1,
+      "speak": "ともだちとはぐれました",
+      "keywords": [
+        "lost friend"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kodomo-maigo",
+      "native": "子供がいなくなりました",
+      "reading": "kodomo ga inaku narimashita",
+      "english": "My child is missing",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "speak": "こどもがいなくなりました",
+      "keywords": [
+        "lost child"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-dareka",
+      "native": "誰か来てください",
+      "reading": "dareka kite kudasai",
+      "english": "Someone, please come!",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "speak": "だれかきてください",
+      "keywords": [
+        "help"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-isha",
+      "native": "医者を呼んでください",
+      "reading": "isha o yonde kudasai",
+      "english": "Please call a doctor",
+      "tags": [
+        "emergency",
+        "health"
+      ],
+      "difficulty": 2,
+      "speak": "いしゃをよんでください",
+      "keywords": [
+        "doctor"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-eigo-isha",
+      "native": "英語が話せる医者はいますか",
+      "reading": "eigo ga hanaseru isha wa imasu ka",
+      "english": "Is there a doctor who speaks English?",
+      "tags": [
+        "emergency",
+        "health"
+      ],
+      "difficulty": 3,
+      "speak": "えいごがはなせるいしゃはいますか",
+      "book": true
+    },
+    {
+      "id": "b-tsuuyaku",
+      "native": "通訳をお願いします",
+      "reading": "tsuuyaku o onegai shimasu",
+      "english": "An interpreter, please",
+      "tags": [
+        "emergency",
+        "help"
+      ],
+      "difficulty": 2,
+      "speak": "つうやくをおねがいします",
+      "keywords": [
+        "translator"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-jishin",
+      "native": "地震です",
+      "reading": "jishin desu",
+      "english": "Earthquake!",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "speak": "じしんです",
+      "keywords": [
+        "quake"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-denwa",
+      "native": "電話を貸してください",
+      "reading": "denwa o kashite kudasai",
+      "english": "Please lend me a phone",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "speak": "でんわをかしてください",
+      "keywords": [
+        "call"
+      ],
+      "book": true
+    },
+    {
+      "id": "bh-nani-nakushita",
+      "native": "何をなくしましたか",
+      "reading": "nani o nakushimashita ka",
+      "english": "What did you lose?",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "speak": "なにをなくしましたか",
+      "listen": true,
+      "replyId": "b-saifu-nakushi",
+      "book": true
+    },
+    {
+      "id": "bh-itsu-doko",
+      "native": "いつ、どこでですか",
+      "reading": "itsu, doko de desu ka",
+      "english": "When and where?",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-denwa-bangou",
+      "native": "お電話番号を教えてください",
+      "reading": "odenwa bangou o oshiete kudasai",
+      "english": "Your phone number, please",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "speak": "おでんわばんごうをおしえてください",
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-okega",
+      "native": "お怪我はありませんか",
+      "reading": "okega wa arimasen ka",
+      "english": "Are you hurt?",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "speak": "おけがはありませんか",
+      "listen": true,
+      "replyId": "b-kega",
+      "book": true
+    },
+    {
+      "id": "bh-sugu-kimasu",
+      "native": "すぐ来ます",
+      "reading": "sugu kimasu",
+      "english": "They are on their way",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "speak": "すぐきます",
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "b-konbini",
+      "native": "コンビニはどこですか",
+      "reading": "konbini wa doko desu ka",
+      "english": "Where is a convenience store?",
+      "tags": [
+        "convenience"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "7-eleven",
+        "seven eleven",
+        "lawson",
+        "familymart",
+        "kombini"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-atatame-iranai",
+      "native": "温めなくて大丈夫です",
+      "reading": "atatamenakute daijoubu desu",
+      "english": "No need to heat it",
+      "tags": [
+        "convenience",
+        "food"
+      ],
+      "difficulty": 1,
+      "speak": "あたためなくてだいじょうぶです",
+      "keywords": [
+        "no microwave"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-hashi-nizen",
+      "native": "お箸を二膳ください",
+      "reading": "ohashi o nizen kudasai",
+      "english": "Two pairs of chopsticks, please",
+      "tags": [
+        "convenience"
+      ],
+      "difficulty": 2,
+      "speak": "おはしをにぜんください",
+      "keywords": [
+        "cutlery"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-supuun",
+      "native": "スプーンをください",
+      "reading": "supuun o kudasai",
+      "english": "A spoon, please",
+      "tags": [
+        "convenience",
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "cutlery"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-chaaji-ic",
+      "native": "ICカードにチャージしてください",
+      "reading": "ai shii kaado ni chaaji shite kudasai",
+      "english": "Please top up my transit card",
+      "tags": [
+        "convenience",
+        "tickets"
+      ],
+      "difficulty": 3,
+      "speak": "アイシーカードにチャージしてください",
+      "keywords": [
+        "suica",
+        "pasmo",
+        "icoca",
+        "easycard",
+        "reload"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-sen-en",
+      "native": "千円お願いします",
+      "reading": "sen-en onegai shimasu",
+      "english": "1,000 yen, please (top-up amount)",
+      "tags": [
+        "convenience",
+        "tickets"
+      ],
+      "difficulty": 1,
+      "speak": "せんえんおねがいします",
+      "keywords": [
+        "charge"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-simu",
+      "native": "SIMカードはありますか",
+      "reading": "shimu kaado wa arimasu ka",
+      "english": "Do you sell SIM cards?",
+      "tags": [
+        "convenience"
+      ],
+      "difficulty": 2,
+      "speak": "シムカードはありますか",
+      "keywords": [
+        "sim",
+        "data",
+        "mobile"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-atm",
+      "native": "ATMはどこですか",
+      "reading": "ee tii emu wa doko desu ka",
+      "english": "Where is the ATM?",
+      "tags": [
+        "convenience",
+        "shopping"
+      ],
+      "difficulty": 3,
+      "speak": "エーティーエムはどこですか",
+      "keywords": [
+        "cash machine",
+        "withdraw"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kaigai-card",
+      "native": "海外のカードは使えますか",
+      "reading": "kaigai no kaado wa tsukaemasu ka",
+      "english": "Does this ATM take foreign cards?",
+      "tags": [
+        "convenience"
+      ],
+      "difficulty": 2,
+      "speak": "かいがいのカードはつかえますか",
+      "keywords": [
+        "overseas card",
+        "withdraw"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-chiketto-hakken",
+      "native": "チケットを発券したいです",
+      "reading": "chiketto o hakken shitai desu",
+      "english": "I'd like to pick up a booked ticket",
+      "tags": [
+        "convenience",
+        "tickets"
+      ],
+      "difficulty": 2,
+      "speak": "チケットをはっけんしたいです",
+      "keywords": [
+        "print",
+        "collect"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-toire-okari",
+      "native": "トイレをお借りできますか",
+      "reading": "toire o okari dekimasu ka",
+      "english": "May I use the toilet?",
+      "tags": [
+        "convenience",
+        "help"
+      ],
+      "difficulty": 2,
+      "speak": "トイレをおかりできますか",
+      "keywords": [
+        "restroom",
+        "bathroom",
+        "loo"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kore-dake",
+      "native": "これだけです",
+      "reading": "kore dake desu",
+      "english": "Just this, thanks",
+      "tags": [
+        "convenience",
+        "shopping"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "that's all"
+      ],
+      "book": true
+    },
+    {
+      "id": "bh-supuun-tsuke",
+      "native": "スプーンはお付けしますか",
+      "reading": "supuun wa otsuke shimasu ka",
+      "english": "Would you like a spoon?",
+      "tags": [
+        "convenience"
+      ],
+      "difficulty": 2,
+      "speak": "スプーンはおつけしますか",
+      "listen": true,
+      "replyId": "b-supuun",
+      "book": true
+    },
+    {
+      "id": "bh-nenrei",
+      "native": "年齢確認のボタンを押してください",
+      "reading": "nenrei kakunin no botan o oshite kudasai",
+      "english": "Please press the age-confirm button (alcohol)",
+      "tags": [
+        "convenience"
+      ],
+      "difficulty": 2,
+      "speak": "ねんれいかくにんのボタンをおしてください",
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-kaado-ireru",
+      "native": "カードをこちらに入れてください",
+      "reading": "kaado o kochira ni irete kudasai",
+      "english": "Please insert your card",
+      "tags": [
+        "convenience"
+      ],
+      "difficulty": 2,
+      "speak": "カードをこちらにいれてください",
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-ic-tacchi",
+      "native": "ICカードをタッチしてください",
+      "reading": "ai shii kaado o tacchi shite kudasai",
+      "english": "Please tap your card",
+      "tags": [
+        "convenience",
+        "tickets"
+      ],
+      "difficulty": 2,
+      "speak": "アイシーカードをタッチしてください",
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "b-kippu-ichimai",
+      "native": "大人一枚お願いします",
+      "reading": "otona ichimai onegai shimasu",
+      "english": "One adult ticket, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "speak": "おとないちまいおねがいします",
+      "keywords": [
+        "adult"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-otona-nimai",
+      "native": "大人二枚お願いします",
+      "reading": "otona nimai onegai shimasu",
+      "english": "Two adult tickets, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "speak": "おとなにまいおねがいします",
+      "keywords": [
+        "adult"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kodomo",
+      "native": "子供一枚お願いします",
+      "reading": "kodomo ichimai onegai shimasu",
+      "english": "One child ticket, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "speak": "こどもいちまいおねがいします",
+      "keywords": [
+        "kid"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-oufuku",
+      "native": "往復でお願いします",
+      "reading": "oufuku de onegai shimasu",
+      "english": "Round trip, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "speak": "おうふくでおねがいします",
+      "keywords": [
+        "return"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-katamichi",
+      "native": "片道でお願いします",
+      "reading": "katamichi de onegai shimasu",
+      "english": "One way, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "speak": "かたみちでおねがいします",
+      "keywords": [
+        "single"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-shiteiseki",
+      "native": "指定席をお願いします",
+      "reading": "shiteiseki o onegai shimasu",
+      "english": "A reserved seat, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "speak": "していせきをおねがいします",
+      "keywords": [
+        "reservation"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-jiyuuseki",
+      "native": "自由席をお願いします",
+      "reading": "jiyuuseki o onegai shimasu",
+      "english": "An unreserved seat, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "speak": "じゆうせきをおねがいします",
+      "book": true
+    },
+    {
+      "id": "b-madogawa",
+      "native": "窓側の席をお願いします",
+      "reading": "madogawa no seki o onegai shimasu",
+      "english": "A window seat, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "speak": "まどがわのせきをおねがいします",
+      "book": true
+    },
+    {
+      "id": "b-tsuurogawa",
+      "native": "通路側の席をお願いします",
+      "reading": "tsuurogawa no seki o onegai shimasu",
+      "english": "An aisle seat, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "speak": "つうろがわのせきをおねがいします",
+      "book": true
+    },
+    {
+      "id": "b-nanbansen",
+      "native": "何番線ですか",
+      "reading": "nanbansen desu ka",
+      "english": "Which platform?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 1,
+      "speak": "なんばんせんですか",
+      "keywords": [
+        "track"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-hoomu",
+      "native": "ホームはどこですか",
+      "reading": "hoomu wa doko desu ka",
+      "english": "Where is the platform?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "track"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-shinkansen",
+      "native": "新幹線の乗り場はどこですか",
+      "reading": "shinkansen no noriba wa doko desu ka",
+      "english": "Where is the bullet train platform?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 3,
+      "speak": "しんかんせんののりばはどこですか",
+      "keywords": [
+        "shinkansen",
+        "hsr",
+        "high speed rail"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-tsugi-densha",
+      "native": "次の電車は何時ですか",
+      "reading": "tsugi no densha wa nanji desu ka",
+      "english": "What time is the next train?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 3,
+      "speak": "つぎのでんしゃはなんじですか",
+      "keywords": [
+        "timetable",
+        "schedule"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-saishuu",
+      "native": "最終電車は何時ですか",
+      "reading": "saishuu densha wa nanji desu ka",
+      "english": "What time is the last train?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "speak": "さいしゅうでんしゃはなんじですか",
+      "keywords": [
+        "last service"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ic-tsukaeru",
+      "native": "ICカードは使えますか",
+      "reading": "ai shii kaado wa tsukaemasu ka",
+      "english": "Can I use my transit card here?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "speak": "アイシーカードはつかえますか",
+      "keywords": [
+        "suica",
+        "pasmo",
+        "icoca",
+        "easycard",
+        "tap"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ic-kau",
+      "native": "ICカードを買いたいです",
+      "reading": "ai shii kaado o kaitai desu",
+      "english": "I'd like to buy a transit card",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "speak": "アイシーカードをかいたいです",
+      "keywords": [
+        "suica",
+        "pasmo",
+        "icoca",
+        "easycard"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-zandaka",
+      "native": "残高を確認したいです",
+      "reading": "zandaka o kakunin shitai desu",
+      "english": "I'd like to check my balance",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "speak": "ざんだかをかくにんしたいです",
+      "keywords": [
+        "remaining"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-seisan",
+      "native": "精算機はどこですか",
+      "reading": "seisanki wa doko desu ka",
+      "english": "Where is the fare adjustment machine?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "speak": "せいさんきはどこですか",
+      "keywords": [
+        "excess fare"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-norikoshi",
+      "native": "乗り越しました",
+      "reading": "norikoshimashita",
+      "english": "I went past my stop",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 1,
+      "speak": "のりこしました",
+      "keywords": [
+        "overshot"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kippu-nakushi",
+      "native": "切符をなくしました",
+      "reading": "kippu o nakushimashita",
+      "english": "I lost my ticket",
+      "tags": [
+        "tickets",
+        "emergency"
+      ],
+      "difficulty": 1,
+      "speak": "きっぷをなくしました",
+      "book": true
+    },
+    {
+      "id": "b-kono-kippu",
+      "native": "この切符で乗れますか",
+      "reading": "kono kippu de noremasu ka",
+      "english": "Can I use this ticket?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "speak": "このきっぷでのれますか",
+      "book": true
+    },
+    {
+      "id": "b-rail-pass",
+      "native": "レールパスは使えますか",
+      "reading": "reeru pasu wa tsukaemasu ka",
+      "english": "Can I use a rail pass?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "jr pass",
+        "tourist pass"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-pass-koukan",
+      "native": "レールパスの引き換えはどこですか",
+      "reading": "reeru pasu no hikikae wa doko desu ka",
+      "english": "Where do I exchange my rail pass?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 3,
+      "speak": "レールパスのひきかえはどこですか",
+      "keywords": [
+        "jr pass"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-cancel",
+      "native": "キャンセルしたいです",
+      "reading": "kyanseru shitai desu",
+      "english": "I'd like to cancel",
+      "tags": [
+        "tickets",
+        "hotel"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "refund"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-okurete",
+      "native": "電車は遅れていますか",
+      "reading": "densha wa okurete imasu ka",
+      "english": "Is the train delayed?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "speak": "でんしゃはおくれていますか",
+      "keywords": [
+        "late"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kyuukou",
+      "native": "この電車は急行ですか",
+      "reading": "kono densha wa kyuukou desu ka",
+      "english": "Is this an express?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "speak": "このでんしゃはきゅうこうですか",
+      "keywords": [
+        "local",
+        "limited express"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ryoukin",
+      "native": "料金はいくらですか",
+      "reading": "ryoukin wa ikura desu ka",
+      "english": "What's the fare?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "speak": "りょうきんはいくらですか",
+      "keywords": [
+        "price"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-shinjuku",
+      "native": "この電車は新宿に行きますか",
+      "reading": "kono densha wa Shinjuku ni ikimasu ka",
+      "english": "Does this train go to Shinjuku?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 3,
+      "speak": "このでんしゃはしんじゅくにいきますか",
+      "book": true
+    },
+    {
+      "id": "b-basu-kuukou",
+      "native": "このバスは空港に行きますか",
+      "reading": "kono basu wa kuukou ni ikimasu ka",
+      "english": "Does this bus go to the airport?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 3,
+      "speak": "このバスはくうこうにいきますか",
+      "book": true
+    },
+    {
+      "id": "b-ushiro",
+      "native": "後ろから乗りますか",
+      "reading": "ushiro kara norimasu ka",
+      "english": "Do I board from the back?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "speak": "うしろからのりますか",
+      "keywords": [
+        "bus"
+      ],
+      "book": true
+    },
+    {
+      "id": "bh-nanmai",
+      "native": "何枚ですか",
+      "reading": "nanmai desu ka",
+      "english": "How many tickets?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "speak": "なんまいですか",
+      "listen": true,
+      "replyId": "b-kippu-ichimai",
+      "book": true
+    },
+    {
+      "id": "bh-shitei",
+      "native": "指定席にしますか",
+      "reading": "shiteiseki ni shimasu ka",
+      "english": "Reserved or unreserved?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "speak": "していせきにしますか",
+      "listen": true,
+      "replyId": "b-shiteiseki",
+      "book": true
+    },
+    {
+      "id": "bh-oufuku",
+      "native": "片道ですか、往復ですか",
+      "reading": "katamichi desu ka, oufuku desu ka",
+      "english": "One way or round trip?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "speak": "かたみちですか、おうふくですか",
+      "listen": true,
+      "replyId": "b-katamichi",
+      "book": true
+    },
+    {
+      "id": "bh-hoomu",
+      "native": "三番線です",
+      "reading": "sanbansen desu",
+      "english": "It's platform 3",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "speak": "さんばんせんです",
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-kippu-haiken",
+      "native": "切符を拝見します",
+      "reading": "kippu o haiken shimasu",
+      "english": "Tickets, please (inspector)",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "speak": "きっぷをはいけんします",
+      "listen": true,
+      "replyId": "b-douzo",
+      "book": true
+    },
+    {
+      "id": "bh-norikae",
+      "native": "次の駅で乗り換えてください",
+      "reading": "tsugi no eki de norikaete kudasai",
+      "english": "Change trains at the next station",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "speak": "つぎのえきでのりかえてください",
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "b-takushii-noriba",
+      "native": "タクシー乗り場はどこですか",
+      "reading": "takushii noriba wa doko desu ka",
+      "english": "Where is the taxi stand?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "speak": "タクシーのりばはどこですか",
+      "keywords": [
+        "cab"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-takushii-yonde",
+      "native": "タクシーを呼んでください",
+      "reading": "takushii o yonde kudasai",
+      "english": "Please call a taxi",
+      "tags": [
+        "transport",
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "cab"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-takushii-ikura",
+      "native": "ここまでいくらですか",
+      "reading": "koko made ikura desu ka",
+      "english": "How much to here? (taxi)",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "fare"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-meetaa",
+      "native": "メーターを使ってください",
+      "reading": "meetaa o tsukatte kudasai",
+      "english": "Please use the meter",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "speak": "メーターをつかってください",
+      "keywords": [
+        "taxi"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-tomete",
+      "native": "ここで止めてください",
+      "reading": "koko de tomete kudasai",
+      "english": "Please stop here",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "speak": "ここでとめてください",
+      "keywords": [
+        "taxi"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-matte-te",
+      "native": "ここで待っててもらえますか",
+      "reading": "koko de matte te moraemasu ka",
+      "english": "Can you wait here?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "speak": "ここでまっててもらえますか",
+      "keywords": [
+        "taxi"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kuukou-dou",
+      "native": "空港へはどう行きますか",
+      "reading": "kuukou e wa dou ikimasu ka",
+      "english": "How do I get to the airport?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "speak": "くうこうへはどういきますか",
+      "book": true
+    },
+    {
+      "id": "b-michi-oshiete",
+      "native": "道を教えてください",
+      "reading": "michi o oshiete kudasai",
+      "english": "Please tell me the way",
+      "tags": [
+        "transport",
+        "help"
+      ],
+      "difficulty": 2,
+      "speak": "みちをおしえてください",
+      "keywords": [
+        "directions"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-aruite",
+      "native": "歩いて行けますか",
+      "reading": "aruite ikemasu ka",
+      "english": "Can I walk there?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 1,
+      "speak": "あるいていけますか",
+      "book": true
+    },
+    {
+      "id": "b-nanpun",
+      "native": "何分かかりますか",
+      "reading": "nanpun kakarimasu ka",
+      "english": "How many minutes does it take?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 1,
+      "speak": "なんぷんかかりますか",
+      "keywords": [
+        "time",
+        "how long"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-chizu-de",
+      "native": "地図で教えてください",
+      "reading": "chizu de oshiete kudasai",
+      "english": "Please show me on the map",
+      "tags": [
+        "transport",
+        "help"
+      ],
+      "difficulty": 2,
+      "speak": "ちずでおしえてください",
+      "book": true
+    },
+    {
+      "id": "b-massugu",
+      "native": "まっすぐ行ってください",
+      "reading": "massugu itte kudasai",
+      "english": "Go straight",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 1,
+      "speak": "まっすぐいってください",
+      "keywords": [
+        "straight ahead",
+        "forward"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-migi",
+      "native": "右に曲がってください",
+      "reading": "migi ni magatte kudasai",
+      "english": "Turn right",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "speak": "みぎにまがってください",
+      "book": true
+    },
+    {
+      "id": "b-hidari",
+      "native": "左に曲がってください",
+      "reading": "hidari ni magatte kudasai",
+      "english": "Turn left",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "speak": "ひだりにまがってください",
+      "book": true
+    },
+    {
+      "id": "b-norikae-doko",
+      "native": "乗り換えはどこですか",
+      "reading": "norikae wa doko desu ka",
+      "english": "Where do I transfer?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "speak": "のりかえはどこですか",
+      "keywords": [
+        "change trains"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-tsugi-eki",
+      "native": "次の駅は何ですか",
+      "reading": "tsugi no eki wa nan desu ka",
+      "english": "What's the next station?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 3,
+      "speak": "つぎのえきはなんですか",
+      "book": true
+    },
+    {
+      "id": "b-koko-doko",
+      "native": "ここはどこですか",
+      "reading": "koko wa doko desu ka",
+      "english": "Where am I?",
+      "tags": [
+        "transport",
+        "help"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-deguchi-doko",
+      "native": "出口はどこですか",
+      "reading": "deguchi wa doko desu ka",
+      "english": "Where is the exit?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "speak": "でぐちはどこですか",
+      "keywords": [
+        "way out"
+      ],
+      "book": true
+    },
+    {
+      "id": "bh-doko-made",
+      "native": "どちらまでですか",
+      "reading": "dochira made desu ka",
+      "english": "Where to?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "destination"
+      ],
+      "listen": true,
+      "replyId": "p-juusho",
+      "book": true
+    },
+    {
+      "id": "bh-tsukimashita",
+      "native": "着きました",
+      "reading": "tsukimashita",
+      "english": "We've arrived",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "speak": "つきました",
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-taxi-en",
+      "native": "千五百円です",
+      "reading": "sen gohyaku-en desu",
+      "english": "That's 1,500 yen",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "speak": "せんごひゃくえんです",
+      "keywords": [
+        "fare"
+      ],
+      "listen": true,
+      "book": true
     }
   ]
 }

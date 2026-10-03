@@ -7,7 +7,7 @@ import { h } from './dom';
 /** "12 of 78 learned" for any pack, read straight from storage so it works for packs not loaded. */
 async function progress(code: string): Promise<string> {
   const [pack, cards] = await Promise.all([loadPack(code), getCards(code)]);
-  const said = pack.phrases.phrases;
+  const said = pack.phrases.phrases.filter((p) => !p.book);
   const learned = said.filter((p) => (cards.get(p.id)?.interval ?? 0) >= 1).length;
   return `${learned} of ${said.length} learned`;
 }

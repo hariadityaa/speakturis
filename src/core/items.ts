@@ -1,6 +1,6 @@
 import type { Item, Pack } from './types';
 
-/** Flattens a pack into reviewable items. Kana and phrases share one review pipeline. */
+/** Flattens a pack into reviewable items. Kana and phrases share one review pipeline. Phrasebook-only phrases are left out. */
 export function buildItems(pack: Pack): Item[] {
   const items: Item[] = [];
   for (const s of pack.scripts.systems) {
@@ -11,6 +11,7 @@ export function buildItems(pack: Pack): Item[] {
     }
   }
   for (const p of pack.phrases.phrases) {
+    if (p.book) continue; // phrasebook only
     items.push({
       id: p.id, kind: 'phrase', front: p.native, reading: p.reading, english: p.english,
       speak: p.speak ?? p.native, audioSrc: p.audioSrc, tags: p.tags, listen: p.listen,

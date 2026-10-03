@@ -47,6 +47,17 @@ function plain(pack: Pack, key: string): Phrase[] {
   return all.filter((p) => !p.listen && p.tags.includes(key));
 }
 
+/** Lowercase without accents, so "xiexie" finds xièxie. */
+export const fold = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
+/** True when every word of `query` appears in the phrase's English, reading, native text or keywords. An empty query matches all. */
+export function matchPhrase(p: Phrase, query: string): boolean {
+  const words = fold(query).split(/\s+/).filter(Boolean);
+  if (!words.length) return true;
+  const hay = fold([p.english, p.reading, p.native, ...(p.keywords ?? [])].join(' '));
+  return words.every((w) => hay.includes(w));
+}
+
 export interface BookSection { key: string; label: string; phrases: Phrase[] }
 
 /** The All view without a search: Starred, then each topic by its first tag, then what staff say. Starred phrases repeat in their topic. */
