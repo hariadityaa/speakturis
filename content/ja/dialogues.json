@@ -5,7 +5,7 @@
       "id": "d-ramen",
       "title": "Ordering at a ramen shop",
       "situation": "food",
-      "intro": "You enter a small ramen shop. The staff greets you.",
+      "intro": "You enter a small ramen shop in Sapporo. A staff member greets you.",
       "start": "n1",
       "nodes": {
         "n1": {
@@ -17,113 +17,544 @@
             {
               "next": "n2",
               "good": true,
-              "native": "一人です",
-              "reading": "hitori desu",
-              "english": "Just one"
-            },
-            {
-              "next": "n1b",
-              "good": false,
-              "native": "さようなら",
-              "reading": "sayounara",
-              "english": "Goodbye",
-              "feedback": "That means goodbye. You just arrived."
+              "phraseId": "p-futari"
             },
             {
               "next": "n2",
               "good": true,
-              "native": "ひとりです",
+              "native": "一人です",
               "reading": "hitori desu",
-              "english": "One person"
+              "english": "Just one",
+              "speak": "ひとりです"
+            },
+            {
+              "next": "n1b",
+              "good": false,
+              "native": "ごちそうさまでした",
+              "reading": "gochisousama deshita",
+              "english": "Thank you for the meal",
+              "speak": "ごちそうさまでした",
+              "feedback": "That is said after eating. You just arrived."
             }
           ]
         },
         "n1b": {
           "speaker": "npc",
-          "native": "えっ？ご注文は？",
-          "reading": "e? gochuumon wa?",
-          "english": "Huh? Your order?",
+          "native": "あの、何名様ですか。",
+          "reading": "ano, nanmei sama desu ka",
+          "english": "Um, how many people?",
           "replies": [
             {
               "next": "n2",
               "good": true,
-              "native": "ラーメンをください",
-              "reading": "raamen o kudasai",
-              "english": "Ramen, please"
+              "phraseId": "p-futari"
             },
             {
               "next": "n2",
               "good": true,
-              "phraseId": "p-sumimasen"
+              "native": "一人です",
+              "reading": "hitori desu",
+              "english": "Just one",
+              "speak": "ひとりです"
             }
           ]
         },
         "n2": {
           "speaker": "npc",
-          "native": "こちらへどうぞ。ご注文は？",
-          "reading": "kochira e douzo. gochuumon wa?",
-          "english": "This way. What would you like?",
+          "native": "こちらへどうぞ。メニューです。",
+          "reading": "kochira e douzo. menyuu desu",
+          "english": "This way. Here's the menu.",
           "replies": [
             {
               "next": "n3",
               "good": true,
-              "native": "ラーメンをください",
-              "reading": "raamen o kudasai",
-              "english": "Ramen, please"
-            },
-            {
-              "next": "n3b",
-              "good": false,
-              "native": "トイレはどこですか",
-              "reading": "toire wa doko desu ka",
-              "english": "Where is the toilet?",
-              "feedback": "Not yet. Order first."
-            }
-          ]
-        },
-        "n3b": {
-          "speaker": "npc",
-          "native": "トイレはあちらです。ご注文は？",
-          "reading": "toire wa achira desu. gochuumon wa?",
-          "english": "The toilet is over there. Your order?",
-          "replies": [
-            {
-              "next": "n3",
-              "good": true,
-              "native": "ラーメンをください",
-              "reading": "raamen o kudasai",
-              "english": "Ramen, please"
+              "phraseId": "p-osusume"
             },
             {
               "next": "n3",
               "good": true,
               "phraseId": "p-kore-kudasai"
+            },
+            {
+              "next": "n2b",
+              "good": false,
+              "phraseId": "p-toire",
+              "feedback": "Not yet. You still need to order."
+            }
+          ]
+        },
+        "n2b": {
+          "speaker": "npc",
+          "native": "お手洗いはあちらです。ご注文は？",
+          "reading": "otearai wa achira desu. gochuumon wa?",
+          "english": "The restroom is over there. Your order?",
+          "speak": "おてあらいはあちらです。ごちゅうもんは？",
+          "replies": [
+            {
+              "next": "n3",
+              "good": true,
+              "phraseId": "p-kore-kudasai"
+            },
+            {
+              "next": "n3",
+              "good": true,
+              "phraseId": "p-osusume"
             }
           ]
         },
         "n3": {
           "speaker": "npc",
-          "native": "かしこまりました。以上でよろしいですか。",
-          "reading": "kashikomarimashita. ijou de yoroshii desu ka",
-          "english": "Certainly. Is that all?",
+          "native": "味噌ラーメンがおすすめです。辛いですが、大丈夫ですか。",
+          "reading": "miso raamen ga osusume desu. karai desu ga, daijoubu desu ka",
+          "english": "The miso ramen is recommended. It's spicy. Is that OK?",
+          "speak": "みそラーメンがおすすめです。からいですが、だいじょうぶですか。",
           "replies": [
             {
               "next": "n4",
               "good": true,
-              "native": "はい、大丈夫です",
-              "reading": "hai, daijoubu desu",
-              "english": "Yes, that's fine"
+              "phraseId": "p-no-spice"
             },
             {
               "next": "n4",
               "good": true,
-              "native": "ビールもください",
-              "reading": "biiru mo kudasai",
-              "english": "Beer too, please"
+              "native": "大丈夫です。それをください",
+              "reading": "daijoubu desu. sore o kudasai",
+              "english": "That's fine. I'll have that",
+              "speak": "だいじょうぶです。それをください"
+            },
+            {
+              "next": "n3b",
+              "good": false,
+              "phraseId": "p-arigatou",
+              "feedback": "Polite, but it doesn't answer the question."
+            }
+          ]
+        },
+        "n3b": {
+          "speaker": "npc",
+          "native": "味噌ラーメンでいいですか。",
+          "reading": "miso raamen de ii desu ka",
+          "english": "Is miso ramen OK?",
+          "speak": "みそラーメンでいいですか。",
+          "replies": [
+            {
+              "next": "n4",
+              "good": true,
+              "native": "はい、お願いします",
+              "reading": "hai, onegai shimasu",
+              "english": "Yes, please",
+              "speak": "はい、おねがいします"
+            },
+            {
+              "next": "n4",
+              "good": true,
+              "phraseId": "p-no-spice"
             }
           ]
         },
         "n4": {
+          "speaker": "npc",
+          "native": "かしこまりました。お飲み物はどうしますか。",
+          "reading": "kashikomarimashita. onomimono wa doushimasu ka",
+          "english": "Certainly. Anything to drink?",
+          "speak": "かしこまりました。おのみものはどうしますか。",
+          "replies": [
+            {
+              "next": "n5",
+              "good": true,
+              "phraseId": "p-mizu"
+            },
+            {
+              "next": "n5",
+              "good": true,
+              "native": "ビールをください",
+              "reading": "biiru o kudasai",
+              "english": "A beer, please"
+            },
+            {
+              "next": "n5",
+              "good": true,
+              "native": "いりません",
+              "reading": "irimasen",
+              "english": "No, thank you"
+            }
+          ]
+        },
+        "n5": {
+          "speaker": "npc",
+          "native": "お待たせしました。ごゆっくりどうぞ。",
+          "reading": "omatase shimashita. goyukkuri douzo",
+          "english": "Thank you for waiting. Enjoy.",
+          "speak": "おまたせしました。ごゆっくりどうぞ。",
+          "replies": [
+            {
+              "next": "n6",
+              "good": true,
+              "phraseId": "p-itadakimasu"
+            },
+            {
+              "next": "n6",
+              "good": true,
+              "phraseId": "p-oishii"
+            }
+          ]
+        },
+        "n6": {
+          "speaker": "npc",
+          "native": "ありがとうございます。",
+          "reading": "arigatou gozaimasu",
+          "english": "Thank you.",
+          "replies": [
+            {
+              "next": "n7",
+              "good": true,
+              "phraseId": "p-okaikei"
+            },
+            {
+              "next": "n7",
+              "good": true,
+              "native": "お会計は？",
+              "reading": "okaikei wa?",
+              "english": "The bill?",
+              "speak": "おかいけいは？"
+            }
+          ]
+        },
+        "n7": {
+          "speaker": "npc",
+          "native": "千二百八十円です。",
+          "reading": "sen nihyaku hachijuu en desu",
+          "english": "That's 1,280 yen.",
+          "speak": "せんにひゃくはちじゅうえんです。",
+          "replies": [
+            {
+              "next": "n8",
+              "good": true,
+              "phraseId": "p-kaado"
+            },
+            {
+              "next": "n8",
+              "good": true,
+              "native": "現金でお願いします",
+              "reading": "genkin de onegai shimasu",
+              "english": "Cash, please",
+              "speak": "げんきんでおねがいします"
+            }
+          ]
+        },
+        "n8": {
+          "speaker": "npc",
+          "native": "ありがとうございました。またどうぞ。",
+          "reading": "arigatou gozaimashita. mata douzo",
+          "english": "Thank you very much. Please come again.",
+          "end": true
+        }
+      }
+    },
+    {
+      "id": "d-taxi",
+      "title": "Taking a taxi",
+      "situation": "transport",
+      "intro": "You hail a taxi outside the hotel. You have the address saved on your phone.",
+      "start": "n1",
+      "nodes": {
+        "n1": {
+          "speaker": "npc",
+          "native": "どちらまでですか。",
+          "reading": "dochira made desu ka",
+          "english": "Where to?",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-juusho"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "native": "札幌駅までお願いします",
+              "reading": "sapporo eki made onegai shimasu",
+              "english": "To Sapporo Station, please",
+              "speak": "さっぽろえきまでおねがいします"
+            },
+            {
+              "next": "n1b",
+              "good": false,
+              "phraseId": "p-kore-kudasai",
+              "feedback": "That's for ordering things. Say where you want to go."
+            }
+          ]
+        },
+        "n1b": {
+          "speaker": "npc",
+          "native": "え？どちらへ行きますか。",
+          "reading": "e? dochira e ikimasu ka",
+          "english": "Huh? Where are you going?",
+          "speak": "え？どちらへいきますか。",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-juusho"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "native": "札幌駅までお願いします",
+              "reading": "sapporo eki made onegai shimasu",
+              "english": "To Sapporo Station, please",
+              "speak": "さっぽろえきまでおねがいします"
+            }
+          ]
+        },
+        "n2": {
+          "speaker": "npc",
+          "native": "はい、分かりました。二十分ぐらいです。",
+          "reading": "hai, wakarimashita. nijuppun gurai desu",
+          "english": "OK, understood. About 20 minutes.",
+          "speak": "はい、わかりました。にじゅっぷんぐらいです。",
+          "replies": [
+            {
+              "next": "n3",
+              "good": true,
+              "phraseId": "p-arigatou"
+            },
+            {
+              "next": "n3",
+              "good": true,
+              "phraseId": "p-yukkuri"
+            },
+            {
+              "next": "n3",
+              "good": false,
+              "phraseId": "p-itadakimasu",
+              "feedback": "That's said before a meal, not in a taxi."
+            }
+          ]
+        },
+        "n3": {
+          "speaker": "npc",
+          "native": "着きました。三千二百円です。",
+          "reading": "tsukimashita. sanzen nihyaku en desu",
+          "english": "We're here. That's 3,200 yen.",
+          "speak": "つきました。さんぜんにひゃくえんです。",
+          "replies": [
+            {
+              "next": "n4",
+              "good": true,
+              "phraseId": "p-kaado"
+            },
+            {
+              "next": "n4",
+              "good": true,
+              "native": "現金でお願いします",
+              "reading": "genkin de onegai shimasu",
+              "english": "Cash, please",
+              "speak": "げんきんでおねがいします"
+            },
+            {
+              "next": "n3b",
+              "good": false,
+              "phraseId": "p-mizu",
+              "feedback": "You asked for water. The driver wants payment."
+            }
+          ]
+        },
+        "n3b": {
+          "speaker": "npc",
+          "native": "お会計をお願いします。三千二百円です。",
+          "reading": "okaikei o onegai shimasu. sanzen nihyaku en desu",
+          "english": "Payment, please. 3,200 yen.",
+          "speak": "おかいけいをおねがいします。さんぜんにひゃくえんです。",
+          "replies": [
+            {
+              "next": "n4",
+              "good": true,
+              "phraseId": "p-kaado"
+            },
+            {
+              "next": "n4",
+              "good": true,
+              "native": "現金でお願いします",
+              "reading": "genkin de onegai shimasu",
+              "english": "Cash, please",
+              "speak": "げんきんでおねがいします"
+            }
+          ]
+        },
+        "n4": {
+          "speaker": "npc",
+          "native": "はい、大丈夫です。レシートは？",
+          "reading": "hai, daijoubu desu. reshiito wa?",
+          "english": "Yes, that's fine. Receipt?",
+          "speak": "はい、だいじょうぶです。レシートは？",
+          "replies": [
+            {
+              "next": "n5",
+              "good": true,
+              "phraseId": "p-reshiito"
+            },
+            {
+              "next": "n5",
+              "good": true,
+              "native": "いりません",
+              "reading": "irimasen",
+              "english": "No, thank you"
+            }
+          ]
+        },
+        "n5": {
+          "speaker": "npc",
+          "native": "ありがとうございました。お気をつけて。",
+          "reading": "arigatou gozaimashita. oki o tsukete",
+          "english": "Thank you. Take care.",
+          "speak": "ありがとうございました。おきをつけて。",
+          "end": true
+        }
+      }
+    },
+    {
+      "id": "d-konbini",
+      "title": "At the convenience store",
+      "situation": "shopping",
+      "intro": "You bring a bento box and a drink to the register.",
+      "start": "n1",
+      "nodes": {
+        "n1": {
+          "speaker": "npc",
+          "native": "いらっしゃいませ。お弁当、温めますか。",
+          "reading": "irasshaimase. obentou, atatamemasu ka",
+          "english": "Welcome. Shall I heat the bento?",
+          "speak": "いらっしゃいませ。おべんとう、あたためますか。",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-atatamete"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "native": "はい、お願いします",
+              "reading": "hai, onegai shimasu",
+              "english": "Yes, please",
+              "speak": "はい、おねがいします"
+            },
+            {
+              "next": "n1b",
+              "good": false,
+              "phraseId": "p-sumimasen",
+              "feedback": "Polite, but it doesn't answer the question."
+            }
+          ]
+        },
+        "n1b": {
+          "speaker": "npc",
+          "native": "温めますか。",
+          "reading": "atatamemasu ka",
+          "english": "Heat it up?",
+          "speak": "あたためますか。",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "native": "はい、お願いします",
+              "reading": "hai, onegai shimasu",
+              "english": "Yes, please",
+              "speak": "はい、おねがいします"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "native": "いいえ、大丈夫です",
+              "reading": "iie, daijoubu desu",
+              "english": "No, it's fine",
+              "speak": "いいえ、だいじょうぶです"
+            }
+          ]
+        },
+        "n2": {
+          "speaker": "npc",
+          "native": "袋はご利用ですか。",
+          "reading": "fukuro wa goriyou desu ka",
+          "english": "Do you need a bag?",
+          "speak": "ふくろはごりようですか。",
+          "replies": [
+            {
+              "next": "n3",
+              "good": true,
+              "phraseId": "p-fukuro"
+            },
+            {
+              "next": "n3",
+              "good": true,
+              "native": "はい、お願いします",
+              "reading": "hai, onegai shimasu",
+              "english": "Yes, please",
+              "speak": "はい、おねがいします"
+            },
+            {
+              "next": "n3",
+              "good": false,
+              "phraseId": "p-toire",
+              "feedback": "Answer the bag question first. The toilet can wait."
+            }
+          ]
+        },
+        "n3": {
+          "speaker": "npc",
+          "native": "八百五十円です。お箸はご利用ですか。",
+          "reading": "happyaku gojuu en desu. ohashi wa goriyou desu ka",
+          "english": "That's 850 yen. Would you like chopsticks?",
+          "speak": "はっぴゃくごじゅうえんです。おはしはごりようですか。",
+          "replies": [
+            {
+              "next": "n4",
+              "good": true,
+              "phraseId": "p-hashi"
+            },
+            {
+              "next": "n4",
+              "good": true,
+              "native": "箸はいりません",
+              "reading": "hashi wa irimasen",
+              "english": "No chopsticks, thanks",
+              "speak": "はしはいりません"
+            },
+            {
+              "next": "n4",
+              "good": false,
+              "phraseId": "p-gochisousama",
+              "feedback": "That's said after eating, not at the register."
+            }
+          ]
+        },
+        "n4": {
+          "speaker": "npc",
+          "native": "カードですか、現金ですか。",
+          "reading": "kaado desu ka, genkin desu ka",
+          "english": "Card or cash?",
+          "speak": "カードですか、げんきんですか。",
+          "replies": [
+            {
+              "next": "n5",
+              "good": true,
+              "native": "カードでお願いします",
+              "reading": "kaado de onegai shimasu",
+              "english": "Card, please",
+              "speak": "カードでおねがいします"
+            },
+            {
+              "next": "n5",
+              "good": true,
+              "native": "現金でお願いします",
+              "reading": "genkin de onegai shimasu",
+              "english": "Cash, please",
+              "speak": "げんきんでおねがいします"
+            }
+          ]
+        },
+        "n5": {
           "speaker": "npc",
           "native": "ありがとうございました。",
           "reading": "arigatou gozaimashita",

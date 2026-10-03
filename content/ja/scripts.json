@@ -7,7 +7,7 @@
       "groups": [
         {
           "id": "k-vowels",
-          "label": "a i u e o",
+          "label": "Vowels: a i u e o",
           "chars": [
             {
               "id": "kata-a",
@@ -38,7 +38,7 @@
         },
         {
           "id": "k-k",
-          "label": "ka ki ku ke ko",
+          "label": "K row: ka ki ku ke ko",
           "chars": [
             {
               "id": "kata-ka",
@@ -69,7 +69,7 @@
         },
         {
           "id": "k-s",
-          "label": "sa shi su se so",
+          "label": "S row: sa shi su se so",
           "chars": [
             {
               "id": "kata-sa",
@@ -100,7 +100,7 @@
         },
         {
           "id": "k-t",
-          "label": "ta chi tsu te to",
+          "label": "T row: ta chi tsu te to",
           "chars": [
             {
               "id": "kata-ta",
@@ -131,7 +131,7 @@
         },
         {
           "id": "k-n",
-          "label": "na ni nu ne no",
+          "label": "N row: na ni nu ne no",
           "chars": [
             {
               "id": "kata-na",
@@ -159,6 +159,370 @@
               "reading": "no"
             }
           ]
+        },
+        {
+          "id": "k-h",
+          "label": "H row: ha hi fu he ho",
+          "chars": [
+            {
+              "id": "kata-ha",
+              "char": "ハ",
+              "reading": "ha"
+            },
+            {
+              "id": "kata-hi",
+              "char": "ヒ",
+              "reading": "hi"
+            },
+            {
+              "id": "kata-fu",
+              "char": "フ",
+              "reading": "fu"
+            },
+            {
+              "id": "kata-he",
+              "char": "ヘ",
+              "reading": "he"
+            },
+            {
+              "id": "kata-ho",
+              "char": "ホ",
+              "reading": "ho"
+            }
+          ]
+        },
+        {
+          "id": "k-m",
+          "label": "M row: ma mi mu me mo",
+          "chars": [
+            {
+              "id": "kata-ma",
+              "char": "マ",
+              "reading": "ma"
+            },
+            {
+              "id": "kata-mi",
+              "char": "ミ",
+              "reading": "mi"
+            },
+            {
+              "id": "kata-mu",
+              "char": "ム",
+              "reading": "mu"
+            },
+            {
+              "id": "kata-me",
+              "char": "メ",
+              "reading": "me"
+            },
+            {
+              "id": "kata-mo",
+              "char": "モ",
+              "reading": "mo"
+            }
+          ]
+        },
+        {
+          "id": "k-y",
+          "label": "Y row: ya yu yo",
+          "chars": [
+            {
+              "id": "kata-ya",
+              "char": "ヤ",
+              "reading": "ya"
+            },
+            {
+              "id": "kata-yu",
+              "char": "ユ",
+              "reading": "yu"
+            },
+            {
+              "id": "kata-yo",
+              "char": "ヨ",
+              "reading": "yo"
+            }
+          ]
+        },
+        {
+          "id": "k-r",
+          "label": "R row: ra ri ru re ro",
+          "chars": [
+            {
+              "id": "kata-ra",
+              "char": "ラ",
+              "reading": "ra"
+            },
+            {
+              "id": "kata-ri",
+              "char": "リ",
+              "reading": "ri"
+            },
+            {
+              "id": "kata-ru",
+              "char": "ル",
+              "reading": "ru"
+            },
+            {
+              "id": "kata-re",
+              "char": "レ",
+              "reading": "re"
+            },
+            {
+              "id": "kata-ro",
+              "char": "ロ",
+              "reading": "ro"
+            }
+          ]
+        },
+        {
+          "id": "k-wn",
+          "label": "W and N: wa wo n",
+          "chars": [
+            {
+              "id": "kata-wa",
+              "char": "ワ",
+              "reading": "wa"
+            },
+            {
+              "id": "kata-wo",
+              "char": "ヲ",
+              "reading": "wo"
+            },
+            {
+              "id": "kata-n",
+              "char": "ン",
+              "reading": "n"
+            }
+          ]
+        },
+        {
+          "id": "k-g",
+          "label": "G row: ga gi gu ge go",
+          "chars": [
+            {
+              "id": "kata-ga",
+              "char": "ガ",
+              "reading": "ga"
+            },
+            {
+              "id": "kata-gi",
+              "char": "ギ",
+              "reading": "gi"
+            },
+            {
+              "id": "kata-gu",
+              "char": "グ",
+              "reading": "gu"
+            },
+            {
+              "id": "kata-ge",
+              "char": "ゲ",
+              "reading": "ge"
+            },
+            {
+              "id": "kata-go",
+              "char": "ゴ",
+              "reading": "go"
+            }
+          ]
+        },
+        {
+          "id": "k-z",
+          "label": "Z row: za ji zu ze zo",
+          "chars": [
+            {
+              "id": "kata-za",
+              "char": "ザ",
+              "reading": "za"
+            },
+            {
+              "id": "kata-ji",
+              "char": "ジ",
+              "reading": "ji"
+            },
+            {
+              "id": "kata-zu",
+              "char": "ズ",
+              "reading": "zu"
+            },
+            {
+              "id": "kata-ze",
+              "char": "ゼ",
+              "reading": "ze"
+            },
+            {
+              "id": "kata-zo",
+              "char": "ゾ",
+              "reading": "zo"
+            }
+          ]
+        },
+        {
+          "id": "k-d",
+          "label": "D row: da de do",
+          "chars": [
+            {
+              "id": "kata-da",
+              "char": "ダ",
+              "reading": "da"
+            },
+            {
+              "id": "kata-de",
+              "char": "デ",
+              "reading": "de"
+            },
+            {
+              "id": "kata-do",
+              "char": "ド",
+              "reading": "do"
+            }
+          ]
+        },
+        {
+          "id": "k-b",
+          "label": "B row: ba bi bu be bo",
+          "chars": [
+            {
+              "id": "kata-ba",
+              "char": "バ",
+              "reading": "ba"
+            },
+            {
+              "id": "kata-bi",
+              "char": "ビ",
+              "reading": "bi"
+            },
+            {
+              "id": "kata-bu",
+              "char": "ブ",
+              "reading": "bu"
+            },
+            {
+              "id": "kata-be",
+              "char": "ベ",
+              "reading": "be"
+            },
+            {
+              "id": "kata-bo",
+              "char": "ボ",
+              "reading": "bo"
+            }
+          ]
+        },
+        {
+          "id": "k-p",
+          "label": "P row: pa pi pu pe po",
+          "chars": [
+            {
+              "id": "kata-pa",
+              "char": "パ",
+              "reading": "pa"
+            },
+            {
+              "id": "kata-pi",
+              "char": "ピ",
+              "reading": "pi"
+            },
+            {
+              "id": "kata-pu",
+              "char": "プ",
+              "reading": "pu"
+            },
+            {
+              "id": "kata-pe",
+              "char": "ペ",
+              "reading": "pe"
+            },
+            {
+              "id": "kata-po",
+              "char": "ポ",
+              "reading": "po"
+            }
+          ]
+        },
+        {
+          "id": "k-youon",
+          "label": "Blends: kya sha cha ja",
+          "chars": [
+            {
+              "id": "kata-kya",
+              "char": "キャ",
+              "reading": "kya"
+            },
+            {
+              "id": "kata-kyu",
+              "char": "キュ",
+              "reading": "kyu"
+            },
+            {
+              "id": "kata-kyo",
+              "char": "キョ",
+              "reading": "kyo"
+            },
+            {
+              "id": "kata-sha",
+              "char": "シャ",
+              "reading": "sha"
+            },
+            {
+              "id": "kata-shu",
+              "char": "シュ",
+              "reading": "shu"
+            },
+            {
+              "id": "kata-sho",
+              "char": "ショ",
+              "reading": "sho"
+            },
+            {
+              "id": "kata-cha",
+              "char": "チャ",
+              "reading": "cha"
+            },
+            {
+              "id": "kata-chu",
+              "char": "チュ",
+              "reading": "chu"
+            },
+            {
+              "id": "kata-cho",
+              "char": "チョ",
+              "reading": "cho"
+            },
+            {
+              "id": "kata-ja",
+              "char": "ジャ",
+              "reading": "ja"
+            },
+            {
+              "id": "kata-ju",
+              "char": "ジュ",
+              "reading": "ju"
+            },
+            {
+              "id": "kata-jo",
+              "char": "ジョ",
+              "reading": "jo"
+            }
+          ]
+        },
+        {
+          "id": "k-small",
+          "label": "Small tsu and long vowel",
+          "chars": [
+            {
+              "id": "kata-small-tsu",
+              "char": "ッ",
+              "reading": "small tsu",
+              "speak": "ちいさいつ"
+            },
+            {
+              "id": "kata-choon",
+              "char": "ー",
+              "reading": "long vowel",
+              "speak": "ちょうおん"
+            }
+          ]
         }
       ],
       "wordSets": [
@@ -167,40 +531,310 @@
           "label": "Menu words",
           "words": [
             {
-              "id": "kw-ramen",
+              "id": "kw-raamen",
               "native": "ラーメン",
               "reading": "raamen",
               "english": "ramen"
             },
             {
-              "id": "kw-beer",
+              "id": "kw-biiru",
               "native": "ビール",
               "reading": "biiru",
               "english": "beer"
             },
             {
-              "id": "kw-coffee",
+              "id": "kw-koohii",
               "native": "コーヒー",
               "reading": "koohii",
               "english": "coffee"
             },
             {
-              "id": "kw-curry",
+              "id": "kw-karee",
               "native": "カレー",
               "reading": "karee",
               "english": "curry"
             },
             {
-              "id": "kw-salad",
+              "id": "kw-sarada",
               "native": "サラダ",
               "reading": "sarada",
               "english": "salad"
             },
             {
-              "id": "kw-steak",
+              "id": "kw-suteeki",
               "native": "ステーキ",
               "reading": "suteeki",
               "english": "steak"
+            },
+            {
+              "id": "kw-hanbaagu",
+              "native": "ハンバーグ",
+              "reading": "hanbaagu",
+              "english": "hamburger steak"
+            },
+            {
+              "id": "kw-hanbaagaa",
+              "native": "ハンバーガー",
+              "reading": "hanbaagaa",
+              "english": "hamburger"
+            },
+            {
+              "id": "kw-piza",
+              "native": "ピザ",
+              "reading": "piza",
+              "english": "pizza"
+            },
+            {
+              "id": "kw-pasuta",
+              "native": "パスタ",
+              "reading": "pasuta",
+              "english": "pasta"
+            },
+            {
+              "id": "kw-pan",
+              "native": "パン",
+              "reading": "pan",
+              "english": "bread"
+            },
+            {
+              "id": "kw-toosuto",
+              "native": "トースト",
+              "reading": "toosuto",
+              "english": "toast"
+            },
+            {
+              "id": "kw-sandoicchi",
+              "native": "サンドイッチ",
+              "reading": "sandoicchi",
+              "english": "sandwich"
+            },
+            {
+              "id": "kw-keeki",
+              "native": "ケーキ",
+              "reading": "keeki",
+              "english": "cake"
+            },
+            {
+              "id": "kw-aisukuriimu",
+              "native": "アイスクリーム",
+              "reading": "aisukuriimu",
+              "english": "ice cream"
+            },
+            {
+              "id": "kw-juusu",
+              "native": "ジュース",
+              "reading": "juusu",
+              "english": "juice"
+            },
+            {
+              "id": "kw-koora",
+              "native": "コーラ",
+              "reading": "koora",
+              "english": "cola"
+            },
+            {
+              "id": "kw-wain",
+              "native": "ワイン",
+              "reading": "wain",
+              "english": "wine"
+            },
+            {
+              "id": "kw-uisukii",
+              "native": "ウイスキー",
+              "reading": "uisukii",
+              "english": "whisky"
+            },
+            {
+              "id": "kw-miruku",
+              "native": "ミルク",
+              "reading": "miruku",
+              "english": "milk"
+            },
+            {
+              "id": "kw-chiizu",
+              "native": "チーズ",
+              "reading": "chiizu",
+              "english": "cheese"
+            },
+            {
+              "id": "kw-bataa",
+              "native": "バター",
+              "reading": "bataa",
+              "english": "butter"
+            },
+            {
+              "id": "kw-sooseeji",
+              "native": "ソーセージ",
+              "reading": "sooseeji",
+              "english": "sausage"
+            },
+            {
+              "id": "kw-poteto",
+              "native": "ポテト",
+              "reading": "poteto",
+              "english": "potato (fries)"
+            },
+            {
+              "id": "kw-korokke",
+              "native": "コロッケ",
+              "reading": "korokke",
+              "english": "croquette"
+            },
+            {
+              "id": "kw-omuraisu",
+              "native": "オムライス",
+              "reading": "omuraisu",
+              "english": "omelette rice"
+            },
+            {
+              "id": "kw-chikin",
+              "native": "チキン",
+              "reading": "chikin",
+              "english": "chicken"
+            },
+            {
+              "id": "kw-suupu",
+              "native": "スープ",
+              "reading": "suupu",
+              "english": "soup"
+            },
+            {
+              "id": "kw-dorinku",
+              "native": "ドリンク",
+              "reading": "dorinku",
+              "english": "drink"
+            },
+            {
+              "id": "kw-menyuu",
+              "native": "メニュー",
+              "reading": "menyuu",
+              "english": "menu"
+            },
+            {
+              "id": "kw-ebifurai",
+              "native": "エビフライ",
+              "reading": "ebifurai",
+              "english": "fried prawn"
+            },
+            {
+              "id": "kw-tomato",
+              "native": "トマト",
+              "reading": "tomato",
+              "english": "tomato"
+            }
+          ]
+        },
+        {
+          "id": "k-travel",
+          "label": "Travel words",
+          "words": [
+            {
+              "id": "kt-takushii",
+              "native": "タクシー",
+              "reading": "takushii",
+              "english": "taxi"
+            },
+            {
+              "id": "kt-hoteru",
+              "native": "ホテル",
+              "reading": "hoteru",
+              "english": "hotel"
+            },
+            {
+              "id": "kt-toire",
+              "native": "トイレ",
+              "reading": "toire",
+              "english": "toilet"
+            },
+            {
+              "id": "kt-basu",
+              "native": "バス",
+              "reading": "basu",
+              "english": "bus"
+            },
+            {
+              "id": "kt-konbini",
+              "native": "コンビニ",
+              "reading": "konbini",
+              "english": "convenience store"
+            },
+            {
+              "id": "kt-resutoran",
+              "native": "レストラン",
+              "reading": "resutoran",
+              "english": "restaurant"
+            },
+            {
+              "id": "kt-erebeetaa",
+              "native": "エレベーター",
+              "reading": "erebeetaa",
+              "english": "elevator"
+            },
+            {
+              "id": "kt-esukareetaa",
+              "native": "エスカレーター",
+              "reading": "esukareetaa",
+              "english": "escalator"
+            },
+            {
+              "id": "kt-kaado",
+              "native": "カード",
+              "reading": "kaado",
+              "english": "card"
+            },
+            {
+              "id": "kt-reshiito",
+              "native": "レシート",
+              "reading": "reshiito",
+              "english": "receipt"
+            },
+            {
+              "id": "kt-hoomu",
+              "native": "ホーム",
+              "reading": "hoomu",
+              "english": "station platform"
+            },
+            {
+              "id": "kt-chiketto",
+              "native": "チケット",
+              "reading": "chiketto",
+              "english": "ticket"
+            },
+            {
+              "id": "kt-rokkaa",
+              "native": "ロッカー",
+              "reading": "rokkaa",
+              "english": "locker"
+            },
+            {
+              "id": "kt-seeru",
+              "native": "セール",
+              "reading": "seeru",
+              "english": "sale"
+            },
+            {
+              "id": "kt-doraggusutoa",
+              "native": "ドラッグストア",
+              "reading": "doraggusutoa",
+              "english": "drugstore"
+            },
+            {
+              "id": "kt-suupaa",
+              "native": "スーパー",
+              "reading": "suupaa",
+              "english": "supermarket"
+            },
+            {
+              "id": "kt-infomeeshon",
+              "native": "インフォメーション",
+              "reading": "infomeeshon",
+              "english": "information desk"
+            },
+            {
+              "id": "kt-basutaaminaru",
+              "native": "バスターミナル",
+              "reading": "basutaaminaru",
+              "english": "bus terminal"
             }
           ]
         }
@@ -212,7 +846,7 @@
       "groups": [
         {
           "id": "h-vowels",
-          "label": "a i u e o",
+          "label": "Vowels: a i u e o",
           "chars": [
             {
               "id": "hira-a",
@@ -243,7 +877,7 @@
         },
         {
           "id": "h-k",
-          "label": "ka ki ku ke ko",
+          "label": "K row: ka ki ku ke ko",
           "chars": [
             {
               "id": "hira-ka",
@@ -274,7 +908,7 @@
         },
         {
           "id": "h-s",
-          "label": "sa shi su se so",
+          "label": "S row: sa shi su se so",
           "chars": [
             {
               "id": "hira-sa",
@@ -300,6 +934,680 @@
               "id": "hira-so",
               "char": "そ",
               "reading": "so"
+            }
+          ]
+        },
+        {
+          "id": "h-t",
+          "label": "T row: ta chi tsu te to",
+          "chars": [
+            {
+              "id": "hira-ta",
+              "char": "た",
+              "reading": "ta"
+            },
+            {
+              "id": "hira-chi",
+              "char": "ち",
+              "reading": "chi"
+            },
+            {
+              "id": "hira-tsu",
+              "char": "つ",
+              "reading": "tsu"
+            },
+            {
+              "id": "hira-te",
+              "char": "て",
+              "reading": "te"
+            },
+            {
+              "id": "hira-to",
+              "char": "と",
+              "reading": "to"
+            }
+          ]
+        },
+        {
+          "id": "h-n",
+          "label": "N row: na ni nu ne no",
+          "chars": [
+            {
+              "id": "hira-na",
+              "char": "な",
+              "reading": "na"
+            },
+            {
+              "id": "hira-ni",
+              "char": "に",
+              "reading": "ni"
+            },
+            {
+              "id": "hira-nu",
+              "char": "ぬ",
+              "reading": "nu"
+            },
+            {
+              "id": "hira-ne",
+              "char": "ね",
+              "reading": "ne"
+            },
+            {
+              "id": "hira-no",
+              "char": "の",
+              "reading": "no"
+            }
+          ]
+        },
+        {
+          "id": "h-h",
+          "label": "H row: ha hi fu he ho",
+          "chars": [
+            {
+              "id": "hira-ha",
+              "char": "は",
+              "reading": "ha"
+            },
+            {
+              "id": "hira-hi",
+              "char": "ひ",
+              "reading": "hi"
+            },
+            {
+              "id": "hira-fu",
+              "char": "ふ",
+              "reading": "fu"
+            },
+            {
+              "id": "hira-he",
+              "char": "へ",
+              "reading": "he"
+            },
+            {
+              "id": "hira-ho",
+              "char": "ほ",
+              "reading": "ho"
+            }
+          ]
+        },
+        {
+          "id": "h-m",
+          "label": "M row: ma mi mu me mo",
+          "chars": [
+            {
+              "id": "hira-ma",
+              "char": "ま",
+              "reading": "ma"
+            },
+            {
+              "id": "hira-mi",
+              "char": "み",
+              "reading": "mi"
+            },
+            {
+              "id": "hira-mu",
+              "char": "む",
+              "reading": "mu"
+            },
+            {
+              "id": "hira-me",
+              "char": "め",
+              "reading": "me"
+            },
+            {
+              "id": "hira-mo",
+              "char": "も",
+              "reading": "mo"
+            }
+          ]
+        },
+        {
+          "id": "h-y",
+          "label": "Y row: ya yu yo",
+          "chars": [
+            {
+              "id": "hira-ya",
+              "char": "や",
+              "reading": "ya"
+            },
+            {
+              "id": "hira-yu",
+              "char": "ゆ",
+              "reading": "yu"
+            },
+            {
+              "id": "hira-yo",
+              "char": "よ",
+              "reading": "yo"
+            }
+          ]
+        },
+        {
+          "id": "h-r",
+          "label": "R row: ra ri ru re ro",
+          "chars": [
+            {
+              "id": "hira-ra",
+              "char": "ら",
+              "reading": "ra"
+            },
+            {
+              "id": "hira-ri",
+              "char": "り",
+              "reading": "ri"
+            },
+            {
+              "id": "hira-ru",
+              "char": "る",
+              "reading": "ru"
+            },
+            {
+              "id": "hira-re",
+              "char": "れ",
+              "reading": "re"
+            },
+            {
+              "id": "hira-ro",
+              "char": "ろ",
+              "reading": "ro"
+            }
+          ]
+        },
+        {
+          "id": "h-wn",
+          "label": "W and N: wa wo n",
+          "chars": [
+            {
+              "id": "hira-wa",
+              "char": "わ",
+              "reading": "wa"
+            },
+            {
+              "id": "hira-wo",
+              "char": "を",
+              "reading": "wo"
+            },
+            {
+              "id": "hira-n",
+              "char": "ん",
+              "reading": "n"
+            }
+          ]
+        },
+        {
+          "id": "h-g",
+          "label": "G row: ga gi gu ge go",
+          "chars": [
+            {
+              "id": "hira-ga",
+              "char": "が",
+              "reading": "ga"
+            },
+            {
+              "id": "hira-gi",
+              "char": "ぎ",
+              "reading": "gi"
+            },
+            {
+              "id": "hira-gu",
+              "char": "ぐ",
+              "reading": "gu"
+            },
+            {
+              "id": "hira-ge",
+              "char": "げ",
+              "reading": "ge"
+            },
+            {
+              "id": "hira-go",
+              "char": "ご",
+              "reading": "go"
+            }
+          ]
+        },
+        {
+          "id": "h-z",
+          "label": "Z row: za ji zu ze zo",
+          "chars": [
+            {
+              "id": "hira-za",
+              "char": "ざ",
+              "reading": "za"
+            },
+            {
+              "id": "hira-ji",
+              "char": "じ",
+              "reading": "ji"
+            },
+            {
+              "id": "hira-zu",
+              "char": "ず",
+              "reading": "zu"
+            },
+            {
+              "id": "hira-ze",
+              "char": "ぜ",
+              "reading": "ze"
+            },
+            {
+              "id": "hira-zo",
+              "char": "ぞ",
+              "reading": "zo"
+            }
+          ]
+        },
+        {
+          "id": "h-d",
+          "label": "D row: da de do",
+          "chars": [
+            {
+              "id": "hira-da",
+              "char": "だ",
+              "reading": "da"
+            },
+            {
+              "id": "hira-de",
+              "char": "で",
+              "reading": "de"
+            },
+            {
+              "id": "hira-do",
+              "char": "ど",
+              "reading": "do"
+            }
+          ]
+        },
+        {
+          "id": "h-b",
+          "label": "B row: ba bi bu be bo",
+          "chars": [
+            {
+              "id": "hira-ba",
+              "char": "ば",
+              "reading": "ba"
+            },
+            {
+              "id": "hira-bi",
+              "char": "び",
+              "reading": "bi"
+            },
+            {
+              "id": "hira-bu",
+              "char": "ぶ",
+              "reading": "bu"
+            },
+            {
+              "id": "hira-be",
+              "char": "べ",
+              "reading": "be"
+            },
+            {
+              "id": "hira-bo",
+              "char": "ぼ",
+              "reading": "bo"
+            }
+          ]
+        },
+        {
+          "id": "h-p",
+          "label": "P row: pa pi pu pe po",
+          "chars": [
+            {
+              "id": "hira-pa",
+              "char": "ぱ",
+              "reading": "pa"
+            },
+            {
+              "id": "hira-pi",
+              "char": "ぴ",
+              "reading": "pi"
+            },
+            {
+              "id": "hira-pu",
+              "char": "ぷ",
+              "reading": "pu"
+            },
+            {
+              "id": "hira-pe",
+              "char": "ぺ",
+              "reading": "pe"
+            },
+            {
+              "id": "hira-po",
+              "char": "ぽ",
+              "reading": "po"
+            }
+          ]
+        },
+        {
+          "id": "h-youon",
+          "label": "Blends: kya sha cha ja",
+          "chars": [
+            {
+              "id": "hira-kya",
+              "char": "きゃ",
+              "reading": "kya"
+            },
+            {
+              "id": "hira-kyu",
+              "char": "きゅ",
+              "reading": "kyu"
+            },
+            {
+              "id": "hira-kyo",
+              "char": "きょ",
+              "reading": "kyo"
+            },
+            {
+              "id": "hira-sha",
+              "char": "しゃ",
+              "reading": "sha"
+            },
+            {
+              "id": "hira-shu",
+              "char": "しゅ",
+              "reading": "shu"
+            },
+            {
+              "id": "hira-sho",
+              "char": "しょ",
+              "reading": "sho"
+            },
+            {
+              "id": "hira-cha",
+              "char": "ちゃ",
+              "reading": "cha"
+            },
+            {
+              "id": "hira-chu",
+              "char": "ちゅ",
+              "reading": "chu"
+            },
+            {
+              "id": "hira-cho",
+              "char": "ちょ",
+              "reading": "cho"
+            },
+            {
+              "id": "hira-ja",
+              "char": "じゃ",
+              "reading": "ja"
+            },
+            {
+              "id": "hira-ju",
+              "char": "じゅ",
+              "reading": "ju"
+            },
+            {
+              "id": "hira-jo",
+              "char": "じょ",
+              "reading": "jo"
+            }
+          ]
+        },
+        {
+          "id": "h-small",
+          "label": "Small tsu",
+          "chars": [
+            {
+              "id": "hira-small-tsu",
+              "char": "っ",
+              "reading": "small tsu",
+              "speak": "ちいさいつ"
+            }
+          ]
+        }
+      ],
+      "wordSets": [
+        {
+          "id": "h-menu",
+          "label": "Menu words (hiragana)",
+          "words": [
+            {
+              "id": "hw-udon",
+              "native": "うどん",
+              "reading": "udon",
+              "english": "udon noodles"
+            },
+            {
+              "id": "hw-soba",
+              "native": "そば",
+              "reading": "soba",
+              "english": "buckwheat noodles"
+            },
+            {
+              "id": "hw-sushi",
+              "native": "すし",
+              "reading": "sushi",
+              "english": "sushi"
+            },
+            {
+              "id": "hw-tenpura",
+              "native": "てんぷら",
+              "reading": "tenpura",
+              "english": "tempura"
+            },
+            {
+              "id": "hw-onigiri",
+              "native": "おにぎり",
+              "reading": "onigiri",
+              "english": "rice ball"
+            },
+            {
+              "id": "hw-misoshiru",
+              "native": "みそしる",
+              "reading": "misoshiru",
+              "english": "miso soup"
+            },
+            {
+              "id": "hw-takoyaki",
+              "native": "たこやき",
+              "reading": "takoyaki",
+              "english": "octopus balls"
+            },
+            {
+              "id": "hw-oden",
+              "native": "おでん",
+              "reading": "oden",
+              "english": "oden stew"
+            },
+            {
+              "id": "hw-gohan",
+              "native": "ごはん",
+              "reading": "gohan",
+              "english": "rice / meal"
+            },
+            {
+              "id": "hw-ocha",
+              "native": "おちゃ",
+              "reading": "ocha",
+              "english": "tea"
+            },
+            {
+              "id": "hw-omizu",
+              "native": "おみず",
+              "reading": "omizu",
+              "english": "water"
+            },
+            {
+              "id": "hw-sake",
+              "native": "さけ",
+              "reading": "sake",
+              "english": "sake / salmon"
+            },
+            {
+              "id": "hw-yasai",
+              "native": "やさい",
+              "reading": "yasai",
+              "english": "vegetables"
+            },
+            {
+              "id": "hw-gyouza",
+              "native": "ぎょうざ",
+              "reading": "gyouza",
+              "english": "dumplings"
+            },
+            {
+              "id": "hw-shouyu",
+              "native": "しょうゆ",
+              "reading": "shouyu",
+              "english": "soy sauce"
+            },
+            {
+              "id": "hw-wasabi",
+              "native": "わさび",
+              "reading": "wasabi",
+              "english": "wasabi"
+            },
+            {
+              "id": "hw-karai",
+              "native": "からい",
+              "reading": "karai",
+              "english": "spicy"
+            },
+            {
+              "id": "hw-amai",
+              "native": "あまい",
+              "reading": "amai",
+              "english": "sweet"
+            },
+            {
+              "id": "hw-osusume",
+              "native": "おすすめ",
+              "reading": "osusume",
+              "english": "recommended"
+            },
+            {
+              "id": "hw-zarusoba",
+              "native": "ざるそば",
+              "reading": "zarusoba",
+              "english": "cold soba on a tray"
+            }
+          ]
+        },
+        {
+          "id": "h-signs",
+          "label": "Signs (kanji)",
+          "words": [
+            {
+              "id": "hs-deguchi",
+              "native": "出口",
+              "reading": "deguchi",
+              "english": "exit"
+            },
+            {
+              "id": "hs-iriguchi",
+              "native": "入口",
+              "reading": "iriguchi",
+              "english": "entrance"
+            },
+            {
+              "id": "hs-otoko",
+              "native": "男",
+              "reading": "otoko",
+              "english": "men"
+            },
+            {
+              "id": "hs-onna",
+              "native": "女",
+              "reading": "onna",
+              "english": "women"
+            },
+            {
+              "id": "hs-kinen",
+              "native": "禁煙",
+              "reading": "kinen",
+              "english": "no smoking"
+            },
+            {
+              "id": "hs-eigyouchuu",
+              "native": "営業中",
+              "reading": "eigyouchuu",
+              "english": "open for business"
+            },
+            {
+              "id": "hs-junbichuu",
+              "native": "準備中",
+              "reading": "junbichuu",
+              "english": "closed (preparing)"
+            },
+            {
+              "id": "hs-eki",
+              "native": "駅",
+              "reading": "eki",
+              "english": "station"
+            },
+            {
+              "id": "hs-osu",
+              "native": "押す",
+              "reading": "osu",
+              "english": "push"
+            },
+            {
+              "id": "hs-hiku",
+              "native": "引く",
+              "reading": "hiku",
+              "english": "pull"
+            },
+            {
+              "id": "hs-hijouguchi",
+              "native": "非常口",
+              "reading": "hijouguchi",
+              "english": "emergency exit"
+            },
+            {
+              "id": "hs-tachiirikinshi",
+              "native": "立入禁止",
+              "reading": "tachiirikinshi",
+              "english": "no entry"
+            },
+            {
+              "id": "hs-waribiki",
+              "native": "割引",
+              "reading": "waribiki",
+              "english": "discount"
+            },
+            {
+              "id": "hs-zeikomi",
+              "native": "税込",
+              "reading": "zeikomi",
+              "english": "tax included"
+            },
+            {
+              "id": "hs-muryou",
+              "native": "無料",
+              "reading": "muryou",
+              "english": "free of charge"
+            },
+            {
+              "id": "hs-sapporo",
+              "native": "札幌",
+              "reading": "sapporo",
+              "english": "Sapporo"
+            },
+            {
+              "id": "hs-hokkaidou",
+              "native": "北海道",
+              "reading": "hokkaidou",
+              "english": "Hokkaido"
+            },
+            {
+              "id": "hs-chikatetsu",
+              "native": "地下鉄",
+              "reading": "chikatetsu",
+              "english": "subway"
+            },
+            {
+              "id": "hs-kaisatsu",
+              "native": "改札",
+              "reading": "kaisatsu",
+              "english": "ticket gate"
+            },
+            {
+              "id": "hs-kippuuriba",
+              "native": "切符売り場",
+              "reading": "kippuuriba",
+              "english": "ticket office"
             }
           ]
         }

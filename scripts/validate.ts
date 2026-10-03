@@ -128,13 +128,18 @@ export function validatePack(dir: string): string[] {
   if (weeks.length * 7 > daysToTrip) err('schedule.json', `${weeks.length} weeks do not fit in the ${daysToTrip} days before the trip`);
   const introduced: string[] = [];
   for (const w of weeks) {
-    const total = w.tasks.reduce((a, t) => a + t.minutes, 0);
-    if (total > p.schedule.dailyMinutes + 5) err('schedule.json', `week ${w.week}: tasks total ${total} min, above dailyMinutes ${p.schedule.dailyMinutes}`);
+    // Each study day (1-6) must have work and fit the daily budget.
+    for (let day = 1; day <= 6; day++) {
+      const total = w.tasks.filter((t) => !t.days || t.days.includes(day)).reduce((acc, t) => acc + t.minutes, 0);
+      if (total === 0) err('schedule.json', `week ${w.week} day ${day}: no tasks`);
+      if (total > p.schedule.dailyMinutes) err('schedule.json', `week ${w.week} day ${day}: ${total} min, above dailyMinutes ${p.schedule.dailyMinutes}`);
+    }
     for (const t of w.tasks) {
       const where = `week ${w.week} ${t.type}`;
       if (t.type === 'kana' && t.ref && !groupIds.includes(t.ref)) err('schedule.json', `${where}: unknown kana group "${t.ref}"`);
       if (t.type === 'reading' && t.ref && !setIds.includes(t.ref)) err('schedule.json', `${where}: unknown word set "${t.ref}"`);
       if (t.type === 'dialogue' && t.ref && !p.dialogues.dialogues.some((d) => d.id === t.ref)) err('schedule.json', `${where}: unknown dialogue "${t.ref}"`);
+      if (t.days && t.days.some((d) => d < 1 || d > 6)) err('schedule.json', `${where}: days must be 1-6`);
       if (t.type === 'reading' && !t.ref) err('schedule.json', `${where}: needs ref`);
       if (t.type === 'dialogue' && !t.ref) err('schedule.json', `${where}: needs ref`);
     }
@@ -144,6 +149,9 @@ export function validatePack(dir: string): string[] {
     }
   }
   dup('schedule.json', 'newPhraseIds', introduced);
+  for (const id of phraseIds) if (!introduced.includes(id)) err('schedule.json', `phrase "${id}" is never introduced by newPhraseIds`);
+  const scheduledGroups = new Set(weeks.flatMap((w) => w.tasks.filter((t) => t.type === 'kana' && t.ref).map((t) => t.ref!)));
+  for (const g of groupIds) if (!scheduledGroups.has(g)) err('schedule.json', `kana group "${g}" is never scheduled`);
 
   return errors;
 }

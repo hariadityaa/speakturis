@@ -71,4 +71,18 @@ describe('validatePack', () => {
     edit('pack.json', (j) => { j.code = 'ko'; });
     expect(validatePack(dir).join('\n')).toMatch(/must match folder name/);
   });
+  it('rejects a phrase that no week introduces', () => {
+    edit('schedule.json', (j) => { j.weeks[6].newPhraseIds.pop(); });
+    expect(validatePack(dir).join('\n')).toMatch(/never introduced/);
+  });
+
+  it('rejects a study day over the daily minutes', () => {
+    edit('schedule.json', (j) => { j.weeks[0].tasks[0].minutes = 30; });
+    expect(validatePack(dir).join('\n')).toMatch(/above dailyMinutes/);
+  });
+
+  it('rejects a kana group that is never scheduled', () => {
+    edit('schedule.json', (j) => { j.weeks[0].tasks = j.weeks[0].tasks.filter((t: any) => t.ref !== 'k-vowels'); });
+    expect(validatePack(dir).join('\n')).toMatch(/never scheduled/);
+  });
 });

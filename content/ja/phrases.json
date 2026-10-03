@@ -13,6 +13,16 @@
       "difficulty": 1
     },
     {
+      "id": "p-arigatou",
+      "native": "ありがとうございます",
+      "reading": "arigatou gozaimasu",
+      "english": "Thank you",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1
+    },
+    {
       "id": "p-kore-kudasai",
       "native": "これをください",
       "reading": "kore o kudasai",
@@ -45,16 +55,6 @@
       "difficulty": 1
     },
     {
-      "id": "p-arigatou",
-      "native": "ありがとうございます",
-      "reading": "arigatou gozaimasu",
-      "english": "Thank you",
-      "tags": [
-        "greeting"
-      ],
-      "difficulty": 1
-    },
-    {
       "id": "p-eigo",
       "native": "英語は話せますか",
       "reading": "eigo wa hanasemasu ka",
@@ -63,7 +63,431 @@
         "help",
         "greeting"
       ],
+      "difficulty": 2,
+      "speak": "えいごははなせますか"
+    },
+    {
+      "id": "p-konnichiwa",
+      "native": "こんにちは",
+      "reading": "konnichiwa",
+      "english": "Hello",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1,
+      "speak": "こんにちは"
+    },
+    {
+      "id": "p-ohayou",
+      "native": "おはようございます",
+      "reading": "ohayou gozaimasu",
+      "english": "Good morning",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-hai-iie",
+      "native": "はい / いいえ",
+      "reading": "hai / iie",
+      "english": "Yes / No",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-onegai",
+      "native": "お願いします",
+      "reading": "onegai shimasu",
+      "english": "Please (asking for something)",
+      "tags": [
+        "greeting",
+        "shopping"
+      ],
+      "difficulty": 1,
+      "speak": "おねがいします"
+    },
+    {
+      "id": "p-wakarimasen",
+      "native": "分かりません",
+      "reading": "wakarimasen",
+      "english": "I don't understand",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 1,
+      "speak": "わかりません"
+    },
+    {
+      "id": "p-mou-ichido",
+      "native": "もう一度お願いします",
+      "reading": "mou ichido onegai shimasu",
+      "english": "One more time, please (repeat that)",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 2,
+      "speak": "もういちどおねがいします"
+    },
+    {
+      "id": "p-kaado",
+      "native": "カードは使えますか",
+      "reading": "kaado wa tsukaemasu ka",
+      "english": "Can I use a card?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "speak": "カードはつかえますか"
+    },
+    {
+      "id": "p-fukuro",
+      "native": "袋はいりません",
+      "reading": "fukuro wa irimasen",
+      "english": "I don't need a bag",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "speak": "ふくろはいりません"
+    },
+    {
+      "id": "p-menzei",
+      "native": "免税できますか",
+      "reading": "menzei dekimasu ka",
+      "english": "Can I get tax-free?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 3,
+      "speak": "めんぜいできますか"
+    },
+    {
+      "id": "p-reshiito",
+      "native": "レシートをください",
+      "reading": "reshiito o kudasai",
+      "english": "Receipt, please",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-shichaku",
+      "native": "試着してもいいですか",
+      "reading": "shichaku shite mo ii desu ka",
+      "english": "May I try this on?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 3,
+      "speak": "しちゃくしてもいいですか"
+    },
+    {
+      "id": "p-kore-nan",
+      "native": "これは何ですか",
+      "reading": "kore wa nan desu ka",
+      "english": "What is this?",
+      "tags": [
+        "food",
+        "shopping"
+      ],
+      "difficulty": 1,
+      "speak": "これはなんですか"
+    },
+    {
+      "id": "p-menyuu",
+      "native": "メニューをお願いします",
+      "reading": "menyuu o onegai shimasu",
+      "english": "Menu, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "speak": "メニューをおねがいします"
+    },
+    {
+      "id": "p-mizu",
+      "native": "水をください",
+      "reading": "mizu o kudasai",
+      "english": "Water, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "speak": "みずをください"
+    },
+    {
+      "id": "p-no-spice",
+      "native": "辛くしないでください",
+      "reading": "karaku shinai de kudasai",
+      "english": "No spice, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 3,
+      "speak": "からくしないでください"
+    },
+    {
+      "id": "p-okaikei",
+      "native": "お会計をお願いします",
+      "reading": "okaikei o onegai shimasu",
+      "english": "Bill, please",
+      "tags": [
+        "food",
+        "shopping"
+      ],
+      "difficulty": 2,
+      "speak": "おかいけいをおねがいします"
+    },
+    {
+      "id": "p-hitotsu",
+      "native": "もう一つください",
+      "reading": "mou hitotsu kudasai",
+      "english": "One more, please",
+      "tags": [
+        "food",
+        "shopping"
+      ],
+      "difficulty": 2,
+      "speak": "もうひとつください"
+    },
+    {
+      "id": "p-futari",
+      "native": "二人です",
+      "reading": "futari desu",
+      "english": "Two people",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "speak": "ふたりです"
+    },
+    {
+      "id": "p-eki",
+      "native": "駅はどこですか",
+      "reading": "eki wa doko desu ka",
+      "english": "Where is the station?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 1,
+      "speak": "えきはどこですか"
+    },
+    {
+      "id": "p-juusho",
+      "native": "この住所までお願いします",
+      "reading": "kono juusho made onegai shimasu",
+      "english": "To this address, please (taxi)",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 3,
+      "speak": "このじゅうしょまでおねがいします"
+    },
+    {
+      "id": "p-orimasu",
+      "native": "ここで降ります",
+      "reading": "koko de orimasu",
+      "english": "I'll get off here",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "speak": "ここでおります"
+    },
+    {
+      "id": "p-densha",
+      "native": "この電車は札幌に行きますか",
+      "reading": "kono densha wa sapporo ni ikimasu ka",
+      "english": "Does this train go to Sapporo?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 3,
+      "speak": "このでんしゃはさっぽろにいきますか"
+    },
+    {
+      "id": "p-kippu",
+      "native": "切符はどこで買えますか",
+      "reading": "kippu wa doko de kaemasu ka",
+      "english": "Where can I buy a ticket?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 3,
+      "speak": "きっぷはどこでかえますか"
+    },
+    {
+      "id": "p-koko-doko",
+      "native": "ここはどこですか",
+      "reading": "koko wa doko desu ka",
+      "english": "Where is this place?",
+      "tags": [
+        "transport",
+        "help"
+      ],
       "difficulty": 2
+    },
+    {
+      "id": "p-osusume",
+      "native": "おすすめは何ですか",
+      "reading": "osusume wa nan desu ka",
+      "english": "What do you recommend?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "speak": "おすすめはなんですか"
+    },
+    {
+      "id": "p-oishii",
+      "native": "美味しいです",
+      "reading": "oishii desu",
+      "english": "It's delicious",
+      "tags": [
+        "food",
+        "greeting"
+      ],
+      "difficulty": 1,
+      "speak": "おいしいです"
+    },
+    {
+      "id": "p-niku",
+      "native": "肉は食べられません",
+      "reading": "niku wa taberaremasen",
+      "english": "I can't eat meat",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 3,
+      "speak": "にくはたべられません"
+    },
+    {
+      "id": "p-arerugii",
+      "native": "アレルギーがあります",
+      "reading": "arerugii ga arimasu",
+      "english": "I have an allergy",
+      "tags": [
+        "food",
+        "help"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "p-mochikaeri",
+      "native": "持ち帰りでお願いします",
+      "reading": "mochikaeri de onegai shimasu",
+      "english": "Takeaway, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 3,
+      "speak": "もちかえりでおねがいします"
+    },
+    {
+      "id": "p-itadakimasu",
+      "native": "いただきます",
+      "reading": "itadakimasu",
+      "english": "(Said before eating)",
+      "tags": [
+        "food",
+        "greeting"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-gochisousama",
+      "native": "ごちそうさまでした",
+      "reading": "gochisousama deshita",
+      "english": "Thank you for the meal",
+      "tags": [
+        "food",
+        "greeting"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "p-atatamete",
+      "native": "温めてください",
+      "reading": "atatamete kudasai",
+      "english": "Please heat it up",
+      "tags": [
+        "shopping",
+        "food"
+      ],
+      "difficulty": 2,
+      "speak": "あたためてください"
+    },
+    {
+      "id": "p-hashi",
+      "native": "箸をください",
+      "reading": "hashi o kudasai",
+      "english": "Chopsticks, please",
+      "tags": [
+        "food",
+        "shopping"
+      ],
+      "difficulty": 1,
+      "speak": "はしをください"
+    },
+    {
+      "id": "p-tasukete",
+      "native": "助けてください",
+      "reading": "tasukete kudasai",
+      "english": "Please help me",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 2,
+      "speak": "たすけてください"
+    },
+    {
+      "id": "p-yukkuri",
+      "native": "ゆっくりお願いします",
+      "reading": "yukkuri onegai shimasu",
+      "english": "Slowly, please",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 2,
+      "speak": "ゆっくりおねがいします"
+    },
+    {
+      "id": "p-michi",
+      "native": "道に迷いました",
+      "reading": "michi ni mayoimashita",
+      "english": "I'm lost",
+      "tags": [
+        "help",
+        "transport"
+      ],
+      "difficulty": 3,
+      "speak": "みちにまよいました"
+    },
+    {
+      "id": "p-byouin",
+      "native": "病院はどこですか",
+      "reading": "byouin wa doko desu ka",
+      "english": "Where is the hospital?",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 2,
+      "speak": "びょういんはどこですか"
+    },
+    {
+      "id": "p-saifu",
+      "native": "財布をなくしました",
+      "reading": "saifu o nakushimashita",
+      "english": "I lost my wallet",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 3,
+      "speak": "さいふをなくしました"
     }
   ]
 }

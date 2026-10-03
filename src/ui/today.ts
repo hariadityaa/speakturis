@@ -10,7 +10,7 @@ export function taskLink(t: Task, weekNumber: number, idx: number): string {
   const k = `task=${taskKey(weekNumber, idx)}`;
   switch (t.type) {
     case 'review': return `/review?${k}`;
-    case 'kana': return `/kana?${t.ref ? `ref=${t.ref}&` : ''}${k}`;
+    case 'kana': return `/kana?ref=${t.ref ?? 'all'}&${k}`;
     case 'phrases': return `/flash?new=1&${k}`;
     case 'numbers': return `/numbers?${k}`;
     case 'prices': return `/prices?${k}`;
@@ -62,7 +62,7 @@ export const today: Screen = async (root) => {
       ?? app.pack.dialogues.dialogues.find((d) => d.id === ref)?.title ?? ref;
   if (p.week && tasks.length) {
     root.append(h('h2', { class: 'sect' }, `Week ${p.week.week}: ${p.week.title}`));
-    root.append(h('ul', { class: 'list' }, tasks.map((tk, i) => {
+    root.append(h('ul', { class: 'list' }, tasks.map(({ task: tk, index: i }) => {
       const key = taskKey(p.weekNumber, i);
       const done = log.done.includes(key);
       return h('li', null, h('a', { class: `row${done ? ' done' : ''}`, href: `#${taskLink(tk, p.weekNumber, i)}` },

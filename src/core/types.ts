@@ -54,7 +54,8 @@ export interface Dialogue {
 export interface Dialogues { schemaVersion: 1; dialogues: Dialogue[] }
 
 export type TaskType = 'review' | 'kana' | 'phrases' | 'numbers' | 'prices' | 'reading' | 'dialogue' | 'commute';
-export interface Task { type: TaskType; ref?: string; minutes: number; label?: string }
+/** `days` = which study days of the week (1-6, rest day excluded) the task appears on. Omitted = every study day. */
+export interface Task { type: TaskType; ref?: string; minutes: number; label?: string; days?: number[] }
 export interface Week { week: number; focus: string; title: string; tasks: Task[]; newPhraseIds?: string[] }
 export interface Schedule { schemaVersion: 1; dailyMinutes: number; weeks: Week[] }
 

@@ -5,7 +5,7 @@
     {
       "week": 1,
       "focus": "katakana",
-      "title": "Katakana: vowels and K row",
+      "title": "Katakana: A, K, S, T, N rows",
       "tasks": [
         {
           "type": "review",
@@ -14,19 +14,56 @@
         {
           "type": "kana",
           "minutes": 8,
-          "ref": "k-vowels"
+          "ref": "k-vowels",
+          "days": [
+            1
+          ]
         },
         {
           "type": "kana",
           "minutes": 8,
-          "ref": "k-k"
+          "ref": "k-k",
+          "days": [
+            2
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "k-s",
+          "days": [
+            3
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "k-t",
+          "days": [
+            4
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "k-n",
+          "days": [
+            5
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "days": [
+            6
+          ]
         }
       ]
     },
     {
       "week": 2,
       "focus": "katakana",
-      "title": "Katakana: S and T rows",
+      "title": "Katakana: H, M, Y, R, W rows",
       "tasks": [
         {
           "type": "review",
@@ -35,19 +72,64 @@
         {
           "type": "kana",
           "minutes": 8,
-          "ref": "k-s"
+          "ref": "k-h",
+          "days": [
+            1
+          ]
         },
         {
           "type": "kana",
           "minutes": 8,
-          "ref": "k-t"
+          "ref": "k-m",
+          "days": [
+            2
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "k-y",
+          "days": [
+            3
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "k-r",
+          "days": [
+            4
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "k-wn",
+          "days": [
+            5
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "days": [
+            6
+          ]
+        },
+        {
+          "type": "reading",
+          "minutes": 8,
+          "ref": "k-menu",
+          "days": [
+            6
+          ]
         }
       ]
     },
     {
       "week": 3,
       "focus": "katakana",
-      "title": "Katakana: N row and menu words",
+      "title": "Katakana: voiced sounds, blends, menu words",
       "tasks": [
         {
           "type": "review",
@@ -56,19 +138,74 @@
         {
           "type": "kana",
           "minutes": 8,
-          "ref": "k-n"
+          "ref": "k-g",
+          "days": [
+            1
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "k-z",
+          "days": [
+            1
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "k-d",
+          "days": [
+            2
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "k-b",
+          "days": [
+            2
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "k-p",
+          "days": [
+            3
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "k-small",
+          "days": [
+            3
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "k-youon",
+          "days": [
+            4
+          ]
         },
         {
           "type": "reading",
           "minutes": 8,
-          "ref": "k-menu"
+          "ref": "k-menu",
+          "days": [
+            5,
+            6
+          ]
         }
       ]
     },
     {
       "week": 4,
       "focus": "hiragana",
-      "title": "Hiragana: vowels and K row",
+      "title": "Hiragana: A, K, S, T, N rows",
       "tasks": [
         {
           "type": "review",
@@ -77,19 +214,56 @@
         {
           "type": "kana",
           "minutes": 8,
-          "ref": "h-vowels"
+          "ref": "h-vowels",
+          "days": [
+            1
+          ]
         },
         {
           "type": "kana",
           "minutes": 8,
-          "ref": "h-k"
+          "ref": "h-k",
+          "days": [
+            2
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "h-s",
+          "days": [
+            3
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "h-t",
+          "days": [
+            4
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "h-n",
+          "days": [
+            5
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "days": [
+            6
+          ]
         }
       ]
     },
     {
       "week": 5,
       "focus": "hiragana",
-      "title": "Hiragana: S row",
+      "title": "Hiragana: H, M, Y, R, W rows",
       "tasks": [
         {
           "type": "review",
@@ -98,27 +272,126 @@
         {
           "type": "kana",
           "minutes": 8,
-          "ref": "h-s"
+          "ref": "h-h",
+          "days": [
+            1
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "h-m",
+          "days": [
+            2
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "h-y",
+          "days": [
+            3
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "h-r",
+          "days": [
+            4
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "h-wn",
+          "days": [
+            5
+          ]
         },
         {
           "type": "reading",
           "minutes": 8,
-          "ref": "k-menu"
+          "ref": "h-menu",
+          "days": [
+            6
+          ]
         }
       ]
     },
     {
       "week": 6,
       "focus": "hiragana",
-      "title": "Hiragana review",
+      "title": "Hiragana: voiced sounds and blends",
       "tasks": [
         {
           "type": "review",
-          "minutes": 8
+          "minutes": 4
         },
         {
           "type": "kana",
-          "minutes": 12
+          "minutes": 8,
+          "ref": "h-g",
+          "days": [
+            1
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "h-z",
+          "days": [
+            1
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "h-d",
+          "days": [
+            2
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "h-b",
+          "days": [
+            2
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "h-p",
+          "days": [
+            3
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "h-small",
+          "days": [
+            3
+          ]
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "h-youon",
+          "days": [
+            4
+          ]
+        },
+        {
+          "type": "reading",
+          "minutes": 8,
+          "ref": "h-menu",
+          "days": [
+            5,
+            6
+          ]
         }
       ]
     },
@@ -129,64 +402,136 @@
       "tasks": [
         {
           "type": "review",
-          "minutes": 5
-        },
-        {
-          "type": "numbers",
-          "minutes": 8
+          "minutes": 4
         },
         {
           "type": "phrases",
-          "minutes": 7
+          "minutes": 8,
+          "days": [
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "type": "numbers",
+          "minutes": 8,
+          "days": [
+            1,
+            2,
+            4,
+            6
+          ]
+        },
+        {
+          "type": "commute",
+          "minutes": 8,
+          "days": [
+            5,
+            6
+          ]
         }
       ],
       "newPhraseIds": [
         "p-sumimasen",
-        "p-kore-kudasai",
-        "p-ikura"
-      ]
-    },
-    {
-      "week": 8,
-      "focus": "numbers",
-      "title": "Numbers to 1,000 and thanks",
-      "tasks": [
-        {
-          "type": "review",
-          "minutes": 5
-        },
-        {
-          "type": "numbers",
-          "minutes": 8
-        },
-        {
-          "type": "phrases",
-          "minutes": 7
-        }
-      ],
-      "newPhraseIds": [
         "p-arigatou",
+        "p-kore-kudasai",
+        "p-ikura",
         "p-toire",
         "p-eigo"
       ]
     },
     {
-      "week": 9,
-      "focus": "prices",
-      "title": "Yen prices",
+      "week": 8,
+      "focus": "numbers",
+      "title": "Numbers to 1,000 and survival phrases",
       "tasks": [
         {
           "type": "review",
-          "minutes": 5
-        },
-        {
-          "type": "prices",
-          "minutes": 10
+          "minutes": 4
         },
         {
           "type": "phrases",
-          "minutes": 5
+          "minutes": 8,
+          "days": [
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "type": "numbers",
+          "minutes": 8,
+          "days": [
+            1,
+            2,
+            4,
+            6
+          ]
+        },
+        {
+          "type": "commute",
+          "minutes": 8,
+          "days": [
+            5,
+            6
+          ]
         }
+      ],
+      "newPhraseIds": [
+        "p-konnichiwa",
+        "p-ohayou",
+        "p-hai-iie",
+        "p-onegai",
+        "p-wakarimasen",
+        "p-mou-ichido"
+      ]
+    },
+    {
+      "week": 9,
+      "focus": "prices",
+      "title": "Yen prices and shopping",
+      "tasks": [
+        {
+          "type": "review",
+          "minutes": 4
+        },
+        {
+          "type": "phrases",
+          "minutes": 8,
+          "days": [
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "type": "prices",
+          "minutes": 8,
+          "days": [
+            1,
+            2,
+            4,
+            6
+          ]
+        },
+        {
+          "type": "dialogue",
+          "minutes": 8,
+          "ref": "d-konbini",
+          "days": [
+            5,
+            6
+          ]
+        }
+      ],
+      "newPhraseIds": [
+        "p-kaado",
+        "p-fukuro",
+        "p-menzei",
+        "p-reshiito",
+        "p-shichaku",
+        "p-kore-nan"
       ]
     },
     {
@@ -196,17 +541,42 @@
       "tasks": [
         {
           "type": "review",
-          "minutes": 5
+          "minutes": 4
         },
         {
           "type": "phrases",
-          "minutes": 7
+          "minutes": 8,
+          "days": [
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "type": "prices",
+          "minutes": 8,
+          "days": [
+            2,
+            4
+          ]
         },
         {
           "type": "dialogue",
           "minutes": 8,
-          "ref": "d-ramen"
+          "ref": "d-ramen",
+          "days": [
+            5,
+            6
+          ]
         }
+      ],
+      "newPhraseIds": [
+        "p-menyuu",
+        "p-mizu",
+        "p-no-spice",
+        "p-okaikei",
+        "p-hitotsu",
+        "p-futari"
       ]
     },
     {
@@ -216,36 +586,87 @@
       "tasks": [
         {
           "type": "review",
-          "minutes": 5
+          "minutes": 4
         },
         {
           "type": "phrases",
-          "minutes": 7
+          "minutes": 8,
+          "days": [
+            1,
+            3,
+            5
+          ]
         },
         {
-          "type": "prices",
-          "minutes": 8
+          "type": "numbers",
+          "minutes": 8,
+          "days": [
+            2,
+            4
+          ]
+        },
+        {
+          "type": "dialogue",
+          "minutes": 8,
+          "ref": "d-taxi",
+          "days": [
+            5,
+            6
+          ]
         }
+      ],
+      "newPhraseIds": [
+        "p-eki",
+        "p-juusho",
+        "p-orimasu",
+        "p-densha",
+        "p-kippu",
+        "p-koko-doko"
       ]
     },
     {
       "week": 12,
       "focus": "ordering",
-      "title": "Numbers, prices, ordering, directions: mixed",
+      "title": "Restaurant detail and dietary phrases",
       "tasks": [
         {
           "type": "review",
-          "minutes": 5
+          "minutes": 4
+        },
+        {
+          "type": "phrases",
+          "minutes": 8,
+          "days": [
+            1,
+            3,
+            5
+          ]
         },
         {
           "type": "prices",
-          "minutes": 7
+          "minutes": 8,
+          "days": [
+            2,
+            4
+          ]
         },
         {
           "type": "dialogue",
           "minutes": 8,
-          "ref": "d-ramen"
+          "ref": "d-ramen",
+          "days": [
+            5,
+            6
+          ]
         }
+      ],
+      "newPhraseIds": [
+        "p-osusume",
+        "p-oishii",
+        "p-niku",
+        "p-arerugii",
+        "p-mochikaeri",
+        "p-itadakimasu"
       ]
     },
     {
@@ -255,76 +676,201 @@
       "tasks": [
         {
           "type": "review",
-          "minutes": 5
+          "minutes": 4
+        },
+        {
+          "type": "phrases",
+          "minutes": 8,
+          "days": [
+            1,
+            3
+          ]
+        },
+        {
+          "type": "commute",
+          "minutes": 8,
+          "days": [
+            1,
+            2,
+            4,
+            5
+          ]
         },
         {
           "type": "dialogue",
           "minutes": 8,
-          "ref": "d-ramen"
+          "ref": "d-konbini",
+          "days": [
+            3,
+            6
+          ]
         },
         {
-          "type": "commute",
-          "minutes": 7
+          "type": "reading",
+          "minutes": 8,
+          "ref": "k-menu",
+          "days": [
+            2,
+            4,
+            5
+          ]
         }
+      ],
+      "newPhraseIds": [
+        "p-gochisousama",
+        "p-atatamete",
+        "p-hashi",
+        "p-tasukete",
+        "p-yukkuri",
+        "p-michi"
       ]
     },
     {
       "week": 14,
       "focus": "reading",
-      "title": "Real menu reading",
+      "title": "Real menus: katakana and hiragana",
       "tasks": [
         {
           "type": "review",
-          "minutes": 5
+          "minutes": 4
+        },
+        {
+          "type": "phrases",
+          "minutes": 8,
+          "days": [
+            1,
+            3
+          ]
         },
         {
           "type": "reading",
           "minutes": 8,
-          "ref": "k-menu"
+          "ref": "k-menu",
+          "days": [
+            1,
+            4
+          ]
         },
         {
-          "type": "commute",
-          "minutes": 7
-        }
-      ]
-    },
-    {
-      "week": 15,
-      "focus": "listening",
-      "title": "Role-play",
-      "tasks": [
-        {
-          "type": "review",
-          "minutes": 5
+          "type": "reading",
+          "minutes": 8,
+          "ref": "h-menu",
+          "days": [
+            2,
+            5
+          ]
         },
         {
           "type": "dialogue",
           "minutes": 8,
-          "ref": "d-ramen"
+          "ref": "d-ramen",
+          "days": [
+            3,
+            6
+          ]
+        }
+      ],
+      "newPhraseIds": [
+        "p-byouin",
+        "p-saifu"
+      ]
+    },
+    {
+      "week": 15,
+      "focus": "reading",
+      "title": "Signs and travel words",
+      "tasks": [
+        {
+          "type": "review",
+          "minutes": 4
         },
         {
-          "type": "prices",
-          "minutes": 7
+          "type": "reading",
+          "minutes": 8,
+          "ref": "h-signs",
+          "days": [
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "type": "reading",
+          "minutes": 8,
+          "ref": "k-travel",
+          "days": [
+            2,
+            4
+          ]
+        },
+        {
+          "type": "dialogue",
+          "minutes": 8,
+          "ref": "d-taxi",
+          "days": [
+            3,
+            6
+          ]
+        },
+        {
+          "type": "commute",
+          "minutes": 8,
+          "days": [
+            2,
+            5
+          ]
         }
       ]
     },
     {
       "week": 16,
-      "focus": "reading",
-      "title": "Signs and menus",
+      "focus": "listening",
+      "title": "Mixed listening and role-play",
       "tasks": [
         {
           "type": "review",
-          "minutes": 5
-        },
-        {
-          "type": "reading",
-          "minutes": 8,
-          "ref": "k-menu"
+          "minutes": 4
         },
         {
           "type": "commute",
-          "minutes": 7
+          "minutes": 8,
+          "days": [
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "type": "prices",
+          "minutes": 8,
+          "days": [
+            2,
+            4
+          ]
+        },
+        {
+          "type": "dialogue",
+          "minutes": 8,
+          "ref": "d-konbini",
+          "days": [
+            2
+          ]
+        },
+        {
+          "type": "dialogue",
+          "minutes": 8,
+          "ref": "d-ramen",
+          "days": [
+            4
+          ]
+        },
+        {
+          "type": "dialogue",
+          "minutes": 8,
+          "ref": "d-taxi",
+          "days": [
+            6
+          ]
         }
       ]
     },
@@ -338,13 +884,37 @@
           "minutes": 8
         },
         {
-          "type": "dialogue",
-          "minutes": 6,
-          "ref": "d-ramen"
+          "type": "commute",
+          "minutes": 8,
+          "days": [
+            1,
+            3,
+            5
+          ]
         },
         {
-          "type": "commute",
-          "minutes": 6
+          "type": "reading",
+          "minutes": 8,
+          "ref": "h-signs",
+          "days": [
+            2
+          ]
+        },
+        {
+          "type": "reading",
+          "minutes": 8,
+          "ref": "h-menu",
+          "days": [
+            4
+          ]
+        },
+        {
+          "type": "dialogue",
+          "minutes": 8,
+          "ref": "d-ramen",
+          "days": [
+            6
+          ]
         }
       ]
     }

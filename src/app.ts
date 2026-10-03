@@ -50,7 +50,7 @@ export const saveSettings = () => kvSet('settings', app.settings);
 
 export const now = () => new Date();
 export const plan = (): Plan => planFor(app.pack, now());
-export const unlocked = () => unlockedIds(app.pack, plan().weekNumber);
+export const unlocked = () => (() => { const p = plan(); return unlockedIds(app.pack, p.weekNumber, p.studyDay); })();
 
 /** Items introduced by the schedule that are due now, oldest first. */
 export function dueItems(): Item[] {
