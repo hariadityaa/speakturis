@@ -23,7 +23,7 @@ const chunk = (type, data) => {
 
 // Teal speech bubble on near-black. `scale` shrinks the artwork so maskable icons keep a safe zone.
 function icon(size, scale) {
-  const bg = [10, 10, 10];
+  const bg = [8, 32, 36];
   const fg = [94, 234, 212];
   const raw = Buffer.alloc((size * 3 + 1) * size);
   const cx = size / 2;

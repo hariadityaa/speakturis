@@ -2,7 +2,6 @@ import { isValidSettings } from '../core/settings';
 import { dumpAll, restoreAll, type Dump } from './db';
 
 const APP = 'turisfasih';
-const LEGACY_APP = 'speakturis';
 const VERSION = 1;
 
 export async function exportBackup(): Promise<void> {
@@ -29,7 +28,7 @@ const isStr = (x: unknown) => typeof x === 'string';
 export function parseBackup(text: string): Dump {
   let j: any;
   try { j = JSON.parse(text); } catch { throw new Error('Not a JSON file.'); }
-  if (j?.app !== APP && j?.app !== LEGACY_APP) throw new Error('Not a Turisfasih backup.');
+  if (j?.app !== APP) throw new Error('Not a Turisfasih backup.');
   if (j.version !== VERSION) throw new Error(`Unsupported backup version ${j.version}.`);
   const d = j.data;
   if (!d || !Array.isArray(d.cards) || !Array.isArray(d.log) || !Array.isArray(d.kv)) throw new Error('Backup is incomplete.');

@@ -12,14 +12,16 @@ interface Schema extends DBSchema {
 }
 
 let dbp: Promise<IDBPDatabase<Schema>> | undefined;
-const db = () =>
-  (dbp ??= openDB<Schema>('speakturis', 1, {
+const db = () => {
+  if (!dbp) indexedDB.deleteDatabase('speakturis'); // pre-rename database, intentionally discarded
+  return (dbp ??= openDB<Schema>('turisfasih', 1, {
     upgrade(d) {
       d.createObjectStore('cards', { keyPath: ['lang', 'id'] });
       d.createObjectStore('log', { keyPath: ['lang', 'date'] });
       d.createObjectStore('kv');
     },
   }));
+};
 
 const langRange = (lang: string) => IDBKeyRange.bound([lang, ''], [lang, '￿']);
 

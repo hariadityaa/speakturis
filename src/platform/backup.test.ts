@@ -9,10 +9,6 @@ describe('parseBackup', () => {
     const d = parseBackup(wrap({ cards: [card], log: [{ lang: 'ja', date: '2026-10-03', done: [], reviews: 1 }], kv: [['settings', { lang: 'ja', rate: 0.8 }]] }));
     expect(d.cards).toHaveLength(1);
   });
-  it('accepts a backup from before the rename', () => {
-    const legacy = JSON.stringify({ app: 'speakturis', version: 1, data: { cards: [card], log: [], kv: [] } });
-    expect(parseBackup(legacy).cards).toHaveLength(1);
-  });
   it.each([
     ['not json', 'hello'],
     ['array', '[]'],
