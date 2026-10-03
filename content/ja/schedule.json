@@ -128,7 +128,9 @@
                 "h-fukuro",
                 "h-atatame",
                 "h-pointo",
-                "h-shoushou"
+                "h-shoushou",
+                "h-gochuumon",
+                "h-ohashi"
               ],
               "label": "Help and what staff say"
             },
@@ -331,7 +333,8 @@
               "phraseIds": [
                 "h-nanmei",
                 "h-kochira",
-                "h-tennai"
+                "h-tennai",
+                "h-gochuumon"
               ]
             },
             {
@@ -425,7 +428,8 @@
                 "h-fukuro",
                 "h-atatame",
                 "h-pointo",
-                "h-shoushou"
+                "h-shoushou",
+                "h-ohashi"
               ]
             },
             {

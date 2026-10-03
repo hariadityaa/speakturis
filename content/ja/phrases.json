@@ -278,7 +278,8 @@
         "food"
       ],
       "difficulty": 1,
-      "listen": true
+      "listen": true,
+      "replyId": "p-futari"
     },
     {
       "id": "h-fukuro",
@@ -290,7 +291,8 @@
         "shopping"
       ],
       "difficulty": 1,
-      "listen": true
+      "listen": true,
+      "replyId": "p-fukuro"
     },
     {
       "id": "h-atatame",
@@ -303,7 +305,8 @@
         "food"
       ],
       "difficulty": 1,
-      "listen": true
+      "listen": true,
+      "replyId": "p-atatamete"
     },
     {
       "id": "h-pointo",
@@ -315,7 +318,8 @@
         "shopping"
       ],
       "difficulty": 1,
-      "listen": true
+      "listen": true,
+      "replyId": "p-daijoubu"
     },
     {
       "id": "h-shoushou",
@@ -655,7 +659,8 @@
         "food"
       ],
       "difficulty": 1,
-      "listen": true
+      "listen": true,
+      "replyId": "p-hai-iie"
     },
     {
       "id": "h-shiharai",
@@ -668,7 +673,8 @@
         "food"
       ],
       "difficulty": 1,
-      "listen": true
+      "listen": true,
+      "replyId": "p-kaado"
     },
     {
       "id": "h-yoyaku",
@@ -681,7 +687,35 @@
         "hotel"
       ],
       "difficulty": 1,
-      "listen": true
+      "listen": true,
+      "replyId": "p-yoyaku"
+    },
+    {
+      "id": "h-gochuumon",
+      "native": "ご注文はお決まりですか",
+      "reading": "gochuumon wa okimari desu ka",
+      "english": "Are you ready to order?",
+      "speak": "ごちゅうもんはおきまりですか",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "listen": true,
+      "replyId": "p-kore-kudasai"
+    },
+    {
+      "id": "h-ohashi",
+      "native": "お箸はおつけしますか",
+      "reading": "ohashi wa otsuke shimasu ka",
+      "english": "Do you want chopsticks?",
+      "speak": "おはしはおつけしますか",
+      "tags": [
+        "shopping",
+        "food"
+      ],
+      "difficulty": 1,
+      "listen": true,
+      "replyId": "p-hashi"
     },
     {
       "id": "s-toire",

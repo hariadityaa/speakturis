@@ -25,7 +25,8 @@ try {
   check('Today lists plan tasks', (await page.$$('.list .row')).length > 0);
 
   const routes = ['/review', '/flash', '/flash?tag=food', '/flash?new=1', '/kana', '/kana?ref=all',
-    '/numbers', '/prices', '/read', '/dialogue', '/commute'];
+    '/numbers', '/prices', '/read', '/dialogue', '/commute',
+    '/show?id=p-ikura&list=survival', '/show?id=h-nanmei&list=heard', '/show?id=p-ikura&list=survival&from=today'];
   for (const r of routes) {
     await page.goto(`${base}#${r}`);
     await page.waitForSelector('.bar');
@@ -36,6 +37,28 @@ try {
     await page.waitForSelector('.bar');
     check(`${r} back -> ${href}`, href.startsWith('#/') && page.url().startsWith(base) && !(await page.content()).includes('404'), page.url());
   }
+
+  // Phrasebook: survival pinned on Today, a tab of its own, staff lines link to a reply.
+  await page.goto(`${base}#/`);
+  await page.waitForSelector('.grid.mini .tile');
+  check('Today pins 10 survival phrases', (await page.$$('.grid.mini .tile')).length === 10);
+  await page.click('.grid.mini .tile');
+  await page.waitForSelector('.show-text');
+  check('survival tile opens a show card', (await page.textContent('.show-text')) === 'すみません');
+  await page.click('a.back');
+  await page.waitForSelector('.grid.mini');
+  check('show card back -> Today', page.url() === `${base}#/`);
+  await page.click('.tabs a[data-path="/phrasebook"]');
+  await page.waitForSelector('.chips .chip.on');
+  check('Phrasebook tab is active', (await page.getAttribute('.tabs a.on', 'data-path')) === '/phrasebook');
+  await page.click('.chips a[href="#/phrasebook?list=heard"]');
+  await page.waitForSelector('.chip.on[href="#/phrasebook?list=heard"]');
+  await page.click('a.row[href*="h-nanmei"]');
+  await page.waitForSelector('.show-text');
+  await page.click('a.row[href*="p-futari"]');
+  await page.waitForFunction(() => document.querySelector('.show-text')?.textContent !== '何名様ですか');
+  check('staff line links to its reply', (await page.textContent('.show-text')) === '二人です');
+  check('reply card has no prev/next outside its list', !(await page.$('.grades a')));
 
   // Reported bug: Review mid-session, back returns to Today.
   await page.goto(`${base}#/review`);

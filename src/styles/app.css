@@ -72,6 +72,7 @@ h2.sect { font-size: .75rem; font-weight: 600; text-transform: uppercase; letter
 .grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-2); margin: var(--s-2) 0; }
 .tile { display: flex; flex-direction: column; justify-content: center; gap: var(--s-1); min-height: 88px; padding: var(--s-4); border-radius: var(--r);
   background: var(--surface); border: 1px solid var(--border); text-decoration: none; color: inherit; transition: background var(--ease), border-color var(--ease); }
+.grid.mini .tile { min-height: 64px; padding: var(--s-2) var(--s-3); } .grid.mini .tile b { font-size: .9375rem; }
 .tile b { font-size: 1.125rem; } .tile small { color: var(--text-2); } .tile.dim { opacity: .6; }
 
 .chips { display: flex; gap: var(--s-2); overflow-x: auto; padding: var(--s-1) 0 var(--s-2); scrollbar-width: none; }
@@ -83,6 +84,8 @@ h2.sect { font-size: .75rem; font-weight: 600; text-transform: uppercase; letter
   padding: var(--s-6); font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); cursor: pointer; text-align: center;
   transition: background var(--ease), border-color var(--ease); }
 .flash.static { cursor: default; }
+.show { min-height: 50dvh; } .show-text { font-size: clamp(2.25rem, 11vw, 4rem); line-height: 1.2; overflow-wrap: anywhere; }
+.row .sub { display: block; color: var(--text-2); font-size: .875rem; }
 .big { font-size: 2rem; font-weight: 600; line-height: 1.25; } .big.huge { font-size: 4rem; line-height: 1.1; }
 .reading { font-size: 1.25rem; color: var(--text-2); } .english { font-size: 1.125rem; color: var(--text-2); }
 .back-face { text-align: center; display: grid; gap: var(--s-1); margin: var(--s-2) 0 var(--s-3); } .back-face[hidden], [hidden] { display: none !important; }
