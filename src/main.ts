@@ -20,7 +20,7 @@ initPwa();
 function chooseLanguage(mount: HTMLElement): Promise<void> {
   return new Promise((resolve) => {
     mount.replaceChildren(h('main', { class: 'welcome' },
-      h('h1', null, 'Turisfasih'),
+      h('h1', null, 'TurisTalk'),
       h('h2', { class: 'sect' }, 'What language do you want to learn?'),
       h('div', { class: 'stack' }, app.packs.map((p) =>
         h('button', { class: 'btn big', onclick: async () => { await setLanguage(p.code); resolve(); } },
@@ -37,7 +37,7 @@ async function offerInstall(mount: HTMLElement, offered: Promise<boolean>): Prom
   if (isStandalone() || (await kvGet<boolean>('installDeclined')) || !(await offered)) return;
   return new Promise((resolve) => {
     mount.replaceChildren(h('main', { class: 'welcome' },
-      h('h1', null, 'Turisfasih'),
+      h('h1', null, 'TurisTalk'),
       h('h2', { class: 'sect' }, 'Install the app?'),
       h('p', { class: 'note' }, 'Opens full screen from your home screen and works offline.'),
       h('div', { class: 'stack' },

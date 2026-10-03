@@ -1,4 +1,4 @@
-# Turisfasih
+# TurisTalk
 
 Mobile-first PWA for learning travel-level phrases. No alphabets, just what you say and hear. First pack: Japanese. It runs fully offline after the first load. No backend, no accounts, no analytics, no third-party requests.
 
@@ -68,7 +68,7 @@ Run on a real phone against the deployed URL.
 - [ ] Settings → Export backup. Save the file.
 - [ ] Do a lesson, then Start over (erase progress).
 - [ ] Settings → Import backup, pick the file. Progress returns. Learn shows the learned count again.
-- [ ] Import a non-backup JSON. It shows "Not a Turisfasih backup." and changes nothing.
+- [ ] Import a non-backup JSON. It shows "Not a TurisTalk backup." and changes nothing.
 
 **Updates**
 - [ ] Push a change to `main`. Reopen the app twice. "Update available" appears. Tap Update. The new version loads.
