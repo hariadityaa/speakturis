@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 1,
+  "dailyMinutes": 20,
+  "weeks": [
+    {
+      "week": 1,
+      "focus": "katakana",
+      "title": "Katakana: vowels and K row",
+      "tasks": [
+        {
+          "type": "review",
+          "minutes": 4
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "k-vowels"
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "k-k"
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "focus": "katakana",
+      "title": "Katakana: S and T rows",
+      "tasks": [
+        {
+          "type": "review",
+          "minutes": 4
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "k-s"
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "k-t"
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "focus": "katakana",
+      "title": "Katakana: N row and menu words",
+      "tasks": [
+        {
+          "type": "review",
+          "minutes": 4
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "k-n"
+        },
+        {
+          "type": "reading",
+          "minutes": 8,
+          "ref": "k-menu"
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "focus": "hiragana",
+      "title": "Hiragana: vowels and K row",
+      "tasks": [
+        {
+          "type": "review",
+          "minutes": 4
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "h-vowels"
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "h-k"
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "focus": "hiragana",
+      "title": "Hiragana: S row",
+      "tasks": [
+        {
+          "type": "review",
+          "minutes": 4
+        },
+        {
+          "type": "kana",
+          "minutes": 8,
+          "ref": "h-s"
+        },
+        {
+          "type": "reading",
+          "minutes": 8,
+          "ref": "k-menu"
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "focus": "hiragana",
+      "title": "Hiragana review",
+      "tasks": [
+        {
+          "type": "review",
+          "minutes": 8
+        },
+        {
+          "type": "kana",
+          "minutes": 12
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "focus": "numbers",
+      "title": "Numbers 0-100 and first phrases",
+      "tasks": [
+        {
+          "type": "review",
+          "minutes": 5
+        },
+        {
+          "type": "numbers",
+          "minutes": 8
+        },
+        {
+          "type": "phrases",
+          "minutes": 7
+        }
+      ],
+      "newPhraseIds": [
+        "p-sumimasen",
+        "p-kore-kudasai",
+        "p-ikura"
+      ]
+    },
+    {
+      "week": 8,
+      "focus": "numbers",
+      "title": "Numbers to 1,000 and thanks",
+      "tasks": [
+        {
+          "type": "review",
+          "minutes": 5
+        },
+        {
+          "type": "numbers",
+          "minutes": 8
+        },
+        {
+          "type": "phrases",
+          "minutes": 7
+        }
+      ],
+      "newPhraseIds": [
+        "p-arigatou",
+        "p-toire",
+        "p-eigo"
+      ]
+    },
+    {
+      "week": 9,
+      "focus": "prices",
+      "title": "Yen prices",
+      "tasks": [
+        {
+          "type": "review",
+          "minutes": 5
+        },
+        {
+          "type": "prices",
+          "minutes": 10
+        },
+        {
+          "type": "phrases",
+          "minutes": 5
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "focus": "ordering",
+      "title": "Ordering food",
+      "tasks": [
+        {
+          "type": "review",
+          "minutes": 5
+        },
+        {
+          "type": "phrases",
+          "minutes": 7
+        },
+        {
+          "type": "dialogue",
+          "minutes": 8,
+          "ref": "d-ramen"
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "focus": "directions",
+      "title": "Directions and transport",
+      "tasks": [
+        {
+          "type": "review",
+          "minutes": 5
+        },
+        {
+          "type": "phrases",
+          "minutes": 7
+        },
+        {
+          "type": "prices",
+          "minutes": 8
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "focus": "ordering",
+      "title": "Numbers, prices, ordering, directions: mixed",
+      "tasks": [
+        {
+          "type": "review",
+          "minutes": 5
+        },
+        {
+          "type": "prices",
+          "minutes": 7
+        },
+        {
+          "type": "dialogue",
+          "minutes": 8,
+          "ref": "d-ramen"
+        }
+      ]
+    },
+    {
+      "week": 13,
+      "focus": "listening",
+      "title": "Listening and role-play",
+      "tasks": [
+        {
+          "type": "review",
+          "minutes": 5
+        },
+        {
+          "type": "dialogue",
+          "minutes": 8,
+          "ref": "d-ramen"
+        },
+        {
+          "type": "commute",
+          "minutes": 7
+        }
+      ]
+    },
+    {
+      "week": 14,
+      "focus": "reading",
+      "title": "Real menu reading",
+      "tasks": [
+        {
+          "type": "review",
+          "minutes": 5
+        },
+        {
+          "type": "reading",
+          "minutes": 8,
+          "ref": "k-menu"
+        },
+        {
+          "type": "commute",
+          "minutes": 7
+        }
+      ]
+    },
+    {
+      "week": 15,
+      "focus": "listening",
+      "title": "Role-play",
+      "tasks": [
+        {
+          "type": "review",
+          "minutes": 5
+        },
+        {
+          "type": "dialogue",
+          "minutes": 8,
+          "ref": "d-ramen"
+        },
+        {
+          "type": "prices",
+          "minutes": 7
+        }
+      ]
+    },
+    {
+      "week": 16,
+      "focus": "reading",
+      "title": "Signs and menus",
+      "tasks": [
+        {
+          "type": "review",
+          "minutes": 5
+        },
+        {
+          "type": "reading",
+          "minutes": 8,
+          "ref": "k-menu"
+        },
+        {
+          "type": "commute",
+          "minutes": 7
+        }
+      ]
+    },
+    {
+      "week": 17,
+      "focus": "review",
+      "title": "Trip ready: full review",
+      "tasks": [
+        {
+          "type": "review",
+          "minutes": 8
+        },
+        {
+          "type": "dialogue",
+          "minutes": 6,
+          "ref": "d-ramen"
+        },
+        {
+          "type": "commute",
+          "minutes": 6
+        }
+      ]
+    }
+  ]
+}

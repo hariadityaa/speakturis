@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "dialogues": [
+    {
+      "id": "d-ramen",
+      "title": "Ordering at a ramen shop",
+      "situation": "food",
+      "intro": "You enter a small ramen shop. The staff greets you.",
+      "start": "n1",
+      "nodes": {
+        "n1": {
+          "speaker": "npc",
+          "native": "いらっしゃいませ。何名様ですか。",
+          "reading": "irasshaimase. nanmei sama desu ka",
+          "english": "Welcome. How many people?",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "native": "一人です",
+              "reading": "hitori desu",
+              "english": "Just one"
+            },
+            {
+              "next": "n1b",
+              "good": false,
+              "native": "さようなら",
+              "reading": "sayounara",
+              "english": "Goodbye",
+              "feedback": "That means goodbye. You just arrived."
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "native": "ひとりです",
+              "reading": "hitori desu",
+              "english": "One person"
+            }
+          ]
+        },
+        "n1b": {
+          "speaker": "npc",
+          "native": "えっ？ご注文は？",
+          "reading": "e? gochuumon wa?",
+          "english": "Huh? Your order?",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "native": "ラーメンをください",
+              "reading": "raamen o kudasai",
+              "english": "Ramen, please"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-sumimasen"
+            }
+          ]
+        },
+        "n2": {
+          "speaker": "npc",
+          "native": "こちらへどうぞ。ご注文は？",
+          "reading": "kochira e douzo. gochuumon wa?",
+          "english": "This way. What would you like?",
+          "replies": [
+            {
+              "next": "n3",
+              "good": true,
+              "native": "ラーメンをください",
+              "reading": "raamen o kudasai",
+              "english": "Ramen, please"
+            },
+            {
+              "next": "n3b",
+              "good": false,
+              "native": "トイレはどこですか",
+              "reading": "toire wa doko desu ka",
+              "english": "Where is the toilet?",
+              "feedback": "Not yet. Order first."
+            }
+          ]
+        },
+        "n3b": {
+          "speaker": "npc",
+          "native": "トイレはあちらです。ご注文は？",
+          "reading": "toire wa achira desu. gochuumon wa?",
+          "english": "The toilet is over there. Your order?",
+          "replies": [
+            {
+              "next": "n3",
+              "good": true,
+              "native": "ラーメンをください",
+              "reading": "raamen o kudasai",
+              "english": "Ramen, please"
+            },
+            {
+              "next": "n3",
+              "good": true,
+              "phraseId": "p-kore-kudasai"
+            }
+          ]
+        },
+        "n3": {
+          "speaker": "npc",
+          "native": "かしこまりました。以上でよろしいですか。",
+          "reading": "kashikomarimashita. ijou de yoroshii desu ka",
+          "english": "Certainly. Is that all?",
+          "replies": [
+            {
+              "next": "n4",
+              "good": true,
+              "native": "はい、大丈夫です",
+              "reading": "hai, daijoubu desu",
+              "english": "Yes, that's fine"
+            },
+            {
+              "next": "n4",
+              "good": true,
+              "native": "ビールもください",
+              "reading": "biiru mo kudasai",
+              "english": "Beer too, please"
+            }
+          ]
+        },
+        "n4": {
+          "speaker": "npc",
+          "native": "ありがとうございました。",
+          "reading": "arigatou gozaimashita",
+          "english": "Thank you very much.",
+          "end": true
+        }
+      }
+    }
+  ]
+}

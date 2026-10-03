@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "code",
+    "name",
+    "nativeName",
+    "ttsLocale",
+    "readingSystem",
+    "scriptSystems",
+    "situations",
+    "currency",
+    "trip",
+    "studyStart",
+    "restDay"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "code": {
+      "type": "string",
+      "pattern": "^[a-z]{2,3}$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "nativeName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ttsLocale": {
+      "type": "string",
+      "pattern": "^[a-z]{2,3}-[A-Z]{2}$"
+    },
+    "readingSystem": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scriptSystems": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9-]*$"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "situations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9-]*$"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "currency": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "symbol",
+        "position",
+        "decimals",
+        "unit"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$"
+        },
+        "symbol": {
+          "type": "string",
+          "minLength": 1
+        },
+        "position": {
+          "enum": [
+            "prefix",
+            "suffix"
+          ]
+        },
+        "decimals": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "unit": {
+          "type": "object",
+          "required": [
+            "native",
+            "reading"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "native": {
+              "type": "string",
+              "minLength": 1
+            },
+            "reading": {
+              "type": "string",
+              "minLength": 1
+            },
+            "speak": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    "trip": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "date",
+        "place"
+      ],
+      "properties": {
+        "date": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "place": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "studyStart": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "restDay": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 6
+    }
+  }
+}

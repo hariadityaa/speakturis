@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "dialogues"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "dialogues": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "situation",
+          "start",
+          "nodes"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "situation": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$"
+          },
+          "intro": {
+            "type": "string",
+            "minLength": 1
+          },
+          "start": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$"
+          },
+          "nodes": {
+            "type": "object",
+            "minProperties": 2,
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "native",
+                "reading",
+                "english"
+              ],
+              "properties": {
+                "speaker": {
+                  "enum": [
+                    "npc",
+                    "narrator"
+                  ]
+                },
+                "native": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "reading": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "english": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "speak": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "end": {
+                  "type": "boolean"
+                },
+                "replies": {
+                  "type": "array",
+                  "minItems": 2,
+                  "maxItems": 4,
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "next",
+                      "good"
+                    ],
+                    "properties": {
+                      "phraseId": {
+                        "type": "string",
+                        "pattern": "^[a-z0-9][a-z0-9-]*$"
+                      },
+                      "native": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "reading": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "english": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "speak": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "next": {
+                        "type": "string",
+                        "pattern": "^[a-z0-9][a-z0-9-]*$"
+                      },
+                      "good": {
+                        "type": "boolean"
+                      },
+                      "feedback": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "propertyNames": {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9-]*$"
+            }
+          }
+        }
+      }
+    }
+  }
+}

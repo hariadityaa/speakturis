@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "range": {
+    "min": 0,
+    "max": 10000
+  },
+  "words": {
+    "0": {
+      "native": "ゼロ",
+      "reading": "zero",
+      "speak": "ぜろ"
+    },
+    "1": {
+      "native": "一",
+      "reading": "ichi",
+      "speak": "いち"
+    },
+    "2": {
+      "native": "二",
+      "reading": "ni",
+      "speak": "に"
+    },
+    "3": {
+      "native": "三",
+      "reading": "san",
+      "speak": "さん"
+    },
+    "4": {
+      "native": "四",
+      "reading": "yon",
+      "speak": "よん"
+    },
+    "5": {
+      "native": "五",
+      "reading": "go",
+      "speak": "ご"
+    },
+    "6": {
+      "native": "六",
+      "reading": "roku",
+      "speak": "ろく"
+    },
+    "7": {
+      "native": "七",
+      "reading": "nana",
+      "speak": "なな"
+    },
+    "8": {
+      "native": "八",
+      "reading": "hachi",
+      "speak": "はち"
+    },
+    "9": {
+      "native": "九",
+      "reading": "kyuu",
+      "speak": "きゅう"
+    }
+  },
+  "multipliers": [
+    {
+      "value": 10,
+      "native": "十",
+      "reading": "juu",
+      "speak": "じゅう",
+      "omitOne": true
+    },
+    {
+      "value": 100,
+      "native": "百",
+      "reading": "hyaku",
+      "speak": "ひゃく",
+      "omitOne": true
+    },
+    {
+      "value": 1000,
+      "native": "千",
+      "reading": "sen",
+      "speak": "せん",
+      "omitOne": true
+    },
+    {
+      "value": 10000,
+      "native": "万",
+      "reading": "man",
+      "speak": "まん",
+      "omitOne": false
+    }
+  ],
+  "overrides": {
+    "300": {
+      "native": "三百",
+      "reading": "sanbyaku",
+      "speak": "さんびゃく"
+    },
+    "600": {
+      "native": "六百",
+      "reading": "roppyaku",
+      "speak": "ろっぴゃく"
+    },
+    "800": {
+      "native": "八百",
+      "reading": "happyaku",
+      "speak": "はっぴゃく"
+    },
+    "3000": {
+      "native": "三千",
+      "reading": "sanzen",
+      "speak": "さんぜん"
+    },
+    "8000": {
+      "native": "八千",
+      "reading": "hassen",
+      "speak": "はっせん"
+    }
+  },
+  "separator": " ",
+  "priceDrill": {
+    "min": 100,
+    "max": 9800,
+    "step": 10
+  }
+}

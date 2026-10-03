@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "code": "ja",
+  "name": "Japanese",
+  "nativeName": "日本語",
+  "ttsLocale": "ja-JP",
+  "readingSystem": "romaji",
+  "scriptSystems": [
+    "katakana",
+    "hiragana"
+  ],
+  "situations": [
+    "greeting",
+    "food",
+    "shopping",
+    "transport",
+    "help"
+  ],
+  "currency": {
+    "code": "JPY",
+    "symbol": "円",
+    "position": "suffix",
+    "decimals": 0,
+    "unit": {
+      "native": "円",
+      "reading": "en",
+      "speak": "えん"
+    }
+  },
+  "trip": {
+    "date": "2027-01-30",
+    "place": "Sapporo"
+  },
+  "studyStart": "2026-10-03",
+  "restDay": 0
+}

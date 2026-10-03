@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "systems": [
+    {
+      "id": "katakana",
+      "name": "Katakana",
+      "groups": [
+        {
+          "id": "k-vowels",
+          "label": "a i u e o",
+          "chars": [
+            {
+              "id": "kata-a",
+              "char": "ア",
+              "reading": "a"
+            },
+            {
+              "id": "kata-i",
+              "char": "イ",
+              "reading": "i"
+            },
+            {
+              "id": "kata-u",
+              "char": "ウ",
+              "reading": "u"
+            },
+            {
+              "id": "kata-e",
+              "char": "エ",
+              "reading": "e"
+            },
+            {
+              "id": "kata-o",
+              "char": "オ",
+              "reading": "o"
+            }
+          ]
+        },
+        {
+          "id": "k-k",
+          "label": "ka ki ku ke ko",
+          "chars": [
+            {
+              "id": "kata-ka",
+              "char": "カ",
+              "reading": "ka"
+            },
+            {
+              "id": "kata-ki",
+              "char": "キ",
+              "reading": "ki"
+            },
+            {
+              "id": "kata-ku",
+              "char": "ク",
+              "reading": "ku"
+            },
+            {
+              "id": "kata-ke",
+              "char": "ケ",
+              "reading": "ke"
+            },
+            {
+              "id": "kata-ko",
+              "char": "コ",
+              "reading": "ko"
+            }
+          ]
+        },
+        {
+          "id": "k-s",
+          "label": "sa shi su se so",
+          "chars": [
+            {
+              "id": "kata-sa",
+              "char": "サ",
+              "reading": "sa"
+            },
+            {
+              "id": "kata-shi",
+              "char": "シ",
+              "reading": "shi"
+            },
+            {
+              "id": "kata-su",
+              "char": "ス",
+              "reading": "su"
+            },
+            {
+              "id": "kata-se",
+              "char": "セ",
+              "reading": "se"
+            },
+            {
+              "id": "kata-so",
+              "char": "ソ",
+              "reading": "so"
+            }
+          ]
+        },
+        {
+          "id": "k-t",
+          "label": "ta chi tsu te to",
+          "chars": [
+            {
+              "id": "kata-ta",
+              "char": "タ",
+              "reading": "ta"
+            },
+            {
+              "id": "kata-chi",
+              "char": "チ",
+              "reading": "chi"
+            },
+            {
+              "id": "kata-tsu",
+              "char": "ツ",
+              "reading": "tsu"
+            },
+            {
+              "id": "kata-te",
+              "char": "テ",
+              "reading": "te"
+            },
+            {
+              "id": "kata-to",
+              "char": "ト",
+              "reading": "to"
+            }
+          ]
+        },
+        {
+          "id": "k-n",
+          "label": "na ni nu ne no",
+          "chars": [
+            {
+              "id": "kata-na",
+              "char": "ナ",
+              "reading": "na"
+            },
+            {
+              "id": "kata-ni",
+              "char": "ニ",
+              "reading": "ni"
+            },
+            {
+              "id": "kata-nu",
+              "char": "ヌ",
+              "reading": "nu"
+            },
+            {
+              "id": "kata-ne",
+              "char": "ネ",
+              "reading": "ne"
+            },
+            {
+              "id": "kata-no",
+              "char": "ノ",
+              "reading": "no"
+            }
+          ]
+        }
+      ],
+      "wordSets": [
+        {
+          "id": "k-menu",
+          "label": "Menu words",
+          "words": [
+            {
+              "id": "kw-ramen",
+              "native": "ラーメン",
+              "reading": "raamen",
+              "english": "ramen"
+            },
+            {
+              "id": "kw-beer",
+              "native": "ビール",
+              "reading": "biiru",
+              "english": "beer"
+            },
+            {
+              "id": "kw-coffee",
+              "native": "コーヒー",
+              "reading": "koohii",
+              "english": "coffee"
+            },
+            {
+              "id": "kw-curry",
+              "native": "カレー",
+              "reading": "karee",
+              "english": "curry"
+            },
+            {
+              "id": "kw-salad",
+              "native": "サラダ",
+              "reading": "sarada",
+              "english": "salad"
+            },
+            {
+              "id": "kw-steak",
+              "native": "ステーキ",
+              "reading": "suteeki",
+              "english": "steak"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hiragana",
+      "name": "Hiragana",
+      "groups": [
+        {
+          "id": "h-vowels",
+          "label": "a i u e o",
+          "chars": [
+            {
+              "id": "hira-a",
+              "char": "あ",
+              "reading": "a"
+            },
+            {
+              "id": "hira-i",
+              "char": "い",
+              "reading": "i"
+            },
+            {
+              "id": "hira-u",
+              "char": "う",
+              "reading": "u"
+            },
+            {
+              "id": "hira-e",
+              "char": "え",
+              "reading": "e"
+            },
+            {
+              "id": "hira-o",
+              "char": "お",
+              "reading": "o"
+            }
+          ]
+        },
+        {
+          "id": "h-k",
+          "label": "ka ki ku ke ko",
+          "chars": [
+            {
+              "id": "hira-ka",
+              "char": "か",
+              "reading": "ka"
+            },
+            {
+              "id": "hira-ki",
+              "char": "き",
+              "reading": "ki"
+            },
+            {
+              "id": "hira-ku",
+              "char": "く",
+              "reading": "ku"
+            },
+            {
+              "id": "hira-ke",
+              "char": "け",
+              "reading": "ke"
+            },
+            {
+              "id": "hira-ko",
+              "char": "こ",
+              "reading": "ko"
+            }
+          ]
+        },
+        {
+          "id": "h-s",
+          "label": "sa shi su se so",
+          "chars": [
+            {
+              "id": "hira-sa",
+              "char": "さ",
+              "reading": "sa"
+            },
+            {
+              "id": "hira-shi",
+              "char": "し",
+              "reading": "shi"
+            },
+            {
+              "id": "hira-su",
+              "char": "す",
+              "reading": "su"
+            },
+            {
+              "id": "hira-se",
+              "char": "せ",
+              "reading": "se"
+            },
+            {
+              "id": "hira-so",
+              "char": "そ",
+              "reading": "so"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

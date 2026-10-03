@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "range",
+    "words",
+    "multipliers",
+    "separator",
+    "priceDrill"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "range": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "min",
+        "max"
+      ],
+      "properties": {
+        "min": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "max": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "words": {
+      "type": "object",
+      "description": "Words for exact values, keyed by number as a string. Must cover 0..9 at minimum.",
+      "patternProperties": {
+        "^\\d+$": {
+          "type": "object",
+          "required": [
+            "native",
+            "reading"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "native": {
+              "type": "string",
+              "minLength": 1
+            },
+            "reading": {
+              "type": "string",
+              "minLength": 1
+            },
+            "speak": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "multipliers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "value",
+          "native",
+          "reading",
+          "omitOne"
+        ],
+        "properties": {
+          "value": {
+            "type": "integer",
+            "minimum": 2
+          },
+          "native": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reading": {
+            "type": "string",
+            "minLength": 1
+          },
+          "speak": {
+            "type": "string",
+            "minLength": 1
+          },
+          "omitOne": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "overrides": {
+      "type": "object",
+      "description": "Irregular readings for an exact multiple (e.g. 300) used as a group.",
+      "patternProperties": {
+        "^\\d+$": {
+          "type": "object",
+          "required": [
+            "native",
+            "reading"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "native": {
+              "type": "string",
+              "minLength": 1
+            },
+            "reading": {
+              "type": "string",
+              "minLength": 1
+            },
+            "speak": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "separator": {
+      "type": "string"
+    },
+    "priceDrill": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "min",
+        "max",
+        "step"
+      ],
+      "properties": {
+        "min": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "step": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    }
+  }
+}
