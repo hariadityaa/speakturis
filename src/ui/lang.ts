@@ -2,6 +2,7 @@ import { app, setLanguage } from '../app';
 import { loadPack } from '../core/packs';
 import { getCards } from '../platform/db';
 import { refresh } from '../router';
+import { notify } from '../platform/notice';
 import { h } from './dom';
 
 /** "12 of 78 learned" for any pack, read straight from storage so it works for packs not loaded. */
@@ -17,12 +18,15 @@ function openSheet() {
   const close = () => { sheet.close(); sheet.remove(); };
   const rows = app.packs.map((p) => {
     const sub = h('small', null, p.name);
-    void progress(p.code).then((t) => { sub.textContent = `${p.name} · ${t}`; });
+    progress(p.code).then((t) => { sub.textContent = `${p.name} · ${t}`; }).catch(() => { /* the progress line is optional */ });
     const on = p.code === app.settings.lang;
     return h('li', null, h('button', { class: `row lang-row${on ? ' on' : ''}`, 'aria-current': on ? 'true' : null, onclick: async () => {
       close();
       if (on) return;
-      await setLanguage(p.code);
+      try { await setLanguage(p.code); } catch {
+        notify(`Could not open ${p.name}. Try again, or close the app and open it again.`);
+        return;
+      }
       await refresh();
     } },
       h('span', { class: 'native', 'data-pack': p.code }, p.nativeName),

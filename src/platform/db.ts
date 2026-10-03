@@ -18,7 +18,7 @@ const db = () =>
       d.createObjectStore('cards', { keyPath: ['lang', 'id'] });
       d.createObjectStore('kv');
     },
-  }));
+  }).catch((e) => { dbp = undefined; throw e; })); // a failed open must not stick until restart
 
 const langRange = (lang: string) => IDBKeyRange.bound([lang, ''], [lang, '￿']);
 

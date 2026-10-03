@@ -5,6 +5,7 @@ import { MASTERED_DAYS, drillReview, isDue, newState, review, startOfDay, type G
 import { DEFAULTS, cleanSettings, type Settings } from './core/settings';
 import type { Item, Pack, PackMeta } from './core/types';
 import { getCards, kvGet, kvSet, putCard, type CardRecord } from './platform/db';
+import { notify } from './platform/notice';
 import { speak, voicesReady } from './platform/tts';
 
 export type { Settings };
@@ -42,26 +43,42 @@ export async function initApp(): Promise<boolean> {
 }
 
 export async function setLanguage(code: string, persist = true) {
+  // Load everything first. If any step fails, the app stays on the language it had.
+  const pack = await loadPack(code);
+  const items = buildItems(pack);
+  const cards = await getCards(code);
+  const stars = cleanStars(await kvGet<unknown>(`stars:${code}`), pack);
   app.settings.lang = code;
-  app.pack = await loadPack(code);
+  app.pack = pack;
   // Picks the native-script font for this language (Japanese and Chinese share characters but not glyphs).
   document.documentElement.dataset.pack = code;
-  app.items = buildItems(app.pack);
-  app.itemById = new Map(app.items.map((i) => [i.id, i]));
-  await loadCards();
-  app.stars = cleanStars(await kvGet<unknown>(`stars:${code}`), app.pack);
+  app.items = items;
+  app.itemById = new Map(items.map((i) => [i.id, i]));
+  app.cards = cards;
+  app.stars = stars;
   if (persist) await saveSettings();
 }
 
-export const loadCards = async () => { app.cards = await getCards(app.settings.lang); };
+/** After a backup is restored: take the saved settings and progress from storage. */
+export async function reloadFromStorage() {
+  const keep = app.settings.lang;
+  const restored = cleanSettings(await kvGet<unknown>('settings'));
+  if (!app.packs.some((p) => p.code === restored.lang)) restored.lang = keep;
+  app.settings = restored;
+  await setLanguage(restored.lang, false);
+}
 /** Flips a star and saves it. Returns whether the phrase is now starred. */
 export function toggleStar(id: string): boolean {
   const on = !app.stars.has(id);
   if (on) app.stars.add(id); else app.stars.delete(id);
-  void kvSet(`stars:${app.settings.lang}`, [...app.stars]);
+  kvSet(`stars:${app.settings.lang}`, [...app.stars]).catch(saveFailed);
   return on;
 }
 export const saveSettings = () => kvSet('settings', app.settings);
+
+const saveFailed = () => notify('Could not save that change. It will reset when you close the app.');
+/** For controls that do not wait on the save. Tells the user if it did not stick. */
+export const saveSettingsQuietly = () => { saveSettings().catch(saveFailed); };
 
 /** Phrases in pack order, which is most useful first. */
 export const phrases = (): Item[] => app.items.filter((i) => i.kind === 'phrase');
@@ -92,6 +109,12 @@ export function lessonItems(pool: Item[] = phrases(), daily = true): { due: Item
   return { due: dueItems(pool).slice(0, MAX_DUE), fresh: newItems(pool).slice(0, room) };
 }
 
+/** Saves a card. The lesson carries on if the phone cannot store it, but the user is told. */
+async function saveCard(rec: CardRecord) {
+  try { await putCard(rec); }
+  catch { notify('Could not save your progress. Your phone may be low on storage. Free some space to keep your progress.'); }
+}
+
 /** Records a grade and schedules the next review. */
 export async function grade(item: Item, g: Grade) {
   const t = Date.now();
@@ -99,7 +122,7 @@ export async function grade(item: Item, g: Grade) {
   const state = review(prev ?? newState(t), g, t, { maxIntervalDays: MAX_INTERVAL_DAYS });
   const rec: CardRecord = { lang: app.settings.lang, id: item.id, added: prev?.added ?? t, ...state };
   app.cards.set(item.id, rec);
-  await putCard(rec);
+  await saveCard(rec);
 }
 
 /** Records a drill answer. Right answers on cards that are not due do not move the schedule. */
@@ -108,7 +131,7 @@ export async function gradeDrill(item: Item, correct: boolean) {
   if (!state) return;
   const rec: CardRecord = { lang: app.settings.lang, id: item.id, ...state };
   app.cards.set(item.id, rec);
-  await putCard(rec);
+  await saveCard(rec);
 }
 
 export function say(text: string, audioSrc?: string) {

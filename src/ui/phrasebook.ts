@@ -63,7 +63,8 @@ export const phrasebookScreen: Screen = (root, q) => {
       const found = bookPhrases(app.pack, key, app.stars).filter((p) => matchPhrase(p, words));
       list.append(found.length ? h('ul', { class: 'list' }, found.map((p) => phraseRow(p, key, back, paint)))
         : h('p', { class: 'note' }, 'No phrase found. ',
-          words ? h('a', { href: translateUrl(app.pack.meta.ttsLocale, search.value.trim()), target: '_blank', rel: 'noopener noreferrer' }, 'Look it up in Google Translate') : null));
+          words ? h('a', { href: translateUrl(app.pack.meta.ttsLocale, search.value.trim()), target: '_blank', rel: 'noopener noreferrer' }, 'Look it up in Google Translate') : null,
+          words && !navigator.onLine ? ' (needs internet)' : null));
       return;
     }
     // Everything once: Starred, then phrases you say under their first topic, then what staff say.
@@ -87,7 +88,8 @@ export const showScreen: Screen = (root, q) => {
   root.append(header(label, back));
   if (!p) { root.append(h('p', { class: 'note' }, 'Phrase not found.')); return; }
   // Staff may take a while to read it. Do not let the screen dim.
-  const release = keepAwake();
+  const awakeNote = h('p', { class: 'note center', hidden: true }, 'Your screen may switch off while you show this. Turn off battery saver to keep it on.');
+  const release = keepAwake(() => { awakeNote.hidden = false; });
 
   // Rebuilt when the star flips, because starred phrases move to the front.
   const nav = h('div');
@@ -118,6 +120,6 @@ export const showScreen: Screen = (root, q) => {
         h('span', { class: 'chev', 'aria-hidden': 'true' }, '›')));
   }
   paintNav();
-  root.append(nav);
+  root.append(nav, awakeNote);
   return () => { release(); stopSpeaking(); };
 };
