@@ -4,7 +4,7 @@ Mobile-first PWA for learning travel-level phrases. First pack: Japanese, for a 
 
 ## What it does
 
-- **Today**: the day's tasks from the 17-week schedule, a streak, and due reviews.
+- **Today**: the day's tasks from the 17-week schedule, a streak, and due reviews. First run asks which language to learn.
 - **Review**: spaced repetition (SM-2 variant) for kana and phrases. Cards are text-first. Tap to reveal and hear.
 - **Practice**: flashcards, kana drills (both directions), number and yen drills, menu and sign reading, branching role-play.
 - **Commute mode**: loops phrase, pause, meaning, next. Big buttons. Keeps the screen on.
@@ -51,7 +51,7 @@ Speech stops when the screen locks on most phones. Commute mode holds a wake loc
 Run on a real phone against the deployed URL.
 
 **Install**
-- [ ] Open the site in Chrome. An "Install for offline use" banner appears. Tap Install. The app opens full screen with no browser bar.
+- [ ] Open the site in Chrome. Menu → Install app (or Settings → Install app). The app opens full screen with no browser bar.
 - [ ] The icon on the home screen is the speech bubble. It is not cropped (maskable).
 - [ ] Settings shows "Running as installed app."
 

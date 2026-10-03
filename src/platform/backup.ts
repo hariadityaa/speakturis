@@ -1,3 +1,4 @@
+import { isValidSettings } from '../core/settings';
 import { dumpAll, restoreAll, type Dump } from './db';
 
 const APP = 'speakturis';
@@ -32,12 +33,17 @@ export function parseBackup(text: string): Dump {
   const d = j.data;
   if (!d || !Array.isArray(d.cards) || !Array.isArray(d.log) || !Array.isArray(d.kv)) throw new Error('Backup is incomplete.');
   for (const c of d.cards) {
+    if (typeof c !== 'object' || c === null) throw new Error('Backup has a corrupt card.');
     if (!isStr(c.lang) || !isStr(c.id) || !isNum(c.ease) || !isNum(c.interval) || !isNum(c.due) || !isNum(c.reps) || !isNum(c.lapses)) throw new Error('Backup has a corrupt card.');
   }
   for (const l of d.log) {
+    if (typeof l !== 'object' || l === null) throw new Error('Backup has a corrupt log entry.');
     if (!isStr(l.lang) || !isStr(l.date) || !Array.isArray(l.done) || !isNum(l.reviews)) throw new Error('Backup has a corrupt log entry.');
   }
-  for (const kv of d.kv) if (!Array.isArray(kv) || !isStr(kv[0])) throw new Error('Backup has corrupt settings.');
+  for (const kv of d.kv) {
+    if (!Array.isArray(kv) || !isStr(kv[0])) throw new Error('Backup has corrupt settings.');
+    if (kv[0] === 'settings' && !isValidSettings(kv[1])) throw new Error('Backup has corrupt settings.');
+  }
   return d as Dump;
 }
 

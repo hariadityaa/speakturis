@@ -64,7 +64,7 @@ export const commuteScreen: Screen = (root, q) => {
   function jump(d: number) {
     idx = (idx + d + deck.length) % deck.length;
     if (playing) { stopSpeaking(); void loop(++run); }
-    else { front.textContent = deck[idx].front; reading.textContent = deck[idx].reading; english.textContent = deck[idx].english ?? ''; }
+    else { status.textContent = `${idx + 1} / ${deck.length}`; front.textContent = deck[idx].front; reading.textContent = deck[idx].reading; english.textContent = deck[idx].english ?? ''; }
   }
 
   front.textContent = deck[0].front;
