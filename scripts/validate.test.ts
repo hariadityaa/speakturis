@@ -61,6 +61,26 @@ describe('validatePack', () => {
     expect(validatePack(dir).join('\n')).toMatch(/numbers.json/);
   });
 
+  it('rejects an unknown survival phrase', () => {
+    edit('pack.json', (j) => { j.survival = ['p-nope']; });
+    expect(validatePack(dir).join('\n')).toMatch(/survival "p-nope"/);
+  });
+
+  it('rejects a staff line in the survival list', () => {
+    edit('pack.json', (j) => { j.survival = ['h-nanmei']; });
+    expect(validatePack(dir).join('\n')).toMatch(/survival "h-nanmei" is not a phrase you say/);
+  });
+
+  it('rejects a replyId that does not resolve', () => {
+    edit('phrases.json', (j) => { j.phrases.find((x: any) => x.id === 'h-nanmei').replyId = 'p-ghost'; });
+    expect(validatePack(dir).join('\n')).toMatch(/replyId "p-ghost"/);
+  });
+
+  it('rejects a replyId on a phrase you say', () => {
+    edit('phrases.json', (j) => { j.phrases[0].replyId = 'p-arigatou'; });
+    expect(validatePack(dir).join('\n')).toMatch(/only listen phrases can have a replyId/);
+  });
+
   it('rejects a pack whose code differs from its folder', () => {
     edit('pack.json', (j) => { j.code = 'ko'; });
     expect(validatePack(dir).join('\n')).toMatch(/must match folder name/);

@@ -36,6 +36,18 @@
       "label": "Signs"
     }
   ],
+  "survival": [
+    "p-sumimasen",
+    "p-arigatou",
+    "p-onegai",
+    "p-kore-kudasai",
+    "p-ikura",
+    "p-kaado",
+    "p-okaikei",
+    "p-toire",
+    "p-eigo",
+    "p-wakarimasen"
+  ],
   "currency": {
     "code": "JPY",
     "symbol": "円",

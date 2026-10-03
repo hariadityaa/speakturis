@@ -11,7 +11,7 @@ import { readingScreen } from './ui/reading';
 import { settingsScreen } from './ui/settings';
 import { buildShell } from './ui/shell';
 import { learnScreen, topicScreen } from './ui/learn';
-import { phrasebookScreen } from './ui/phrasebook';
+import { phrasebookScreen, showScreen } from './ui/phrasebook';
 import { lessonScreen } from './ui/session';
 
 initPwa();
@@ -64,6 +64,7 @@ async function boot() {
   route('/lesson', lessonScreen);
   route('/topic', topicScreen);
   route('/phrasebook', phrasebookScreen);
+  route('/show', showScreen);
   route('/kana', kanaScreen);
   route('/numbers', numbersScreen(false));
   route('/prices', numbersScreen(true));

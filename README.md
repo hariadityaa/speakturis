@@ -6,7 +6,7 @@ Mobile-first PWA for learning travel-level phrases. No alphabets, just what you 
 
 - **Learn**: one button for today's lesson. It brings back phrases due for practice, then adds up to 5 new ones a day, most useful first. A new phrase is taught (meaning, romaji, voice) before you are asked for it. Spaced repetition (SM-2 variant) decides when each comes back.
 - **Topics**: basics, food, shopping and so on. Each shows how many phrases you know and lets you practise just that topic.
-- **Phrasebook**: every phrase by topic, with search. Tap to hear it, or play it to someone.
+- **Phrasebook**: every phrase by topic, with search. Tap 🔊 to hear one, or tap the phrase to show it full size to staff. "Survival 10" lists the ten phrases that cover most days. "They say" lists staff lines with what to say back.
 - **More practice**: number and price drills, and short branching conversations.
 - **Backup**: JSON export and import in Settings. Progress lives only on the device.
 

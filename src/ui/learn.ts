@@ -79,7 +79,7 @@ export const topicScreen: Screen = (root, q) => {
     talks.length ? h('h2', { class: 'sect' }, 'Conversation') : null,
     talks.length ? h('ul', { class: 'list' }, talks.map((d) => link(`/dialogue?id=${d.id}&back=${encodeURIComponent(`/topic?id=${id}`)}`, d.title, 'Practise it as a short role-play'))) : null,
     h('h2', { class: 'sect' }, 'Phrases'),
-    h('p', { class: 'note' }, 'Tap a phrase to hear it.'),
-    h('ul', { class: 'list phrases' }, items.map(phraseRow)),
+    h('p', { class: 'note' }, 'Tap a phrase to show it full size, or tap 🔊 to hear it.'),
+    h('ul', { class: 'list' }, app.pack.phrases.phrases.filter((p) => p.tags.includes(id)).map((p) => phraseRow(p, id, `/topic?id=${id}`))),
   ].filter((x): x is HTMLElement => !!x));
 };

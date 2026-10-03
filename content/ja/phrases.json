@@ -167,7 +167,8 @@
         "shopping"
       ],
       "difficulty": 1,
-      "listen": true
+      "listen": true,
+      "replyId": "p-fukuro"
     },
     {
       "id": "p-fukuro",
@@ -200,7 +201,8 @@
         "food"
       ],
       "difficulty": 1,
-      "listen": true
+      "listen": true,
+      "replyId": "p-futari"
     },
     {
       "id": "p-futari",
@@ -234,6 +236,19 @@
       ],
       "difficulty": 1,
       "speak": "メニューをおねがいします"
+    },
+    {
+      "id": "h-gochuumon",
+      "native": "ご注文はお決まりですか",
+      "reading": "gochuumon wa okimari desu ka",
+      "english": "Are you ready to order?",
+      "speak": "ごちゅうもんはおきまりですか",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "listen": true,
+      "replyId": "p-kore-kudasai"
     },
     {
       "id": "s-deguchi",
@@ -301,7 +316,8 @@
         "food"
       ],
       "difficulty": 1,
-      "listen": true
+      "listen": true,
+      "replyId": "p-atatamete"
     },
     {
       "id": "h-pointo",
@@ -313,7 +329,8 @@
         "shopping"
       ],
       "difficulty": 1,
-      "listen": true
+      "listen": true,
+      "replyId": "p-daijoubu"
     },
     {
       "id": "h-shoushou",
@@ -408,7 +425,8 @@
         "hotel"
       ],
       "difficulty": 1,
-      "listen": true
+      "listen": true,
+      "replyId": "p-yoyaku"
     },
     {
       "id": "s-iriguchi",
@@ -498,7 +516,8 @@
         "food"
       ],
       "difficulty": 1,
-      "listen": true
+      "listen": true,
+      "replyId": "p-hai-iie"
     },
     {
       "id": "h-shiharai",
@@ -511,7 +530,8 @@
         "food"
       ],
       "difficulty": 1,
-      "listen": true
+      "listen": true,
+      "replyId": "p-kaado"
     },
     {
       "id": "h-kochira",
@@ -635,6 +655,20 @@
       ],
       "difficulty": 1,
       "speak": "はしをください"
+    },
+    {
+      "id": "h-ohashi",
+      "native": "お箸はおつけしますか",
+      "reading": "ohashi wa otsuke shimasu ka",
+      "english": "Do you want chopsticks?",
+      "speak": "おはしはおつけしますか",
+      "tags": [
+        "shopping",
+        "food"
+      ],
+      "difficulty": 1,
+      "listen": true,
+      "replyId": "p-hashi"
     },
     {
       "id": "p-atatamete",

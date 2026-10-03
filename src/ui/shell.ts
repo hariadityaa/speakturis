@@ -14,7 +14,7 @@ export function buildShell(): HTMLElement {
   const syncNav = (path: string) => {
     const base = '/' + (path.split('/')[1] ?? '');
     // Lessons, topics and drills all belong to Learn.
-    const active = base === '/phrasebook' || base === '/settings' ? base : '/';
+    const active = base === '/phrasebook' || base === '/show' ? '/phrasebook' : base === '/settings' ? base : '/';
     nav.querySelectorAll('a').forEach((a) => a.classList.toggle('on', a.dataset.path === active));
   };
   document.addEventListener('route', (e) => syncNav((e as CustomEvent<string>).detail));

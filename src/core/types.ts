@@ -12,6 +12,8 @@ export interface PackMeta {
   scriptSystems: string[];
   /** Topics. Phrases and dialogues refer to them by id. */
   situations: Situation[];
+  /** Phrase ids for the phrasebook's Survival list: the few that get you through most days. */
+  survival?: string[];
   currency: { code: string; symbol: string; position: 'prefix' | 'suffix'; decimals: number; unit: Word };
   restDay: number;
 }
@@ -28,6 +30,8 @@ export interface Phrase {
   tags: string[]; difficulty: 1 | 2 | 3; audioSrc?: string;
   /** Something you hear, not say (staff lines). Cards play audio first and ask for the meaning. */
   listen?: boolean;
+  /** For a listen phrase: the phrase to say back. */
+  replyId?: string;
 }
 export interface Phrases { schemaVersion: 1; phrases: Phrase[] }
 

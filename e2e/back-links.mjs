@@ -21,7 +21,8 @@ try {
   check('Learn lists topics', (await page.$$('.list .row')).length > 0);
 
   const routes = ['/lesson', '/lesson?more=1', '/topic?id=food', '/lesson?topic=food', '/numbers', '/prices',
-    '/dialogue', '/dialogue?id=d-ramen', '/dialogue?id=d-ramen&back=%2Ftopic%3Fid%3Dfood'];
+    '/dialogue', '/dialogue?id=d-ramen', '/dialogue?id=d-ramen&back=%2Ftopic%3Fid%3Dfood',
+    '/show?id=p-ikura&list=survival', '/show?id=h-nanmei&list=heard', '/show?id=p-mizu&list=food&back=%2Ftopic%3Fid%3Dfood'];
   for (const r of routes) {
     await page.goto(`${base}#${r}`);
     await page.waitForSelector('.bar');
@@ -44,10 +45,30 @@ try {
   await page.waitForSelector('.bar');
   check('lesson mid-session back -> Learn', page.url() === `${base}#/`);
 
-  await page.goto(`${base}#/phrasebook`);
+  // Phrasebook: search, Survival list, staff lines link to a reply, show card returns to its list.
+  await page.click('.tabs a[data-path="/phrasebook"]');
   await page.waitForSelector('.phrase');
+  check('Phrasebook tab is active', (await page.getAttribute('.tabs a.on', 'data-path')) === '/phrasebook');
   await page.fill('.search', 'toilet');
   check('phrasebook search finds toilet', (await page.$$('.phrase')).length >= 1);
+  await page.fill('.search', '');
+  await page.click('.chips .chip:has-text("Survival")');
+  await page.waitForSelector('.chip.on:has-text("Survival")');
+  check('Survival lists 10 phrases', (await page.$$('.phrase')).length === 10);
+  await page.click('.phrase a');
+  await page.waitForSelector('.show-text');
+  check('survival row opens a show card', (await page.textContent('.show-text')) === 'すみません');
+  await page.click('a.back');
+  await page.waitForSelector('.chip.on:has-text("Survival")');
+  check('show card back -> Survival list', page.url().endsWith('#/phrasebook?list=survival'));
+  await page.click('.chips .chip:has-text("They say")');
+  await page.waitForSelector('.chip.on:has-text("They say")');
+  await page.click('.phrase a[href*="h-nanmei"]');
+  await page.waitForSelector('.show-text');
+  await page.click('a.row[href*="p-futari"]');
+  await page.waitForFunction(() => document.querySelector('.show-text')?.textContent !== '何名様ですか');
+  check('staff line links to its reply', (await page.textContent('.show-text')) === '二人です');
+  check('reply card has no prev/next outside its list', !(await page.$('.grades a')));
   check('no page errors', errors.length === 0, errors.join(' | '));
 } finally {
   await browser.close();
