@@ -5,6 +5,7 @@ import { streak } from '../core/streak';
 import type { Task } from '../core/types';
 import { allLogs, getLog } from '../platform/db';
 import { h, header, type Screen } from './dom';
+import { survivalGrid } from './phrasebook';
 
 export function taskLink(t: Task, key: string): string {
   const k = `task=${key}`;
@@ -45,6 +46,7 @@ export const today: Screen = async (root) => {
   if (due > 0) {
     root.append(h('a', { class: 'btn primary big', href: '#/review' }, `Review ${due} due`));
   }
+  root.append(...survivalGrid());
 
   if (p.phase === 'before') {
     root.append(h('p', { class: 'note' }, `Study starts in ${p.daysToStart} day${p.daysToStart === 1 ? '' : 's'}. Here is week 1.`));

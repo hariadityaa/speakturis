@@ -9,6 +9,7 @@ import { dialogueScreen } from './ui/dialogue';
 import { kanaScreen } from './ui/kana';
 import { numbersScreen } from './ui/numbers';
 import { planPicker } from './ui/plans';
+import { phrasebookScreen, showScreen } from './ui/phrasebook';
 import { practice } from './ui/practice';
 import { progressScreen } from './ui/progress';
 import { readingScreen } from './ui/reading';
@@ -62,11 +63,13 @@ async function boot() {
     mount.textContent = `Failed to load: ${(e as Error).message}`;
     return;
   }
-  // Every screen but Settings needs a plan. Without one, show the picker instead.
+  // Every screen but Settings and the phrasebook needs a plan. Without one, show the picker instead.
   const needsPlan = (s: Screen): Screen => (root, q) => (studyPlan() ? s(root, q) : planPicker(root, q));
   const shell = buildShell();
   mount.replaceChildren(shell);
   route('/', needsPlan(today));
+  route('/phrasebook', phrasebookScreen);
+  route('/show', showScreen);
   route('/practice', needsPlan(practice));
   route('/review', needsPlan(reviewScreen));
   route('/flash', needsPlan(flashScreen));

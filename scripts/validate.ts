@@ -78,6 +78,14 @@ export function validatePack(dir: string): string[] {
     if (ph.audioSrc && !existsSync(join(dir, ph.audioSrc))) err('phrases.json', `${ph.id}: audioSrc "${ph.audioSrc}" file not found`);
   }
   if (charIds.some((id) => phraseIds.includes(id))) err('phrases.json', 'a phrase id collides with a character id');
+  // A staff line's reply and the survival list must be phrases you say, not ones you hear.
+  const said = (id: string) => p.phrases.phrases.some((x) => x.id === id && !x.listen);
+  for (const ph of p.phrases.phrases) {
+    if (!ph.replyId) continue;
+    if (!ph.listen) err('phrases.json', `${ph.id}: only listen phrases can have a replyId`);
+    if (!said(ph.replyId)) err('phrases.json', `${ph.id}: replyId "${ph.replyId}" is not a phrase you say`);
+  }
+  for (const id of meta.survival ?? []) if (!said(id)) err('pack.json', `survival "${id}" is not a phrase you say`);
 
   // 5. Numbers: every integer in range must compose; words cover 0..9
   for (let i = 0; i <= 9; i++) if (!p.numbers.words[String(i)]) err('numbers.json', `words must define ${i}`);

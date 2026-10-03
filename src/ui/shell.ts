@@ -2,7 +2,7 @@ import { h } from './dom';
 import { applyUpdate, onPwaChange, updateAvailable } from '../platform/pwa';
 
 const tabs: [string, string, string][] = [
-  ['/', 'Today', '◉'], ['/practice', 'Practice', '✎'], ['/progress', 'Progress', '▤'], ['/settings', 'Settings', '⚙'],
+  ['/', 'Today', '◉'], ['/phrasebook', 'Phrasebook', '❝'], ['/practice', 'Practice', '✎'], ['/progress', 'Progress', '▤'], ['/settings', 'Settings', '⚙'],
 ];
 
 export function buildShell(): HTMLElement {
@@ -13,7 +13,7 @@ export function buildShell(): HTMLElement {
 
   const syncNav = (path: string) => {
     const base = '/' + (path.split('/')[1] ?? '');
-    const group: Record<string, string> = { '/': '/', '/practice': '/practice', '/progress': '/progress', '/settings': '/settings' };
+    const group: Record<string, string> = { '/': '/', '/phrasebook': '/phrasebook', '/show': '/phrasebook', '/practice': '/practice', '/progress': '/progress', '/settings': '/settings' };
     const active = group[base] ?? '/practice'; // drills, flashcards, dialogues belong to Practice
     nav.querySelectorAll('a').forEach((a) => a.classList.toggle('on', a.dataset.path === active));
     nav.hidden = path === '/commute';

@@ -6,6 +6,8 @@ Mobile-first PWA for learning travel-level phrases. No alphabets, just what you 
 
 - **Plans**: 1 week (about 25 min a day) or 1 month (about 20 min a day). A plan starts the day you pick it. Switch in Settings.
 - **Today**: the day's tasks from your plan, a streak, and due reviews. First run asks for a language, then a plan.
+- **Phrasebook**: every phrase, no plan needed. Tap one to show it full size to staff, or press Play. "They say" lists staff lines with what to say back.
+- **Survival 10**: the ten phrases that cover most days, pinned on Today.
 - **Review**: spaced repetition (SM-2 variant) for phrases and sight words. Cards are text-first. Tap to reveal and hear. Staff lines ("Do you need a bag?") play audio first and ask what they said.
 - **Practice**: flashcards, sight words, number and yen drills, branching role-play.
 - **Commute mode**: loops phrase, pause, meaning, next. Big buttons. Keeps the screen on.
