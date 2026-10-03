@@ -1,4 +1,4 @@
-import { app, saveSettings, setLanguage, say } from '../app';
+import { app, choosePlan, saveSettings, setLanguage, say, studyPlan } from '../app';
 import { exportBackup, importBackup } from '../platform/backup';
 import { resetLanguage } from '../platform/db';
 import { canInstall, install, isStandalone } from '../platform/pwa';
@@ -14,6 +14,17 @@ export const settingsScreen: Screen = async (root) => {
 
   const lang = h('select', { 'aria-label': 'Language', onchange: async (e: Event) => { await setLanguage((e.target as HTMLSelectElement).value); location.hash = '#/'; } },
     app.packs.map((p) => h('option', { value: p.code, selected: p.code === s.lang }, `${p.name} (${p.nativeName})`)));
+
+  const current = studyPlan();
+  const planSel = h('select', { 'aria-label': 'Study plan', onchange: async (e: Event) => {
+    const el = e.target as HTMLSelectElement;
+    if (current && !confirm('Start this plan from today? Your review progress is kept.')) { el.value = current.id; return; }
+    await choosePlan(el.value);
+    location.hash = '#/';
+  } },
+    current ? null : h('option', { value: '', selected: true, disabled: true }, 'Choose a plan'),
+    app.pack.schedule.plans.map((p) => h('option', { value: p.id, selected: p.id === current?.id }, p.name)));
+  const started = current ? h('p', { class: 'note' }, `${current.description} Started ${s.plan[s.lang].start}. Picking a plan restarts it from today.`) : null;
 
   const warn = !ttsSupported
     ? 'This browser has no speech support. Audio will not play.'
@@ -63,6 +74,7 @@ export const settingsScreen: Screen = async (root) => {
     field('Speed', rate, rateLabel),
     h('button', { class: 'btn', onclick: () => void say(app.pack.phrases.phrases[0].speak ?? app.pack.phrases.phrases[0].native) }, '🔊 Test voice'),
     h('h2', { class: 'sect' }, 'Study'),
+    field('Plan', planSel), started,
     field('Card order', dir), field('New cards per session', newN),
     field('Commute pause', pause, pauseLabel),
     h('label', { class: 'field row' }, h('span', null, 'Keep screen on during commute mode'), awake),

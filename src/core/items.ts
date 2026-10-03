@@ -13,7 +13,7 @@ export function buildItems(pack: Pack): Item[] {
   for (const p of pack.phrases.phrases) {
     items.push({
       id: p.id, kind: 'phrase', front: p.native, reading: p.reading, english: p.english,
-      speak: p.speak ?? p.native, audioSrc: p.audioSrc, tags: p.tags,
+      speak: p.speak ?? p.native, audioSrc: p.audioSrc, tags: p.tags, listen: p.listen,
     });
   }
   return items;

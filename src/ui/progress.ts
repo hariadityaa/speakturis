@@ -27,7 +27,7 @@ export const progressScreen: Screen = (root) => {
   root.append(
     header('Progress'),
     h('p', { class: 'note' }, `Mastered = you can go ${MASTERED_DAYS} days without seeing it. Learning = seen, not yet there.`),
-    h('h2', { class: 'sect' }, 'Scripts'), h('ul', { class: 'list' }, scripts),
+    ...(scripts.length ? [h('h2', { class: 'sect' }, 'Scripts'), h('ul', { class: 'list' }, scripts)] : []),
     h('h2', { class: 'sect' }, 'Situations'), h('ul', { class: 'list' }, situations),
   );
 };

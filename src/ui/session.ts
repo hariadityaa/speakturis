@@ -1,4 +1,5 @@
-import { app, dueItems, grade, markTaskDone, newItems, say, unlocked } from '../app';
+import { app, dueItems, grade, markTaskDone, newItems, say, studyPlan, unlocked } from '../app';
+import { taskFor } from '../core/schedule';
 import { shuffle } from '../core/items';
 import type { Grade } from '../core/srs';
 import type { Item } from '../core/types';
@@ -18,14 +19,16 @@ function runSession(root: HTMLElement, items: Item[], o: Opts) {
     root.replaceChildren(header(o.title, o.back));
     if (!queue.length) return finish();
     const item = queue[0];
-    const englishFirst = item.kind === 'phrase' && app.settings.direction === 'english-first';
+    // Staff lines are for listening: the card plays first, and the text is the answer.
+    const listen = !!item.listen;
+    const englishFirst = !listen && item.kind === 'phrase' && app.settings.direction === 'english-first';
     let revealed = false;
 
-    const front = englishFirst ? item.english! : item.front;
+    const front = listen ? h('span', null, '🔊', h('small', { class: 'note' }, ' What did they say?')) : englishFirst ? item.english! : item.front;
     const card = h('button', { class: 'flash', 'aria-live': 'polite' },
       h('div', { class: `big${item.kind === 'kana' ? ' huge' : ''}` }, front));
     const back = h('div', { class: 'back-face', hidden: true },
-      englishFirst ? h('div', { class: 'big' }, item.front) : null,
+      englishFirst || listen ? h('div', { class: 'big' }, item.front) : null,
       h('div', { class: 'reading' }, item.reading),
       item.english && !englishFirst ? h('div', { class: 'english' }, item.english) : null);
     const grades = h('div', { class: 'grades', hidden: true },
@@ -43,13 +46,14 @@ function runSession(root: HTMLElement, items: Item[], o: Opts) {
       back.hidden = false;
       grades.hidden = false;
       hint.hidden = true;
-      void say(item.speak, item.audioSrc);
+      if (!listen) void say(item.speak, item.audioSrc);
     };
     card.addEventListener('click', reveal);
     const hint = h('p', { class: 'note center' }, 'Tap the card to reveal');
     const speaker = h('button', { class: 'btn ghost', 'aria-label': 'Play audio', onclick: () => void say(item.speak, item.audioSrc) }, '🔊 Play');
 
     root.append(progressBar(done, total), card, back, hint, h('div', { class: 'stack' }, speaker), grades);
+    if (listen) void say(item.speak, item.audioSrc);
   };
 
   const finish = () => {
@@ -82,7 +86,10 @@ export const flashScreen: Screen = (root, q) => {
   let items: Item[];
   if (q.get('new')) {
     const due = dueItems().filter((i) => i.kind === 'phrase');
-    items = [...newItems().filter((i) => i.kind === 'phrase').slice(0, app.settings.newPerSession), ...due];
+    // A schedule task teaches its own phrases, all of them. Otherwise take the next few new ones.
+    const ids = taskFor(studyPlan()!, q.get('task'))?.phraseIds;
+    const fresh = newItems().filter((i) => i.kind === 'phrase');
+    items = [...(ids ? fresh.filter((i) => ids.includes(i.id)) : fresh.slice(0, app.settings.newPerSession)), ...due];
   } else {
     items = phrases.filter((i) => !tag || i.tags?.includes(tag));
     items = shuffle(items).slice(0, 20);

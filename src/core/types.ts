@@ -11,7 +11,6 @@ export interface PackMeta {
   situations: string[];
   currency: { code: string; symbol: string; position: 'prefix' | 'suffix'; decimals: number; unit: Word };
   trip: { date: string; place: string };
-  studyStart: string;
   restDay: number;
 }
 
@@ -25,6 +24,8 @@ export interface Scripts { schemaVersion: 1; systems: ScriptSystem[] }
 export interface Phrase {
   id: string; native: string; reading: string; english: string; speak?: string;
   tags: string[]; difficulty: 1 | 2 | 3; audioSrc?: string;
+  /** Something you hear, not say (staff lines). Cards play audio first and ask for the meaning. */
+  listen?: boolean;
 }
 export interface Phrases { schemaVersion: 1; phrases: Phrase[] }
 
@@ -54,10 +55,15 @@ export interface Dialogue {
 export interface Dialogues { schemaVersion: 1; dialogues: Dialogue[] }
 
 export type TaskType = 'review' | 'kana' | 'phrases' | 'numbers' | 'prices' | 'reading' | 'dialogue' | 'commute';
-/** `days` = which study days of the week (1-6, rest day excluded) the task appears on. Omitted = every study day. */
-export interface Task { type: TaskType; ref?: string; minutes: number; label?: string; days?: number[] }
-export interface Week { week: number; focus: string; title: string; tasks: Task[]; newPhraseIds?: string[] }
-export interface Schedule { schemaVersion: 1; dailyMinutes: number; weeks: Week[] }
+/**
+ * `days` = which study days of the week (1-6, rest day excluded) the task appears on. Omitted = every study day.
+ * `phraseIds` = phrases this task introduces. They unlock on the task's first day.
+ */
+export interface Task { type: TaskType; ref?: string; minutes: number; label?: string; days?: number[]; phraseIds?: string[] }
+export interface Week { week: number; focus: string; title: string; tasks: Task[] }
+/** One study plan. A plan starts on the day the learner picks it. */
+export interface StudyPlan { id: string; name: string; description: string; dailyMinutes: number; weeks: Week[] }
+export interface Schedule { schemaVersion: 2; plans: StudyPlan[] }
 
 /** Everything a language pack provides. The engine only ever sees this shape. */
 export interface Pack {
@@ -80,4 +86,5 @@ export interface Item {
   audioSrc?: string;
   system?: string;     // kana: script system id
   tags?: string[];     // phrase: situations
+  listen?: boolean;    // phrase: recognise by ear only
 }

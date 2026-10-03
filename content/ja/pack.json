@@ -5,16 +5,15 @@
   "nativeName": "日本語",
   "ttsLocale": "ja-JP",
   "readingSystem": "romaji",
-  "scriptSystems": [
-    "katakana",
-    "hiragana"
-  ],
+  "scriptSystems": [],
   "situations": [
     "greeting",
     "food",
     "shopping",
     "transport",
-    "help"
+    "hotel",
+    "help",
+    "signs"
   ],
   "currency": {
     "code": "JPY",
@@ -31,6 +30,5 @@
     "date": "2027-01-30",
     "place": "Sapporo"
   },
-  "studyStart": "2026-10-03",
   "restDay": 0
 }

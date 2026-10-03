@@ -112,7 +112,10 @@
             {
               "next": "n4",
               "good": true,
-              "phraseId": "p-no-spice"
+              "native": "辛くしないでください",
+              "reading": "karaku shinai de kudasai",
+              "english": "Not spicy, please",
+              "speak": "からくしないでください"
             },
             {
               "next": "n4",
@@ -148,7 +151,10 @@
             {
               "next": "n4",
               "good": true,
-              "phraseId": "p-no-spice"
+              "native": "辛くしないでください",
+              "reading": "karaku shinai de kudasai",
+              "english": "Not spicy, please",
+              "speak": "からくしないでください"
             }
           ]
         },
@@ -559,6 +565,168 @@
           "native": "ありがとうございました。",
           "reading": "arigatou gozaimashita",
           "english": "Thank you very much.",
+          "end": true
+        }
+      }
+    },
+    {
+      "id": "d-hotel",
+      "title": "Checking in at the hotel",
+      "situation": "hotel",
+      "intro": "You arrive at your Sapporo hotel with your suitcase. Your booking is under the name Tan.",
+      "start": "n1",
+      "nodes": {
+        "n1": {
+          "speaker": "npc",
+          "native": "いらっしゃいませ。チェックインですか。",
+          "reading": "irasshaimase. chekkuin desu ka",
+          "english": "Welcome. Checking in?",
+          "speak": "いらっしゃいませ。チェックインですか。",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-chekkuin"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-yoyaku"
+            },
+            {
+              "next": "n1b",
+              "good": false,
+              "phraseId": "p-gochisousama",
+              "feedback": "That's said after a meal. Here, just say you're checking in."
+            }
+          ]
+        },
+        "n1b": {
+          "speaker": "npc",
+          "native": "チェックインでよろしいですか。",
+          "reading": "chekkuin de yoroshii desu ka",
+          "english": "Checking in, is that right?",
+          "speak": "チェックインでよろしいですか。",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "native": "はい、お願いします",
+              "reading": "hai, onegai shimasu",
+              "english": "Yes, please",
+              "speak": "はい、おねがいします"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-chekkuin"
+            }
+          ]
+        },
+        "n2": {
+          "speaker": "npc",
+          "native": "ご予約のお名前をお願いします。",
+          "reading": "goyoyaku no onamae o onegai shimasu",
+          "english": "The name on the reservation, please.",
+          "speak": "ごよやくのおなまえをおねがいします。",
+          "replies": [
+            {
+              "next": "n3",
+              "good": true,
+              "native": "タンです",
+              "reading": "tan desu",
+              "english": "It's Tan",
+              "speak": "タンです"
+            },
+            {
+              "next": "n2b",
+              "good": true,
+              "phraseId": "p-wakarimasen"
+            },
+            {
+              "next": "n2",
+              "good": false,
+              "phraseId": "p-yoyaku",
+              "feedback": "They know you have one. They want the name. Listen for onamae."
+            }
+          ]
+        },
+        "n2b": {
+          "speaker": "npc",
+          "native": "お名前は？",
+          "reading": "onamae wa?",
+          "english": "Your name?",
+          "speak": "おなまえは？",
+          "replies": [
+            {
+              "next": "n3",
+              "good": true,
+              "native": "タンです",
+              "reading": "tan desu",
+              "english": "It's Tan",
+              "speak": "タンです"
+            },
+            {
+              "next": "n3",
+              "good": true,
+              "native": "すみません、タンです",
+              "reading": "sumimasen, tan desu",
+              "english": "Sorry, it's Tan",
+              "speak": "すみません、タンです"
+            }
+          ]
+        },
+        "n3": {
+          "speaker": "npc",
+          "native": "タン様ですね。チェックアウトは十一時です。",
+          "reading": "tan sama desu ne. chekkuauto wa juuichi ji desu",
+          "english": "Tan, yes. Check-out is at 11.",
+          "speak": "タンさまですね。チェックアウトはじゅういちじです。",
+          "replies": [
+            {
+              "next": "n4",
+              "good": true,
+              "phraseId": "p-nimotsu"
+            },
+            {
+              "next": "n5",
+              "good": true,
+              "phraseId": "p-arigatou"
+            },
+            {
+              "next": "n3",
+              "good": false,
+              "phraseId": "p-checkout",
+              "feedback": "They just told you: juuichi ji, 11 o'clock."
+            }
+          ]
+        },
+        "n4": {
+          "speaker": "npc",
+          "native": "はい、チェックアウトの後もお預かりできます。",
+          "reading": "hai, chekkuauto no ato mo oazukari dekimasu",
+          "english": "Yes, we can keep it after check-out too.",
+          "speak": "はい、チェックアウトのあともおあずかりできます。",
+          "replies": [
+            {
+              "next": "n5",
+              "good": true,
+              "phraseId": "p-arigatou"
+            },
+            {
+              "next": "n4",
+              "good": false,
+              "phraseId": "p-itadakimasu",
+              "feedback": "That's said before eating. A simple thank you works here."
+            }
+          ]
+        },
+        "n5": {
+          "speaker": "npc",
+          "native": "こちらがお部屋の鍵です。ごゆっくりどうぞ。",
+          "reading": "kochira ga oheya no kagi desu. goyukkuri douzo",
+          "english": "Here is your room key. Enjoy your stay.",
+          "speak": "こちらがおへやのかぎです。ごゆっくりどうぞ。",
           "end": true
         }
       }

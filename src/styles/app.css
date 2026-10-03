@@ -123,6 +123,8 @@ input[type=range] { padding: 0; border: 0; background: none; accent-color: var(-
 .warn { background: var(--surface-2); color: var(--text); border: 1px solid var(--border-strong); padding: var(--s-3) var(--s-4); border-radius: var(--r); margin: var(--s-2) 0; font-weight: 600; }
 
 .welcome { display: block; padding: var(--s-12) var(--s-4); max-width: 560px; margin: 0 auto; }
+.plans .btn { flex-direction: column; align-items: flex-start; gap: var(--s-1); padding: var(--s-3) var(--s-4); text-align: left; }
+.plans .btn small { color: var(--text-2); font-weight: 400; font-size: .875rem; }
 
 @media (hover: hover) {
   .btn:hover, .chip:hover, select:hover { border-color: var(--border-strong); background: var(--surface-2); }

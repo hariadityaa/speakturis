@@ -1,6 +1,6 @@
 /**
  * Validates every language pack in /content against /schema, then runs cross-file checks
- * (IDs resolve, dialogue graphs are sound, schedule fits the study window, every number composes).
+ * (IDs resolve, dialogue graphs are sound, plans fit the daily budget, every number composes).
  * Exit code 1 on any error, so CI fails.
  */
 import Ajv2020 from 'ajv/dist/2020.js';
@@ -19,7 +19,6 @@ const validators = Object.fromEntries(
   FILES.map((f) => [f, ajv.compile(JSON.parse(readFileSync(join(ROOT, 'schema', `${f}.schema.json`), 'utf8')))]),
 ) as Record<FileKey, ReturnType<typeof ajv.compile>>;
 
-const DAY = 86_400_000;
 const parseDate = (s: string) => Date.parse(`${s}T00:00:00Z`);
 
 export function validatePack(dir: string): string[] {
@@ -51,7 +50,6 @@ export function validatePack(dir: string): string[] {
 
   // 2. Pack meta
   if (dir.split(/[\\/]/).pop() !== meta.code) err('pack.json', `code "${meta.code}" must match folder name`);
-  if (Number.isNaN(parseDate(meta.studyStart))) err('pack.json', 'studyStart is not a valid date');
   if (Number.isNaN(parseDate(meta.trip.date))) err('pack.json', 'trip.date is not a valid date');
 
   // 3. Scripts
@@ -121,36 +119,42 @@ export function validatePack(dir: string): string[] {
     for (const id of reach) if (!canEnd.has(id)) err('dialogues.json', `${d.id}: node "${id}" cannot reach an end`);
   }
 
-  // 7. Schedule
-  const weeks = p.schedule.weeks;
-  weeks.forEach((w, i) => { if (w.week !== i + 1) err('schedule.json', `weeks must be numbered 1..N in order (found ${w.week} at position ${i + 1})`); });
-  const daysToTrip = (parseDate(meta.trip.date) - parseDate(meta.studyStart)) / DAY;
-  if (weeks.length * 7 > daysToTrip) err('schedule.json', `${weeks.length} weeks do not fit in the ${daysToTrip} days before the trip`);
-  const introduced: string[] = [];
-  for (const w of weeks) {
-    // Each study day (1-6) must have work and fit the daily budget.
-    for (let day = 1; day <= 6; day++) {
-      const total = w.tasks.filter((t) => !t.days || t.days.includes(day)).reduce((acc, t) => acc + t.minutes, 0);
-      if (total === 0) err('schedule.json', `week ${w.week} day ${day}: no tasks`);
-      if (total > p.schedule.dailyMinutes) err('schedule.json', `week ${w.week} day ${day}: ${total} min, above dailyMinutes ${p.schedule.dailyMinutes}`);
+  // 7. Schedule: each plan is checked on its own. Together the plans must teach every phrase and kana group.
+  const plans = p.schedule.plans;
+  dup('schedule.json', 'plan', plans.map((x) => x.id));
+  const everIntroduced = new Set<string>();
+  const scheduledGroups = new Set<string>();
+  for (const plan of plans) {
+    const at = (s: string) => `plan ${plan.id} ${s}`;
+    plan.weeks.forEach((w, i) => { if (w.week !== i + 1) err('schedule.json', at(`weeks must be numbered 1..N in order (found ${w.week} at position ${i + 1})`)); });
+    const introduced: string[] = [];
+    for (const w of plan.weeks) {
+      // Each study day (1-6) must have work and fit the daily budget.
+      for (let day = 1; day <= 6; day++) {
+        const total = w.tasks.filter((t) => !t.days || t.days.includes(day)).reduce((acc, t) => acc + t.minutes, 0);
+        if (total === 0) err('schedule.json', at(`week ${w.week} day ${day}: no tasks`));
+        if (total > plan.dailyMinutes) err('schedule.json', at(`week ${w.week} day ${day}: ${total} min, above dailyMinutes ${plan.dailyMinutes}`));
+      }
+      for (const t of w.tasks) {
+        const where = at(`week ${w.week} ${t.type}`);
+        if (t.type === 'kana' && t.ref && !groupIds.includes(t.ref)) err('schedule.json', `${where}: unknown kana group "${t.ref}"`);
+        if (t.type === 'kana' && t.ref) scheduledGroups.add(t.ref);
+        if (t.type === 'reading' && t.ref && !setIds.includes(t.ref)) err('schedule.json', `${where}: unknown word set "${t.ref}"`);
+        if (t.type === 'dialogue' && t.ref && !p.dialogues.dialogues.some((d) => d.id === t.ref)) err('schedule.json', `${where}: unknown dialogue "${t.ref}"`);
+        if (t.days && t.days.some((d) => d < 1 || d > 6)) err('schedule.json', `${where}: days must be 1-6`);
+        if (t.type === 'reading' && !t.ref) err('schedule.json', `${where}: needs ref`);
+        if (t.type === 'dialogue' && !t.ref) err('schedule.json', `${where}: needs ref`);
+        if (t.phraseIds && t.type !== 'phrases') err('schedule.json', `${where}: only phrases tasks can list phraseIds`);
+        for (const id of t.phraseIds ?? []) {
+          if (!phraseIds.includes(id)) err('schedule.json', `${where}: unknown phrase "${id}"`);
+          introduced.push(id);
+          everIntroduced.add(id);
+        }
+      }
     }
-    for (const t of w.tasks) {
-      const where = `week ${w.week} ${t.type}`;
-      if (t.type === 'kana' && t.ref && !groupIds.includes(t.ref)) err('schedule.json', `${where}: unknown kana group "${t.ref}"`);
-      if (t.type === 'reading' && t.ref && !setIds.includes(t.ref)) err('schedule.json', `${where}: unknown word set "${t.ref}"`);
-      if (t.type === 'dialogue' && t.ref && !p.dialogues.dialogues.some((d) => d.id === t.ref)) err('schedule.json', `${where}: unknown dialogue "${t.ref}"`);
-      if (t.days && t.days.some((d) => d < 1 || d > 6)) err('schedule.json', `${where}: days must be 1-6`);
-      if (t.type === 'reading' && !t.ref) err('schedule.json', `${where}: needs ref`);
-      if (t.type === 'dialogue' && !t.ref) err('schedule.json', `${where}: needs ref`);
-    }
-    for (const id of w.newPhraseIds ?? []) {
-      if (!phraseIds.includes(id)) err('schedule.json', `week ${w.week}: unknown phrase "${id}"`);
-      introduced.push(id);
-    }
+    dup('schedule.json', at('phraseIds'), introduced);
   }
-  dup('schedule.json', 'newPhraseIds', introduced);
-  for (const id of phraseIds) if (!introduced.includes(id)) err('schedule.json', `phrase "${id}" is never introduced by newPhraseIds`);
-  const scheduledGroups = new Set(weeks.flatMap((w) => w.tasks.filter((t) => t.type === 'kana' && t.ref).map((t) => t.ref!)));
+  for (const id of phraseIds) if (!everIntroduced.has(id)) err('schedule.json', `phrase "${id}" is never introduced by any plan`);
   for (const g of groupIds) if (!scheduledGroups.has(g)) err('schedule.json', `kana group "${g}" is never scheduled`);
 
   return errors;

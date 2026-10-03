@@ -1,4 +1,4 @@
-import { app, dueItems, newItems, now, plan } from '../app';
+import { app, dueItems, newItems, now, plan, studyPlan } from '../app';
 import { localDate } from '../core/dates';
 import { taskKey } from '../core/schedule';
 import { streak } from '../core/streak';
@@ -6,8 +6,8 @@ import type { Task } from '../core/types';
 import { allLogs, getLog } from '../platform/db';
 import { h, header, type Screen } from './dom';
 
-export function taskLink(t: Task, weekNumber: number, idx: number): string {
-  const k = `task=${taskKey(weekNumber, idx)}`;
+export function taskLink(t: Task, key: string): string {
+  const k = `task=${key}`;
   switch (t.type) {
     case 'review': return `/review?${k}`;
     case 'kana': return `/kana?ref=${t.ref ?? 'all'}&${k}`;
@@ -27,6 +27,7 @@ const label: Record<Task['type'], string> = {
 
 export const today: Screen = async (root) => {
   const p = plan();
+  const sp = studyPlan()!;
   const t = now();
   const log = await getLog(app.settings.lang, localDate(t));
   const active = new Set((await allLogs(app.settings.lang)).filter((l) => l.done.length || l.reviews).map((l) => l.date));
@@ -50,7 +51,7 @@ export const today: Screen = async (root) => {
   } else if (p.phase === 'rest') {
     root.append(h('div', { class: 'card' }, h('h2', null, 'Rest day'), h('p', null, 'No new work today. Reviews are optional.')));
   } else if (p.phase === 'after') {
-    root.append(h('p', { class: 'note' }, 'Schedule complete. Keep reviewing until the trip.'));
+    root.append(h('p', { class: 'note' }, `${sp.name} plan complete. Keep reviewing until the trip, or start another plan in Settings.`));
   }
 
   const tasks = p.tasks;
@@ -59,13 +60,14 @@ export const today: Screen = async (root) => {
       .find((g) => g.id === ref)?.label ?? app.pack.scripts.systems.flatMap((s) => s.wordSets ?? []).find((w) => w.id === ref)?.label
       ?? app.pack.dialogues.dialogues.find((d) => d.id === ref)?.title ?? ref;
   if (p.week && tasks.length) {
-    root.append(h('h2', { class: 'sect' }, `Week ${p.week.week}: ${p.week.title}`));
+    const heading = sp.weeks.length > 1 ? `Week ${p.week.week}: ${p.week.title}` : p.week.title;
+    root.append(h('h2', { class: 'sect' }, `${heading} · day ${p.studyDay}`));
     root.append(h('ul', { class: 'list' }, tasks.map(({ task: tk, index: i }) => {
-      const key = taskKey(p.weekNumber, i);
+      const key = taskKey(sp.id, p.weekNumber, i);
       const done = log.done.includes(key);
-      return h('li', null, h('a', { class: `row${done ? ' done' : ''}`, href: `#${taskLink(tk, p.weekNumber, i)}` },
+      return h('li', null, h('a', { class: `row${done ? ' done' : ''}`, href: `#${taskLink(tk, key)}` },
         h('span', { class: 'tick', 'aria-hidden': 'true' }, done ? '✓' : '○'),
-        h('span', { class: 'grow' }, tk.label ?? label[tk.type], tk.ref ? h('small', null, ` ${refName(tk.ref)}`) : null),
+        h('span', { class: 'grow' }, tk.label ?? label[tk.type], tk.ref ? h('small', null, ` ${refName(tk.ref)}`) : tk.phraseIds ? h('small', null, ` ${tk.phraseIds.length} new`) : null),
         h('span', { class: 'min' }, `${tk.minutes} min`)));
     })));
   }
