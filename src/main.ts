@@ -1,7 +1,8 @@
 import './styles/app.css';
 import { app, initApp, setLanguage } from './app';
 import { h } from './ui/dom';
-import { initPwa } from './platform/pwa';
+import { kvGet, kvSet } from './platform/db';
+import { initPwa, install, isStandalone, waitForInstallPrompt } from './platform/pwa';
 import { route, startRouter } from './router';
 import { commuteScreen } from './ui/commute';
 import { dialogueScreen } from './ui/dialogue';
@@ -29,10 +30,32 @@ function chooseLanguage(mount: HTMLElement): Promise<void> {
   });
 }
 
+/**
+ * First screen in a browser tab: install, or keep using the web version.
+ * Skipped when running installed, when Chrome does not offer install (already installed,
+ * unsupported browser), or once the user chose to stay in the browser.
+ */
+async function offerInstall(mount: HTMLElement, offered: Promise<boolean>): Promise<void> {
+  if (isStandalone() || (await kvGet<boolean>('installDeclined')) || !(await offered)) return;
+  return new Promise((resolve) => {
+    mount.replaceChildren(h('main', { class: 'welcome' },
+      h('h1', null, 'Turisfasih'),
+      h('h2', { class: 'sect' }, 'Install the app?'),
+      h('p', { class: 'note' }, 'Opens full screen from your home screen and works offline.'),
+      h('div', { class: 'stack' },
+        h('button', { class: 'btn big primary', onclick: async () => { await install(); resolve(); } }, 'Install app'),
+        h('button', { class: 'btn big', onclick: async () => { await kvSet('installDeclined', true); resolve(); } }, 'Keep using in browser'))));
+  });
+}
+
 async function boot() {
   const mount = document.getElementById('app')!;
+  const offered = waitForInstallPrompt(1500);
+  const ready = initApp(); // load packs while Chrome decides whether to offer install
+  ready.catch(() => {}); // rejection is reported below
   try {
-    if (!(await initApp())) await chooseLanguage(mount);
+    await offerInstall(mount, offered);
+    if (!(await ready)) await chooseLanguage(mount);
   } catch (e) {
     mount.textContent = `Failed to load: ${(e as Error).message}`;
     return;

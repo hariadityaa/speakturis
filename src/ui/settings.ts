@@ -74,7 +74,7 @@ export const settingsScreen: Screen = async (root) => {
     msg,
     h('h2', { class: 'sect' }, 'App'),
     !isStandalone() && canInstall() ? h('button', { class: 'btn', onclick: () => void install() }, 'Install app') : null,
-    h('p', { class: 'note' }, isStandalone() ? 'Running as installed app.' : 'Tip: Chrome menu → Install app, for full-screen offline use.'),
+    h('p', { class: 'note' }, isStandalone() ? 'Running as installed app.' : canInstall() ? 'Install for full-screen offline use.' : 'Not installable from this browser, or already installed.'),
     h('button', { class: 'btn danger', onclick: async () => {
       if (!confirm(`Erase all ${meta.name} progress on this device?`)) return;
       await resetLanguage(s.lang);
