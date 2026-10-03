@@ -60,7 +60,7 @@ h2.sect { font-size: .75rem; font-weight: 600; text-transform: uppercase; letter
 .btn[disabled] { opacity: .6; cursor: default; }
 .stack { display: grid; gap: var(--s-2); margin: var(--s-3) 0; }
 
-.hero { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-2); margin: var(--s-2) 0; }
+.hero { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s-2); margin: var(--s-2) 0; }
 .stat { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); padding: var(--s-3) var(--s-2); text-align: center; }
 .stat b { display: block; font-size: 1.75rem; line-height: 1.2; } .stat small { color: var(--text-2); font-size: .75rem; }
 
@@ -121,6 +121,8 @@ select, input[type=range] { width: 100%; min-height: var(--control-h); font: inh
   transition: background var(--ease), border-color var(--ease); }
 input[type=range] { padding: 0; border: 0; background: none; accent-color: var(--accent); } input[type=checkbox] { width: var(--s-6); height: var(--s-6); accent-color: var(--accent); }
 .warn { background: var(--surface-2); color: var(--text); border: 1px solid var(--border-strong); padding: var(--s-3) var(--s-4); border-radius: var(--r); margin: var(--s-2) 0; font-weight: 600; }
+
+.welcome { display: block; padding: var(--s-12) var(--s-4); max-width: 560px; margin: 0 auto; }
 
 @media (hover: hover) {
   .btn:hover, .chip:hover, select:hover { border-color: var(--border-strong); background: var(--surface-2); }

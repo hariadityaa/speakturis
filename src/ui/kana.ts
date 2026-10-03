@@ -1,4 +1,4 @@
-import { app, grade, markTaskDone, say, unlocked } from '../app';
+import { app, gradeDrill, markTaskDone, say, unlocked } from '../app';
 import { choices, shuffle } from '../core/items';
 import type { Item, KanaChar, KanaGroup } from '../core/types';
 import { stopSpeaking } from '../platform/tts';
@@ -82,7 +82,8 @@ export const kanaScreen: Screen = (root, q) => {
       }
       const c = qs[i];
       const item = app.itemById.get(c.id) as Item;
-      const opts = choices(c, distract, 4, (a, b) => a.id === b.id);
+      // Marks such as the long vowel sign have no single sound, so they make poor wrong options.
+      const opts = choices(c, distract.filter((d) => !/\s/.test(d.reading)), 4, (a, b) => a.id === b.id);
       const answered = h('p', { class: 'note center', 'aria-live': 'polite' }, ' ');
       const prompt = m === 'c2s'
         ? h('div', { class: 'flash static' }, h('div', { class: 'big huge' }, c.char))
@@ -96,7 +97,7 @@ export const kanaScreen: Screen = (root, q) => {
           if (!ok) tiles.querySelectorAll('button').forEach((b, k) => { if (opts[k].id === c.id) b.classList.add('ok'); });
           if (ok) right++;
           answered.textContent = ok ? 'Correct' : `${c.char} = ${c.reading}`;
-          await grade(item, ok ? 2 : 0);
+          await gradeDrill(item, ok);
           setTimeout(() => { i++; step(); }, ok ? 600 : 1400);
         } }, m === 'c2s' ? o.reading : o.char)));
       body.append(progressBar(i, qs.length), prompt, answered, tiles);

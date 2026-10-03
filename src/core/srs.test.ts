@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { DAY, MIN_EASE, RELEARN_MS, START_EASE, isDue, isMastered, newState, review, startOfDay } from './srs';
+import { DAY, MIN_EASE, RELEARN_MS, START_EASE, drillReview, isDue, isMastered, newState, review, startOfDay } from './srs';
 
 const now = new Date(2026, 9, 5, 8, 30).getTime(); // local 5 Oct 2026, 08:30
 
@@ -69,5 +69,26 @@ describe('srs.review', () => {
   it('mastered means a 21 day interval or more', () => {
     expect(isMastered({ ...newState(now), interval: 20 })).toBe(false);
     expect(isMastered({ ...newState(now), interval: 21 })).toBe(true);
+  });
+});
+
+describe('srs.drillReview', () => {
+  it('a right answer on a card that is not due keeps the schedule', () => {
+    const c = review(newState(now), 2, now); // due tomorrow
+    expect(drillReview(c, true, now)).toBeNull();
+  });
+  it('repeated right drills the same day do not inflate the interval', () => {
+    let c = review(newState(now), 2, now);
+    for (let i = 0; i < 20; i++) c = drillReview(c, true, now) ?? c;
+    expect(c.interval).toBe(1);
+  });
+  it('a wrong answer always resets the card', () => {
+    const c = review(newState(now), 2, now);
+    expect(drillReview(c, false, now)?.interval).toBe(0);
+  });
+  it('a new or due card is graded as Good', () => {
+    expect(drillReview(undefined, true, now)?.interval).toBe(1);
+    const due = { ...newState(now), reps: 1, interval: 1, due: now - 1 };
+    expect(drillReview(due, true, now)?.interval).toBe(3);
   });
 });

@@ -1,22 +1,14 @@
 import { buildItems } from './core/items';
 import { listPacks, loadPack } from './core/packs';
 import { planFor, unlockedIds, type Plan } from './core/schedule';
-import { MASTERED_DAYS, isDue, newState, review, type Grade } from './core/srs';
+import { MASTERED_DAYS, drillReview, isDue, newState, review, type Grade } from './core/srs';
 import { localDate } from './core/dates';
+import { DEFAULTS, cleanSettings, type Settings } from './core/settings';
 import type { Item, Pack, PackMeta } from './core/types';
-import { getCards, kvGet, kvSet, putCard, updateLog, type CardRecord } from './platform/db';
+import { getCards, kvGet, progressLang, kvSet, putCard, updateLog, type CardRecord } from './platform/db';
 import { speak, voicesReady } from './platform/tts';
 
-export interface Settings {
-  lang: string;
-  rate: number;
-  voice: Record<string, string>;            // per language voice URI
-  direction: 'native-first' | 'english-first';
-  keepAwake: boolean;
-  newPerSession: number;
-  commutePauseMs: number;
-}
-const DEFAULTS: Settings = { lang: '', rate: 0.9, voice: {}, direction: 'native-first', keepAwake: true, newPerSession: 5, commutePauseMs: 2500 };
+export type { Settings };
 
 export const app = {
   settings: { ...DEFAULTS } as Settings,
@@ -27,13 +19,17 @@ export const app = {
   cards: new Map<string, CardRecord>(),
 };
 
-export async function initApp() {
+/** Returns false when no language is chosen yet. */
+export async function initApp(): Promise<boolean> {
   app.packs = await listPacks();
-  const saved = await kvGet<Settings>('settings');
-  app.settings = { ...DEFAULTS, ...saved };
-  if (!app.packs.some((p) => p.code === app.settings.lang)) app.settings.lang = app.packs[0].code;
-  await setLanguage(app.settings.lang, false);
+  const saved = await kvGet<unknown>('settings');
+  app.settings = cleanSettings(saved);
   void voicesReady();
+  if (!app.packs.some((p) => p.code === app.settings.lang)) app.settings.lang = (await progressLang()) ?? '';
+  // First run (or a saved language that no longer exists): leave the pack unloaded so main.ts asks.
+  if (!app.packs.some((p) => p.code === app.settings.lang)) { app.settings.lang = ''; return false; }
+  await setLanguage(app.settings.lang, false);
+  return true;
 }
 
 export async function setLanguage(code: string, persist = true) {
@@ -77,6 +73,18 @@ export async function grade(item: Item, g: Grade) {
   const rec: CardRecord = { lang: app.settings.lang, id: item.id, ...state };
   app.cards.set(item.id, rec);
   await putCard(rec);
+  await updateLog(app.settings.lang, localDate(now()), (l) => { l.reviews++; });
+}
+
+/** Records a drill answer. Right answers on cards that are not due do not move the schedule. */
+export async function gradeDrill(item: Item, correct: boolean) {
+  const t = Date.now();
+  const state = drillReview(app.cards.get(item.id), correct, t, { maxIntervalDays: Math.max(1, plan().daysToTrip) });
+  if (state) {
+    const rec: CardRecord = { lang: app.settings.lang, id: item.id, ...state };
+    app.cards.set(item.id, rec);
+    await putCard(rec);
+  }
   await updateLog(app.settings.lang, localDate(now()), (l) => { l.reviews++; });
 }
 

@@ -74,3 +74,12 @@ export const isDue = (card: SrsState, now: number): boolean => card.due <= now;
 /** "Mastered" means you can go three weeks without seeing it. Used by the progress view. */
 export const MASTERED_DAYS = 21;
 export const isMastered = (card: SrsState): boolean => card.interval >= MASTERED_DAYS;
+
+/**
+ * Drill answers feed the schedule without inflating it. A card that is not due yet keeps its
+ * schedule when answered right (returns null). A wrong answer, or a card that is new or due, is graded as usual.
+ */
+export function drillReview(card: SrsState | undefined, correct: boolean, now: number, opts: ReviewOptions = {}): SrsState | null {
+  if (card && !isDue(card, now) && correct) return null;
+  return review(card ?? newState(now), correct ? 2 : 0, now, opts);
+}

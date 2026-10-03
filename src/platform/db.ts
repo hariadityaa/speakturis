@@ -23,6 +23,12 @@ const db = () =>
 
 const langRange = (lang: string) => IDBKeyRange.bound([lang, ''], [lang, '￿']);
 
+/** Language of any saved progress. Older versions never saved a language choice, only progress. */
+export async function progressLang(): Promise<string | undefined> {
+  const d = await db();
+  return (await d.getAll('cards', undefined, 1))[0]?.lang ?? (await d.getAll('log', undefined, 1))[0]?.lang;
+}
+
 export async function getCards(lang: string): Promise<Map<string, CardRecord>> {
   const all = await (await db()).getAll('cards', langRange(lang));
   return new Map(all.map((c) => [c.id, c]));
