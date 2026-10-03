@@ -18,6 +18,7 @@ export default defineConfig({
         name: 'Speakturis',
         short_name: 'Speakturis',
         description: 'Travel phrases for your trip. Works offline.',
+        id: base,
         start_url: base,
         scope: base,
         display: 'standalone',
