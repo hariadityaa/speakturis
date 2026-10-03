@@ -15,8 +15,8 @@ export default defineConfig({
       registerType: 'prompt', // we show "Update available" and apply on tap
       injectRegister: false, // registered manually in src/platform/pwa.ts
       manifest: {
-        name: 'Speakturis',
-        short_name: 'Speakturis',
+        name: 'Turisfasih',
+        short_name: 'Turisfasih',
         description: 'Travel phrases for your trip. Works offline.',
         start_url: `${base}index.html`,
         scope: base,
