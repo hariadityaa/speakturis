@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "range": {
+    "min": 0,
+    "max": 10000
+  },
+  "words": {
+    "0": {
+      "native": "영",
+      "reading": "yeong"
+    },
+    "1": {
+      "native": "일",
+      "reading": "il"
+    },
+    "2": {
+      "native": "이",
+      "reading": "i"
+    },
+    "3": {
+      "native": "삼",
+      "reading": "sam"
+    },
+    "4": {
+      "native": "사",
+      "reading": "sa"
+    },
+    "5": {
+      "native": "오",
+      "reading": "o"
+    },
+    "6": {
+      "native": "육",
+      "reading": "yuk"
+    },
+    "7": {
+      "native": "칠",
+      "reading": "chil"
+    },
+    "8": {
+      "native": "팔",
+      "reading": "pal"
+    },
+    "9": {
+      "native": "구",
+      "reading": "gu"
+    }
+  },
+  "multipliers": [
+    {
+      "value": 10,
+      "native": "십",
+      "reading": "sip",
+      "omitOne": true
+    },
+    {
+      "value": 100,
+      "native": "백",
+      "reading": "baek",
+      "omitOne": true
+    },
+    {
+      "value": 1000,
+      "native": "천",
+      "reading": "cheon",
+      "omitOne": true
+    },
+    {
+      "value": 10000,
+      "native": "만",
+      "reading": "man",
+      "omitOne": true
+    }
+  ],
+  "overrides": {},
+  "separator": " ",
+  "priceDrill": {
+    "min": 500,
+    "max": 10000,
+    "step": 100
+  }
+}

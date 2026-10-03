@@ -1,6 +1,6 @@
 # TurisTalk
 
-Mobile-first PWA for learning travel-level phrases. No alphabets, just what you say and hear. Packs: Japanese and Mandarin (Traditional characters, Taiwan usage). It runs fully offline after the first load. No backend, no accounts, no analytics, no third-party requests.
+Mobile-first PWA for learning travel-level phrases. No alphabets, just what you say and hear. Packs: Japanese, Mandarin (Traditional characters, Taiwan usage) and Korean (Revised Romanization). It runs fully offline after the first load. No backend, no accounts, no analytics, no third-party requests.
 
 ## What it does
 
@@ -86,5 +86,5 @@ Chrome DevTools → Lighthouse → Mobile, on the deployed URL. Chrome removed t
 
 - No cross-device sync. Use Export and Import.
 - Speech does not continue with the screen locked.
-- Japanese and Mandarin content is not reviewed by native speakers. Have one check each pack's `phrases.json` and `dialogues.json` before relying on it.
+- Japanese, Mandarin and Korean content is not reviewed by native speakers. Have one check each pack's `phrases.json` and `dialogues.json` before relying on it.
 - iOS is not a target. It should work but is untested.

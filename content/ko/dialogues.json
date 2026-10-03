@@ -1,0 +1,687 @@
+{
+  "schemaVersion": 1,
+  "dialogues": [
+    {
+      "id": "d-restaurant",
+      "title": "Ordering at a restaurant",
+      "situation": "food",
+      "intro": "You enter a small restaurant in Seoul. A staff member greets you.",
+      "start": "n1",
+      "nodes": {
+        "n1": {
+          "speaker": "npc",
+          "native": "어서 오세요. 몇 분이세요?",
+          "reading": "eoseo oseyo. myeot buniseyo",
+          "english": "Welcome. How many people?",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-futari"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "native": "혼자예요",
+              "reading": "honjayeyo",
+              "english": "Just one"
+            },
+            {
+              "next": "n1b",
+              "good": false,
+              "native": "잘 먹었습니다",
+              "reading": "jal meogeotseumnida",
+              "english": "Thank you for the meal",
+              "feedback": "That is said after eating. You just arrived."
+            }
+          ]
+        },
+        "n1b": {
+          "speaker": "npc",
+          "native": "저기, 몇 분이세요?",
+          "reading": "jeogi, myeot buniseyo",
+          "english": "Um, how many people?",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-futari"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "native": "혼자예요",
+              "reading": "honjayeyo",
+              "english": "Just one"
+            }
+          ]
+        },
+        "n2": {
+          "speaker": "npc",
+          "native": "이쪽으로 오세요. 메뉴판 여기 있어요.",
+          "reading": "ijjogeuro oseyo. menyupan yeogi isseoyo",
+          "english": "This way. Here's the menu.",
+          "replies": [
+            {
+              "next": "n3",
+              "good": true,
+              "phraseId": "p-osusume"
+            },
+            {
+              "next": "n3",
+              "good": true,
+              "phraseId": "p-kore-kudasai"
+            },
+            {
+              "next": "n2b",
+              "good": false,
+              "phraseId": "p-toire",
+              "feedback": "Not yet. You still need to order."
+            }
+          ]
+        },
+        "n2b": {
+          "speaker": "npc",
+          "native": "화장실은 저쪽이에요. 주문하시겠어요?",
+          "reading": "hwajangsireun jeojjogieyo. jumunhasigesseoyo",
+          "english": "The restroom is over there. Your order?",
+          "replies": [
+            {
+              "next": "n3",
+              "good": true,
+              "phraseId": "p-kore-kudasai"
+            },
+            {
+              "next": "n3",
+              "good": true,
+              "phraseId": "p-osusume"
+            }
+          ]
+        },
+        "n3": {
+          "speaker": "npc",
+          "native": "김치찌개가 맛있어요. 좀 매운데 괜찮으세요?",
+          "reading": "gimchijjigaega masisseoyo. jom maeunde gwaenchaneuseyo",
+          "english": "The kimchi stew is recommended. It's spicy. Is that OK?",
+          "replies": [
+            {
+              "next": "n4",
+              "good": true,
+              "native": "안 맵게 해 주세요",
+              "reading": "an maepge hae juseyo",
+              "english": "Not spicy, please"
+            },
+            {
+              "next": "n4",
+              "good": true,
+              "native": "괜찮아요. 그걸로 주세요",
+              "reading": "gwaenchanayo. geugeollo juseyo",
+              "english": "That's fine. I'll have that"
+            },
+            {
+              "next": "n3b",
+              "good": false,
+              "phraseId": "p-arigatou",
+              "feedback": "Polite, but it doesn't answer the question."
+            }
+          ]
+        },
+        "n3b": {
+          "speaker": "npc",
+          "native": "김치찌개로 괜찮으세요?",
+          "reading": "gimchijjigaero gwaenchaneuseyo",
+          "english": "Is kimchi stew OK?",
+          "replies": [
+            {
+              "next": "n4",
+              "good": true,
+              "native": "네, 부탁드려요",
+              "reading": "ne, butakdeuryeoyo",
+              "english": "Yes, please"
+            },
+            {
+              "next": "n4",
+              "good": true,
+              "native": "안 맵게 해 주세요",
+              "reading": "an maepge hae juseyo",
+              "english": "Not spicy, please"
+            }
+          ]
+        },
+        "n4": {
+          "speaker": "npc",
+          "native": "알겠습니다. 음료는 뭐 드릴까요?",
+          "reading": "algetseumnida. eumnyoneun mwo deurilkkayo",
+          "english": "Certainly. Anything to drink?",
+          "replies": [
+            {
+              "next": "n5",
+              "good": true,
+              "phraseId": "p-mizu"
+            },
+            {
+              "next": "n5",
+              "good": true,
+              "native": "맥주 주세요",
+              "reading": "maekju juseyo",
+              "english": "A beer, please"
+            },
+            {
+              "next": "n5",
+              "good": true,
+              "native": "괜찮아요",
+              "reading": "gwaenchanayo",
+              "english": "No, thank you"
+            }
+          ]
+        },
+        "n5": {
+          "speaker": "npc",
+          "native": "기다리셨습니다. 맛있게 드세요.",
+          "reading": "gidarisyeotseumnida. masitge deuseyo",
+          "english": "Thank you for waiting. Enjoy.",
+          "replies": [
+            {
+              "next": "n6",
+              "good": true,
+              "phraseId": "p-itadakimasu"
+            },
+            {
+              "next": "n6",
+              "good": true,
+              "phraseId": "p-oishii"
+            }
+          ]
+        },
+        "n6": {
+          "speaker": "npc",
+          "native": "감사합니다.",
+          "reading": "gamsahamnida",
+          "english": "Thank you.",
+          "replies": [
+            {
+              "next": "n7",
+              "good": true,
+              "phraseId": "p-okaikei"
+            },
+            {
+              "next": "n7",
+              "good": true,
+              "native": "계산은요?",
+              "reading": "gyesaneunyo",
+              "english": "The bill?"
+            }
+          ]
+        },
+        "n7": {
+          "speaker": "npc",
+          "native": "만 이천팔백 원이에요.",
+          "reading": "man icheonpalbaek wonieyo",
+          "english": "That's 12,800 won.",
+          "replies": [
+            {
+              "next": "n8",
+              "good": true,
+              "phraseId": "p-kaado"
+            },
+            {
+              "next": "n8",
+              "good": true,
+              "native": "현금으로 할게요",
+              "reading": "hyeongeumeuro halgeyo",
+              "english": "Cash, please"
+            }
+          ]
+        },
+        "n8": {
+          "speaker": "npc",
+          "native": "감사합니다. 또 오세요.",
+          "reading": "gamsahamnida. tto oseyo",
+          "english": "Thank you very much. Please come again.",
+          "end": true
+        }
+      }
+    },
+    {
+      "id": "d-taxi",
+      "title": "Taking a taxi",
+      "situation": "transport",
+      "intro": "You hail a taxi outside the hotel. You have the address saved on your phone.",
+      "start": "n1",
+      "nodes": {
+        "n1": {
+          "speaker": "npc",
+          "native": "어디까지 가세요?",
+          "reading": "eodikkaji gaseyo",
+          "english": "Where to?",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-juusho"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "native": "역까지 가 주세요",
+              "reading": "yeokkkaji ga juseyo",
+              "english": "To the station, please"
+            },
+            {
+              "next": "n1b",
+              "good": false,
+              "phraseId": "p-kore-kudasai",
+              "feedback": "That's for ordering things. Say where you want to go."
+            }
+          ]
+        },
+        "n1b": {
+          "speaker": "npc",
+          "native": "네? 어디로 가세요?",
+          "reading": "ne? eodiro gaseyo",
+          "english": "Huh? Where are you going?",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-juusho"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "native": "역까지 가 주세요",
+              "reading": "yeokkkaji ga juseyo",
+              "english": "To the station, please"
+            }
+          ]
+        },
+        "n2": {
+          "speaker": "npc",
+          "native": "네, 알겠습니다. 이십 분쯤 걸려요.",
+          "reading": "ne, algetseumnida. isip bunjjeum geollyeoyo",
+          "english": "OK, understood. About 20 minutes.",
+          "replies": [
+            {
+              "next": "n3",
+              "good": true,
+              "phraseId": "p-arigatou"
+            },
+            {
+              "next": "n3",
+              "good": true,
+              "phraseId": "p-yukkuri"
+            },
+            {
+              "next": "n3",
+              "good": false,
+              "phraseId": "p-itadakimasu",
+              "feedback": "That's said before a meal, not in a taxi."
+            }
+          ]
+        },
+        "n3": {
+          "speaker": "npc",
+          "native": "도착했어요. 삼만 이천 원이에요.",
+          "reading": "dochakaesseoyo. samman icheon wonieyo",
+          "english": "We're here. That's 32,000 won.",
+          "replies": [
+            {
+              "next": "n4",
+              "good": true,
+              "phraseId": "p-kaado"
+            },
+            {
+              "next": "n4",
+              "good": true,
+              "native": "현금으로 할게요",
+              "reading": "hyeongeumeuro halgeyo",
+              "english": "Cash, please"
+            },
+            {
+              "next": "n3b",
+              "good": false,
+              "phraseId": "p-mizu",
+              "feedback": "You asked for water. The driver wants payment."
+            }
+          ]
+        },
+        "n3b": {
+          "speaker": "npc",
+          "native": "계산 부탁드려요. 삼만 이천 원이에요.",
+          "reading": "gyesan butakdeuryeoyo. samman icheon wonieyo",
+          "english": "Payment, please. 32,000 won.",
+          "replies": [
+            {
+              "next": "n4",
+              "good": true,
+              "phraseId": "p-kaado"
+            },
+            {
+              "next": "n4",
+              "good": true,
+              "native": "현금으로 할게요",
+              "reading": "hyeongeumeuro halgeyo",
+              "english": "Cash, please"
+            }
+          ]
+        },
+        "n4": {
+          "speaker": "npc",
+          "native": "네, 괜찮아요. 영수증 드릴까요?",
+          "reading": "ne, gwaenchanayo. yeongsujeung deurilkkayo",
+          "english": "Yes, that's fine. Receipt?",
+          "replies": [
+            {
+              "next": "n5",
+              "good": true,
+              "phraseId": "p-reshiito"
+            },
+            {
+              "next": "n5",
+              "good": true,
+              "native": "필요 없어요",
+              "reading": "piryo eopseoyo",
+              "english": "No, thank you"
+            }
+          ]
+        },
+        "n5": {
+          "speaker": "npc",
+          "native": "감사합니다. 안녕히 가세요.",
+          "reading": "gamsahamnida. annyeonghi gaseyo",
+          "english": "Thank you. Take care.",
+          "end": true
+        }
+      }
+    },
+    {
+      "id": "d-konbini",
+      "title": "At the convenience store",
+      "situation": "shopping",
+      "intro": "You bring a lunch box and a drink to the register.",
+      "start": "n1",
+      "nodes": {
+        "n1": {
+          "speaker": "npc",
+          "native": "어서 오세요. 도시락 데워 드릴까요?",
+          "reading": "eoseo oseyo. dosirak dewo deurilkkayo",
+          "english": "Welcome. Shall I heat the lunch box?",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-atatamete"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "native": "네, 부탁드려요",
+              "reading": "ne, butakdeuryeoyo",
+              "english": "Yes, please"
+            },
+            {
+              "next": "n1b",
+              "good": false,
+              "phraseId": "p-sumimasen",
+              "feedback": "Polite, but it doesn't answer the question."
+            }
+          ]
+        },
+        "n1b": {
+          "speaker": "npc",
+          "native": "데워 드릴까요?",
+          "reading": "dewo deurilkkayo",
+          "english": "Heat it up?",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "native": "네, 부탁드려요",
+              "reading": "ne, butakdeuryeoyo",
+              "english": "Yes, please"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "native": "아니요, 괜찮아요",
+              "reading": "aniyo, gwaenchanayo",
+              "english": "No, it's fine"
+            }
+          ]
+        },
+        "n2": {
+          "speaker": "npc",
+          "native": "봉투 필요하세요?",
+          "reading": "bongtu piryohaseyo",
+          "english": "Do you need a bag?",
+          "replies": [
+            {
+              "next": "n3",
+              "good": true,
+              "phraseId": "p-fukuro"
+            },
+            {
+              "next": "n3",
+              "good": true,
+              "native": "네, 부탁드려요",
+              "reading": "ne, butakdeuryeoyo",
+              "english": "Yes, please"
+            },
+            {
+              "next": "n3",
+              "good": false,
+              "phraseId": "p-toire",
+              "feedback": "Answer the bag question first. The toilet can wait."
+            }
+          ]
+        },
+        "n3": {
+          "speaker": "npc",
+          "native": "팔천오백 원이에요. 젓가락 드릴까요?",
+          "reading": "palcheonobaek wonieyo. jeotgarak deurilkkayo",
+          "english": "That's 8,500 won. Would you like chopsticks?",
+          "replies": [
+            {
+              "next": "n4",
+              "good": true,
+              "phraseId": "p-hashi"
+            },
+            {
+              "next": "n4",
+              "good": true,
+              "native": "젓가락은 필요 없어요",
+              "reading": "jeotgarageun piryo eopseoyo",
+              "english": "No chopsticks, thanks"
+            },
+            {
+              "next": "n4",
+              "good": false,
+              "phraseId": "p-gochisousama",
+              "feedback": "That's said after eating, not at the register."
+            }
+          ]
+        },
+        "n4": {
+          "speaker": "npc",
+          "native": "카드예요, 현금이에요?",
+          "reading": "kadeuyeyo, hyeongeumieyo",
+          "english": "Card or cash?",
+          "replies": [
+            {
+              "next": "n5",
+              "good": true,
+              "native": "카드로 할게요",
+              "reading": "kadeuro halgeyo",
+              "english": "Card, please"
+            },
+            {
+              "next": "n5",
+              "good": true,
+              "native": "현금으로 할게요",
+              "reading": "hyeongeumeuro halgeyo",
+              "english": "Cash, please"
+            }
+          ]
+        },
+        "n5": {
+          "speaker": "npc",
+          "native": "감사합니다.",
+          "reading": "gamsahamnida",
+          "english": "Thank you very much.",
+          "end": true
+        }
+      }
+    },
+    {
+      "id": "d-hotel",
+      "title": "Checking in at the hotel",
+      "situation": "hotel",
+      "intro": "You arrive at your hotel with your suitcase. Your booking is under the name Tan.",
+      "start": "n1",
+      "nodes": {
+        "n1": {
+          "speaker": "npc",
+          "native": "어서 오세요. 체크인이세요?",
+          "reading": "eoseo oseyo. chekeuiniseyo",
+          "english": "Welcome. Checking in?",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-chekkuin"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-yoyaku"
+            },
+            {
+              "next": "n1b",
+              "good": false,
+              "phraseId": "p-gochisousama",
+              "feedback": "That's said after a meal. Here, just say you're checking in."
+            }
+          ]
+        },
+        "n1b": {
+          "speaker": "npc",
+          "native": "체크인 맞으세요?",
+          "reading": "chekeuin majeuseyo",
+          "english": "Checking in, is that right?",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "native": "네, 부탁드려요",
+              "reading": "ne, butakdeuryeoyo",
+              "english": "Yes, please"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-chekkuin"
+            }
+          ]
+        },
+        "n2": {
+          "speaker": "npc",
+          "native": "예약하신 성함을 말씀해 주세요.",
+          "reading": "yeyakasin seonghameul malsseumhae juseyo",
+          "english": "The name on the reservation, please.",
+          "replies": [
+            {
+              "next": "n3",
+              "good": true,
+              "native": "탄이에요",
+              "reading": "tanieyo",
+              "english": "It's Tan"
+            },
+            {
+              "next": "n2b",
+              "good": true,
+              "phraseId": "p-wakarimasen"
+            },
+            {
+              "next": "n2",
+              "good": false,
+              "phraseId": "p-yoyaku",
+              "feedback": "They know you have one. They want the name. Listen for seongham."
+            }
+          ]
+        },
+        "n2b": {
+          "speaker": "npc",
+          "native": "성함이요?",
+          "reading": "seonghamiyo",
+          "english": "Your name?",
+          "replies": [
+            {
+              "next": "n3",
+              "good": true,
+              "native": "탄이에요",
+              "reading": "tanieyo",
+              "english": "It's Tan"
+            },
+            {
+              "next": "n3",
+              "good": true,
+              "native": "죄송합니다, 탄이에요",
+              "reading": "joesonghamnida, tanieyo",
+              "english": "Sorry, it's Tan"
+            }
+          ]
+        },
+        "n3": {
+          "speaker": "npc",
+          "native": "탄 님이시군요. 체크아웃은 열한 시예요.",
+          "reading": "tan nimisigunyo. chekeuauseun yeolhan siyeyo",
+          "english": "Tan, yes. Check-out is at 11.",
+          "replies": [
+            {
+              "next": "n4",
+              "good": true,
+              "phraseId": "p-nimotsu"
+            },
+            {
+              "next": "n5",
+              "good": true,
+              "phraseId": "p-arigatou"
+            },
+            {
+              "next": "n3",
+              "good": false,
+              "phraseId": "p-checkout",
+              "feedback": "They just told you: yeolhan si, 11 o'clock."
+            }
+          ]
+        },
+        "n4": {
+          "speaker": "npc",
+          "native": "네, 체크아웃 후에도 맡아 드릴 수 있어요.",
+          "reading": "ne, chekeuaut huedo mata deuril su isseoyo",
+          "english": "Yes, we can keep it after check-out too.",
+          "replies": [
+            {
+              "next": "n5",
+              "good": true,
+              "phraseId": "p-arigatou"
+            },
+            {
+              "next": "n4",
+              "good": false,
+              "phraseId": "p-itadakimasu",
+              "feedback": "That's said before eating. A simple thank you works here."
+            }
+          ]
+        },
+        "n5": {
+          "speaker": "npc",
+          "native": "여기 방 열쇠예요. 편안히 쉬세요.",
+          "reading": "yeogi bang yeolsoeyeyo. pyeonanhi swiseyo",
+          "english": "Here is your room key. Enjoy your stay.",
+          "end": true
+        }
+      }
+    }
+  ]
+}
