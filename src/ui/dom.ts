@@ -25,7 +25,7 @@ export type Screen = (root: HTMLElement, q: URLSearchParams) => void | (() => vo
 
 export const header = (title: string, back?: string) =>
   h('header', { class: 'bar' },
-    back ? h('a', { class: 'back', href: back, 'aria-label': 'Back' }, '‹') : null,
+    back ? h('a', { class: 'back', href: `#${back}`, 'aria-label': 'Back' }, '‹') : null,
     h('h1', null, title));
 
 export const progressBar = (done: number, total: number) =>
