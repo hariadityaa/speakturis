@@ -9,6 +9,10 @@ describe('parseBackup', () => {
     const d = parseBackup(wrap({ cards: [card], kv: [['settings', { lang: 'ja', rate: 0.8 }]] }));
     expect(d.cards).toHaveLength(1);
   });
+  it('accepts star lists in kv', () => {
+    const d = parseBackup(wrap({ cards: [], kv: [['stars:ja', ['a', 'b']], ['stars:zh', []]] }));
+    expect(d.kv).toHaveLength(2);
+  });
   it.each([
     ['not json', 'hello'],
     ['array', '[]'],

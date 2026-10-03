@@ -1,4 +1,5 @@
 import { buildItems } from './core/items';
+import { cleanStars } from './core/phrasebook';
 import { listPacks, loadPack } from './core/packs';
 import { MASTERED_DAYS, drillReview, isDue, newState, review, startOfDay, type Grade } from './core/srs';
 import { DEFAULTS, cleanSettings, type Settings } from './core/settings';
@@ -20,6 +21,8 @@ export const app = {
   items: [] as Item[],
   itemById: new Map<string, Item>(),
   cards: new Map<string, CardRecord>(),
+  /** Starred phrase ids for the current language. */
+  stars: new Set<string>(),
 };
 
 /** Returns false when no language is chosen yet and there is more than one to choose from. */
@@ -46,10 +49,18 @@ export async function setLanguage(code: string, persist = true) {
   app.items = buildItems(app.pack);
   app.itemById = new Map(app.items.map((i) => [i.id, i]));
   await loadCards();
+  app.stars = cleanStars(await kvGet<unknown>(`stars:${code}`), app.pack);
   if (persist) await saveSettings();
 }
 
 export const loadCards = async () => { app.cards = await getCards(app.settings.lang); };
+/** Flips a star and saves it. Returns whether the phrase is now starred. */
+export function toggleStar(id: string): boolean {
+  const on = !app.stars.has(id);
+  if (on) app.stars.add(id); else app.stars.delete(id);
+  void kvSet(`stars:${app.settings.lang}`, [...app.stars]);
+  return on;
+}
 export const saveSettings = () => kvSet('settings', app.settings);
 
 /** Phrases in pack order, which is most useful first. */
