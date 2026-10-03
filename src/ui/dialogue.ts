@@ -4,6 +4,9 @@ import type { Dialogue, DialogueReply } from '../core/types';
 import { stopSpeaking } from '../platform/tts';
 import { h, header, type Screen } from './dom';
 
+/** Bumped on every start and exit, so a line still being spoken cannot carry on after the screen is left. */
+let run = 0;
+
 const resolve = (r: DialogueReply) => {
   const p = r.phraseId ? app.pack.phrases.phrases.find((x) => x.id === r.phraseId) : undefined;
   return {
@@ -24,12 +27,13 @@ export const dialogueScreen: Screen = (root, q) => {
     return;
   }
   play(root, d, back);
-  return stopSpeaking;
+  return () => { run++; stopSpeaking(); };
 };
 
 function play(root: HTMLElement, d: Dialogue, back: string) {
   const log = h('div', { class: 'chat', 'aria-live': 'polite' });
   const choicesEl = h('div', { class: 'choices col' });
+  const mine = ++run;
   let good = 0, turns = 0;
   root.replaceChildren(...[header(d.title, back), d.intro ? h('p', { class: 'note' }, d.intro) : null, log, choicesEl].filter((x): x is HTMLElement => !!x));
 
@@ -56,7 +60,7 @@ function play(root: HTMLElement, d: Dialogue, back: string) {
           if (r.good) good++;
           log.append(bubble('me', t, r.good ? undefined : (r.feedback ?? 'Not the best reply.')));
           choicesEl.replaceChildren();
-          void say(t.speak).then(() => show(r.next));
+          void say(t.speak).then(() => { if (mine === run) show(r.next); });
         } }, h('span', { class: 'jp' }, t.native), h('span', { class: 'say-it' }, t.reading), h('small', null, t.english));
       }));
     }

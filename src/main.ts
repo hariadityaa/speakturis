@@ -2,6 +2,7 @@ import './styles/app.css';
 import { app, initApp, setLanguage } from './app';
 import { h } from './ui/dom';
 import { kvGet, kvSet } from './platform/db';
+import { installErrorNotices } from './platform/notice';
 import { initPwa, install, isStandalone, waitForInstallPrompt } from './platform/pwa';
 import { route, startRouter } from './router';
 import { dialogueScreen } from './ui/dialogue';
@@ -14,16 +15,25 @@ import { learnScreen, topicScreen } from './ui/learn';
 import { phrasebookScreen, showScreen } from './ui/phrasebook';
 import { lessonScreen } from './ui/session';
 
+installErrorNotices();
 initPwa();
 
 /** First run: blank screen, one question. Picking a language saves it and starts the app. */
 function chooseLanguage(mount: HTMLElement): Promise<void> {
   return new Promise((resolve) => {
+    const problem = h('p', { class: 'warn', role: 'alert', hidden: true });
     mount.replaceChildren(h('main', { class: 'welcome' },
       h('h1', null, 'TurisTalk'),
       h('h2', { class: 'sect' }, 'What language do you want to learn?'),
+      problem,
       h('div', { class: 'stack' }, app.packs.map((p) =>
-        h('button', { class: 'btn big', onclick: async () => { await setLanguage(p.code); resolve(); } },
+        h('button', { class: 'btn big', onclick: async () => {
+          try { await setLanguage(p.code); resolve(); } catch (e) {
+            console.error(e);
+            problem.textContent = `Could not open ${p.name}. Try again, or close the app and open it again.`;
+            problem.hidden = false;
+          }
+        } },
           h('span', { class: 'native', 'data-pack': p.code }, p.nativeName), h('small', null, ` ${p.name}`))))));
   });
 }
@@ -42,8 +52,17 @@ async function offerInstall(mount: HTMLElement, offered: Promise<boolean>): Prom
       h('p', { class: 'note' }, 'Opens full screen from your home screen and works offline.'),
       h('div', { class: 'stack' },
         h('button', { class: 'btn big primary', onclick: async () => { await install(); resolve(); } }, 'Install app'),
-        h('button', { class: 'btn big', onclick: async () => { await kvSet('installDeclined', true); resolve(); } }, 'Keep using in browser'))));
+        h('button', { class: 'btn big', onclick: async () => { try { await kvSet('installDeclined', true); } catch { /* asked again next time */ } resolve(); } }, 'Keep using in browser'))));
   });
+}
+
+/** The app could not start. Say so in plain words and offer a retry. */
+function showFatal(mount: HTMLElement, e: unknown) {
+  console.error(e);
+  mount.replaceChildren(h('main', { class: 'welcome' },
+    h('h1', null, 'TurisTalk'),
+    h('p', { class: 'warn', role: 'alert' }, 'TurisTalk could not start. Close the app and open it again. If it keeps happening, your phone may be low on storage.'),
+    h('button', { class: 'btn big primary', onclick: () => location.reload() }, 'Try again')));
 }
 
 async function boot() {
@@ -55,7 +74,7 @@ async function boot() {
     await offerInstall(mount, offered);
     if (!(await ready)) await chooseLanguage(mount);
   } catch (e) {
-    mount.textContent = `Failed to load: ${(e as Error).message}`;
+    showFatal(mount, e);
     return;
   }
   const shell = buildShell();
@@ -71,7 +90,7 @@ async function boot() {
   route('/read', readingScreen);
   route('/dialogue', dialogueScreen);
   route('/settings', settingsScreen);
-  await startRouter(shell.querySelector('#main')!);
+  try { await startRouter(shell.querySelector('#main')!); } catch (e) { showFatal(mount, e); }
 }
 
 void boot();

@@ -4,7 +4,8 @@ import { dumpAll, restoreAll, type Dump } from './db';
 const APP = 'turisfasih';
 const VERSION = 2;
 
-export async function exportBackup(): Promise<void> {
+/** How the backup left the app. 'cancelled' means the user closed the share sheet. */
+export async function exportBackup(): Promise<'shared' | 'downloaded' | 'cancelled'> {
   const data = await dumpAll();
   const body = JSON.stringify({ app: APP, version: VERSION, exportedAt: new Date().toISOString(), data });
   const name = `turisfasih-backup-${new Date().toISOString().slice(0, 10)}.json`;
@@ -12,13 +13,14 @@ export async function exportBackup(): Promise<void> {
   const file = new File([blob], name, { type: 'application/json' });
   // Share sheet on Android lets the user save to Drive. Fall back to a plain download.
   if (navigator.canShare?.({ files: [file] })) {
-    try { await navigator.share({ files: [file], title: name }); return; } catch (e) { if ((e as Error).name === 'AbortError') return; }
+    try { await navigator.share({ files: [file], title: name }); return 'shared'; } catch (e) { if ((e as Error).name === 'AbortError') return 'cancelled'; }
   }
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
   a.download = name;
   a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 10_000);
+  return 'downloaded';
 }
 
 const isNum = (x: unknown) => typeof x === 'number' && Number.isFinite(x);
