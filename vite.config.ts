@@ -2,7 +2,7 @@ import { defineConfig } from 'vitest/config';
 import { VitePWA } from 'vite-plugin-pwa';
 
 // Project pages live at /<repo>/. Override with BASE_PATH for a custom domain ("/").
-const base = process.env.BASE_PATH ?? '/speakturis/';
+const base = process.env.BASE_PATH ?? '/turisfasih/';
 
 export default defineConfig({
   base,
