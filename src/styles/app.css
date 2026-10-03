@@ -165,3 +165,6 @@ input[type=range] { padding: 0; border: 0; background: none; accent-color: var(-
   .row:hover, .tile:hover, .flash:hover, .kana-cell:hover, .phrase .grow:hover, .phrase .play:hover, .phrase .star:hover { background: var(--surface-2); border-color: var(--border-strong); }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
+
+.toast { position: fixed; left: 1rem; right: 1rem; bottom: 5rem; padding: .75rem 1rem; border-radius: .75rem; background: var(--text); color: var(--bg); font-size: .9rem; z-index: 20; box-shadow: 0 2px 12px rgba(0,0,0,.3); }
+.toast[hidden] { display: none; }
