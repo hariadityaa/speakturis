@@ -15,7 +15,7 @@ Mobile-first PWA for learning travel-level phrases. First pack: Japanese, for a 
 
 ```
 npm ci
-npm run dev        # http://localhost:5173/speakturis/
+npm run dev        # http://localhost:5173/turisfasih/
 npm test           # SRS, validation, numbers, schedule, streak
 npm run validate   # check every pack in /content
 npm run build      # typecheck + validate + production build into dist/
