@@ -59,7 +59,10 @@ export const numbersScreen = (prices: boolean): Screen => (root, q) => {
         // Wrong options sit near the answer so listening, not size, decides it.
         const near = new Set<number>([n]);
         const span = Math.max(2, Math.round(max / 10));
-        while (near.size < Math.min(4, max + 1)) near.add(Math.max(numbers.range.min, Math.min(max, n + rnd(-span, span) * (prices ? numbers.priceDrill.step : 1))));
+        const unit = prices ? numbers.priceDrill.step : 1;
+        const lo = prices ? numbers.priceDrill.min : numbers.range.min;
+        const possible = Math.floor((max - lo) / unit) + 1;
+        while (near.size < Math.min(4, possible)) near.add(Math.max(lo, Math.min(max, n + rnd(-span, span) * unit)));
         const opts = shuffle([...near]);
         const note = h('p', { class: 'note center', 'aria-live': 'polite' }, ' ');
         const tiles = h('div', { class: 'choices' }, opts.map((o) => h('button', { class: 'btn choice', onclick: (e: MouseEvent) => {

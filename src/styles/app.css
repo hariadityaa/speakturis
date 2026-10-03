@@ -1,14 +1,14 @@
 :root {
   color-scheme: light dark;
   --bg: #f6f5f1; --surface: #ffffff; --text: #1b1d27; --muted: #666b7a; --line: #e2e0d8;
-  --accent: #3b4cca; --accent-text: #ffffff; --ok: #1f8a4c; --bad: #c43b3b; --warn-bg: #fff3cd; --warn-text: #5c4400;
+  --accent: #3b4cca; --accent-text: #ffffff; --ok: #1a7a42; --bad: #c43b3b; --on-fill: #ffffff; --warn-bg: #fff3cd; --warn-text: #5c4400;
   --m: #1f8a4c; --l: #e0a82e;
   --tab-h: 64px;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #151822; --surface: #1f2331; --text: #ecedf3; --muted: #9ba0b3; --line: #2d3245;
-    --accent: #8493ff; --accent-text: #10131f; --ok: #4cc384; --bad: #ff7b7b; --warn-bg: #3a3014; --warn-text: #ffe29a;
+    --accent: #8493ff; --accent-text: #10131f; --ok: #4cc384; --bad: #ff7b7b; --on-fill: #10131f; --warn-bg: #3a3014; --warn-text: #ffe29a;
     --m: #4cc384; --l: #e0b04a;
   }
 }
@@ -94,7 +94,7 @@ h2.sect { font-size: .85rem; text-transform: uppercase; letter-spacing: .06em; c
 .choice { min-height: 68px; font-size: 1.3rem; } .choice.jp { font-size: 2rem; }
 .choice.left { justify-content: flex-start; flex-direction: column; align-items: flex-start; gap: 0; padding: 10px 16px; font-size: 1.1rem; }
 .choice small { color: var(--muted); font-weight: 400; font-size: .85rem; }
-.choice.ok { background: var(--ok); color: #fff; border-color: var(--ok); } .choice.bad { background: var(--bad); color: #fff; border-color: var(--bad); }
+.choice.ok { background: var(--ok); color: var(--on-fill); border-color: var(--ok); opacity: 1; } .choice.bad { background: var(--bad); color: var(--on-fill); border-color: var(--bad); opacity: 1; }
 
 .chat { display: grid; gap: 10px; margin: 12px 0; }
 .bubble { max-width: 88%; padding: 10px 14px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); }
