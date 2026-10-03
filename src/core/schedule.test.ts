@@ -1,57 +1,72 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { planFor, unlockedIds } from './schedule';
+import { planFor, taskFor, taskKey, unlockedIds } from './schedule';
 import type { Pack } from './types';
 
 const read = (f: string) => JSON.parse(readFileSync(new URL(`../../content/ja/${f}.json`, import.meta.url), 'utf8'));
 const pack = { meta: read('pack'), scripts: read('scripts'), phrases: read('phrases'), numbers: read('numbers'), dialogues: read('dialogues'), schedule: read('schedule') } as Pack;
+const week = pack.schedule.plans.find((p) => p.id === 'week')!;
+const month = pack.schedule.plans.find((p) => p.id === 'month')!;
 
-// Study starts Sat 3 Oct 2026. Rest day is Sunday.
+// Plans start on Sat 3 Oct 2026, the day they were picked. Rest day is Sunday.
+const START = '2026-10-03';
 const day = (m: number, d: number) => new Date(2026, m - 1, d, 9, 0);
 
 describe('planFor', () => {
-  it('before the start shows week 1 day 1', () => {
-    const p = planFor(pack, day(10, 1));
-    expect(p.phase).toBe('before');
-    expect(p.daysToStart).toBe(2);
-    expect(p.weekNumber).toBe(1);
+  it('the day before the start shows week 1 day 1', () => {
+    const p = planFor(pack, month, START, day(10, 2));
+    expect([p.phase, p.daysToStart, p.weekNumber]).toEqual(['before', 1, 1]);
   });
 
-  it('first day is week 1, study day 1', () => {
-    const p = planFor(pack, day(10, 3));
+  it('the start day is week 1, study day 1', () => {
+    const p = planFor(pack, week, START, day(10, 3));
     expect([p.phase, p.weekNumber, p.studyDay]).toEqual(['active', 1, 1]);
-    expect(p.tasks.some((t) => t.task.ref === 'k-vowels')).toBe(true);
-    expect(p.tasks.some((t) => t.task.ref === 'k-k')).toBe(false);
+    expect(p.tasks.some((t) => t.task.label === 'Basics')).toBe(true);
+    expect(p.tasks.some((t) => t.task.label === 'Food')).toBe(false);
   });
 
   it('Sunday is a rest day with no tasks and does not count as a study day', () => {
-    expect(planFor(pack, day(10, 4)).phase).toBe('rest');
-    expect(planFor(pack, day(10, 4)).tasks).toEqual([]);
-    expect(planFor(pack, day(10, 5)).studyDay).toBe(2); // Monday
-    expect(planFor(pack, day(10, 8)).studyDay).toBe(5); // Thursday
+    expect(planFor(pack, month, START, day(10, 4)).phase).toBe('rest');
+    expect(planFor(pack, month, START, day(10, 4)).tasks).toEqual([]);
+    expect(planFor(pack, month, START, day(10, 5)).studyDay).toBe(2); // Monday
+    expect(planFor(pack, month, START, day(10, 8)).studyDay).toBe(5); // Thursday
   });
 
-  it('week 2 starts a week after the study start', () => {
-    expect(planFor(pack, day(10, 10)).weekNumber).toBe(2);
+  it('the 1-week plan ends after 7 days', () => {
+    expect(planFor(pack, week, START, day(10, 9)).phase).toBe('active');
+    expect(planFor(pack, week, START, day(10, 10)).phase).toBe('after');
+    expect(planFor(pack, week, START, day(10, 10)).tasks).toEqual([]);
   });
 
-  it('week 17 is the last; the day after it is "after"', () => {
-    expect(planFor(pack, new Date(2027, 0, 29, 9)).weekNumber).toBe(17);
-    expect(planFor(pack, new Date(2027, 0, 30, 9)).phase).toBe('after');
-    expect(planFor(pack, new Date(2027, 0, 30, 9)).daysToTrip).toBe(0);
+  it('the 1-month plan runs 4 weeks', () => {
+    expect(planFor(pack, month, START, day(10, 10)).weekNumber).toBe(2);
+    expect(planFor(pack, month, START, day(10, 30)).weekNumber).toBe(4);
+    expect(planFor(pack, month, START, day(10, 31)).phase).toBe('after');
+  });
+
+  it('counts down to the trip', () => {
+    expect(planFor(pack, week, START, new Date(2027, 0, 29, 9)).daysToTrip).toBe(1);
   });
 });
 
 describe('unlockedIds', () => {
-  it('unlocks kana groups on the day their task first appears', () => {
-    expect(unlockedIds(pack, 1, 1).has('kata-a')).toBe(true);
-    expect(unlockedIds(pack, 1, 1).has('kata-ka')).toBe(false);
-    expect(unlockedIds(pack, 1, 2).has('kata-ka')).toBe(true);
+  it('unlocks phrases on the day their task first appears', () => {
+    expect(unlockedIds(pack, week, 1, 1).has('p-sumimasen')).toBe(true);
+    expect(unlockedIds(pack, week, 1, 1).has('p-menyuu')).toBe(false);
+    expect(unlockedIds(pack, week, 1, 2).has('p-menyuu')).toBe(true);
   });
-  it('earlier weeks stay unlocked and phrases arrive with their week', () => {
-    expect(unlockedIds(pack, 2, 1).has('kata-na')).toBe(true);
-    expect(unlockedIds(pack, 6, 6).has('p-sumimasen')).toBe(false);
-    expect(unlockedIds(pack, 7, 1).has('p-sumimasen')).toBe(true);
-    expect(unlockedIds(pack, 7, 1).has('p-konnichiwa')).toBe(false);
+  it('earlier weeks stay unlocked', () => {
+    expect(unlockedIds(pack, month, 2, 1).has('p-singapore')).toBe(true);
+    expect(unlockedIds(pack, month, 1, 6).has('p-menyuu')).toBe(false);
+    expect(unlockedIds(pack, month, 4, 6).size).toBe(pack.phrases.phrases.length);
+  });
+});
+
+describe('taskKey', () => {
+  it('resolves only within its own plan', () => {
+    const key = taskKey('week', 1, 1);
+    expect(taskFor(week, key)?.label).toBe('Basics');
+    expect(taskFor(month, key)).toBeUndefined();
+    expect(taskFor(week, null)).toBeUndefined();
   });
 });

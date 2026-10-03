@@ -1,14 +1,15 @@
 # Turisfasih
 
-Mobile-first PWA for learning travel-level phrases. First pack: Japanese, for a Sapporo trip on 30 Jan 2027. It runs fully offline after the first load. No backend, no accounts, no analytics, no third-party requests.
+Mobile-first PWA for learning travel-level phrases. No alphabets, just what you say and hear. First pack: Japanese, for a Sapporo trip on 30 Jan 2027. It runs fully offline after the first load. No backend, no accounts, no analytics, no third-party requests.
 
 ## What it does
 
-- **Today**: the day's tasks from the 17-week schedule, a streak, and due reviews. First run asks which language to learn.
-- **Review**: spaced repetition (SM-2 variant) for kana and phrases. Cards are text-first. Tap to reveal and hear.
-- **Practice**: flashcards, kana drills (both directions), number and yen drills, menu and sign reading, branching role-play.
+- **Plans**: 1 week (about 25 min a day) or 1 month (about 20 min a day). A plan starts the day you pick it. Switch in Settings.
+- **Today**: the day's tasks from your plan, a streak, and due reviews. First run asks for a language, then a plan.
+- **Review**: spaced repetition (SM-2 variant) for phrases and sight words. Cards are text-first. Tap to reveal and hear. Staff lines ("Do you need a bag?") play audio first and ask what they said.
+- **Practice**: flashcards, sight words, number and yen drills, branching role-play.
 - **Commute mode**: loops phrase, pause, meaning, next. Big buttons. Keeps the screen on.
-- **Progress**: mastery per script and per situation.
+- **Progress**: mastery per situation.
 - **Backup**: JSON export and import in Settings. Progress lives only on the device.
 
 ## Develop
@@ -16,7 +17,7 @@ Mobile-first PWA for learning travel-level phrases. First pack: Japanese, for a 
 ```
 npm ci
 npm run dev        # http://localhost:5173/turisfasih/
-npm test           # SRS, validation, numbers, schedule, streak
+npm test           # SRS, validation, numbers, plans, streak
 npm run validate   # check every pack in /content
 npm run build      # typecheck + validate + production build into dist/
 npm run preview    # serve the production build
@@ -58,11 +59,11 @@ Run on a real phone against the deployed URL.
 **Audio**
 - [ ] Settings → Audio shows no warning, or a clear warning if no Japanese voice is installed.
 - [ ] Test voice speaks Japanese.
-- [ ] Open a kana drill (sound → character). The sound plays.
+- [ ] Open a "what staff say" card. The line plays before you tap.
 
 **Offline (airplane mode)**
 - [ ] With the app loaded once online, turn on airplane mode. Force-close the app and reopen it.
-- [ ] Today, Review, Kana, Numbers, Prices, Reading, Role-play and Commute all open and work.
+- [ ] Today, Review, Phrases, Signs, Numbers, Prices, Role-play and Commute all open and work.
 - [ ] Grade a card. Close and reopen. The due count changed and progress persists.
 
 **Backup and restore**

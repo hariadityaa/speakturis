@@ -18,6 +18,11 @@ try {
   await page.waitForSelector('.welcome button, .bar');
   if (await page.$('.welcome button')) await page.click('.welcome button');
   await page.waitForSelector('.bar');
+  // Then a study plan.
+  await page.waitForSelector('.plans button');
+  await page.click('.plans button');
+  await page.waitForSelector('.list .row');
+  check('Today lists plan tasks', (await page.$$('.list .row')).length > 0);
 
   const routes = ['/review', '/flash', '/flash?tag=food', '/flash?new=1', '/kana', '/kana?ref=all',
     '/numbers', '/prices', '/read', '/dialogue', '/commute'];

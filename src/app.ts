@@ -4,7 +4,7 @@ import { planFor, unlockedIds, type Plan } from './core/schedule';
 import { MASTERED_DAYS, drillReview, isDue, newState, review, type Grade } from './core/srs';
 import { localDate } from './core/dates';
 import { DEFAULTS, cleanSettings, type Settings } from './core/settings';
-import type { Item, Pack, PackMeta } from './core/types';
+import type { Item, Pack, PackMeta, StudyPlan } from './core/types';
 import { getCards, kvGet, progressLang, kvSet, putCard, updateLog, type CardRecord } from './platform/db';
 import { speak, voicesReady } from './platform/tts';
 
@@ -19,7 +19,7 @@ export const app = {
   cards: new Map<string, CardRecord>(),
 };
 
-/** Returns false when no language is chosen yet. */
+/** Returns false when no language is chosen yet. Call `studyPlan()` after to see if a plan is still needed. */
 export async function initApp(): Promise<boolean> {
   app.packs = await listPacks();
   const saved = await kvGet<unknown>('settings');
@@ -45,8 +45,21 @@ export const loadCards = async () => { app.cards = await getCards(app.settings.l
 export const saveSettings = () => kvSet('settings', app.settings);
 
 export const now = () => new Date();
-export const plan = (): Plan => planFor(app.pack, now());
-export const unlocked = () => (() => { const p = plan(); return unlockedIds(app.pack, p.weekNumber, p.studyDay); })();
+
+/** The study plan chosen for the current language, or undefined if none is chosen (or it no longer exists). */
+export function studyPlan(): StudyPlan | undefined {
+  const c = app.settings.plan[app.settings.lang];
+  return c && app.pack.schedule.plans.find((p) => p.id === c.id);
+}
+
+/** Starts a plan today. Review progress is kept. */
+export async function choosePlan(id: string) {
+  app.settings.plan = { ...app.settings.plan, [app.settings.lang]: { id, start: localDate(now()) } };
+  await saveSettings();
+}
+
+export const plan = (): Plan => planFor(app.pack, studyPlan()!, app.settings.plan[app.settings.lang].start, now());
+export const unlocked = () => { const p = plan(); return unlockedIds(app.pack, studyPlan()!, p.weekNumber, p.studyDay); };
 
 /** Items introduced by the schedule that are due now, oldest first. */
 export function dueItems(): Item[] {
