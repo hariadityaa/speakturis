@@ -24,8 +24,24 @@
       "label": "Getting around"
     },
     {
+      "id": "tickets",
+      "label": "Tickets and trains"
+    },
+    {
       "id": "hotel",
       "label": "Hotel"
+    },
+    {
+      "id": "convenience",
+      "label": "Convenience store"
+    },
+    {
+      "id": "health",
+      "label": "Health"
+    },
+    {
+      "id": "emergency",
+      "label": "Emergency"
     },
     {
       "id": "help",

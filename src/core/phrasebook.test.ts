@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { ALL, HEARD, STARRED, SURVIVAL, bookLists, bookPhrases, bookSections, cleanStars, starredFirst, translateUrl } from './phrasebook';
-import type { Pack } from './types';
+import { ALL, HEARD, STARRED, SURVIVAL, bookLists, bookPhrases, bookSections, cleanStars, matchPhrase, starredFirst, translateUrl } from './phrasebook';
+import type { Pack, Phrase } from './types';
 
 const read = (f: string) => JSON.parse(readFileSync(new URL(`../../content/ja/${f}.json`, import.meta.url), 'utf8'));
 const pack = { meta: read('pack'), scripts: read('scripts'), phrases: read('phrases'), numbers: read('numbers'), dialogues: read('dialogues') } as Pack;
@@ -77,6 +77,31 @@ describe('phrasebook', () => {
       expect([...cleanStars([food[0].id, 'gone', 7], pack)]).toEqual([food[0].id]);
       expect(cleanStars('junk', pack).size).toBe(0);
       expect(cleanStars(undefined, pack).size).toBe(0);
+    });
+  });
+
+  describe('search', () => {
+    const lift: Phrase = { id: 'x', native: 'エレベーター', reading: 'erebeetaa', english: 'Where is the elevator?', tags: ['help'], difficulty: 1, keywords: ['lift'] };
+    const thanks: Phrase = { id: 'y', native: '謝謝', reading: 'xièxie', english: 'Thank you', tags: ['greeting'], difficulty: 1 };
+
+    it('matches english, reading, native and keywords', () => {
+      expect(matchPhrase(lift, 'elevator')).toBe(true);
+      expect(matchPhrase(lift, 'erebee')).toBe(true);
+      expect(matchPhrase(lift, 'エレ')).toBe(true);
+      expect(matchPhrase(lift, 'lift')).toBe(true);
+      expect(matchPhrase(lift, 'stairs')).toBe(false);
+    });
+
+    it('ignores pinyin tone marks and case', () => {
+      expect(matchPhrase(thanks, 'xiexie')).toBe(true);
+      expect(matchPhrase(thanks, 'XIÈXIE')).toBe(true);
+      expect(matchPhrase(thanks, 'THANK')).toBe(true);
+    });
+
+    it('needs every word, and an empty query matches all', () => {
+      expect(matchPhrase(lift, 'where lift')).toBe(true);
+      expect(matchPhrase(lift, 'where bus')).toBe(false);
+      expect(matchPhrase(lift, '  ')).toBe(true);
     });
   });
 

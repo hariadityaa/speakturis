@@ -32,6 +32,10 @@ export interface Phrase {
   listen?: boolean;
   /** For a listen phrase: the phrase to say back. */
   replyId?: string;
+  /** Phrasebook only: listed, searchable and starrable, but never a lesson, practice item or part of the learned count. */
+  book?: boolean;
+  /** Lowercase English synonyms the phrasebook search also matches, e.g. ["lift", "elevator"]. */
+  keywords?: string[];
 }
 export interface Phrases { schemaVersion: 1; phrases: Phrase[] }
 
