@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run typecheck && npm run validate && vite build",
+    "build:preview": "BASE_PATH=./ vite build --outDir dist-preview",
     "preview": "vite preview",
     "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.sw.json --noEmit",
     "validate": "tsx scripts/validate.ts",
