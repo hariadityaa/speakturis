@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { parseBackup } from './backup';
 
-const wrap = (data: unknown, version = 1) => JSON.stringify({ app: 'speakturis', version, data });
+const wrap = (data: unknown, version = 1) => JSON.stringify({ app: 'turisfasih', version, data });
 const card = { lang: 'ja', id: 'a', ease: 2.5, interval: 1, due: 1, reps: 1, lapses: 0 };
 
 describe('parseBackup', () => {
@@ -23,6 +23,6 @@ describe('parseBackup', () => {
     ['bad kv', wrap({ cards: [], log: [], kv: [[1, 2]] })],
     ['bad settings value', wrap({ cards: [], log: [], kv: [['settings', { lang: 'ja', rate: 'fast' }]] })],
   ])('rejects %s with a readable error', (_n, text) => {
-    expect(() => parseBackup(text)).toThrow(/^(Not a JSON file|Not a Speakturis backup|Unsupported backup version 2|Backup (is incomplete|has a corrupt (card|log entry)|has corrupt settings))\.$/);
+    expect(() => parseBackup(text)).toThrow(/^(Not a JSON file|Not a Turisfasih backup|Unsupported backup version 2|Backup (is incomplete|has a corrupt (card|log entry)|has corrupt settings))\.$/);
   });
 });

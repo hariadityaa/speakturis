@@ -21,7 +21,7 @@ initPwa();
 function chooseLanguage(mount: HTMLElement): Promise<void> {
   return new Promise((resolve) => {
     mount.replaceChildren(h('main', { class: 'welcome' },
-      h('h1', null, 'Speakturis'),
+      h('h1', null, 'Turisfasih'),
       h('h2', { class: 'sect' }, 'What language do you want to learn?'),
       h('div', { class: 'stack' }, app.packs.map((p) =>
         h('button', { class: 'btn big', onclick: async () => { await setLanguage(p.code); resolve(); } },

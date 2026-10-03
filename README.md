@@ -1,4 +1,4 @@
-# Speakturis
+# Turisfasih
 
 Mobile-first PWA for learning travel-level phrases. First pack: Japanese, for a Sapporo trip on 30 Jan 2027. It runs fully offline after the first load. No backend, no accounts, no analytics, no third-party requests.
 
@@ -69,7 +69,7 @@ Run on a real phone against the deployed URL.
 - [ ] Settings → Export backup. Save the file.
 - [ ] Do a few reviews, then Reset Japanese progress.
 - [ ] Settings → Import backup, pick the file. Progress returns. Today shows the streak and due reviews again.
-- [ ] Import a non-backup JSON. It shows "Not a Speakturis backup." and changes nothing.
+- [ ] Import a non-backup JSON. It shows "Not a Turisfasih backup." and changes nothing.
 
 **Updates**
 - [ ] Push a change to `main`. Reopen the app twice. "Update available" appears. Tap Update. The new version loads.
