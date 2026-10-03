@@ -4,7 +4,7 @@ import { planFor, unlockedIds, type Plan } from './core/schedule';
 import { MASTERED_DAYS, isDue, newState, review, type Grade } from './core/srs';
 import { localDate } from './core/dates';
 import type { Item, Pack, PackMeta } from './core/types';
-import { getCards, kvGet, kvSet, putCard, updateLog, type CardRecord } from './platform/db';
+import { getCards, kvGet, progressLang, kvSet, putCard, updateLog, type CardRecord } from './platform/db';
 import { speak, voicesReady } from './platform/tts';
 
 export interface Settings {
@@ -27,13 +27,17 @@ export const app = {
   cards: new Map<string, CardRecord>(),
 };
 
-export async function initApp() {
+/** Returns false when no language is chosen yet. */
+export async function initApp(): Promise<boolean> {
   app.packs = await listPacks();
   const saved = await kvGet<Settings>('settings');
   app.settings = { ...DEFAULTS, ...saved };
-  if (!app.packs.some((p) => p.code === app.settings.lang)) app.settings.lang = app.packs[0].code;
-  await setLanguage(app.settings.lang, false);
   void voicesReady();
+  if (!app.packs.some((p) => p.code === app.settings.lang)) app.settings.lang = (await progressLang()) ?? '';
+  // First run (or a saved language that no longer exists): leave the pack unloaded so main.ts asks.
+  if (!app.packs.some((p) => p.code === app.settings.lang)) { app.settings.lang = ''; return false; }
+  await setLanguage(app.settings.lang, false);
+  return true;
 }
 
 export async function setLanguage(code: string, persist = true) {

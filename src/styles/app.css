@@ -52,7 +52,7 @@ h2.sect { font-size: .85rem; text-transform: uppercase; letter-spacing: .06em; c
 .btn[disabled] { opacity: .85; }
 .stack { display: grid; gap: 10px; margin: 12px 0; }
 
-.hero { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 8px 0; }
+.hero { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin: 8px 0; }
 .stat { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px 8px; text-align: center; }
 .stat b { display: block; font-size: 1.8rem; line-height: 1.1; } .stat small { color: var(--muted); font-size: .75rem; }
 
@@ -109,3 +109,4 @@ select, input[type=range] { width: 100%; min-height: 48px; font: inherit; color:
 input[type=range] { padding: 0; border: 0; background: none; } input[type=checkbox] { width: 28px; height: 28px; }
 .warn { background: var(--warn-bg); color: var(--warn-text); padding: 12px 14px; border-radius: 12px; margin: 8px 0; font-weight: 600; }
 @media (prefers-reduced-motion: reduce) { .btn:active { transform: none; } }
+.welcome { display: block; padding: 48px 16px; max-width: 560px; margin: 0 auto; }

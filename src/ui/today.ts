@@ -33,14 +33,12 @@ export const today: Screen = async (root) => {
   const s = streak(active, t, app.pack.meta.restDay);
   const due = dueItems().length;
   const fresh = newItems().length;
-  const { trip } = app.pack.meta;
 
   root.append(
     header(`${app.pack.meta.nativeName}`),
     h('section', { class: 'hero' },
       h('div', { class: 'stat' }, h('b', null, s), h('small', null, 'day streak')),
-      h('div', { class: 'stat' }, h('b', null, due), h('small', null, 'due reviews')),
-      h('div', { class: 'stat' }, h('b', null, Math.max(0, p.daysToTrip)), h('small', null, `days to ${trip.place}`))),
+      h('div', { class: 'stat' }, h('b', null, due), h('small', null, 'due reviews'))),
   );
 
   if (due > 0) {

@@ -1,5 +1,5 @@
 import { h } from './dom';
-import { applyUpdate, canInstall, install, isStandalone, onPwaChange, updateAvailable } from '../platform/pwa';
+import { applyUpdate, onPwaChange, updateAvailable } from '../platform/pwa';
 
 const tabs: [string, string, string][] = [
   ['/', 'Today', '◉'], ['/practice', 'Practice', '✎'], ['/progress', 'Progress', '▤'], ['/settings', 'Settings', '⚙'],
@@ -20,20 +20,11 @@ export function buildShell(): HTMLElement {
   };
   document.addEventListener('route', (e) => syncNav((e as CustomEvent<string>).detail));
 
-  const dismissed = () => { try { return localStorage.getItem('install-dismissed') === '1'; } catch { return false; } };
   const renderBanners = () => {
     banner.replaceChildren();
     if (updateAvailable()) {
       banner.append(h('div', { class: 'banner' }, h('span', null, 'Update available'),
         h('button', { class: 'btn small', onclick: () => applyUpdate() }, 'Update')));
-    }
-    if (!isStandalone() && canInstall() && !dismissed()) {
-      banner.append(h('div', { class: 'banner' }, h('span', null, 'Install for offline use'),
-        h('button', { class: 'btn small', onclick: () => install() }, 'Install'),
-        h('button', { class: 'btn small ghost', 'aria-label': 'Dismiss', onclick: () => {
-          try { localStorage.setItem('install-dismissed', '1'); } catch { /* ignore */ }
-          renderBanners();
-        } }, '✕')));
     }
   };
   onPwaChange(renderBanners);
