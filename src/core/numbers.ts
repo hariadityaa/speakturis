@@ -8,7 +8,9 @@ import type { Numbers, Word } from './types';
  *  2. Otherwise take the largest multiplier that fits (e.g. 1000), split the number into
  *     quantity x multiplier + remainder, and build each part.
  *  3. `overrides` replaces irregular groups such as 300 or 8000.
- *  4. `omitOne` drops the quantity when it is 1 (e.g. "100", not "1 100").
+ *  4. `omitOne` drops the quantity when it is 1 (e.g. "100", not "1 100"). With "leading" it does so
+ *     only at the start of the number (Mandarin 十 for 10, but 一百一十 for 110).
+ *  5. `zero`, when set, marks a skipped place (Mandarin 一百零五 for 105).
  */
 export function composeNumber(n: number, data: Numbers): Word {
   if (!Number.isInteger(n) || n < 0) throw new Error(`cannot compose ${n}`);
@@ -21,7 +23,7 @@ export function composeNumber(n: number, data: Numbers): Word {
   };
 }
 
-function group(n: number, data: Numbers): Word[] {
+function group(n: number, data: Numbers, leading = true): Word[] {
   const exact = data.words[String(n)];
   if (exact) return [exact];
   const multipliers = [...data.multipliers].sort((a, b) => b.value - a.value);
@@ -36,7 +38,7 @@ function group(n: number, data: Numbers): Word[] {
     out.push(irregular);
   } else {
     const mw: Word = { native: m.native, reading: m.reading, speak: m.speak };
-    if (q === 1 && m.omitOne) out.push(mw);
+    if (q === 1 && (m.omitOne === true || (m.omitOne === 'leading' && leading))) out.push(mw);
     else {
       // quantity + multiplier read as one unit, e.g. ni + hyaku -> nihyaku
       const qw = group(q, data);
@@ -47,7 +49,8 @@ function group(n: number, data: Numbers): Word[] {
       });
     }
   }
-  if (rest > 0) out.push(...group(rest, data));
+  if (rest > 0 && data.zero && rest < m.value / 10) out.push(data.zero);
+  if (rest > 0) out.push(...group(rest, data, false));
   return out;
 }
 

@@ -57,7 +57,7 @@ function play(root: HTMLElement, d: Dialogue, back: string) {
           log.append(bubble('me', t, r.good ? undefined : (r.feedback ?? 'Not the best reply.')));
           choicesEl.replaceChildren();
           void say(t.speak).then(() => show(r.next));
-        } }, h('span', { class: 'jp' }, t.native), h('small', null, t.english));
+        } }, h('span', { class: 'jp' }, t.native), h('span', { class: 'say-it' }, t.reading), h('small', null, t.english));
       }));
     }
     choicesEl.scrollIntoView?.({ block: 'end', behavior: 'smooth' });

@@ -24,7 +24,7 @@ function chooseLanguage(mount: HTMLElement): Promise<void> {
       h('h2', { class: 'sect' }, 'What language do you want to learn?'),
       h('div', { class: 'stack' }, app.packs.map((p) =>
         h('button', { class: 'btn big', onclick: async () => { await setLanguage(p.code); resolve(); } },
-          h('span', { class: 'jp' }, p.nativeName), h('small', null, ` ${p.name}`))))));
+          h('span', { class: 'native', 'data-pack': p.code }, p.nativeName), h('small', null, ` ${p.name}`))))));
   });
 }
 

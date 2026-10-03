@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "range": {
+    "min": 0,
+    "max": 10000
+  },
+  "words": {
+    "0": {
+      "native": "零",
+      "reading": "líng"
+    },
+    "1": {
+      "native": "一",
+      "reading": "yī"
+    },
+    "2": {
+      "native": "二",
+      "reading": "èr"
+    },
+    "3": {
+      "native": "三",
+      "reading": "sān"
+    },
+    "4": {
+      "native": "四",
+      "reading": "sì"
+    },
+    "5": {
+      "native": "五",
+      "reading": "wǔ"
+    },
+    "6": {
+      "native": "六",
+      "reading": "liù"
+    },
+    "7": {
+      "native": "七",
+      "reading": "qī"
+    },
+    "8": {
+      "native": "八",
+      "reading": "bā"
+    },
+    "9": {
+      "native": "九",
+      "reading": "jiǔ"
+    }
+  },
+  "multipliers": [
+    {
+      "value": 10,
+      "native": "十",
+      "reading": "shí",
+      "omitOne": "leading"
+    },
+    {
+      "value": 100,
+      "native": "百",
+      "reading": "bǎi",
+      "omitOne": false
+    },
+    {
+      "value": 1000,
+      "native": "千",
+      "reading": "qiān",
+      "omitOne": false
+    },
+    {
+      "value": 10000,
+      "native": "萬",
+      "reading": "wàn",
+      "omitOne": false
+    }
+  ],
+  "overrides": {
+    "200": {
+      "native": "兩百",
+      "reading": "liǎngbǎi"
+    },
+    "2000": {
+      "native": "兩千",
+      "reading": "liǎngqiān"
+    }
+  },
+  "zero": {
+    "native": "零",
+    "reading": "líng"
+  },
+  "separator": " ",
+  "priceDrill": {
+    "min": 10,
+    "max": 3000,
+    "step": 5
+  }
+}

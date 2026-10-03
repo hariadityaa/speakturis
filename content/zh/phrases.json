@@ -1,0 +1,859 @@
+{
+  "schemaVersion": 1,
+  "phrases": [
+    {
+      "id": "p-buhaoyisi",
+      "native": "不好意思",
+      "reading": "bù hǎoyìsi",
+      "english": "Excuse me / sorry",
+      "tags": [
+        "greeting",
+        "help"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-xiexie",
+      "native": "謝謝",
+      "reading": "xièxie",
+      "english": "Thank you",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-hao",
+      "native": "好",
+      "reading": "hǎo",
+      "english": "OK / yes, sure",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-zhege",
+      "native": "我要這個",
+      "reading": "wǒ yào zhège",
+      "english": "This one, please",
+      "tags": [
+        "food",
+        "shopping"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-qingwen",
+      "native": "請問",
+      "reading": "qǐngwèn",
+      "english": "Excuse me, may I ask (before a question)",
+      "tags": [
+        "greeting",
+        "help"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-nihao",
+      "native": "你好",
+      "reading": "nǐ hǎo",
+      "english": "Hello",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "h-huanying",
+      "native": "歡迎光臨",
+      "reading": "huānyíng guānglín",
+      "english": "Welcome (staff greeting, no reply needed)",
+      "tags": [
+        "food",
+        "shopping"
+      ],
+      "difficulty": 1,
+      "listen": true
+    },
+    {
+      "id": "p-duoshao",
+      "native": "多少錢？",
+      "reading": "duōshǎo qián?",
+      "english": "How much is it?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-tingbudong",
+      "native": "我聽不懂",
+      "reading": "wǒ tīng bù dǒng",
+      "english": "I don't understand",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-yingwen",
+      "native": "你會說英文嗎？",
+      "reading": "nǐ huì shuō Yīngwén ma?",
+      "english": "Do you speak English?",
+      "tags": [
+        "help",
+        "greeting"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "p-cesuo",
+      "native": "廁所在哪裡？",
+      "reading": "cèsuǒ zài nǎlǐ?",
+      "english": "Where is the toilet?",
+      "tags": [
+        "help",
+        "transport"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-jiezhang",
+      "native": "我要結帳",
+      "reading": "wǒ yào jiézhàng",
+      "english": "Bill, please / I'd like to pay",
+      "tags": [
+        "food",
+        "shopping"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-shuaka",
+      "native": "可以刷卡嗎？",
+      "reading": "kěyǐ shuākǎ ma?",
+      "english": "Can I use a card?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-buyong",
+      "native": "不用了，謝謝",
+      "reading": "bú yòng le, xièxie",
+      "english": "No, thanks",
+      "tags": [
+        "greeting",
+        "help"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "h-daizi",
+      "native": "需要袋子嗎？",
+      "reading": "xūyào dàizi ma?",
+      "english": "Do you need a bag?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 1,
+      "replyId": "p-bu-daizi",
+      "listen": true
+    },
+    {
+      "id": "p-bu-daizi",
+      "native": "不用袋子",
+      "reading": "bú yòng dàizi",
+      "english": "I don't need a bag",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "s-cesuo",
+      "native": "廁所",
+      "reading": "cèsuǒ",
+      "english": "Toilet",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "h-jiwei",
+      "native": "幾位？",
+      "reading": "jǐ wèi?",
+      "english": "How many people?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "replyId": "p-liangwei",
+      "listen": true
+    },
+    {
+      "id": "p-liangwei",
+      "native": "兩位",
+      "reading": "liǎng wèi",
+      "english": "Two people",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "h-neiyong",
+      "native": "內用還是外帶？",
+      "reading": "nèiyòng háishì wàidài?",
+      "english": "Eat in or take away?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "replyId": "p-waidai",
+      "listen": true
+    },
+    {
+      "id": "p-waidai",
+      "native": "外帶",
+      "reading": "wàidài",
+      "english": "Take away, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-neiyong",
+      "native": "內用",
+      "reading": "nèiyòng",
+      "english": "Eat in, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-shui",
+      "native": "請給我一杯水",
+      "reading": "qǐng gěi wǒ yì bēi shuǐ",
+      "english": "Water, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-caidan",
+      "native": "有英文菜單嗎？",
+      "reading": "yǒu Yīngwén càidān ma?",
+      "english": "Is there an English menu?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "h-diancan",
+      "native": "要點什麼？",
+      "reading": "yào diǎn shénme?",
+      "english": "What would you like to order?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "replyId": "p-zhege",
+      "listen": true
+    },
+    {
+      "id": "s-chukou",
+      "native": "出口",
+      "reading": "chūkǒu",
+      "english": "Exit",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "s-nan",
+      "native": "男",
+      "reading": "nán",
+      "english": "Men",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "s-nv",
+      "native": "女",
+      "reading": "nǚ",
+      "english": "Women",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-zaishuo",
+      "native": "請再說一次",
+      "reading": "qǐng zài shuō yí cì",
+      "english": "One more time, please (repeat that)",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-mandian",
+      "native": "請說慢一點",
+      "reading": "qǐng shuō màn yìdiǎn",
+      "english": "Slowly, please",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "h-weibo",
+      "native": "需要微波嗎？",
+      "reading": "xūyào wéibō ma?",
+      "english": "Shall I microwave it?",
+      "tags": [
+        "shopping",
+        "food"
+      ],
+      "difficulty": 1,
+      "replyId": "p-weibo",
+      "listen": true
+    },
+    {
+      "id": "h-zaiju",
+      "native": "有載具嗎？",
+      "reading": "yǒu zàijù ma?",
+      "english": "Do you have an e-receipt carrier? (visitors say no)",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "replyId": "p-meiyou",
+      "listen": true
+    },
+    {
+      "id": "h-shaodeng",
+      "native": "請稍等",
+      "reading": "qǐng shāo děng",
+      "english": "One moment, please",
+      "tags": [
+        "food",
+        "shopping",
+        "hotel"
+      ],
+      "difficulty": 1,
+      "listen": true
+    },
+    {
+      "id": "p-haochi",
+      "native": "很好吃",
+      "reading": "hěn hǎochī",
+      "english": "It's delicious",
+      "tags": [
+        "food",
+        "greeting"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-jieyun",
+      "native": "捷運站在哪裡？",
+      "reading": "jiéyùn zhàn zài nǎlǐ?",
+      "english": "Where is the MRT station?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-dizhi",
+      "native": "請到這個地址",
+      "reading": "qǐng dào zhège dìzhǐ",
+      "english": "To this address, please (taxi)",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-bangmang",
+      "native": "請幫幫我",
+      "reading": "qǐng bāngbang wǒ",
+      "english": "Please help me",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-ruzhu",
+      "native": "我要辦入住",
+      "reading": "wǒ yào bàn rùzhù",
+      "english": "Check-in, please",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-dingfang",
+      "native": "我有訂房",
+      "reading": "wǒ yǒu dìngfáng",
+      "english": "I have a room booked",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "h-dingwei",
+      "native": "有訂位嗎？",
+      "reading": "yǒu dìngwèi ma?",
+      "english": "Do you have a booking?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "replyId": "p-dingwei",
+      "listen": true
+    },
+    {
+      "id": "p-dingwei",
+      "native": "我有訂位",
+      "reading": "wǒ yǒu dìngwèi",
+      "english": "I have a table booked",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "s-rukou",
+      "native": "入口",
+      "reading": "rùkǒu",
+      "english": "Entrance",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "s-jieyun",
+      "native": "捷運",
+      "reading": "jiéyùn",
+      "english": "MRT (metro)",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-zaoan",
+      "native": "早安",
+      "reading": "zǎo'ān",
+      "english": "Good morning",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-zheshi",
+      "native": "這是什麼？",
+      "reading": "zhè shì shénme?",
+      "english": "What is this?",
+      "tags": [
+        "food",
+        "shopping"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-tuijian",
+      "native": "有什麼推薦？",
+      "reading": "yǒu shénme tuījiàn?",
+      "english": "What do you recommend?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-laoban",
+      "native": "老闆！",
+      "reading": "lǎobǎn!",
+      "english": "Boss! (to call a stall owner)",
+      "tags": [
+        "food",
+        "greeting"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-butaila",
+      "native": "不要辣",
+      "reading": "bú yào là",
+      "english": "Not spicy, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-bantang",
+      "native": "半糖少冰",
+      "reading": "bàn táng shǎo bīng",
+      "english": "Half sugar, less ice (drinks)",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "h-tiandu",
+      "native": "甜度冰塊呢？",
+      "reading": "tiándù bīngkuài ne?",
+      "english": "Sugar and ice level?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "replyId": "p-bantang",
+      "listen": true
+    },
+    {
+      "id": "p-chisu",
+      "native": "我吃素",
+      "reading": "wǒ chī sù",
+      "english": "I'm vegetarian",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-pijiu",
+      "native": "我要一瓶台灣啤酒",
+      "reading": "wǒ yào yì píng Táiwān píjiǔ",
+      "english": "A Taiwan Beer, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "p-zaiyige",
+      "native": "再一個",
+      "reading": "zài yí ge",
+      "english": "One more, please",
+      "tags": [
+        "food",
+        "shopping"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "h-fukuan",
+      "native": "怎麼付款？",
+      "reading": "zěnme fùkuǎn?",
+      "english": "How will you pay?",
+      "tags": [
+        "shopping",
+        "food"
+      ],
+      "difficulty": 1,
+      "replyId": "p-shuaka",
+      "listen": true
+    },
+    {
+      "id": "h-zhebian",
+      "native": "這邊請",
+      "reading": "zhèbiān qǐng",
+      "english": "This way, please",
+      "tags": [
+        "food",
+        "hotel"
+      ],
+      "difficulty": 1,
+      "listen": true
+    },
+    {
+      "id": "p-weibo",
+      "native": "請幫我微波",
+      "reading": "qǐng bāng wǒ wéibō",
+      "english": "Please heat it up",
+      "tags": [
+        "shopping",
+        "food"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-meiyou",
+      "native": "沒有",
+      "reading": "méiyǒu",
+      "english": "No, I don't have one",
+      "tags": [
+        "shopping",
+        "greeting"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-fapiao",
+      "native": "可以給我收據嗎？",
+      "reading": "kěyǐ gěi wǒ shōujù ma?",
+      "english": "Receipt, please",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "p-kankan",
+      "native": "我只是看看",
+      "reading": "wǒ zhǐshì kànkan",
+      "english": "I'm just looking",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-milu",
+      "native": "我迷路了",
+      "reading": "wǒ mílù le",
+      "english": "I'm lost",
+      "tags": [
+        "help",
+        "transport"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-dengyixia",
+      "native": "等一下",
+      "reading": "děng yíxià",
+      "english": "Wait a moment, please",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "s-tui",
+      "native": "推",
+      "reading": "tuī",
+      "english": "Push",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "s-la",
+      "native": "拉",
+      "reading": "lā",
+      "english": "Pull",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-xinjiapo",
+      "native": "我從新加坡來",
+      "reading": "wǒ cóng Xīnjiāpō lái",
+      "english": "I'm from Singapore",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-kuaizi",
+      "native": "請給我筷子",
+      "reading": "qǐng gěi wǒ kuàizi",
+      "english": "Chopsticks, please",
+      "tags": [
+        "food",
+        "shopping"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-fenkai",
+      "native": "分開付",
+      "reading": "fēnkāi fù",
+      "english": "Separate bills, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-tuishui",
+      "native": "可以退稅嗎？",
+      "reading": "kěyǐ tuìshuì ma?",
+      "english": "Can I get tax-free?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "p-maipiao",
+      "native": "在哪裡買票？",
+      "reading": "zài nǎlǐ mǎi piào?",
+      "english": "Where can I buy a ticket?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-gongche",
+      "native": "公車站在哪裡？",
+      "reading": "gōngchē zhàn zài nǎlǐ?",
+      "english": "Where is the bus stop?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-xiache",
+      "native": "我在這裡下車",
+      "reading": "wǒ zài zhèlǐ xià chē",
+      "english": "I'll get off here",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-jiazhi",
+      "native": "悠遊卡加值",
+      "reading": "yōuyóukǎ jiāzhí",
+      "english": "Top up my EasyCard, please",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "p-jicun",
+      "native": "可以寄放行李嗎？",
+      "reading": "kěyǐ jìfàng xíngli ma?",
+      "english": "Can you keep my luggage?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "p-tuifang",
+      "native": "幾點退房？",
+      "reading": "jǐ diǎn tuìfáng?",
+      "english": "What time is check-out?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-wifi",
+      "native": "Wi-Fi 密碼是什麼？",
+      "reading": "Wi-Fi mìmǎ shì shénme?",
+      "english": "What's the Wi-Fi password?",
+      "tags": [
+        "hotel",
+        "food"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-paizhao",
+      "native": "可以拍照嗎？",
+      "reading": "kěyǐ pāizhào ma?",
+      "english": "May I take a photo?",
+      "tags": [
+        "help",
+        "shopping"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "s-yingye",
+      "native": "營業中",
+      "reading": "yíngyè zhōng",
+      "english": "Open",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "s-xiuxi",
+      "native": "休息中",
+      "reading": "xiūxí zhōng",
+      "english": "Closed (on a break)",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "s-jinyan",
+      "native": "禁止吸菸",
+      "reading": "jìnzhǐ xīyān",
+      "english": "No smoking",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "s-yeshi",
+      "native": "夜市",
+      "reading": "yèshì",
+      "english": "Night market",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "s-zhenzhu",
+      "native": "珍珠奶茶",
+      "reading": "zhēnzhū nǎichá",
+      "english": "Bubble tea",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "s-niurou",
+      "native": "牛肉麵",
+      "reading": "niúròu miàn",
+      "english": "Beef noodle soup",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1
+    }
+  ]
+}

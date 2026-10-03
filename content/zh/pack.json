@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "code": "zh",
+  "name": "Mandarin",
+  "nativeName": "中文",
+  "ttsLocale": "zh-TW",
+  "readingSystem": "pinyin",
+  "scriptSystems": [],
+  "situations": [
+    {
+      "id": "greeting",
+      "label": "Basics"
+    },
+    {
+      "id": "food",
+      "label": "Food and drink"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "transport",
+      "label": "Getting around"
+    },
+    {
+      "id": "hotel",
+      "label": "Hotel"
+    },
+    {
+      "id": "help",
+      "label": "Help"
+    },
+    {
+      "id": "signs",
+      "label": "Signs"
+    }
+  ],
+  "survival": [
+    "p-buhaoyisi",
+    "p-xiexie",
+    "p-zhege",
+    "p-duoshao",
+    "p-shuaka",
+    "p-jiezhang",
+    "p-cesuo",
+    "p-yingwen",
+    "p-tingbudong",
+    "p-buyong"
+  ],
+  "currency": {
+    "code": "TWD",
+    "symbol": "NT$",
+    "position": "prefix",
+    "decimals": 0,
+    "unit": {
+      "native": "塊",
+      "reading": "kuài"
+    }
+  },
+  "restDay": 0
+}

@@ -2,7 +2,9 @@ import { app, say } from '../app';
 import { ALL, HEARD, bookLists, bookPhrases } from '../core/phrasebook';
 import type { Phrase } from '../core/types';
 import { stopSpeaking } from '../platform/tts';
+import { keepAwake } from '../platform/wake';
 import { h, header, type Screen } from './dom';
+import { langSwitch } from './lang';
 
 const byId = (id: string | null | undefined) => app.pack.phrases.phrases.find((p) => p.id === id);
 /** Only in-app paths are accepted as a back target. */
@@ -10,6 +12,8 @@ const safeBack = (b: string | null) => (b?.startsWith('/') && !b.startsWith('//'
 const showLink = (p: Phrase, list: string, back?: string) =>
   `#/show?id=${p.id}&list=${list}${back ? `&back=${encodeURIComponent(back)}` : ''}`;
 const play = (p: Phrase) => void say(p.speak ?? p.native, p.audioSrc);
+/** Lowercase without accents, so "xiexie" finds xièxie. */
+const fold = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 
 /**
  * A phrase row. Tap the text to open it full size, or tap 🔊 to hear it.
@@ -37,12 +41,12 @@ export const phrasebookScreen: Screen = (root, q) => {
   const note = h('p', { class: 'note' });
 
   const paint = () => {
-    const words = search.value.trim().toLowerCase();
+    const words = fold(search.value.trim());
     const back = `/phrasebook?list=${key}`;
     chips.replaceChildren(...lists.map((l) =>
       h('button', { class: `chip${l.key === key ? ' on' : ''}`, onclick: () => { key = l.key; history.replaceState(null, '', `#${`/phrasebook?list=${key}`}`); paint(); } }, l.label)));
     note.textContent = key === HEARD ? 'What staff say to you, and what to say back.' : 'Tap a phrase to show it full size, or tap 🔊 to hear it.';
-    const hit = (p: Phrase) => !words || `${p.english} ${p.reading} ${p.native}`.toLowerCase().includes(words);
+    const hit = (p: Phrase) => !words || fold(`${p.english} ${p.reading} ${p.native}`).includes(words);
     list.replaceChildren();
     if (words || key !== ALL) {
       const found = bookPhrases(app.pack, key).filter(hit);
@@ -58,7 +62,7 @@ export const phrasebookScreen: Screen = (root, q) => {
     if (heard.length) list.append(h('h2', { class: 'sect' }, 'They say'), h('ul', { class: 'list' }, heard.map((p) => phraseRow(p, HEARD, back))));
   };
 
-  root.append(header('Phrasebook'), note, search, chips, list);
+  root.append(header('Phrasebook', undefined, langSwitch()), note, search, chips, list);
   paint();
   chips.querySelector('.on')?.scrollIntoView?.({ block: 'nearest', inline: 'center' });
   return stopSpeaking;
@@ -72,6 +76,8 @@ export const showScreen: Screen = (root, q) => {
   const label = [{ key: ALL, label: 'Phrasebook' }, ...bookLists(app.pack)].find((l) => l.key === list)?.label ?? 'Phrasebook';
   root.append(header(label, back));
   if (!p) { root.append(h('p', { class: 'note' }, 'Phrase not found.')); return; }
+  // Staff may take a while to read it. Do not let the screen dim.
+  const release = keepAwake();
 
   const phrases = bookPhrases(app.pack, list);
   const i = phrases.findIndex((x) => x.id === p.id);
@@ -97,5 +103,5 @@ export const showScreen: Screen = (root, q) => {
       h('a', { class: 'btn', href: step(-1) }, '‹ Previous'),
       h('a', { class: 'btn', href: step(1) }, 'Next ›')));
   }
-  return stopSpeaking;
+  return () => { release(); stopSpeaking(); };
 };

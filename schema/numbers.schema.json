@@ -91,7 +91,8 @@
             "minLength": 1
           },
           "omitOne": {
-            "type": "boolean"
+            "description": "Drop the quantity 1 before this multiplier. \"leading\" drops it only at the start of the number.",
+            "enum": [true, false, "leading"]
           }
         }
       }
@@ -124,6 +125,17 @@
         }
       },
       "additionalProperties": false
+    },
+    "zero": {
+      "type": "object",
+      "description": "Word said where a place is skipped, e.g. Mandarin 零 in 一百零五.",
+      "required": ["native", "reading"],
+      "additionalProperties": false,
+      "properties": {
+        "native": { "type": "string", "minLength": 1 },
+        "reading": { "type": "string", "minLength": 1 },
+        "speak": { "type": "string", "minLength": 1 }
+      }
     },
     "separator": {
       "type": "string"
