@@ -1,14 +1,17 @@
 import { buildItems } from './core/items';
 import { listPacks, loadPack } from './core/packs';
-import { planFor, unlockedIds, type Plan } from './core/schedule';
-import { MASTERED_DAYS, drillReview, isDue, newState, review, type Grade } from './core/srs';
-import { localDate } from './core/dates';
+import { MASTERED_DAYS, drillReview, isDue, newState, review, startOfDay, type Grade } from './core/srs';
 import { DEFAULTS, cleanSettings, type Settings } from './core/settings';
-import type { Item, Pack, PackMeta, StudyPlan } from './core/types';
-import { getCards, kvGet, progressLang, kvSet, putCard, updateLog, type CardRecord } from './platform/db';
+import type { Item, Pack, PackMeta } from './core/types';
+import { getCards, kvGet, kvSet, putCard, type CardRecord } from './platform/db';
 import { speak, voicesReady } from './platform/tts';
 
 export type { Settings };
+
+/** Longest gap between reviews, so nothing disappears for months. */
+const MAX_INTERVAL_DAYS = 30;
+/** Most cards to bring back in one lesson. The rest wait for the next one. */
+const MAX_DUE = 20;
 
 export const app = {
   settings: { ...DEFAULTS } as Settings,
@@ -19,15 +22,18 @@ export const app = {
   cards: new Map<string, CardRecord>(),
 };
 
-/** Returns false when no language is chosen yet. Call `studyPlan()` after to see if a plan is still needed. */
+/** Returns false when no language is chosen yet and there is more than one to choose from. */
 export async function initApp(): Promise<boolean> {
   app.packs = await listPacks();
   const saved = await kvGet<unknown>('settings');
   app.settings = cleanSettings(saved);
   void voicesReady();
-  if (!app.packs.some((p) => p.code === app.settings.lang)) app.settings.lang = (await progressLang()) ?? '';
-  // First run (or a saved language that no longer exists): leave the pack unloaded so main.ts asks.
-  if (!app.packs.some((p) => p.code === app.settings.lang)) { app.settings.lang = ''; return false; }
+  if (!app.packs.some((p) => p.code === app.settings.lang)) {
+    // With one pack there is nothing to ask.
+    if (app.packs.length !== 1) { app.settings.lang = ''; return false; }
+    await setLanguage(app.packs[0].code);
+    return true;
+  }
   await setLanguage(app.settings.lang, false);
   return true;
 }
@@ -44,65 +50,53 @@ export async function setLanguage(code: string, persist = true) {
 export const loadCards = async () => { app.cards = await getCards(app.settings.lang); };
 export const saveSettings = () => kvSet('settings', app.settings);
 
-export const now = () => new Date();
+/** Phrases in pack order, which is most useful first. */
+export const phrases = (): Item[] => app.items.filter((i) => i.kind === 'phrase');
+export const situationLabel = (id: string) => app.pack.meta.situations.find((s) => s.id === id)?.label ?? id;
 
-/** The study plan chosen for the current language, or undefined if none is chosen (or it no longer exists). */
-export function studyPlan(): StudyPlan | undefined {
-  const c = app.settings.plan[app.settings.lang];
-  return c && app.pack.schedule.plans.find((p) => p.id === c.id);
-}
-
-/** Starts a plan today. Review progress is kept. */
-export async function choosePlan(id: string) {
-  app.settings.plan = { ...app.settings.plan, [app.settings.lang]: { id, start: localDate(now()) } };
-  await saveSettings();
-}
-
-export const plan = (): Plan => planFor(app.pack, studyPlan()!, app.settings.plan[app.settings.lang].start, now());
-export const unlocked = () => { const p = plan(); return unlockedIds(app.pack, studyPlan()!, p.weekNumber, p.studyDay); };
-
-/** Items introduced by the schedule that are due now, oldest first. */
-export function dueItems(): Item[] {
+/** Phrases studied before that are due again, oldest first. */
+export function dueItems(pool: Item[] = phrases()): Item[] {
   const t = Date.now();
-  const open = unlocked();
-  return [...app.cards.values()]
-    .filter((c) => open.has(c.id) && isDue(c, t))
-    .sort((a, b) => a.due - b.due)
-    .map((c) => app.itemById.get(c.id)!)
-    .filter(Boolean);
+  return pool.filter((i) => { const c = app.cards.get(i.id); return c && isDue(c, t); })
+    .sort((a, b) => app.cards.get(a.id)!.due - app.cards.get(b.id)!.due);
 }
 
-/** Introduced but never studied, in schedule order. */
-export function newItems(): Item[] {
-  const open = unlocked();
-  return app.items.filter((i) => open.has(i.id) && !app.cards.has(i.id));
+/** Phrases never studied, most useful first. */
+export const newItems = (pool: Item[] = phrases()): Item[] => pool.filter((i) => !app.cards.has(i.id));
+
+/** Remembered at least once and not forgotten since. */
+export const isLearned = (id: string) => (app.cards.get(id)?.interval ?? 0) >= 1;
+
+/** New phrases first studied today. */
+const newToday = () => { const t = startOfDay(Date.now()); return [...app.cards.values()].filter((c) => (c.added ?? 0) >= t).length; };
+
+/**
+ * Cards due again, then new ones. The daily lesson stops adding new phrases once the day's limit
+ * is reached. A topic the learner opens on purpose (`daily` false) always offers a few.
+ */
+export function lessonItems(pool: Item[] = phrases(), daily = true): { due: Item[]; fresh: Item[] } {
+  const room = daily ? Math.max(0, app.settings.newPerSession - newToday()) : app.settings.newPerSession;
+  return { due: dueItems(pool).slice(0, MAX_DUE), fresh: newItems(pool).slice(0, room) };
 }
 
 /** Records a grade and schedules the next review. */
 export async function grade(item: Item, g: Grade) {
   const t = Date.now();
   const prev = app.cards.get(item.id);
-  const state = review(prev ?? newState(t), g, t, { maxIntervalDays: Math.max(1, plan().daysToTrip) });
-  const rec: CardRecord = { lang: app.settings.lang, id: item.id, ...state };
+  const state = review(prev ?? newState(t), g, t, { maxIntervalDays: MAX_INTERVAL_DAYS });
+  const rec: CardRecord = { lang: app.settings.lang, id: item.id, added: prev?.added ?? t, ...state };
   app.cards.set(item.id, rec);
   await putCard(rec);
-  await updateLog(app.settings.lang, localDate(now()), (l) => { l.reviews++; });
 }
 
 /** Records a drill answer. Right answers on cards that are not due do not move the schedule. */
 export async function gradeDrill(item: Item, correct: boolean) {
-  const t = Date.now();
-  const state = drillReview(app.cards.get(item.id), correct, t, { maxIntervalDays: Math.max(1, plan().daysToTrip) });
-  if (state) {
-    const rec: CardRecord = { lang: app.settings.lang, id: item.id, ...state };
-    app.cards.set(item.id, rec);
-    await putCard(rec);
-  }
-  await updateLog(app.settings.lang, localDate(now()), (l) => { l.reviews++; });
+  const state = drillReview(app.cards.get(item.id), correct, Date.now(), { maxIntervalDays: MAX_INTERVAL_DAYS });
+  if (!state) return;
+  const rec: CardRecord = { lang: app.settings.lang, id: item.id, ...state };
+  app.cards.set(item.id, rec);
+  await putCard(rec);
 }
-
-export const markTaskDone = (key: string) =>
-  updateLog(app.settings.lang, localDate(now()), (l) => { if (!l.done.includes(key)) l.done.push(key); });
 
 export function say(text: string, audioSrc?: string) {
   return speak(text, {

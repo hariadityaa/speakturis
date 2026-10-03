@@ -1,4 +1,4 @@
-import { app, markTaskDone, say } from '../app';
+import { app, say, situationLabel } from '../app';
 import { shuffle } from '../core/items';
 import type { Dialogue, DialogueReply } from '../core/types';
 import { stopSpeaking } from '../platform/tts';
@@ -15,22 +15,23 @@ const resolve = (r: DialogueReply) => {
 export const dialogueScreen: Screen = (root, q) => {
   const all = app.pack.dialogues.dialogues;
   const d = all.find((x) => x.id === q.get('id'));
-  const taskKey = q.get('task');
+  // A topic page links here with its own back target. Only in-app paths are accepted.
+  const back = q.get('back')?.startsWith('/') ? q.get('back')! : '/dialogue';
 
   if (!d) {
-    root.append(header('Role-play', '/practice'),
-      h('div', { class: 'stack' }, all.map((x) => h('a', { class: 'btn', href: `#/dialogue?id=${x.id}` }, h('span', null, x.title), h('small', null, ` ${x.situation}`)))));
+    root.append(header('Conversations', '/'),
+      h('div', { class: 'stack' }, all.map((x) => h('a', { class: 'btn', href: `#/dialogue?id=${x.id}` }, h('span', null, x.title), h('small', null, ` ${situationLabel(x.situation)}`)))));
     return;
   }
-  play(root, d, taskKey);
+  play(root, d, back);
   return stopSpeaking;
 };
 
-function play(root: HTMLElement, d: Dialogue, taskKey: string | null) {
+function play(root: HTMLElement, d: Dialogue, back: string) {
   const log = h('div', { class: 'chat', 'aria-live': 'polite' });
   const choicesEl = h('div', { class: 'choices col' });
   let good = 0, turns = 0;
-  root.replaceChildren(...[header(d.title, taskKey ? '/' : '/dialogue'), d.intro ? h('p', { class: 'note' }, d.intro) : null, log, choicesEl].filter((x): x is HTMLElement => !!x));
+  root.replaceChildren(...[header(d.title, back), d.intro ? h('p', { class: 'note' }, d.intro) : null, log, choicesEl].filter((x): x is HTMLElement => !!x));
 
   const bubble = (who: 'npc' | 'me', n: { native: string; reading: string; english: string; speak?: string }, extra?: string) =>
     h('div', { class: `bubble ${who}` },
@@ -44,10 +45,9 @@ function play(root: HTMLElement, d: Dialogue, taskKey: string | null) {
     void say(node.speak ?? node.native);
     choicesEl.replaceChildren();
     if (node.end || !node.replies) {
-      if (taskKey) void markTaskDone(taskKey);
       choicesEl.append(h('div', { class: 'card center' }, h('h2', null, `${good} / ${turns}`), h('p', null, 'good replies')),
-        h('button', { class: 'btn primary', onclick: () => play(root, d, taskKey) }, 'Play again'),
-        h('a', { class: 'btn', href: taskKey ? '#/' : '#/dialogue' }, 'Done'));
+        h('button', { class: 'btn primary', onclick: () => play(root, d, back) }, 'Play again'),
+        h('a', { class: 'btn', href: `#${back}` }, 'Done'));
     } else {
       choicesEl.append(...shuffle(node.replies).map((r) => {
         const t = resolve(r);

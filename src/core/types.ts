@@ -1,5 +1,7 @@
 export interface Word { native: string; reading: string; speak?: string }
 
+export interface Situation { id: string; label: string }
+
 export interface PackMeta {
   schemaVersion: 1;
   code: string;
@@ -8,9 +10,9 @@ export interface PackMeta {
   ttsLocale: string;
   readingSystem: string;
   scriptSystems: string[];
-  situations: string[];
+  /** Topics. Phrases and dialogues refer to them by id. */
+  situations: Situation[];
   currency: { code: string; symbol: string; position: 'prefix' | 'suffix'; decimals: number; unit: Word };
-  trip: { date: string; place: string };
   restDay: number;
 }
 
@@ -54,17 +56,6 @@ export interface Dialogue {
 }
 export interface Dialogues { schemaVersion: 1; dialogues: Dialogue[] }
 
-export type TaskType = 'review' | 'kana' | 'phrases' | 'numbers' | 'prices' | 'reading' | 'dialogue' | 'commute';
-/**
- * `days` = which study days of the week (1-6, rest day excluded) the task appears on. Omitted = every study day.
- * `phraseIds` = phrases this task introduces. They unlock on the task's first day.
- */
-export interface Task { type: TaskType; ref?: string; minutes: number; label?: string; days?: number[]; phraseIds?: string[] }
-export interface Week { week: number; focus: string; title: string; tasks: Task[] }
-/** One study plan. A plan starts on the day the learner picks it. */
-export interface StudyPlan { id: string; name: string; description: string; dailyMinutes: number; weeks: Week[] }
-export interface Schedule { schemaVersion: 2; plans: StudyPlan[] }
-
 /** Everything a language pack provides. The engine only ever sees this shape. */
 export interface Pack {
   meta: PackMeta;
@@ -72,7 +63,6 @@ export interface Pack {
   phrases: Phrases;
   numbers: Numbers;
   dialogues: Dialogues;
-  schedule: Schedule;
 }
 
 /** One thing that can be reviewed with spaced repetition. */

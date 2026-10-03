@@ -17,15 +17,11 @@ try {
   await page.goto(base);
   await page.waitForSelector('.welcome button, .bar');
   if (await page.$('.welcome button')) await page.click('.welcome button');
-  await page.waitForSelector('.bar');
-  // Then a study plan.
-  await page.waitForSelector('.plans button');
-  await page.click('.plans button');
   await page.waitForSelector('.list .row');
-  check('Today lists plan tasks', (await page.$$('.list .row')).length > 0);
+  check('Learn lists topics', (await page.$$('.list .row')).length > 0);
 
-  const routes = ['/review', '/flash', '/flash?tag=food', '/flash?new=1', '/kana', '/kana?ref=all',
-    '/numbers', '/prices', '/read', '/dialogue', '/commute'];
+  const routes = ['/lesson', '/lesson?more=1', '/topic?id=food', '/lesson?topic=food', '/numbers', '/prices',
+    '/dialogue', '/dialogue?id=d-ramen', '/dialogue?id=d-ramen&back=%2Ftopic%3Fid%3Dfood'];
   for (const r of routes) {
     await page.goto(`${base}#${r}`);
     await page.waitForSelector('.bar');
@@ -37,14 +33,21 @@ try {
     check(`${r} back -> ${href}`, href.startsWith('#/') && page.url().startsWith(base) && !(await page.content()).includes('404'), page.url());
   }
 
-  // Reported bug: Review mid-session, back returns to Today.
-  await page.goto(`${base}#/review`);
+  // Reported bug: back from mid-lesson returns home.
+  await page.goto(`${base}#/lesson`);
   await page.waitForSelector('.flash');
+  // New cards are taught first. Step past them to the first quiz card.
+  while (await page.$('.btn.learn')) await page.click('.btn.learn');
   await page.click('.flash');
   await page.click('.btn.g2');
   await page.click('a.back');
   await page.waitForSelector('.bar');
-  check('review mid-session back -> Today', page.url() === `${base}#/`);
+  check('lesson mid-session back -> Learn', page.url() === `${base}#/`);
+
+  await page.goto(`${base}#/phrasebook`);
+  await page.waitForSelector('.phrase');
+  await page.fill('.search', 'toilet');
+  check('phrasebook search finds toilet', (await page.$$('.phrase')).length >= 1);
   check('no page errors', errors.length === 0, errors.join(' | '));
 } finally {
   await browser.close();

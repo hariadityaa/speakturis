@@ -33,11 +33,11 @@ export async function loadPack(code: string): Promise<Pack> {
   const f = byCode.get(code);
   if (!f) throw new Error(`Unknown language pack: ${code}`);
   const get = async <T>(name: string) => (await f.get(name)!()) as T;
-  const [meta, scripts, phrases, numbers, dialogues, schedule] = await Promise.all([
+  const [meta, scripts, phrases, numbers, dialogues] = await Promise.all([
     get<Pack['meta']>('pack'), get<Pack['scripts']>('scripts'), get<Pack['phrases']>('phrases'),
-    get<Pack['numbers']>('numbers'), get<Pack['dialogues']>('dialogues'), get<Pack['schedule']>('schedule'),
+    get<Pack['numbers']>('numbers'), get<Pack['dialogues']>('dialogues'),
   ]);
-  const pack: Pack = { meta, scripts, phrases, numbers, dialogues, schedule };
+  const pack: Pack = { meta, scripts, phrases, numbers, dialogues };
   cache.set(code, pack);
   return pack;
 }
