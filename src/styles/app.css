@@ -14,6 +14,7 @@
   --font: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans JP', sans-serif;
   --font-jp: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', Inter, system-ui, sans-serif;
   --font-zh: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', Inter, system-ui, sans-serif;
+  --font-ko: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', Inter, system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -22,6 +23,7 @@ body { font: 400 16px/1.5 var(--font); }
 h1, h2, h3 { font-weight: 600; line-height: 1.2; }
 /* The native-script font follows the current pack. Chinese text must not fall back to Japanese glyphs. */
 :root[data-pack="zh"] { --font-jp: var(--font-zh); }
+:root[data-pack="ko"] { --font-jp: var(--font-ko); }
 .jp, .big, .kana-cell b, .tile b.jp { font-family: var(--font-jp); }
 code, kbd, pre, samp { font-family: var(--font-mono); }
 
@@ -142,7 +144,7 @@ input[type=range] { padding: 0; border: 0; background: none; accent-color: var(-
 .lang-pill > span:first-child { color: var(--text-2); font-weight: 400; }
 .lang-pill > span:last-child { color: var(--text-2); font-size: .75rem; }
 .native { font-family: var(--font-jp); }
-[data-pack="ja"].native { font-family: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif; } [data-pack="zh"].native { font-family: var(--font-zh); }
+[data-pack="ja"].native { font-family: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif; } [data-pack="zh"].native { font-family: var(--font-zh); } [data-pack="ko"].native { font-family: var(--font-ko); }
 .sheet { width: 100%; max-width: 560px; margin: auto auto 0; padding: 0; border: 1px solid var(--border); border-bottom: 0; border-radius: var(--r-lg) var(--r-lg) 0 0;
   background: var(--surface); color: var(--text); }
 .sheet::backdrop { background: rgb(0 0 0 / .6); }

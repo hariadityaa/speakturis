@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "code": "ko",
+  "name": "Korean",
+  "nativeName": "한국어",
+  "ttsLocale": "ko-KR",
+  "readingSystem": "romanization",
+  "scriptSystems": [],
+  "situations": [
+    {
+      "id": "greeting",
+      "label": "Basics"
+    },
+    {
+      "id": "food",
+      "label": "Food and drink"
+    },
+    {
+      "id": "shopping",
+      "label": "Shopping"
+    },
+    {
+      "id": "transport",
+      "label": "Getting around"
+    },
+    {
+      "id": "tickets",
+      "label": "Tickets and trains"
+    },
+    {
+      "id": "hotel",
+      "label": "Hotel"
+    },
+    {
+      "id": "convenience",
+      "label": "Convenience store"
+    },
+    {
+      "id": "health",
+      "label": "Health"
+    },
+    {
+      "id": "emergency",
+      "label": "Emergency"
+    },
+    {
+      "id": "help",
+      "label": "Help"
+    },
+    {
+      "id": "signs",
+      "label": "Signs"
+    }
+  ],
+  "survival": [
+    "p-jeogiyo",
+    "p-arigatou",
+    "p-onegai",
+    "p-kore-kudasai",
+    "p-ikura",
+    "p-kaado",
+    "p-okaikei",
+    "p-toire",
+    "p-eigo",
+    "p-wakarimasen"
+  ],
+  "currency": {
+    "code": "KRW",
+    "symbol": "₩",
+    "position": "prefix",
+    "decimals": 0,
+    "unit": {
+      "native": "원",
+      "reading": "won"
+    }
+  },
+  "restDay": 0
+}

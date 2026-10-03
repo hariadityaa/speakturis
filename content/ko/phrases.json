@@ -1,0 +1,4142 @@
+{
+  "schemaVersion": 1,
+  "phrases": [
+    {
+      "id": "p-sumimasen",
+      "native": "죄송합니다",
+      "reading": "joesonghamnida",
+      "english": "Excuse me / sorry",
+      "tags": [
+        "greeting",
+        "help"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "pardon"
+      ]
+    },
+    {
+      "id": "p-jeogiyo",
+      "native": "저기요",
+      "reading": "jeogiyo",
+      "english": "Excuse me (to call staff)",
+      "tags": [
+        "greeting",
+        "help"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "waiter",
+        "attention",
+        "service"
+      ]
+    },
+    {
+      "id": "p-arigatou",
+      "native": "감사합니다",
+      "reading": "gamsahamnida",
+      "english": "Thank you",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "thanks"
+      ]
+    },
+    {
+      "id": "p-hai-iie",
+      "native": "네 / 아니요",
+      "reading": "ne / aniyo",
+      "english": "Yes / No",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-kore-kudasai",
+      "native": "이거 주세요",
+      "reading": "igeo juseyo",
+      "english": "This one, please",
+      "tags": [
+        "food",
+        "shopping"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-onegai",
+      "native": "부탁드려요",
+      "reading": "butakdeuryeoyo",
+      "english": "Please (asking for something)",
+      "tags": [
+        "greeting",
+        "shopping"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-konnichiwa",
+      "native": "안녕하세요",
+      "reading": "annyeonghaseyo",
+      "english": "Hello",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "hi",
+        "hey"
+      ]
+    },
+    {
+      "id": "h-irasshaimase",
+      "native": "어서 오세요",
+      "reading": "eoseo oseyo",
+      "english": "Welcome (staff greeting, no reply needed)",
+      "tags": [
+        "food",
+        "shopping"
+      ],
+      "difficulty": 1,
+      "listen": true
+    },
+    {
+      "id": "p-ikura",
+      "native": "얼마예요?",
+      "reading": "eolmayeyo",
+      "english": "How much is it?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "price",
+        "cost",
+        "how much"
+      ]
+    },
+    {
+      "id": "p-wakarimasen",
+      "native": "잘 모르겠어요",
+      "reading": "jal moreugesseoyo",
+      "english": "I don't understand",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "no idea",
+        "confused"
+      ]
+    },
+    {
+      "id": "p-eigo",
+      "native": "영어 할 수 있어요?",
+      "reading": "yeongeo hal su isseoyo",
+      "english": "Do you speak English?",
+      "tags": [
+        "help",
+        "greeting"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "english speaker"
+      ]
+    },
+    {
+      "id": "p-toire",
+      "native": "화장실이 어디예요?",
+      "reading": "hwajangsiri eodiyeyo",
+      "english": "Where is the toilet?",
+      "tags": [
+        "help",
+        "transport"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "restroom",
+        "bathroom",
+        "loo",
+        "wc",
+        "lavatory"
+      ]
+    },
+    {
+      "id": "p-okaikei",
+      "native": "계산해 주세요",
+      "reading": "gyesanhae juseyo",
+      "english": "Bill, please",
+      "tags": [
+        "food",
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "check",
+        "pay",
+        "payment"
+      ]
+    },
+    {
+      "id": "p-kaado",
+      "native": "카드 돼요?",
+      "reading": "kadeu dwaeyo",
+      "english": "Can I use a card?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "credit card",
+        "debit",
+        "visa",
+        "mastercard"
+      ]
+    },
+    {
+      "id": "p-daijoubu",
+      "native": "괜찮아요",
+      "reading": "gwaenchanayo",
+      "english": "I'm OK / No thanks",
+      "tags": [
+        "greeting",
+        "help"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "no thanks",
+        "fine"
+      ]
+    },
+    {
+      "id": "h-fukuro",
+      "native": "봉투 필요하세요?",
+      "reading": "bongtu piryohaseyo",
+      "english": "Do you need a bag?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "bag",
+        "plastic bag"
+      ],
+      "listen": true,
+      "replyId": "p-fukuro"
+    },
+    {
+      "id": "p-fukuro",
+      "native": "봉투 필요 없어요",
+      "reading": "bongtu piryo eopseoyo",
+      "english": "I don't need a bag",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "bag",
+        "plastic bag"
+      ]
+    },
+    {
+      "id": "s-toire",
+      "native": "화장실",
+      "reading": "hwajangsil",
+      "english": "Toilet",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "restroom",
+        "bathroom",
+        "loo",
+        "wc",
+        "lavatory"
+      ]
+    },
+    {
+      "id": "h-nanmei",
+      "native": "몇 분이세요?",
+      "reading": "myeot buniseyo",
+      "english": "How many people?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "listen": true,
+      "replyId": "p-futari"
+    },
+    {
+      "id": "p-futari",
+      "native": "두 명이에요",
+      "reading": "du myeongieyo",
+      "english": "Two people",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-mizu",
+      "native": "물 주세요",
+      "reading": "mul juseyo",
+      "english": "Water, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "drink"
+      ]
+    },
+    {
+      "id": "p-menyuu",
+      "native": "메뉴판 주세요",
+      "reading": "menyupan juseyo",
+      "english": "Menu, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "carte"
+      ]
+    },
+    {
+      "id": "h-gochuumon",
+      "native": "주문하시겠어요?",
+      "reading": "jumunhasigesseoyo",
+      "english": "Are you ready to order?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "listen": true,
+      "replyId": "p-kore-kudasai"
+    },
+    {
+      "id": "s-deguchi",
+      "native": "출구",
+      "reading": "chulgu",
+      "english": "Exit",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "way out"
+      ]
+    },
+    {
+      "id": "s-otoko",
+      "native": "남자",
+      "reading": "namja",
+      "english": "Men",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "s-onna",
+      "native": "여자",
+      "reading": "yeoja",
+      "english": "Women",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-mou-ichido",
+      "native": "다시 말씀해 주세요",
+      "reading": "dasi malsseumhae juseyo",
+      "english": "One more time, please (repeat that)",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "p-yukkuri",
+      "native": "천천히 말해 주세요",
+      "reading": "cheoncheonhi malhae juseyo",
+      "english": "Slowly, please",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "h-atatame",
+      "native": "데워 드릴까요?",
+      "reading": "dewo deurilkkayo",
+      "english": "Shall I heat it up?",
+      "tags": [
+        "shopping",
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "microwave",
+        "warm"
+      ],
+      "listen": true,
+      "replyId": "p-atatamete"
+    },
+    {
+      "id": "h-pointo",
+      "native": "포인트 카드 있으세요?",
+      "reading": "pointeu kadeu isseuseyo",
+      "english": "Do you have a point card?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 1,
+      "listen": true,
+      "replyId": "p-daijoubu"
+    },
+    {
+      "id": "h-shoushou",
+      "native": "잠시만 기다려 주세요",
+      "reading": "jamsiman gidaryeo juseyo",
+      "english": "One moment, please",
+      "tags": [
+        "food",
+        "shopping",
+        "hotel"
+      ],
+      "difficulty": 1,
+      "listen": true
+    },
+    {
+      "id": "p-oishii",
+      "native": "맛있어요",
+      "reading": "masisseoyo",
+      "english": "It's delicious",
+      "tags": [
+        "food",
+        "greeting"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-eki",
+      "native": "역이 어디예요?",
+      "reading": "yeogi eodiyeyo",
+      "english": "Where is the station?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "train station",
+        "railway"
+      ]
+    },
+    {
+      "id": "p-juusho",
+      "native": "이 주소로 가 주세요",
+      "reading": "i jusoro ga juseyo",
+      "english": "To this address, please (taxi)",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 3,
+      "keywords": [
+        "cab",
+        "taxi"
+      ]
+    },
+    {
+      "id": "p-tasukete",
+      "native": "도와주세요",
+      "reading": "dowajuseyo",
+      "english": "Please help me",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "emergency",
+        "sos"
+      ]
+    },
+    {
+      "id": "p-chekkuin",
+      "native": "체크인할게요",
+      "reading": "chekeuinhalgeyo",
+      "english": "Check-in, please",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "hotel",
+        "check in",
+        "register"
+      ]
+    },
+    {
+      "id": "p-yoyaku",
+      "native": "예약했어요",
+      "reading": "yeyakaesseoyo",
+      "english": "I have a reservation",
+      "tags": [
+        "hotel",
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "booking"
+      ]
+    },
+    {
+      "id": "h-yoyaku",
+      "native": "예약하셨어요?",
+      "reading": "yeyakasyeosseoyo",
+      "english": "Do you have a reservation?",
+      "tags": [
+        "food",
+        "hotel"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "booking"
+      ],
+      "listen": true,
+      "replyId": "p-yoyaku"
+    },
+    {
+      "id": "s-iriguchi",
+      "native": "입구",
+      "reading": "ipgu",
+      "english": "Entrance",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "way in"
+      ]
+    },
+    {
+      "id": "s-eki",
+      "native": "역",
+      "reading": "yeok",
+      "english": "Station",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "train station",
+        "railway"
+      ]
+    },
+    {
+      "id": "p-ohayou",
+      "native": "좋은 아침이에요",
+      "reading": "joeun achimieyo",
+      "english": "Good morning",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-kore-nan",
+      "native": "이게 뭐예요?",
+      "reading": "ige mwoyeyo",
+      "english": "What is this?",
+      "tags": [
+        "food",
+        "shopping"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-osusume",
+      "native": "추천 메뉴가 뭐예요?",
+      "reading": "chucheon menyuga mwoyeyo",
+      "english": "What do you recommend?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "p-nama-biiru",
+      "native": "생맥주 주세요",
+      "reading": "saengmaekju juseyo",
+      "english": "Draught beer, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "beer",
+        "alcohol",
+        "draft"
+      ]
+    },
+    {
+      "id": "p-hitotsu",
+      "native": "하나 더 주세요",
+      "reading": "hana deo juseyo",
+      "english": "One more, please",
+      "tags": [
+        "food",
+        "shopping"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "h-tennai",
+      "native": "드시고 가세요?",
+      "reading": "deusigo gaseyo",
+      "english": "Eating in?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "listen": true,
+      "replyId": "p-hai-iie"
+    },
+    {
+      "id": "h-shiharai",
+      "native": "어떻게 계산하시겠어요?",
+      "reading": "eotteoke gyesanhasigesseoyo",
+      "english": "How will you pay?",
+      "tags": [
+        "shopping",
+        "food"
+      ],
+      "difficulty": 1,
+      "listen": true,
+      "replyId": "p-kaado"
+    },
+    {
+      "id": "h-kochira",
+      "native": "이쪽으로 오세요",
+      "reading": "ijjogeuro oseyo",
+      "english": "This way, please",
+      "tags": [
+        "food",
+        "hotel"
+      ],
+      "difficulty": 1,
+      "listen": true
+    },
+    {
+      "id": "p-itadakimasu",
+      "native": "잘 먹겠습니다",
+      "reading": "jal meokgetseumnida",
+      "english": "(Said before eating)",
+      "tags": [
+        "food",
+        "greeting"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-gochisousama",
+      "native": "잘 먹었습니다",
+      "reading": "jal meogeotseumnida",
+      "english": "Thank you for the meal",
+      "tags": [
+        "food",
+        "greeting"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "p-reshiito",
+      "native": "영수증 주세요",
+      "reading": "yeongsujeung juseyo",
+      "english": "Receipt, please",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "invoice"
+      ]
+    },
+    {
+      "id": "p-miteru",
+      "native": "그냥 구경하는 거예요",
+      "reading": "geunyang gugyeonghaneun geoyeyo",
+      "english": "I'm just looking",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-michi",
+      "native": "길을 잃었어요",
+      "reading": "gireul ireosseoyo",
+      "english": "I'm lost",
+      "tags": [
+        "help",
+        "transport"
+      ],
+      "difficulty": 3,
+      "keywords": [
+        "directions"
+      ]
+    },
+    {
+      "id": "p-chotto-matte",
+      "native": "잠깐만요",
+      "reading": "jamkkanmanyo",
+      "english": "Wait a moment, please",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "s-osu",
+      "native": "미시오",
+      "reading": "misio",
+      "english": "Push",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "s-hiku",
+      "native": "당기시오",
+      "reading": "danggisio",
+      "english": "Pull",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-singapore",
+      "native": "싱가포르에서 왔어요",
+      "reading": "singgaporeeseo wasseoyo",
+      "english": "I'm from Singapore",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "p-hashi",
+      "native": "젓가락 주세요",
+      "reading": "jeotgarak juseyo",
+      "english": "Chopsticks, please",
+      "tags": [
+        "food",
+        "shopping"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "cutlery",
+        "utensils"
+      ]
+    },
+    {
+      "id": "h-ohashi",
+      "native": "젓가락 드릴까요?",
+      "reading": "jeotgarak deurilkkayo",
+      "english": "Do you want chopsticks?",
+      "tags": [
+        "shopping",
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "cutlery",
+        "utensils"
+      ],
+      "listen": true,
+      "replyId": "p-hashi"
+    },
+    {
+      "id": "p-atatamete",
+      "native": "데워 주세요",
+      "reading": "dewo juseyo",
+      "english": "Please heat it up",
+      "tags": [
+        "shopping",
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "microwave",
+        "warm"
+      ]
+    },
+    {
+      "id": "p-betsubetsu",
+      "native": "따로 계산해 주세요",
+      "reading": "ttaro gyesanhae juseyo",
+      "english": "Separate bills, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "p-menzei",
+      "native": "세금 환급 받을 수 있어요?",
+      "reading": "segeum hwangeup badeul su isseoyo",
+      "english": "Can I get tax-free?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 3,
+      "keywords": [
+        "duty free",
+        "refund",
+        "vat",
+        "tax refund"
+      ]
+    },
+    {
+      "id": "p-kippu",
+      "native": "표는 어디서 살 수 있어요?",
+      "reading": "pyoneun eodiseo sal su isseoyo",
+      "english": "Where can I buy a ticket?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 3,
+      "keywords": [
+        "ticket",
+        "train"
+      ]
+    },
+    {
+      "id": "p-basutei",
+      "native": "버스 정류장이 어디예요?",
+      "reading": "beoseu jeongnyujangi eodiyeyo",
+      "english": "Where is the bus stop?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "bus"
+      ]
+    },
+    {
+      "id": "p-orimasu",
+      "native": "여기서 내릴게요",
+      "reading": "yeogiseo naerilgeyo",
+      "english": "I'll get off here",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "alight",
+        "exit bus",
+        "stop"
+      ]
+    },
+    {
+      "id": "s-chikatetsu",
+      "native": "지하철",
+      "reading": "jihacheol",
+      "english": "Subway",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "metro",
+        "underground",
+        "mrt"
+      ]
+    },
+    {
+      "id": "s-kaisatsu",
+      "native": "개찰구",
+      "reading": "gaechalgu",
+      "english": "Ticket gates",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "turnstile",
+        "fare gate"
+      ]
+    },
+    {
+      "id": "p-nimotsu",
+      "native": "짐 좀 맡아 주실 수 있어요?",
+      "reading": "jim jom mata jusil su isseoyo",
+      "english": "Can you keep my luggage?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 3,
+      "keywords": [
+        "baggage",
+        "bags",
+        "suitcase",
+        "store"
+      ]
+    },
+    {
+      "id": "p-checkout",
+      "native": "체크아웃은 몇 시예요?",
+      "reading": "chekeuauseun myeot siyeyo",
+      "english": "What time is check-out?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "check out"
+      ]
+    },
+    {
+      "id": "p-shokkenki",
+      "native": "키오스크가 어디예요?",
+      "reading": "kioseukeuga eodiyeyo",
+      "english": "Where is the ordering kiosk?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "vending",
+        "self-order",
+        "kiosk"
+      ]
+    },
+    {
+      "id": "p-chaaji",
+      "native": "교통카드 충전해 주세요",
+      "reading": "gyotongkadeu chungjeonhae juseyo",
+      "english": "Top up my transit card, please",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "tmoney",
+        "cashbee",
+        "top-up",
+        "reload"
+      ]
+    },
+    {
+      "id": "p-shashin",
+      "native": "사진 찍어도 돼요?",
+      "reading": "sajin jjigeodo dwaeyo",
+      "english": "May I take a photo?",
+      "tags": [
+        "help",
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "camera",
+        "picture",
+        "photograph"
+      ]
+    },
+    {
+      "id": "s-eigyouchuu",
+      "native": "영업 중",
+      "reading": "yeongeop jung",
+      "english": "Open",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "s-junbichuu",
+      "native": "준비 중",
+      "reading": "junbi jung",
+      "english": "Closed (preparing)",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "s-kinen",
+      "native": "금연",
+      "reading": "geumyeon",
+      "english": "No smoking",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "p-tatuu",
+      "native": "문신 있어도 돼요?",
+      "reading": "munsin isseodo dwaeyo",
+      "english": "Are tattoos OK? (bathhouse)",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "tattoo",
+        "sauna",
+        "bath"
+      ]
+    },
+    {
+      "id": "s-yu",
+      "native": "목욕탕",
+      "reading": "mogyoktang",
+      "english": "Bathhouse (jjimjilbang, sauna)",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "hot spring",
+        "bath",
+        "jjimjilbang",
+        "sauna"
+      ]
+    },
+    {
+      "id": "s-raamen",
+      "native": "라면",
+      "reading": "ramyeon",
+      "english": "Ramen",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "s-nama-biiru",
+      "native": "생맥주",
+      "reading": "saengmaekju",
+      "english": "Draught beer",
+      "tags": [
+        "signs"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "beer",
+        "alcohol",
+        "draft"
+      ]
+    },
+    {
+      "id": "b-konbanwa",
+      "native": "좋은 저녁 보내세요",
+      "reading": "joeun jeonyeok bonaeseyo",
+      "english": "Have a good evening",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "hi"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-oyasumi",
+      "native": "안녕히 주무세요",
+      "reading": "annyeonghi jumuseyo",
+      "english": "Good night",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1,
+      "book": true
+    },
+    {
+      "id": "b-hajimemashite",
+      "native": "처음 뵙겠습니다",
+      "reading": "cheoeum boepgetseumnida",
+      "english": "Nice to meet you",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "pleased to meet you"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-sayounara",
+      "native": "안녕히 계세요",
+      "reading": "annyeonghi gyeseyo",
+      "english": "Goodbye (when you leave)",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "bye"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-douitashimashite",
+      "native": "천만에요",
+      "reading": "cheonmaneyo",
+      "english": "You're welcome",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 1,
+      "book": true
+    },
+    {
+      "id": "b-gomen",
+      "native": "미안해요",
+      "reading": "mianhaeyo",
+      "english": "I'm sorry",
+      "tags": [
+        "greeting",
+        "help"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "apologies",
+        "apologise"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ryokousha",
+      "native": "관광객이에요",
+      "reading": "gwangwanggaegieyo",
+      "english": "I'm a tourist",
+      "tags": [
+        "greeting"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "visitor",
+        "traveller"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-wakarimashita",
+      "native": "알겠어요",
+      "reading": "algesseoyo",
+      "english": "I understand / got it",
+      "tags": [
+        "help",
+        "greeting"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "okay"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kekkou",
+      "native": "아니요, 괜찮습니다",
+      "reading": "aniyo, gwaenchanseumnida",
+      "english": "No, thank you (polite refusal)",
+      "tags": [
+        "greeting",
+        "shopping"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "decline",
+        "no thanks"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-nihongo-sukoshi",
+      "native": "한국어를 조금 해요",
+      "reading": "hangugeoreul jogeum haeyo",
+      "english": "I speak a little Korean",
+      "tags": [
+        "help",
+        "greeting"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-douzo",
+      "native": "여기 있어요",
+      "reading": "yeogi isseoyo",
+      "english": "Here you go",
+      "tags": [
+        "greeting",
+        "shopping"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "please",
+        "go ahead"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kore-nihongo",
+      "native": "이건 한국어로 뭐라고 해요?",
+      "reading": "igeon hangugeoro mworago haeyo",
+      "english": "How do you say this in Korean?",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 3,
+      "keywords": [
+        "translate"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kaite",
+      "native": "적어 주실 수 있어요?",
+      "reading": "jeogeo jusil su isseoyo",
+      "english": "Can you write it down?",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "paper",
+        "note"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-honyaku",
+      "native": "번역 앱 써도 돼요?",
+      "reading": "beonyeok aep sseodo dwaeyo",
+      "english": "May I use a translation app?",
+      "tags": [
+        "help"
+      ],
+      "difficulty": 3,
+      "keywords": [
+        "translate",
+        "phone"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-biiru-futatsu",
+      "native": "맥주 두 잔 주세요",
+      "reading": "maekju du jan juseyo",
+      "english": "Two beers, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "beer"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ocha",
+      "native": "차 주세요",
+      "reading": "cha juseyo",
+      "english": "Tea, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "green tea"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-koohii",
+      "native": "커피 주세요",
+      "reading": "keopi juseyo",
+      "english": "Coffee, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "book": true
+    },
+    {
+      "id": "b-sake",
+      "native": "소주 주세요",
+      "reading": "soju juseyo",
+      "english": "Soju, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "alcohol",
+        "makgeolli",
+        "rice wine"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-nomihoudai",
+      "native": "무한 리필 돼요?",
+      "reading": "muhan ripil dwaeyo",
+      "english": "Do you have all-you-can-eat/drink refills?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "buffet",
+        "unlimited drinks",
+        "refill"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-eigo-menu",
+      "native": "영어 메뉴판 있어요?",
+      "reading": "yeongeo menyupan isseoyo",
+      "english": "Do you have an English menu?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "translation"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kore-futatsu",
+      "native": "이거 두 개 주세요",
+      "reading": "igeo du gae juseyo",
+      "english": "Two of these, please",
+      "tags": [
+        "food",
+        "shopping"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-onaji",
+      "native": "같은 걸로 주세요",
+      "reading": "gateun geollo juseyo",
+      "english": "The same, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "same as that"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-wasabi-nuki",
+      "native": "와사비 빼 주세요",
+      "reading": "wasabi ppae juseyo",
+      "english": "No wasabi, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "without"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-karakunai",
+      "native": "맵지 않게 해 주세요",
+      "reading": "maepji anke hae juseyo",
+      "english": "Not too spicy, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "mild"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-nama-mono",
+      "native": "날것은 못 먹어요",
+      "reading": "nalgeoseun mot meogeoyo",
+      "english": "I can't eat raw food",
+      "tags": [
+        "food",
+        "health"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "sushi",
+        "sashimi"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-okawari",
+      "native": "리필해 주세요",
+      "reading": "ripilhae juseyo",
+      "english": "A refill, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "seconds",
+        "more"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-niku-nan",
+      "native": "이건 무슨 고기예요?",
+      "reading": "igeon museun gogiyeyo",
+      "english": "What meat is this?",
+      "tags": [
+        "food",
+        "health"
+      ],
+      "difficulty": 3,
+      "keywords": [
+        "pork",
+        "beef",
+        "chicken"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-mochikaeri",
+      "native": "포장돼요?",
+      "reading": "pojangdwaeyo",
+      "english": "Can I take it away?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "takeaway",
+        "take out",
+        "doggy bag"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-oishikatta",
+      "native": "정말 맛있었어요",
+      "reading": "jeongmal masisseosseoyo",
+      "english": "That was very delicious",
+      "tags": [
+        "food",
+        "greeting"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "tasty",
+        "yummy"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-nomimono",
+      "native": "음료는 뭐가 있어요?",
+      "reading": "eumnyoneun mwoga isseoyo",
+      "english": "What drinks do you have?",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "beverages"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-yoyaku-onegai",
+      "native": "예약하고 싶어요",
+      "reading": "yeyakago sipeoyo",
+      "english": "I'd like to make a reservation",
+      "tags": [
+        "food",
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "book a table"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kinen",
+      "native": "금연석으로 주세요",
+      "reading": "geumyeonseogeuro juseyo",
+      "english": "Non-smoking seat, please",
+      "tags": [
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "no smoking"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-chiisai",
+      "native": "더 작은 거 있어요?",
+      "reading": "deo jageun geo isseoyo",
+      "english": "Do you have a smaller one?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "size"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ookii-no",
+      "native": "더 큰 거 있어요?",
+      "reading": "deo keun geo isseoyo",
+      "english": "Do you have a bigger one?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "size"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-betsu-iro",
+      "native": "다른 색 있어요?",
+      "reading": "dareun saek isseoyo",
+      "english": "Do you have other colours?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "colors"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-shichaku",
+      "native": "입어 봐도 돼요?",
+      "reading": "ibeo bwado dwaeyo",
+      "english": "May I try this on?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "fitting room"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-yasuku",
+      "native": "좀 깎아 주실 수 있어요?",
+      "reading": "jom kkakka jusil su isseoyo",
+      "english": "Can it be a bit cheaper?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "discount",
+        "bargain"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-fukuro-onegai",
+      "native": "봉투 주세요",
+      "reading": "bongtu juseyo",
+      "english": "A bag, please",
+      "tags": [
+        "shopping",
+        "convenience"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "plastic bag"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-zeikomi",
+      "native": "세금 포함이에요?",
+      "reading": "segeum pohamieyo",
+      "english": "Is tax included?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "vat",
+        "gst"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-genkin",
+      "native": "현금으로 할게요",
+      "reading": "hyeongeumeuro halgeyo",
+      "english": "Cash, please",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "pay cash"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ic-pay",
+      "native": "교통카드로 결제돼요?",
+      "reading": "gyotongkadeuro gyeoljedwaeyo",
+      "english": "Can I pay with my transit card?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "tmoney",
+        "cashbee",
+        "tap"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-qr",
+      "native": "큐알 결제 돼요?",
+      "reading": "kyu-al gyeolje dwaeyo",
+      "english": "Can I pay by QR code?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "mobile payment",
+        "scan",
+        "kakaopay",
+        "naver pay"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-menzei-counter",
+      "native": "세금 환급 창구가 어디예요?",
+      "reading": "segeum hwangeup changguga eodiyeyo",
+      "english": "Where is the tax-free counter?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "duty free",
+        "refund",
+        "tax refund"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-pasupooto",
+      "native": "여권이에요",
+      "reading": "yeogwonieyo",
+      "english": "Here is my passport",
+      "tags": [
+        "shopping",
+        "hotel"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "id"
+      ],
+      "book": true
+    },
+    {
+      "id": "bh-goukei-en",
+      "native": "합쳐서 오천 원이에요",
+      "reading": "hapchyeoseo ocheon wonieyo",
+      "english": "That's 5,000 won in total",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "total"
+      ],
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-reshiito",
+      "native": "영수증 필요하세요?",
+      "reading": "yeongsujeung piryohaseyo",
+      "english": "Do you need a receipt?",
+      "tags": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "invoice"
+      ],
+      "listen": true,
+      "replyId": "p-reshiito",
+      "book": true
+    },
+    {
+      "id": "b-yoyaku-kakunin",
+      "native": "예약 확인해 주세요",
+      "reading": "yeyak hwaginhae juseyo",
+      "english": "Please confirm my reservation",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-hayame-ci",
+      "native": "일찍 체크인할 수 있어요?",
+      "reading": "iljjik chekeuinhal su isseoyo",
+      "english": "Can I check in early?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "early arrival"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-osoku-co",
+      "native": "체크아웃을 늦게 할 수 있어요?",
+      "reading": "chekeuauseul neutge hal su isseoyo",
+      "english": "Can I check out late?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "late checkout"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-nimotsu-ato",
+      "native": "체크아웃 후에도 짐을 맡길 수 있어요?",
+      "reading": "chekeuaut huedo jimeul matgil su isseoyo",
+      "english": "Can I leave my bags after check-out?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 3,
+      "keywords": [
+        "luggage storage",
+        "baggage"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kagi-nakushi",
+      "native": "방 열쇠를 잃어버렸어요",
+      "reading": "bang yeolsoereul ireobeoryeosseoyo",
+      "english": "I lost my room key",
+      "tags": [
+        "hotel",
+        "emergency"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "key card"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-heya-hairenai",
+      "native": "방에 못 들어가요",
+      "reading": "bange mot deureogayo",
+      "english": "I can't get into my room",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "locked out"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-oyu",
+      "native": "뜨거운 물이 안 나와요",
+      "reading": "tteugeoun muri an nawayo",
+      "english": "There's no hot water",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "shower",
+        "broken"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-eakon",
+      "native": "에어컨이 안 돼요",
+      "reading": "eeokeoni an dwaeyo",
+      "english": "The air conditioning doesn't work",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "ac",
+        "heater",
+        "broken"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-heya-atsui",
+      "native": "방이 너무 더워요",
+      "reading": "bangi neomu deowoyo",
+      "english": "The room is too hot",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "warm"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-tonari-urusai",
+      "native": "옆방이 시끄러워요",
+      "reading": "yeopbangi sikkeureowoyo",
+      "english": "The next room is noisy",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "noise",
+        "loud"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-taoru",
+      "native": "수건 하나 더 주세요",
+      "reading": "sugeon hana deo juseyo",
+      "english": "One more towel, please",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "towels"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-juudenki",
+      "native": "충전기 빌려 주실 수 있어요?",
+      "reading": "chungjeongi billyeo jusil su isseoyo",
+      "english": "Can I borrow a phone charger?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "charger",
+        "cable"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-wifi-pass",
+      "native": "와이파이 비밀번호가 뭐예요?",
+      "reading": "waipai bimilbeonhoga mwoyeyo",
+      "english": "What's the Wi-Fi password?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 3,
+      "keywords": [
+        "wifi",
+        "internet"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-chousyoku-nanji",
+      "native": "조식은 몇 시부터예요?",
+      "reading": "josigeun myeot sibuteoyeyo",
+      "english": "What time does breakfast start?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "breakfast"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-chousyoku-doko",
+      "native": "조식은 어디서 먹어요?",
+      "reading": "josigeun eodiseo meogeoyo",
+      "english": "Where is breakfast served?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "breakfast"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-erebeetaa",
+      "native": "엘리베이터가 어디예요?",
+      "reading": "ellibeiteoga eodiyeyo",
+      "english": "Where is the elevator?",
+      "tags": [
+        "hotel",
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "lift"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kankou",
+      "native": "추천하는 관광지가 어디예요?",
+      "reading": "chucheonhaneun gwangwangjiga eodiyeyo",
+      "english": "What sightseeing do you recommend?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 3,
+      "keywords": [
+        "attractions",
+        "tourist"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ippaku",
+      "native": "하루 더 묵을 수 있어요?",
+      "reading": "haru deo mugeul su isseoyo",
+      "english": "Can I stay one more night?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "extend"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ryoushuusho",
+      "native": "영수증 부탁드려요",
+      "reading": "yeongsujeung butakdeuryeoyo",
+      "english": "A receipt, please",
+      "tags": [
+        "hotel",
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "invoice"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-aiteiru",
+      "native": "빈 방 있어요?",
+      "reading": "bin bang isseoyo",
+      "english": "Do you have any rooms free?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "vacancy",
+        "available"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-sanpaku",
+      "native": "삼 박이에요",
+      "reading": "sam bagieyo",
+      "english": "Three nights",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "stay"
+      ],
+      "book": true
+    },
+    {
+      "id": "bh-pasupooto",
+      "native": "여권을 보여 주세요",
+      "reading": "yeogwoneul boyeo juseyo",
+      "english": "Your passport, please",
+      "tags": [
+        "hotel",
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "id"
+      ],
+      "listen": true,
+      "replyId": "b-pasupooto",
+      "book": true
+    },
+    {
+      "id": "bh-onamae",
+      "native": "성함이 어떻게 되세요?",
+      "reading": "seonghami eotteoke doeseyo",
+      "english": "Your name, please",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-nanpaku",
+      "native": "며칠 묵으실 거예요?",
+      "reading": "myeochil mugeusil geoyeyo",
+      "english": "How many nights?",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-sanpaku",
+      "book": true
+    },
+    {
+      "id": "bh-checkout-jikan",
+      "native": "체크아웃은 열한 시예요",
+      "reading": "chekeuauseun yeolhan siyeyo",
+      "english": "Check-out is at eleven",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-asa-nanaji",
+      "native": "조식은 일곱 시부터예요",
+      "reading": "josigeun ilgop sibuteoyeyo",
+      "english": "Breakfast is from seven",
+      "tags": [
+        "hotel"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "b-byouin",
+      "native": "병원이 어디예요?",
+      "reading": "byeongwoni eodiyeyo",
+      "english": "Where is the hospital?",
+      "tags": [
+        "health",
+        "emergency"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "clinic"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-yakkyoku",
+      "native": "약국이 어디예요?",
+      "reading": "yakgugi eodiyeyo",
+      "english": "Where is a pharmacy?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "drugstore",
+        "chemist"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-zutsuuyaku",
+      "native": "두통약 있어요?",
+      "reading": "dutongyak isseoyo",
+      "english": "Do you have headache medicine?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "painkiller",
+        "aspirin",
+        "paracetamol"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kazegusuri",
+      "native": "감기약 있어요?",
+      "reading": "gamgiyak isseoyo",
+      "english": "Do you have cold medicine?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "flu"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-igusuri",
+      "native": "소화제 있어요?",
+      "reading": "sohwaje isseoyo",
+      "english": "Do you have stomach medicine?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "indigestion",
+        "antacid"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-geridome",
+      "native": "지사제 있어요?",
+      "reading": "jisaje isseoyo",
+      "english": "Do you have anti-diarrhoea medicine?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "diarrhea"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-bansoukou",
+      "native": "밴드 있어요?",
+      "reading": "baendeu isseoyo",
+      "english": "Do you have plasters?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "band-aid",
+        "bandage"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-hiyakedome",
+      "native": "선크림 있어요?",
+      "reading": "seonkeurim isseoyo",
+      "english": "Do you have sunscreen?",
+      "tags": [
+        "health",
+        "shopping"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "sunblock"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kusuri-nomikata",
+      "native": "이 약은 어떻게 먹어요?",
+      "reading": "i yageun eotteoke meogeoyo",
+      "english": "How do I take this medicine?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "dose"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-atama",
+      "native": "머리가 아파요",
+      "reading": "meoriga apayo",
+      "english": "I have a headache",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "head hurts"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-onaka",
+      "native": "배가 아파요",
+      "reading": "baega apayo",
+      "english": "I have a stomachache",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "tummy"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-nodo",
+      "native": "목이 아파요",
+      "reading": "mogi apayo",
+      "english": "I have a sore throat",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "throat"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ha",
+      "native": "이가 아파요",
+      "reading": "iga apayo",
+      "english": "I have a toothache",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "dentist",
+        "tooth"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-netsu",
+      "native": "열이 있어요",
+      "reading": "yeori isseoyo",
+      "english": "I have a fever",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "temperature"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-seki",
+      "native": "기침이 나요",
+      "reading": "gichimi nayo",
+      "english": "I have a cough",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "coughing"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-hakike",
+      "native": "토할 것 같아요",
+      "reading": "tohal geot gatayo",
+      "english": "I feel sick (nauseous)",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "vomit",
+        "nausea"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-geri",
+      "native": "설사를 해요",
+      "reading": "seolsareul haeyo",
+      "english": "I have diarrhoea",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "diarrhea"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kega",
+      "native": "다쳤어요",
+      "reading": "dachyeosseoyo",
+      "english": "I'm injured",
+      "tags": [
+        "health",
+        "emergency"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "hurt",
+        "wound"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-koko-itai",
+      "native": "여기가 아파요",
+      "reading": "yeogiga apayo",
+      "english": "It hurts here",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "pain"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-guai",
+      "native": "몸이 안 좋아요",
+      "reading": "momi an johayo",
+      "english": "I feel unwell",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "sick",
+        "ill"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-arerugii",
+      "native": "알레르기가 있어요",
+      "reading": "allereugiga isseoyo",
+      "english": "I have an allergy",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "allergic"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-piinattsu",
+      "native": "땅콩 알레르기가 있어요",
+      "reading": "ttangkong allereugiga isseoyo",
+      "english": "I'm allergic to peanuts",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "nuts",
+        "allergy"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-tamago-arerugii",
+      "native": "계란 알레르기가 있어요",
+      "reading": "gyeran allereugiga isseoyo",
+      "english": "I'm allergic to eggs",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "egg"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kakukakurui",
+      "native": "갑각류 알레르기가 있어요",
+      "reading": "gapgangnyu allereugiga isseoyo",
+      "english": "I'm allergic to shellfish",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "shrimp",
+        "crab",
+        "seafood"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-nyuu",
+      "native": "유제품은 못 먹어요",
+      "reading": "yujepumeun mot meogeoyo",
+      "english": "I can't have dairy",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "milk",
+        "lactose"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-komugi",
+      "native": "밀 알레르기가 있어요",
+      "reading": "mil allereugiga isseoyo",
+      "english": "I'm allergic to wheat",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "gluten"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-soba",
+      "native": "메밀 알레르기가 있어요",
+      "reading": "memil allereugiga isseoyo",
+      "english": "I'm allergic to buckwheat (soba)",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "noodles"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-bejitarian",
+      "native": "채식해요, 계란과 우유는 먹어요",
+      "reading": "chaesikaeyo, gyerangwa uyuneun meogeoyo",
+      "english": "I'm vegetarian (eggs and dairy OK)",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "no meat"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-biigan",
+      "native": "비건이에요",
+      "reading": "bigeonieyo",
+      "english": "I'm vegan",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "plant-based",
+        "no animal products"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-niku-sakana-nai",
+      "native": "고기와 생선은 안 먹어요",
+      "reading": "gogiwa saengseoneun an meogeoyo",
+      "english": "I don't eat meat or fish",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "vegan"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-dashi",
+      "native": "육수에도 생선이 들어가요?",
+      "reading": "yuksuedo saengseoni deureogayo",
+      "english": "Is there fish in the broth too?",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 3,
+      "keywords": [
+        "broth",
+        "stock",
+        "anchovy"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-buta-nai",
+      "native": "돼지고기는 못 먹어요",
+      "reading": "dwaejigogineun mot meogeoyo",
+      "english": "I can't eat pork",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "halal"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-halal",
+      "native": "할랄이에요?",
+      "reading": "hallarieyo",
+      "english": "Is this halal?",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "muslim"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-no-alcohol",
+      "native": "술은 안 마셔요",
+      "reading": "sureun an masyeoyo",
+      "english": "I don't drink alcohol",
+      "tags": [
+        "health",
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "no alcohol"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ninshin",
+      "native": "임신했어요",
+      "reading": "imsinhaesseoyo",
+      "english": "I'm pregnant",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "expecting"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-hoken",
+      "native": "해외여행자 보험이 있어요",
+      "reading": "haeoeyeohaengja boheomi isseoyo",
+      "english": "I have travel insurance",
+      "tags": [
+        "health",
+        "emergency"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "insurance"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kinou",
+      "native": "어제부터요",
+      "reading": "eojebuteoyo",
+      "english": "Since yesterday",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 1,
+      "book": true
+    },
+    {
+      "id": "bh-doushita",
+      "native": "어디가 안 좋으세요?",
+      "reading": "eodiga an joeuseyo",
+      "english": "What's the matter?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-guai",
+      "book": true
+    },
+    {
+      "id": "bh-doko-itai",
+      "native": "어디가 아프세요?",
+      "reading": "eodiga apeuseyo",
+      "english": "Where does it hurt?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-koko-itai",
+      "book": true
+    },
+    {
+      "id": "bh-arerugii",
+      "native": "알레르기 있으세요?",
+      "reading": "allereugi isseuseyo",
+      "english": "Do you have any allergies?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-arerugii",
+      "book": true
+    },
+    {
+      "id": "bh-itsukara",
+      "native": "언제부터요?",
+      "reading": "eonjebuteoyo",
+      "english": "Since when?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-kinou",
+      "book": true
+    },
+    {
+      "id": "bh-nomikata",
+      "native": "하루 세 번, 식후에 드세요",
+      "reading": "haru se beon, sigue deuseyo",
+      "english": "Take it three times a day after meals",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-hokenshou",
+      "native": "보험 있으세요?",
+      "reading": "boheom isseuseyo",
+      "english": "Do you have insurance?",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-hoken",
+      "book": true
+    },
+    {
+      "id": "bh-netsu-hakaru",
+      "native": "체온을 재 볼게요",
+      "reading": "cheoneul jae bolgeyo",
+      "english": "I'll take your temperature",
+      "tags": [
+        "health"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "b-kyuukyuusha",
+      "native": "구급차를 불러 주세요",
+      "reading": "gugeupchareul bulleo juseyo",
+      "english": "Please call an ambulance",
+      "tags": [
+        "emergency",
+        "health"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "ambulance",
+        "119"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-keisatsu",
+      "native": "경찰을 불러 주세요",
+      "reading": "gyeongchareul bulleo juseyo",
+      "english": "Please call the police",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "cops",
+        "112"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kooban",
+      "native": "파출소가 어디예요?",
+      "reading": "pachulsoga eodiyeyo",
+      "english": "Where is the nearest police station?",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "police box",
+        "police station"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kaji",
+      "native": "불이야!",
+      "reading": "buriya",
+      "english": "Fire!",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "fire"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-dorobou",
+      "native": "도둑이야!",
+      "reading": "dodugiya",
+      "english": "Thief!",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "robbery",
+        "stolen"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-nusumareta",
+      "native": "도둑맞았어요",
+      "reading": "dodungmajasseoyo",
+      "english": "It was stolen",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "theft",
+        "robbed"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-saifu-nusu",
+      "native": "지갑을 도둑맞았어요",
+      "reading": "jigabeul dodungmajasseoyo",
+      "english": "My wallet was stolen",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "purse"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-saifu-nakushi",
+      "native": "지갑을 잃어버렸어요",
+      "reading": "jigabeul ireobeoryeosseoyo",
+      "english": "I lost my wallet",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "lost"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-passport-nakushi",
+      "native": "여권을 잃어버렸어요",
+      "reading": "yeogwoneul ireobeoryeosseoyo",
+      "english": "I lost my passport",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "lost"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kaban",
+      "native": "가방을 두고 왔어요",
+      "reading": "gabangeul dugo wasseoyo",
+      "english": "I left my bag behind",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "forgot",
+        "bag"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-wasuremono",
+      "native": "분실물 센터가 어디예요?",
+      "reading": "bunsilmul senteoga eodiyeyo",
+      "english": "Where is the lost property office?",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "lost and found"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-densha-wasure",
+      "native": "지하철에 물건을 두고 내렸어요",
+      "reading": "jihacheore mulgeoneul dugo naeryeosseoyo",
+      "english": "I left something on the train",
+      "tags": [
+        "emergency",
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "lost"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kaado-tomete",
+      "native": "카드를 정지해 주세요",
+      "reading": "kadeureul jeongjihae juseyo",
+      "english": "Please block my card",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "cancel card"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-taishikan",
+      "native": "싱가포르 대사관이 어디예요?",
+      "reading": "singgaporeu daesagwani eodiyeyo",
+      "english": "Where is the Singapore embassy?",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "consulate"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-higaitodoke",
+      "native": "경찰에 신고하고 싶어요",
+      "reading": "gyeongchare singohago sipeoyo",
+      "english": "I want to report this to the police",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "report crime"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-jiko",
+      "native": "사고가 났어요",
+      "reading": "sagoga nasseoyo",
+      "english": "I've had an accident",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "crash"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-hagureta",
+      "native": "친구와 헤어졌어요",
+      "reading": "chinguwa heeojyeosseoyo",
+      "english": "I got separated from my friend",
+      "tags": [
+        "emergency",
+        "help"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "lost friend"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kodomo-maigo",
+      "native": "아이를 잃어버렸어요",
+      "reading": "aireul ireobeoryeosseoyo",
+      "english": "My child is missing",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "lost child"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-dareka",
+      "native": "누가 좀 와 주세요",
+      "reading": "nuga jom wa juseyo",
+      "english": "Someone, please come!",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "help"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-isha",
+      "native": "의사를 불러 주세요",
+      "reading": "uisareul bulleo juseyo",
+      "english": "Please call a doctor",
+      "tags": [
+        "emergency",
+        "health"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "doctor"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-eigo-isha",
+      "native": "영어 하는 의사 선생님 계세요?",
+      "reading": "yeongeo haneun uisa seonsaengnim gyeseyo",
+      "english": "Is there a doctor who speaks English?",
+      "tags": [
+        "emergency",
+        "health"
+      ],
+      "difficulty": 3,
+      "book": true
+    },
+    {
+      "id": "b-tsuuyaku",
+      "native": "통역해 주세요",
+      "reading": "tongyeokae juseyo",
+      "english": "An interpreter, please",
+      "tags": [
+        "emergency",
+        "help"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "translator"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-jishin",
+      "native": "지진이에요",
+      "reading": "jijinieyo",
+      "english": "Earthquake!",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "quake"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-denwa",
+      "native": "전화 좀 빌려 주세요",
+      "reading": "jeonhwa jom billyeo juseyo",
+      "english": "Please lend me a phone",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "call"
+      ],
+      "book": true
+    },
+    {
+      "id": "bh-nani-nakushita",
+      "native": "뭘 잃어버리셨어요?",
+      "reading": "mwol ireobeorisyeosseoyo",
+      "english": "What did you lose?",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-saifu-nakushi",
+      "book": true
+    },
+    {
+      "id": "bh-itsu-doko",
+      "native": "언제, 어디서요?",
+      "reading": "eonje, eodiseoyo",
+      "english": "When and where?",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-denwa-bangou",
+      "native": "전화번호를 알려 주세요",
+      "reading": "jeonhwabeonhoreul allyeo juseyo",
+      "english": "Your phone number, please",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-okega",
+      "native": "다치셨어요?",
+      "reading": "dachisyeosseoyo",
+      "english": "Are you hurt?",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-kega",
+      "book": true
+    },
+    {
+      "id": "bh-sugu-kimasu",
+      "native": "곧 도착해요",
+      "reading": "got dochakaeyo",
+      "english": "They are on their way",
+      "tags": [
+        "emergency"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "b-konbini",
+      "native": "편의점이 어디예요?",
+      "reading": "pyeonuijeomi eodiyeyo",
+      "english": "Where is a convenience store?",
+      "tags": [
+        "convenience"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "cu",
+        "gs25",
+        "7-eleven",
+        "seven eleven"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-atatame-iranai",
+      "native": "안 데워도 돼요",
+      "reading": "an dewodo dwaeyo",
+      "english": "No need to heat it",
+      "tags": [
+        "convenience",
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "no microwave"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-hashi-nizen",
+      "native": "젓가락 두 벌 주세요",
+      "reading": "jeotgarak du beol juseyo",
+      "english": "Two pairs of chopsticks, please",
+      "tags": [
+        "convenience"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "cutlery"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-supuun",
+      "native": "숟가락 주세요",
+      "reading": "sutgarak juseyo",
+      "english": "A spoon, please",
+      "tags": [
+        "convenience",
+        "food"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "cutlery"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-chaaji-ic",
+      "native": "교통카드에 충전해 주세요",
+      "reading": "gyotongkadeue chungjeonhae juseyo",
+      "english": "Please top up my transit card",
+      "tags": [
+        "convenience",
+        "tickets"
+      ],
+      "difficulty": 3,
+      "keywords": [
+        "tmoney",
+        "cashbee",
+        "reload"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-sen-en",
+      "native": "만 원 충전해 주세요",
+      "reading": "man won chungjeonhae juseyo",
+      "english": "10,000 won, please (top-up amount)",
+      "tags": [
+        "convenience",
+        "tickets"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "charge"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-simu",
+      "native": "유심 있어요?",
+      "reading": "yusim isseoyo",
+      "english": "Do you sell SIM cards?",
+      "tags": [
+        "convenience"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "sim",
+        "data",
+        "mobile"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-atm",
+      "native": "에이티엠이 어디예요?",
+      "reading": "eitiemi eodiyeyo",
+      "english": "Where is the ATM?",
+      "tags": [
+        "convenience",
+        "shopping"
+      ],
+      "difficulty": 3,
+      "keywords": [
+        "cash machine",
+        "withdraw"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kaigai-card",
+      "native": "해외 카드도 돼요?",
+      "reading": "haeoe kadeudo dwaeyo",
+      "english": "Does this ATM take foreign cards?",
+      "tags": [
+        "convenience"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "overseas card",
+        "withdraw"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-chiketto-hakken",
+      "native": "예매한 표를 받고 싶어요",
+      "reading": "yemaehan pyoreul batgo sipeoyo",
+      "english": "I'd like to pick up a booked ticket",
+      "tags": [
+        "convenience",
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "print",
+        "collect"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-toire-okari",
+      "native": "화장실 써도 돼요?",
+      "reading": "hwajangsil sseodo dwaeyo",
+      "english": "May I use the toilet?",
+      "tags": [
+        "convenience",
+        "help"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "restroom",
+        "bathroom",
+        "loo"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kore-dake",
+      "native": "이게 다예요",
+      "reading": "ige dayeyo",
+      "english": "Just this, thanks",
+      "tags": [
+        "convenience",
+        "shopping"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "that's all"
+      ],
+      "book": true
+    },
+    {
+      "id": "bh-supuun-tsuke",
+      "native": "숟가락 드릴까요?",
+      "reading": "sutgarak deurilkkayo",
+      "english": "Would you like a spoon?",
+      "tags": [
+        "convenience"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-supuun",
+      "book": true
+    },
+    {
+      "id": "bh-nenrei",
+      "native": "성인 확인 버튼을 눌러 주세요",
+      "reading": "seongin hwagin beoteuneul nulleo juseyo",
+      "english": "Please press the age-confirm button (alcohol)",
+      "tags": [
+        "convenience"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-kaado-ireru",
+      "native": "카드를 여기에 넣어 주세요",
+      "reading": "kadeureul yeogie neoeo juseyo",
+      "english": "Please insert your card",
+      "tags": [
+        "convenience"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-ic-tacchi",
+      "native": "교통카드를 대 주세요",
+      "reading": "gyotongkadeureul dae juseyo",
+      "english": "Please tap your card",
+      "tags": [
+        "convenience",
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "tmoney",
+        "cashbee"
+      ],
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "b-kippu-ichimai",
+      "native": "성인 한 장 주세요",
+      "reading": "seongin han jang juseyo",
+      "english": "One adult ticket, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "adult"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-otona-nimai",
+      "native": "성인 두 장 주세요",
+      "reading": "seongin du jang juseyo",
+      "english": "Two adult tickets, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "adult"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kodomo",
+      "native": "어린이 한 장 주세요",
+      "reading": "eorini han jang juseyo",
+      "english": "One child ticket, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "kid"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-oufuku",
+      "native": "왕복으로 주세요",
+      "reading": "wangbogeuro juseyo",
+      "english": "Round trip, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "return"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-katamichi",
+      "native": "편도로 주세요",
+      "reading": "pyeondoro juseyo",
+      "english": "One way, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "single"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-shiteiseki",
+      "native": "지정석으로 주세요",
+      "reading": "jijeongseogeuro juseyo",
+      "english": "A reserved seat, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "reservation"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-jiyuuseki",
+      "native": "자유석으로 주세요",
+      "reading": "jayuseogeuro juseyo",
+      "english": "An unreserved seat, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-madogawa",
+      "native": "창가 자리로 주세요",
+      "reading": "changga jariro juseyo",
+      "english": "A window seat, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-tsuurogawa",
+      "native": "복도 쪽 자리로 주세요",
+      "reading": "bokdo jjok jariro juseyo",
+      "english": "An aisle seat, please",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-nanbansen",
+      "native": "몇 번 승강장이에요?",
+      "reading": "myeot beon seunggangjangieyo",
+      "english": "Which platform?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "track"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-hoomu",
+      "native": "승강장이 어디예요?",
+      "reading": "seunggangjangi eodiyeyo",
+      "english": "Where is the platform?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "track"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-shinkansen",
+      "native": "케이티엑스 승강장이 어디예요?",
+      "reading": "keitieksseu seunggangjangi eodiyeyo",
+      "english": "Where is the KTX (bullet train) platform?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 3,
+      "keywords": [
+        "ktx",
+        "srt",
+        "high speed rail"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-tsugi-densha",
+      "native": "다음 열차는 몇 시예요?",
+      "reading": "daeum yeolchaneun myeot siyeyo",
+      "english": "What time is the next train?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 3,
+      "keywords": [
+        "timetable",
+        "schedule"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-saishuu",
+      "native": "막차는 몇 시예요?",
+      "reading": "makchaneun myeot siyeyo",
+      "english": "What time is the last train?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "last service"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ic-tsukaeru",
+      "native": "교통카드 돼요?",
+      "reading": "gyotongkadeu dwaeyo",
+      "english": "Can I use my transit card here?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "tmoney",
+        "cashbee",
+        "tap"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ic-kau",
+      "native": "교통카드를 사고 싶어요",
+      "reading": "gyotongkadeureul sago sipeoyo",
+      "english": "I'd like to buy a transit card",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "tmoney",
+        "cashbee"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-zandaka",
+      "native": "잔액을 확인하고 싶어요",
+      "reading": "janaegeul hwaginhago sipeoyo",
+      "english": "I'd like to check my balance",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "remaining"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-seisan",
+      "native": "정산기가 어디예요?",
+      "reading": "jeongsangiga eodiyeyo",
+      "english": "Where is the fare adjustment machine?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "excess fare"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-norikoshi",
+      "native": "내릴 역을 지나쳤어요",
+      "reading": "naeril yeogeul jinachyeosseoyo",
+      "english": "I went past my stop",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "overshot"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kippu-nakushi",
+      "native": "표를 잃어버렸어요",
+      "reading": "pyoreul ireobeoryeosseoyo",
+      "english": "I lost my ticket",
+      "tags": [
+        "tickets",
+        "emergency"
+      ],
+      "difficulty": 1,
+      "book": true
+    },
+    {
+      "id": "b-kono-kippu",
+      "native": "이 표로 탈 수 있어요?",
+      "reading": "i pyoro tal su isseoyo",
+      "english": "Can I use this ticket?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-rail-pass",
+      "native": "코레일 패스 돼요?",
+      "reading": "koreil paeseu dwaeyo",
+      "english": "Can I use a Korail pass?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "korail",
+        "tourist pass"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-pass-koukan",
+      "native": "코레일 패스는 어디서 교환해요?",
+      "reading": "koreil paeseuneun eodiseo gyohwanhaeyo",
+      "english": "Where do I exchange my Korail pass?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 3,
+      "keywords": [
+        "korail"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-cancel",
+      "native": "취소하고 싶어요",
+      "reading": "chwisohago sipeoyo",
+      "english": "I'd like to cancel",
+      "tags": [
+        "tickets",
+        "hotel"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "refund"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-okurete",
+      "native": "열차가 지연되고 있어요?",
+      "reading": "yeolchaga jiyeondoego isseoyo",
+      "english": "Is the train delayed?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "late"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kyuukou",
+      "native": "이 열차는 급행이에요?",
+      "reading": "i yeolchaneun geupaengieyo",
+      "english": "Is this an express?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "local",
+        "limited express"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-ryoukin",
+      "native": "요금이 얼마예요?",
+      "reading": "yogeumi eolmayeyo",
+      "english": "What's the fare?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "price"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-shinjuku",
+      "native": "이 열차는 서울역에 가요?",
+      "reading": "i yeolchaneun seoullyeoge gayo",
+      "english": "Does this train go to Seoul Station?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 3,
+      "book": true
+    },
+    {
+      "id": "b-basu-kuukou",
+      "native": "이 버스는 공항에 가요?",
+      "reading": "i beoseuneun gonghange gayo",
+      "english": "Does this bus go to the airport?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 3,
+      "book": true
+    },
+    {
+      "id": "b-ushiro",
+      "native": "뒷문으로 타요?",
+      "reading": "dwinmuneuro tayo",
+      "english": "Do I board from the back?",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "bus"
+      ],
+      "book": true
+    },
+    {
+      "id": "bh-nanmai",
+      "native": "몇 장이요?",
+      "reading": "myeot jangiyo",
+      "english": "How many tickets?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-kippu-ichimai",
+      "book": true
+    },
+    {
+      "id": "bh-shitei",
+      "native": "지정석으로 하시겠어요?",
+      "reading": "jijeongseogeuro hasigesseoyo",
+      "english": "Reserved or unreserved?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-shiteiseki",
+      "book": true
+    },
+    {
+      "id": "bh-oufuku",
+      "native": "편도예요, 왕복이에요?",
+      "reading": "pyeondoyeyo, wangbogieyo",
+      "english": "One way or round trip?",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-katamichi",
+      "book": true
+    },
+    {
+      "id": "bh-hoomu",
+      "native": "3번 승강장이에요",
+      "reading": "sam beon seunggangjangieyo",
+      "english": "It's platform 3",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-kippu-haiken",
+      "native": "표 확인하겠습니다",
+      "reading": "pyo hwaginhagetseumnida",
+      "english": "Tickets, please (inspector)",
+      "tags": [
+        "tickets"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "replyId": "b-douzo",
+      "book": true
+    },
+    {
+      "id": "bh-norikae",
+      "native": "다음 역에서 갈아타세요",
+      "reading": "daeum yeogeseo garataseyo",
+      "english": "Change trains at the next station",
+      "tags": [
+        "tickets",
+        "transport"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "b-takushii-noriba",
+      "native": "택시 승강장이 어디예요?",
+      "reading": "taeksi seunggangjangi eodiyeyo",
+      "english": "Where is the taxi stand?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "cab"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-takushii-yonde",
+      "native": "택시를 불러 주세요",
+      "reading": "taeksireul bulleo juseyo",
+      "english": "Please call a taxi",
+      "tags": [
+        "transport",
+        "hotel"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "cab"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-takushii-ikura",
+      "native": "여기까지 얼마예요?",
+      "reading": "yeogikkaji eolmayeyo",
+      "english": "How much to here? (taxi)",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "fare"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-meetaa",
+      "native": "미터기를 켜 주세요",
+      "reading": "miteogireul kyeo juseyo",
+      "english": "Please use the meter",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "taxi"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-tomete",
+      "native": "여기서 세워 주세요",
+      "reading": "yeogiseo sewo juseyo",
+      "english": "Please stop here",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "taxi"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-matte-te",
+      "native": "여기서 기다려 주실 수 있어요?",
+      "reading": "yeogiseo gidaryeo jusil su isseoyo",
+      "english": "Can you wait here?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "taxi"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-kuukou-dou",
+      "native": "공항에 어떻게 가요?",
+      "reading": "gonghange eotteoke gayo",
+      "english": "How do I get to the airport?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-michi-oshiete",
+      "native": "길 좀 알려 주세요",
+      "reading": "gil jom allyeo juseyo",
+      "english": "Please tell me the way",
+      "tags": [
+        "transport",
+        "help"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "directions"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-aruite",
+      "native": "걸어서 갈 수 있어요?",
+      "reading": "georeoseo gal su isseoyo",
+      "english": "Can I walk there?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 1,
+      "book": true
+    },
+    {
+      "id": "b-nanpun",
+      "native": "몇 분 걸려요?",
+      "reading": "myeot bun geollyeoyo",
+      "english": "How many minutes does it take?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "time",
+        "how long"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-chizu-de",
+      "native": "지도에서 알려 주세요",
+      "reading": "jidoeseo allyeo juseyo",
+      "english": "Please show me on the map",
+      "tags": [
+        "transport",
+        "help"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-massugu",
+      "native": "쭉 가세요",
+      "reading": "jjuk gaseyo",
+      "english": "Go straight",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 1,
+      "keywords": [
+        "straight ahead",
+        "forward"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-migi",
+      "native": "오른쪽으로 가세요",
+      "reading": "oreunjjogeuro gaseyo",
+      "english": "Turn right",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-hidari",
+      "native": "왼쪽으로 가세요",
+      "reading": "oenjjogeuro gaseyo",
+      "english": "Turn left",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-norikae-doko",
+      "native": "환승은 어디서 해요?",
+      "reading": "hwanseungeun eodiseo haeyo",
+      "english": "Where do I transfer?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "change trains"
+      ],
+      "book": true
+    },
+    {
+      "id": "b-tsugi-eki",
+      "native": "다음 역이 어디예요?",
+      "reading": "daeum yeogi eodiyeyo",
+      "english": "What's the next station?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 3,
+      "book": true
+    },
+    {
+      "id": "b-koko-doko",
+      "native": "여기가 어디예요?",
+      "reading": "yeogiga eodiyeyo",
+      "english": "Where am I?",
+      "tags": [
+        "transport",
+        "help"
+      ],
+      "difficulty": 2,
+      "book": true
+    },
+    {
+      "id": "b-deguchi-doko",
+      "native": "출구가 어디예요?",
+      "reading": "chulguga eodiyeyo",
+      "english": "Where is the exit?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "way out"
+      ],
+      "book": true
+    },
+    {
+      "id": "bh-doko-made",
+      "native": "어디까지 가세요?",
+      "reading": "eodikkaji gaseyo",
+      "english": "Where to?",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "destination"
+      ],
+      "listen": true,
+      "replyId": "p-juusho",
+      "book": true
+    },
+    {
+      "id": "bh-tsukimashita",
+      "native": "도착했어요",
+      "reading": "dochakaesseoyo",
+      "english": "We've arrived",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "listen": true,
+      "book": true
+    },
+    {
+      "id": "bh-taxi-en",
+      "native": "만 오천 원이에요",
+      "reading": "man ocheon wonieyo",
+      "english": "That's 15,000 won",
+      "tags": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "keywords": [
+        "fare"
+      ],
+      "listen": true,
+      "book": true
+    }
+  ]
+}
