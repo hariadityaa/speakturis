@@ -21,10 +21,10 @@ const chunk = (type, data) => {
   return Buffer.concat([len, td, c]);
 };
 
-// Speech bubble on indigo. `scale` shrinks the artwork so maskable icons keep a safe zone.
+// Speech bubble on near-black (Mono Dark). `scale` shrinks the artwork so maskable icons keep a safe zone.
 function icon(size, scale) {
-  const bg = [59, 76, 202];
-  const fg = [255, 255, 255];
+  const bg = [10, 10, 10];
+  const fg = [237, 237, 237];
   const raw = Buffer.alloc((size * 3 + 1) * size);
   const cx = size / 2;
   const cy = size * 0.47;
