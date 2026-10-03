@@ -1,3 +1,4 @@
+import { app } from '../app';
 import { h } from './dom';
 import { applyUpdate, onPwaChange, updateAvailable } from '../platform/pwa';
 
@@ -29,5 +30,18 @@ export function buildShell(): HTMLElement {
   onPwaChange(renderBanners);
   renderBanners();
 
-  return h('div', { class: 'shell' }, banner, main, nav);
+  // Sound problems from any screen. Say why, and how to fix it.
+  const toast = h('div', { class: 'toast', role: 'status', hidden: true });
+  let hide: ReturnType<typeof setTimeout> | undefined;
+  document.addEventListener('tts-problem', (e) => {
+    const { reason } = (e as CustomEvent<{ reason: string }>).detail;
+    toast.textContent = reason === 'unsupported' ? 'This browser cannot play speech. Try Chrome.'
+      : reason === 'no-voice' ? `No ${app.pack.meta.name} voice on this device. Install one in Android Settings → System → Languages → Text-to-speech, then reopen the app.`
+        : 'Could not play the sound. Check the volume, then try again.';
+    toast.hidden = false;
+    clearTimeout(hide);
+    hide = setTimeout(() => { toast.hidden = true; }, 8000);
+  });
+
+  return h('div', { class: 'shell' }, banner, main, nav, toast);
 }
