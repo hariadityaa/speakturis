@@ -21,6 +21,6 @@ describe('parseBackup', () => {
     ['bad kv', wrap({ cards: [], kv: [[1, 2]] })],
     ['bad settings value', wrap({ cards: [], kv: [['settings', { lang: 'ja', rate: 'fast' }]] })],
   ])('rejects %s with a readable error', (_n, text) => {
-    expect(() => parseBackup(text)).toThrow(/^(Not a JSON file|Not a Turisfasih backup|Unsupported backup version 1|Backup (is incomplete|has a corrupt card|has corrupt settings))\.$/);
+    expect(() => parseBackup(text)).toThrow(/^(Not a JSON file|Not a TurisTalk backup|Unsupported backup version 1|Backup (is incomplete|has a corrupt card|has corrupt settings))\.$/);
   });
 });

@@ -1,4 +1,4 @@
-# Working on Turisfasih
+# Working on TurisTalk
 
 ## Preview before pushing UI changes
 Any change that affects what the user sees (src/ui, styles, index.html, icons, content rendering) must be previewed before commit/push.
