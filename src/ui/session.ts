@@ -101,7 +101,11 @@ function runSession(root: HTMLElement, items: Item[], o: Opts) {
       h('div', { class: 'card center' }, h('h2', null, 'Well done ✓'),
         h('p', null, `You practised ${total} phrase${total === 1 ? '' : 's'}.`),
         again ? h('p', { class: 'note' }, `${again} came back a second time. They will show up again soon.`) : null),
-      h('a', { class: 'btn primary big', href: `#${o.back}` }, 'Done'));
+      h('a', { class: 'btn primary big', href: `#${o.back}` }, 'Done'),
+      h('h2', { class: 'sect' }, 'This lesson'),
+      h('ul', { class: 'list' }, items.map((i) => h('li', { class: 'phrase' },
+        h('div', { class: 'grow' }, h('b', null, i.english ?? i.front), h('span', { class: 'answer' }, i.reading), h('span', { class: 'script' }, i.front)),
+        h('button', { class: 'play', 'aria-label': `Play: ${i.english ?? i.front}`, onclick: () => void say(i.speak, i.audioSrc) }, '🔊')))));
   };
 
   if (!total) {

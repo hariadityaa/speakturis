@@ -1,6 +1,6 @@
 # TurisTalk
 
-Mobile-first PWA for learning travel-level phrases. No alphabets, just what you say and hear. First pack: Japanese. It runs fully offline after the first load. No backend, no accounts, no analytics, no third-party requests.
+Mobile-first PWA for learning travel-level phrases. No alphabets, just what you say and hear. Packs: Japanese and Mandarin (Traditional characters, Taiwan usage). It runs fully offline after the first load. No backend, no accounts, no analytics, no third-party requests.
 
 ## What it does
 
@@ -66,7 +66,7 @@ Run on a real phone against the deployed URL.
 
 **Backup and restore**
 - [ ] Settings → Export backup. Save the file.
-- [ ] Do a lesson, then Start over (erase progress).
+- [ ] Do a lesson, then Erase Japanese progress.
 - [ ] Settings → Import backup, pick the file. Progress returns. Learn shows the learned count again.
 - [ ] Import a non-backup JSON. It shows "Not a TurisTalk backup." and changes nothing.
 
@@ -75,6 +75,8 @@ Run on a real phone against the deployed URL.
 
 **Display**
 - [ ] Switch the phone between light and dark mode. The app follows.
+- [ ] Open a phrase full size and wait past the screen timeout. The screen stays on.
+- [ ] Tap the language pill on Learn. Switch to the other language. The same tab redraws in that language.
 
 ## Lighthouse
 
@@ -84,5 +86,5 @@ Chrome DevTools → Lighthouse → Mobile, on the deployed URL. Chrome removed t
 
 - No cross-device sync. Use Export and Import.
 - Speech does not continue with the screen locked.
-- Japanese content is not reviewed by a native speaker. Have one check `content/ja/phrases.json` and `dialogues.json` before relying on it.
+- Japanese and Mandarin content is not reviewed by native speakers. Have one check each pack's `phrases.json` and `dialogues.json` before relying on it.
 - iOS is not a target. It should work but is untested.

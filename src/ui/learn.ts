@@ -1,5 +1,6 @@
 import { app, isLearned, lessonItems, newItems, phrases, situationLabel } from '../app';
 import { h, header, type Screen } from './dom';
+import { langSwitch } from './lang';
 import { phraseRow } from './phrasebook';
 
 /** Rough lesson length: a new phrase takes longer than one you have seen. */
@@ -54,7 +55,7 @@ export const learnScreen: Screen = (root) => {
   ];
 
   root.append(
-    header(`Learn ${meta.name}`),
+    header('Learn', undefined, langSwitch()),
     lesson,
     h('div', { class: 'overall' }, h('p', null, `You know ${learned} of ${all.length} phrases`), meter(learned, all.length)),
     h('h2', { class: 'sect' }, 'Topics'),

@@ -23,11 +23,14 @@ export const clear = (el: HTMLElement) => { while (el.firstChild) el.removeChild
 
 export type Screen = (root: HTMLElement, q: URLSearchParams) => void | (() => void) | Promise<void | (() => void)>;
 
-export const header = (title: string, back?: string) =>
+export const header = (title: string, back?: string, extra?: Node | null) =>
   h('header', { class: 'bar' },
     back ? h('a', { class: 'back', href: `#${back}`, 'aria-label': 'Back' }, '‹') : null,
-    h('h1', null, title));
+    h('h1', null, title), extra);
 
+/** Bar plus "3 of 10". `done` is how many are finished, so the current one is done + 1. */
 export const progressBar = (done: number, total: number) =>
-  h('div', { class: 'meter', role: 'progressbar', 'aria-valuenow': done, 'aria-valuemax': total },
-    h('span', { style: `width:${total ? (done / total) * 100 : 0}%` }));
+  h('div', { class: 'progress' },
+    h('div', { class: 'meter', role: 'progressbar', 'aria-valuenow': done, 'aria-valuemax': total },
+      h('span', { style: `width:${total ? (done / total) * 100 : 0}%` })),
+    h('small', null, `${Math.min(done + 1, total)} of ${total}`));

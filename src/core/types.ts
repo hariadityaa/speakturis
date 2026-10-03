@@ -35,13 +35,19 @@ export interface Phrase {
 }
 export interface Phrases { schemaVersion: 1; phrases: Phrase[] }
 
-export interface Multiplier { value: number; native: string; reading: string; speak?: string; omitOne: boolean }
+export interface Multiplier {
+  value: number; native: string; reading: string; speak?: string;
+  /** Drop the quantity 1 before this multiplier. "leading" drops it only at the start of the number. */
+  omitOne: boolean | 'leading';
+}
 export interface Numbers {
   schemaVersion: 1;
   range: { min: number; max: number };
   words: Record<string, Word>;
   multipliers: Multiplier[];
   overrides?: Record<string, Word>;
+  /** Said where a place is skipped, e.g. Mandarin 零 in 一百零五. */
+  zero?: Word;
   separator: string;
   priceDrill: { min: number; max: number; step: number };
 }

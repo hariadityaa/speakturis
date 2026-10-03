@@ -7,6 +7,8 @@ let renderId = 0;
 
 export const route = (path: string, s: Screen) => routes.set(path, s);
 export const go = (path: string) => { location.hash = `#${path}`; };
+/** Draws the current screen again, e.g. after the language changes. */
+export const refresh = () => render();
 
 async function render() {
   const id = ++renderId;

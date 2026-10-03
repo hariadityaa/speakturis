@@ -1,0 +1,490 @@
+{
+  "schemaVersion": 1,
+  "dialogues": [
+    {
+      "id": "d-boba",
+      "title": "Ordering bubble tea",
+      "situation": "food",
+      "intro": "You walk up to a bubble tea stand on a busy street.",
+      "start": "n1",
+      "nodes": {
+        "n1": {
+          "speaker": "npc",
+          "native": "歡迎光臨，要點什麼？",
+          "reading": "huānyíng guānglín, yào diǎn shénme?",
+          "english": "Welcome. What would you like?",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "native": "一杯珍珠奶茶",
+              "reading": "yì bēi zhēnzhū nǎichá",
+              "english": "One bubble milk tea"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-zhege"
+            },
+            {
+              "next": "n1b",
+              "good": false,
+              "phraseId": "p-jiezhang",
+              "feedback": "You haven't ordered yet. Say what you want first."
+            }
+          ]
+        },
+        "n1b": {
+          "speaker": "npc",
+          "native": "要喝什麼？",
+          "reading": "yào hē shénme?",
+          "english": "What would you like to drink?",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "native": "一杯珍珠奶茶",
+              "reading": "yì bēi zhēnzhū nǎichá",
+              "english": "One bubble milk tea"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-zhege"
+            }
+          ]
+        },
+        "n2": {
+          "speaker": "npc",
+          "native": "甜度冰塊呢？",
+          "reading": "tiándù bīngkuài ne?",
+          "english": "Sugar and ice level?",
+          "replies": [
+            {
+              "next": "n3",
+              "good": true,
+              "phraseId": "p-bantang"
+            },
+            {
+              "next": "n3",
+              "good": true,
+              "native": "正常",
+              "reading": "zhèngcháng",
+              "english": "Regular"
+            },
+            {
+              "next": "n2b",
+              "good": false,
+              "phraseId": "p-tingbudong",
+              "feedback": "Fine to say, but try answering: half sugar, less ice."
+            }
+          ]
+        },
+        "n2b": {
+          "speaker": "npc",
+          "native": "糖，冰塊，要多少？",
+          "reading": "táng, bīngkuài, yào duōshǎo?",
+          "english": "Sugar, ice, how much?",
+          "replies": [
+            {
+              "next": "n3",
+              "good": true,
+              "phraseId": "p-bantang"
+            },
+            {
+              "next": "n3",
+              "good": true,
+              "native": "正常",
+              "reading": "zhèngcháng",
+              "english": "Regular"
+            }
+          ]
+        },
+        "n3": {
+          "speaker": "npc",
+          "native": "內用還是外帶？",
+          "reading": "nèiyòng háishì wàidài?",
+          "english": "For here or to go?",
+          "replies": [
+            {
+              "next": "n4",
+              "good": true,
+              "phraseId": "p-waidai"
+            },
+            {
+              "next": "n4",
+              "good": true,
+              "phraseId": "p-neiyong"
+            },
+            {
+              "next": "n4",
+              "good": false,
+              "phraseId": "p-haochi",
+              "feedback": "You haven't tried it yet. Answer: for here or to go."
+            }
+          ]
+        },
+        "n4": {
+          "speaker": "npc",
+          "native": "六十五塊。",
+          "reading": "liùshí wǔ kuài",
+          "english": "That's 65 dollars.",
+          "replies": [
+            {
+              "next": "n5",
+              "good": true,
+              "native": "好，給你",
+              "reading": "hǎo, gěi nǐ",
+              "english": "OK, here you go"
+            },
+            {
+              "next": "n5",
+              "good": true,
+              "phraseId": "p-shuaka"
+            }
+          ]
+        },
+        "n5": {
+          "speaker": "npc",
+          "native": "謝謝，請稍等。",
+          "reading": "xièxie, qǐng shāo děng",
+          "english": "Thanks, one moment please.",
+          "end": true
+        }
+      }
+    },
+    {
+      "id": "d-taxi",
+      "title": "Taking a taxi",
+      "situation": "transport",
+      "intro": "You get into a yellow taxi in Taipei.",
+      "start": "n1",
+      "nodes": {
+        "n1": {
+          "speaker": "npc",
+          "native": "你好，去哪裡？",
+          "reading": "nǐ hǎo, qù nǎlǐ?",
+          "english": "Hello, where to?",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-dizhi"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "native": "請到台北101",
+              "reading": "qǐng dào Táiběi yī líng yī",
+              "english": "To Taipei 101, please"
+            },
+            {
+              "next": "n1b",
+              "good": false,
+              "phraseId": "p-xiache",
+              "feedback": "That's for getting off. You just got in."
+            }
+          ]
+        },
+        "n1b": {
+          "speaker": "npc",
+          "native": "你要去哪裡？",
+          "reading": "nǐ yào qù nǎlǐ?",
+          "english": "Where do you want to go?",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-dizhi"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "native": "請到台北101",
+              "reading": "qǐng dào Táiběi yī líng yī",
+              "english": "To Taipei 101, please"
+            }
+          ]
+        },
+        "n2": {
+          "speaker": "npc",
+          "native": "好，沒問題。",
+          "reading": "hǎo, méi wèntí",
+          "english": "OK, no problem.",
+          "replies": [
+            {
+              "next": "n3",
+              "good": true,
+              "phraseId": "p-xiexie"
+            },
+            {
+              "next": "n3",
+              "good": true,
+              "phraseId": "p-hao"
+            }
+          ]
+        },
+        "n3": {
+          "speaker": "npc",
+          "native": "到了，兩百三十塊。",
+          "reading": "dào le, liǎngbǎi sānshí kuài",
+          "english": "We're here. 230 dollars.",
+          "replies": [
+            {
+              "next": "n4",
+              "good": true,
+              "phraseId": "p-shuaka"
+            },
+            {
+              "next": "n4",
+              "good": true,
+              "native": "好，給你",
+              "reading": "hǎo, gěi nǐ",
+              "english": "OK, here you go"
+            },
+            {
+              "next": "n4",
+              "good": false,
+              "phraseId": "p-duoshao",
+              "feedback": "The driver just told you: 230."
+            }
+          ]
+        },
+        "n4": {
+          "speaker": "npc",
+          "native": "謝謝，慢走。",
+          "reading": "xièxie, màn zǒu",
+          "english": "Thanks, take care.",
+          "end": true
+        }
+      }
+    },
+    {
+      "id": "d-store",
+      "title": "At the convenience store",
+      "situation": "shopping",
+      "intro": "You bring a lunch box and a drink to the counter at 7-Eleven.",
+      "start": "n1",
+      "nodes": {
+        "n1": {
+          "speaker": "npc",
+          "native": "歡迎光臨。需要微波嗎？",
+          "reading": "huānyíng guānglín. xūyào wéibō ma?",
+          "english": "Welcome. Shall I microwave it?",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-weibo"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-buyong"
+            },
+            {
+              "next": "n1b",
+              "good": false,
+              "phraseId": "p-buhaoyisi",
+              "feedback": "Polite, but it doesn't answer the question."
+            }
+          ]
+        },
+        "n1b": {
+          "speaker": "npc",
+          "native": "要微波嗎？",
+          "reading": "yào wéibō ma?",
+          "english": "Microwave it?",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "native": "要，謝謝",
+              "reading": "yào, xièxie",
+              "english": "Yes, thanks"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-buyong"
+            }
+          ]
+        },
+        "n2": {
+          "speaker": "npc",
+          "native": "需要袋子嗎？",
+          "reading": "xūyào dàizi ma?",
+          "english": "Do you need a bag?",
+          "replies": [
+            {
+              "next": "n3",
+              "good": true,
+              "phraseId": "p-bu-daizi"
+            },
+            {
+              "next": "n3",
+              "good": true,
+              "native": "要，謝謝",
+              "reading": "yào, xièxie",
+              "english": "Yes, thanks"
+            },
+            {
+              "next": "n3",
+              "good": false,
+              "phraseId": "p-cesuo",
+              "feedback": "Answer the bag question first. The toilet can wait."
+            }
+          ]
+        },
+        "n3": {
+          "speaker": "npc",
+          "native": "一共一百二十五塊。有載具嗎？",
+          "reading": "yígòng yìbǎi èrshí wǔ kuài. yǒu zàijù ma?",
+          "english": "125 dollars in total. Do you have an e-receipt carrier?",
+          "replies": [
+            {
+              "next": "n4",
+              "good": true,
+              "phraseId": "p-meiyou"
+            },
+            {
+              "next": "n4",
+              "good": false,
+              "phraseId": "p-hao",
+              "feedback": "Visitors don't have a carrier barcode. Just say no."
+            }
+          ]
+        },
+        "n4": {
+          "speaker": "npc",
+          "native": "好，謝謝。",
+          "reading": "hǎo, xièxie",
+          "english": "OK, thank you.",
+          "end": true
+        }
+      }
+    },
+    {
+      "id": "d-hotel",
+      "title": "Checking in at the hotel",
+      "situation": "hotel",
+      "intro": "You arrive at the front desk with your bags.",
+      "start": "n1",
+      "nodes": {
+        "n1": {
+          "speaker": "npc",
+          "native": "您好，請問有訂房嗎？",
+          "reading": "nín hǎo, qǐngwèn yǒu dìngfáng ma?",
+          "english": "Hello, do you have a booking?",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-dingfang"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-ruzhu"
+            },
+            {
+              "next": "n1b",
+              "good": false,
+              "phraseId": "p-dingwei",
+              "feedback": "That's for a restaurant table. Here you have a room."
+            }
+          ]
+        },
+        "n1b": {
+          "speaker": "npc",
+          "native": "有訂房嗎？",
+          "reading": "yǒu dìngfáng ma?",
+          "english": "Do you have a room booked?",
+          "replies": [
+            {
+              "next": "n2",
+              "good": true,
+              "phraseId": "p-dingfang"
+            },
+            {
+              "next": "n2",
+              "good": true,
+              "native": "有，我有訂房",
+              "reading": "yǒu, wǒ yǒu dìngfáng",
+              "english": "Yes, I have a booking"
+            }
+          ]
+        },
+        "n2": {
+          "speaker": "npc",
+          "native": "請給我您的護照。",
+          "reading": "qǐng gěi wǒ nín de hùzhào",
+          "english": "Your passport, please.",
+          "replies": [
+            {
+              "next": "n3",
+              "good": true,
+              "native": "好，給你",
+              "reading": "hǎo, gěi nǐ",
+              "english": "OK, here you go"
+            },
+            {
+              "next": "n3",
+              "good": false,
+              "phraseId": "p-kankan",
+              "feedback": "That's for shops. Hand over your passport."
+            }
+          ]
+        },
+        "n3": {
+          "speaker": "npc",
+          "native": "好了。這是您的房卡。",
+          "reading": "hǎo le. zhè shì nín de fángkǎ",
+          "english": "All done. Here's your key card.",
+          "replies": [
+            {
+              "next": "n4",
+              "good": true,
+              "phraseId": "p-tuifang"
+            },
+            {
+              "next": "n4",
+              "good": true,
+              "phraseId": "p-wifi"
+            },
+            {
+              "next": "n4",
+              "good": true,
+              "phraseId": "p-xiexie"
+            }
+          ]
+        },
+        "n4": {
+          "speaker": "npc",
+          "native": "退房是十一點。Wi-Fi 密碼在房卡上。",
+          "reading": "tuìfáng shì shíyī diǎn. Wi-Fi mìmǎ zài fángkǎ shàng",
+          "english": "Check-out is at 11. The Wi-Fi password is on the card.",
+          "replies": [
+            {
+              "next": "n5",
+              "good": true,
+              "phraseId": "p-xiexie"
+            },
+            {
+              "next": "n5",
+              "good": true,
+              "phraseId": "p-jicun"
+            }
+          ]
+        },
+        "n5": {
+          "speaker": "npc",
+          "native": "沒問題，祝您住宿愉快。",
+          "reading": "méi wèntí, zhù nín zhùsù yúkuài",
+          "english": "No problem. Enjoy your stay.",
+          "end": true
+        }
+      }
+    }
+  ]
+}

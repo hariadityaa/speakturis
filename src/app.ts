@@ -41,6 +41,8 @@ export async function initApp(): Promise<boolean> {
 export async function setLanguage(code: string, persist = true) {
   app.settings.lang = code;
   app.pack = await loadPack(code);
+  // Picks the native-script font for this language (Japanese and Chinese share characters but not glyphs).
+  document.documentElement.dataset.pack = code;
   app.items = buildItems(app.pack);
   app.itemById = new Map(app.items.map((i) => [i.id, i]));
   await loadCards();

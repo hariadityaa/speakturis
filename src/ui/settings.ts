@@ -5,24 +5,31 @@ import { canInstall, install, isStandalone } from '../platform/pwa';
 import { matchingVoices, ttsSupported, voicesReady } from '../platform/tts';
 import { h, header, type Screen } from './dom';
 
-export const settingsScreen: Screen = async (root) => {
+export const settingsScreen: Screen = (root) => {
   const s = app.settings;
   const { meta } = app.pack;
-  await voicesReady(400);
-  const voices = matchingVoices(meta.ttsLocale);
-  const exact = voices.some((v) => v.lang.toLowerCase().replace('_', '-') === meta.ttsLocale.toLowerCase());
 
   const lang = h('select', { 'aria-label': 'Language', onchange: async (e: Event) => { await setLanguage((e.target as HTMLSelectElement).value); location.hash = '#/'; } },
     app.packs.map((p) => h('option', { value: p.code, selected: p.code === s.lang }, `${p.name} (${p.nativeName})`)));
 
-  const warn = !ttsSupported
-    ? 'This browser has no speech support. Audio will not play.'
-    : !voices.length
-      ? `No ${meta.name} voice found on this device. Install one in Android Settings → System → Languages → Text-to-speech, then reopen the app.`
-      : !exact ? `No ${meta.ttsLocale} voice. Using a ${voices[0].lang} voice instead.` : '';
-
+  const warn = h('div', { class: 'warn', role: 'alert', hidden: true });
   const voice = h('select', { 'aria-label': 'Voice', onchange: (e: Event) => { s.voice[s.lang] = (e.target as HTMLSelectElement).value; void saveSettings(); } },
-    voices.length ? voices.map((v) => h('option', { value: v.voiceURI, selected: v.voiceURI === s.voice[s.lang] }, `${v.name} (${v.lang})`)) : h('option', null, 'None available'));
+    h('option', null, 'Loading voices…'));
+
+  /** Voices load late on Android. Draw the page now and fill these in when they arrive. */
+  const fillVoices = () => {
+    const voices = matchingVoices(meta.ttsLocale);
+    const exact = voices.some((v) => v.lang.toLowerCase().replace('_', '-') === meta.ttsLocale.toLowerCase());
+    warn.textContent = !ttsSupported
+      ? 'This browser has no speech support. Audio will not play.'
+      : !voices.length
+        ? `No ${meta.name} voice found on this device. Install one in Android Settings → System → Languages → Text-to-speech, then reopen the app.`
+        : !exact ? `No ${meta.ttsLocale} voice. Using a ${voices[0].lang} voice instead.` : '';
+    warn.hidden = !warn.textContent;
+    voice.replaceChildren(...(voices.length
+      ? voices.map((v) => h('option', { value: v.voiceURI, selected: v.voiceURI === s.voice[s.lang] }, `${v.name} (${v.lang})`))
+      : [h('option', null, 'None available')]));
+  };
 
   const rate = h('input', { type: 'range', min: '0.5', max: '1.2', step: '0.05', value: String(s.rate), 'aria-label': 'Speech speed',
     oninput: (e: Event) => { s.rate = Number((e.target as HTMLInputElement).value); rateLabel.textContent = `${s.rate.toFixed(2)}×`; }, onchange: () => void saveSettings() });
@@ -53,7 +60,7 @@ export const settingsScreen: Screen = async (root) => {
     header('Settings'),
     app.packs.length > 1 ? h('h2', { class: 'sect' }, 'Language') : null, app.packs.length > 1 ? field('Learning', lang) : null,
     h('h2', { class: 'sect' }, 'Audio'),
-    warn ? h('div', { class: 'warn', role: 'alert' }, warn) : null,
+    warn,
     field('Voice', voice),
     field('Speed', rate, rateLabel),
     h('button', { class: 'btn', onclick: () => void say(app.pack.phrases.phrases[0].speak ?? app.pack.phrases.phrases[0].native) }, '🔊 Test voice'),
@@ -73,7 +80,8 @@ export const settingsScreen: Screen = async (root) => {
       await resetLanguage(s.lang);
       await setLanguage(s.lang, false);
       msg.textContent = 'Progress erased.';
-    } }, 'Start over (erase progress)'),
+    } }, `Erase ${meta.name} progress`),
   ];
   root.append(...parts.filter((x): x is HTMLElement => !!x));
+  void voicesReady(400).then(fillVoices);
 };
